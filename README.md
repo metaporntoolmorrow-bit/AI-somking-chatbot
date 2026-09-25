@@ -36,3 +36,9 @@ npm run typecheck
 npm run lint
 npm run build
 ```
+
+## เวอร์ชันทดลองบน Vercel
+
+สาขา main เป็นเวอร์ชันหลัก ส่วนสาขา draft ใช้สำหรับลองแก้ไขก่อนนำเข้ารุ่นหลัก เมื่อ push commit ใหม่ไปที่ draft โปรเจกต์ Vercel ที่เชื่อม GitHub จะสร้าง Preview Deployment อัตโนมัติและอัปเดตลิงก์ประจำสาขา
+
+ค่าที่ต้องตั้งใน Vercel สำหรับสภาพแวดล้อม Preview คือ NEXT_PUBLIC_SUPABASE_URL, NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY และ SUPABASE_SECRET_KEY โดยใส่ใน Project Settings → Environment Variables เท่านั้น ห้าม commit ค่าเหล่านี้ลง Git
