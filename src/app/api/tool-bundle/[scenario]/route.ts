@@ -4,6 +4,7 @@ import { getPublishedCatalog } from '@/lib/catalog';
 import { createServiceClient } from '@/lib/supabase/service';
 import { compatibleSelection, scenarioToolIds } from '@/lib/plan-flow';
 import { bundleIdentity } from '@/lib/package-identity.mjs';
+import { TOOL_BUNDLE_FILENAME, TOOL_BUNDLE_DISPOSITION } from '@/lib/download-names';
 
 export const runtime = 'nodejs';
 
@@ -20,7 +21,7 @@ export async function GET(request: Request, { params }: { params: Promise<{ scen
     if(!ids.length||ids.some(id=>!catalog.tools.find(t=>t.id===id)?.downloadReady)) return new Response('ไฟล์เครื่องมือยังไม่พร้อม', {status:409});
     const identity=catalog.bundleVersion===2?bundleIdentity(scenario.packageId,ids):ids.join('\n');
     const key=createHash('sha256').update(identity).digest('hex');
-    const {data,error}=await createServiceClient().storage.from(catalog.bundleBucket).createSignedUrl(`${catalog.releaseId}/bundles/${key}.zip`,300,{download:'ชุดเครื่องมือ.zip'});
+    const {data,error}=await createServiceClient().storage.from(catalog.bundleBucket).createSignedUrl(`${catalog.releaseId}/bundles/${key}.zip`,300,{download:TOOL_BUNDLE_FILENAME});
     if(error||!data) return new Response('ดาวน์โหลดไม่สำเร็จ กรุณาลองใหม่อีกครั้ง', {status:502});
     return new Response(null,{status:302,headers:{Location:data.signedUrl,'Cache-Control':'private, no-store'}});
   }
@@ -67,7 +68,7 @@ export async function GET(request: Request, { params }: { params: Promise<{ scen
   return new Response(Uint8Array.from(output), {
     headers: {
       'Content-Type': 'application/zip',
-      'Content-Disposition': `attachment; filename="tools.zip"; filename*=UTF-8''${encodeURIComponent('ชุดเครื่องมือ.zip')}`,
+      'Content-Disposition': TOOL_BUNDLE_DISPOSITION,
       'Content-Length': String(output.length),
       'Cache-Control': 'private, no-store',
       'X-Content-Type-Options': 'nosniff',

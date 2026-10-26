@@ -5,8 +5,8 @@ import './package-print.css';
 
 const printFont=localFont({src:'../../public/fonts/noto-sans-thai/NotoSansThai-Variable.ttf',weight:'100 900',display:'swap',variable:'--font-print-thai',preload:true});
 
-export function PackagePrintablePlan({catalog,scenarios,item}:{catalog:Catalog;scenarios:Scenario[];item:Package}){
-  const plan=packageSummary(catalog,scenarios);
+export function PackagePrintablePlan({catalog,scenarios,item,guidanceId=1}:{catalog:Catalog;scenarios:Scenario[];item:Package;guidanceId?:number}){
+  const plan=packageSummary(catalog,scenarios,guidanceId);
   const first=scenarios[0];
   const count=plan.steps.length>8?4:Math.min(3,plan.steps.length);
   const columns=Array.from({length:count},(_,index)=>{
