@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict';
 import { readFile, mkdir, writeFile } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
+import { execFileSync } from 'node:child_process';
 import { chromium } from '@playwright/test';
 import JSZip from 'jszip';
 import { conversationState, resolveConversationPreset } from '../presets/real-tools-v1/conversation.mjs';
@@ -22,7 +23,7 @@ const browser=await chromium.launch({headless:true,executablePath:'C:/Program Fi
 await mkdir('output/qa',{recursive:true});
 let testedGroups=0;const runtimeErrors=[];const downloads=[];
 const onlyFive=process.argv.includes('--smoke');
-const rowsToTest=onlyFive?preset.settings.map(setting=>[preset.scenarios.find(s=>s.answers.settingCode===setting.code)]):[...groups.values()];
+const rowsToTest=onlyFive?preset.settings.map(setting=>[...groups.values()].find(rows=>rows[0].answers.settingCode===setting.code)):[...groups.values()];
 try{
   for(const rows of rowsToTest){
     const first=rows[0];
@@ -51,10 +52,14 @@ try{
     for(const row of rows)await page.getByRole('button',{name:row.answerLabels.audience,exact:true}).click();
     await confirm.click();await page.waitForURL('**/result?**');
     await page.getByRole('button',{name:'ดาวน์โหลดแผน PDF',exact:true}).waitFor();
-    assert.equal(await page.locator('.print-document').count(),rows.length);
+    assert.equal(await page.locator('.print-document').count(),1,'All selected groups must share one printable sheet');
+    assert.equal(await page.locator('.usage-list>li').count(),new Set(rows.flatMap(row=>row.useSequence.map(s=>`${s.rank}:${s.toolCode}`))).size);
+    assert.equal(await page.locator('.usage-guidance h2').count(),2);
+    assert.equal(await page.getByText('สัปดาห์ที่ 1',{exact:false}).count(),0);
     const zip=page.getByRole('link',{name:'ดาวน์โหลดชุดเครื่องมือ ZIP',exact:true});
+    const resultUrl=page.url();
     await zip.waitFor();
-    assert.equal(await page.locator('.result-audience-nav a').count(),rows.length>1?rows.length:0);
+    assert.equal(await page.locator('.print-sheet').count(),1);
     const link=await zip.getAttribute('href');
     // The endpoint must redirect directly to private Storage, avoiding Vercel binary limits.
     const response=await page.request.get(`${base}${link}`,{maxRedirects:0});assert.equal(response.status(),302);
@@ -64,6 +69,8 @@ try{
       const file=await page.request.get(location);assert.equal(file.status(),200);
       const bytes=await file.body();const archive=await JSZip.loadAsync(bytes,{checkCRC32:true});
       const text=await archive.file('ลิงก์เครื่องมือ.txt').async('string');
+      const start=await archive.file('00-เริ่มใช้แพ็กเกจ.txt').async('string');
+      assert.ok(start.includes('ลำดับการใช้เครื่องมือ')&&start.includes('ข้อควรระวัง'));
       const codes=[...new Set(rows.flatMap(r=>Object.values(r.tools).flat()))];
       const assets=preset.assets.filter(a=>a.toolCodes.some(c=>codes.includes(c)));
       for(const asset of assets){
@@ -76,7 +83,9 @@ try{
       downloads.push({setting:first.answers.settingCode,bytes:bytes.length,files:assets.length});
       await page.screenshot({path:`output/qa/result-${first.answers.settingCode}-desktop.png`,fullPage:true});
       await page.emulateMedia({media:'print'});
-      await page.pdf({path:`output/qa/plan-${first.answers.settingCode}.pdf`,format:'A4',printBackground:true});
+      const pdfPath=`output/qa/plan-${first.answers.settingCode}.pdf`;
+      await page.pdf({path:pdfPath,format:'A4',preferCSSPageSize:true,printBackground:true});
+      assert.match(execFileSync('pdfinfo',[pdfPath]).toString(),/Pages:\s+1\b/,'Plan must fit one page');
       await page.emulateMedia({media:'screen'});
       await page.setViewportSize({width:390,height:844});
       assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),'Mobile result overflows');
@@ -86,10 +95,16 @@ try{
       assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),'Mobile chat overflows');
       await page.screenshot({path:`output/qa/chat-${first.answers.settingCode}-mobile.png`,fullPage:true});
     }
+    // Test pagination for every context group, including the largest combined selection.
+    if(!page.url().includes('/result?'))await page.goto(resultUrl,{waitUntil:'networkidle'});
+    await page.emulateMedia({media:'print'});
+    const pdfPath=`output/qa/group-${testedGroups+1}.pdf`;
+    await page.pdf({path:pdfPath,preferCSSPageSize:true,printBackground:true});
+    assert.match(execFileSync('pdfinfo',[pdfPath]).toString(),/Pages:\s+1\b/,'Combined plan overflowed one page');
     await page.close();testedGroups++;if(testedGroups%8===0)console.log(`Browser passed ${testedGroups}/${rowsToTest.length} context groups.`);
   }
   const page=await browser.newPage();
-  assert.equal((await page.request.get(`${base}/api/tool-bundle/REAL-0001?scenarios=REAL-0179`,{maxRedirects:0})).status(),400);
+  assert.equal((await page.request.get(`${base}/api/tool-bundle/${preset.scenarios[0].code}?scenarios=${preset.scenarios.at(-1).code}`,{maxRedirects:0})).status(),400);
   assert.equal((await page.request.get(`${base}/api/tool-file/MAIN-01?asset=FILE-99`,{maxRedirects:0})).status(),404);
   await page.goto(`${base}/admin`);assert.match(page.url(),/\/login/);
   for(const asset of preset.assets.filter(a=>a.hosting==='bundle')){

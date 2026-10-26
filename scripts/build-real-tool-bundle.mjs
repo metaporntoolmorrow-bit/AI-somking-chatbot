@@ -10,7 +10,7 @@ const outputDir = path.join(root,'output','bundles');
 await mkdir(outputDir,{recursive:true});
 const flag = name => process.argv[process.argv.indexOf(name)+1];
 const selectedCodes = process.argv.includes('--examples')
-  ? ['PK-EDU-C2','PK-FAM-TEAM','PK-COM-C3','PK-HEA-QUIT','PK-WRK-SYSTEM'].map(code => preset.scenarios.find(row=>row.packageCode===code).code)
+  ? preset.settings.map(setting => preset.scenarios.find(row=>row.answers.settingCode===setting.code).code)
   : [flag('--scenario')];
 if (!process.argv.includes('--examples') && !process.argv.includes('--scenario')) throw new Error('Use --scenario REAL-0001 or --examples');
 const sourceDir = await realpath(path.join(root,'ชุดเครื่องมือใหม่+track'));
@@ -33,11 +33,15 @@ for (const code of selectedCodes) {
     if (createHash('sha256').update(bytes).digest('hex') !== asset.sha256) throw new Error('Source changed; rebuild presets');
     const folder = file.fileKind==='evaluation_report' || file.fileKind==='infographic' ? 'ข้อมูลประกอบ' : 'เครื่องมือ';
     const safeName = file.fileName.replace(/[\\/:*?"<>|\u0000-\u001f]/g,' ').trim();
-    const archivePath = `${folder}/${safeName}`;
+    const firstCode=manifest.toolCodes.find(code=>asset.toolCodes.includes(code));
+    const tool=preset.tools.find(t=>t.code===firstCode);
+    const toolFolder=`${String(manifest.toolCodes.indexOf(firstCode)+1).padStart(2,'0')}-${tool.shortTitle||tool.title}`.replace(/[\\/:*?"<>|\u0000-\u001f]/g,' ');
+    const archivePath = `เครื่องมือ/${toolFolder}/${folder}/${safeName}`;
     zip.file(archivePath,bytes);
     expectedFiles.push(archivePath);
   }
   const txt = formatDownloadLinks(preset,manifest);
+  zip.file('00-เริ่มใช้แพ็กเกจ.txt','\uFEFF'+[scenario.title,'','ลำดับการใช้เครื่องมือ',...manifest.useSequence.map(step=>`${step.order}. ${step.shortTitle} — ${step.action}\n   สิ่งที่อยากได้: ${step.outcome}`),'','ข้อควรระวัง',...scenario.cautions.map(s=>'- '+s),'','แนวทางการใช้ประโยชน์',...scenario.benefits.map(s=>'- '+s),'',scenario.guidanceNote].join('\n'));
   zip.file('ลิงก์เครื่องมือ.txt',txt);
   zip.file('รายการชุดเครื่องมือ.txt','\uFEFF'+[scenario.title,`พื้นที่: ${scenario.answerLabels.setting}`,`ผู้ดำเนินการ: ${scenario.answerLabels.role}`,`กลุ่มเป้าหมาย: ${scenario.answerLabels.audience}`,'',...manifest.toolCodes.map(code=>preset.tools.find(row=>row.code===code).title),'','ไฟล์ใหญ่ให้เปิดจาก ลิงก์เครื่องมือ.txt'].join('\n'));
   const bytes = await zip.generateAsync({type:'nodebuffer',compression:'DEFLATE',compressionOptions:{level:6}});

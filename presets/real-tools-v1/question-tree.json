@@ -48,20 +48,6 @@
       "askWhen": "always"
     }
   ],
-  "conversationPolicy": {
-    "version": "conversational-copy-1",
-    "requiredQuestionKeys": [
-      "settingCode",
-      "roleCode",
-      "packageId",
-      "audienceCodes"
-    ],
-    "conditionalQuestionKey": "level",
-    "conditionalRule": "Ask only when more than one valid level remains after the preceding answers; otherwise derive the sole valid value.",
-    "questionNumbering": "Count displayed questions only; never show a fixed total of five.",
-    "packageOptionLabel": "choiceLabel",
-    "packageResultLabel": "title"
-  },
   "settings": [
     {
       "code": "EDU",
@@ -72,76 +58,89 @@
           "label": "ผู้บริหารสถานศึกษา",
           "packages": [
             {
-              "code": "PK-EDU-C1",
-              "label": "อยากวางนโยบายและจัดทีมดูแลเรื่องบุหรี่ไฟฟ้า",
-              "resultTitle": "วางนโยบายและจัดระบบสถานศึกษาปลอดบุหรี่ไฟฟ้า",
-              "levels": [
+              "code": "PK-EDU-LEARN",
+              "settingCode": "EDU",
+              "componentCode": "C1",
+              "componentCodes": [
+                "C1",
+                "C2",
+                "C3",
+                "C4"
+              ],
+              "title": "ชุดเชื่อมทีม กิจกรรม และการเรียนรู้ในสถานศึกษา",
+              "choiceLabel": "อยากเชื่อมทีม กิจกรรม และการเรียนรู้ให้เป็นงานเดียวกัน",
+              "goal": "เริ่มจากทีมและข้อตกลง เลือกสื่อตามวัย แล้วใช้สิ่งที่เรียนรู้กลับมาดูแลพื้นที่ร่วมกัน",
+              "mappingBasis": [
+                "tracker_scope",
+                "editorial_package_design"
+              ],
+              "audiences": [
                 {
-                  "code": "prevention",
-                  "label": "ป้องกันการเริ่มใช้บุหรี่และบุหรี่ไฟฟ้า",
-                  "audiences": [
-                    {
-                      "code": "primary_upper",
-                      "label": "นักเรียนประถมปลาย อายุประมาณ 10–12 ปี",
-                      "scenarioCode": "REAL-0001",
-                      "packageCode": "PK-EDU-C1"
-                    },
-                    {
-                      "code": "secondary",
-                      "label": "นักเรียนมัธยม",
-                      "scenarioCode": "REAL-0002",
-                      "packageCode": "PK-EDU-C1"
-                    },
-                    {
-                      "code": "vocational",
-                      "label": "นักเรียนอาชีวศึกษา",
-                      "scenarioCode": "REAL-0003",
-                      "packageCode": "PK-EDU-C1"
-                    },
-                    {
-                      "code": "university",
-                      "label": "นักศึกษาอุดมศึกษา",
-                      "scenarioCode": "REAL-0013",
-                      "packageCode": "PK-EDU-C1"
-                    }
-                  ]
+                  "code": "early_childhood",
+                  "label": "เด็กปฐมวัย อายุประมาณ 3–6 ปี",
+                  "scenarioCode": "REAL2-0001"
+                },
+                {
+                  "code": "primary_lower",
+                  "label": "นักเรียนประถมต้น อายุประมาณ 7–9 ปี",
+                  "scenarioCode": "REAL2-0005"
+                },
+                {
+                  "code": "primary_upper",
+                  "label": "นักเรียนประถมปลาย อายุประมาณ 10–12 ปี",
+                  "scenarioCode": "REAL2-0006"
+                },
+                {
+                  "code": "secondary",
+                  "label": "นักเรียนมัธยม",
+                  "scenarioCode": "REAL2-0015"
+                },
+                {
+                  "code": "vocational",
+                  "label": "นักเรียนอาชีวศึกษา",
+                  "scenarioCode": "REAL2-0020"
+                },
+                {
+                  "code": "ethnic_youth",
+                  "label": "เด็กและเยาวชนกลุ่มชาติพันธุ์ในสถานศึกษา",
+                  "scenarioCode": "REAL2-0025"
+                },
+                {
+                  "code": "university",
+                  "label": "นักศึกษาอุดมศึกษา",
+                  "scenarioCode": "REAL2-0030"
                 }
               ]
             },
             {
-              "code": "PK-EDU-C3",
-              "label": "อยากดูแลพื้นที่และสร้างข้อตกลงร่วมกัน",
-              "resultTitle": "สร้างสภาพแวดล้อมสถานศึกษาปลอดบุหรี่ไฟฟ้า",
-              "levels": [
+              "code": "PK-EDU-CARE",
+              "settingCode": "EDU",
+              "componentCode": "C5",
+              "componentCodes": [
+                "C5"
+              ],
+              "title": "ชุดประสานโรงเรียนและครอบครัวเพื่อช่วยเหลือผู้เรียน",
+              "choiceLabel": "อยากจัดทีมพูดคุยกับครอบครัวและประสานความช่วยเหลือ",
+              "goal": "จัดระบบพูดคุยกับผู้เรียน ผู้ปกครอง และหน่วยบริการโดยไม่ตีตรา",
+              "mappingBasis": [
+                "tracker_scope",
+                "editorial_package_design"
+              ],
+              "audiences": [
                 {
-                  "code": "prevention",
-                  "label": "ป้องกันการเริ่มใช้บุหรี่และบุหรี่ไฟฟ้า",
-                  "audiences": [
-                    {
-                      "code": "primary_upper",
-                      "label": "นักเรียนประถมปลาย อายุประมาณ 10–12 ปี",
-                      "scenarioCode": "REAL-0044",
-                      "packageCode": "PK-EDU-C3"
-                    },
-                    {
-                      "code": "secondary",
-                      "label": "นักเรียนมัธยม",
-                      "scenarioCode": "REAL-0045",
-                      "packageCode": "PK-EDU-C3"
-                    },
-                    {
-                      "code": "vocational",
-                      "label": "นักเรียนอาชีวศึกษา",
-                      "scenarioCode": "REAL-0046",
-                      "packageCode": "PK-EDU-C3"
-                    },
-                    {
-                      "code": "university",
-                      "label": "นักศึกษาอุดมศึกษา",
-                      "scenarioCode": "REAL-0056",
-                      "packageCode": "PK-EDU-C3"
-                    }
-                  ]
+                  "code": "primary_upper",
+                  "label": "นักเรียนประถมปลาย อายุประมาณ 10–12 ปี",
+                  "scenarioCode": "REAL2-0035"
+                },
+                {
+                  "code": "secondary",
+                  "label": "นักเรียนมัธยม",
+                  "scenarioCode": "REAL2-0036"
+                },
+                {
+                  "code": "vocational",
+                  "label": "นักเรียนอาชีวศึกษา",
+                  "scenarioCode": "REAL2-0037"
                 }
               ]
             }
@@ -152,205 +151,89 @@
           "label": "ครู / อาจารย์ / ครู ศพด.",
           "packages": [
             {
-              "code": "PK-EDU-C1",
-              "label": "อยากวางนโยบายและจัดทีมดูแลเรื่องบุหรี่ไฟฟ้า",
-              "resultTitle": "วางนโยบายและจัดระบบสถานศึกษาปลอดบุหรี่ไฟฟ้า",
-              "levels": [
+              "code": "PK-EDU-LEARN",
+              "settingCode": "EDU",
+              "componentCode": "C1",
+              "componentCodes": [
+                "C1",
+                "C2",
+                "C3",
+                "C4"
+              ],
+              "title": "ชุดเชื่อมทีม กิจกรรม และการเรียนรู้ในสถานศึกษา",
+              "choiceLabel": "อยากเชื่อมทีม กิจกรรม และการเรียนรู้ให้เป็นงานเดียวกัน",
+              "goal": "เริ่มจากทีมและข้อตกลง เลือกสื่อตามวัย แล้วใช้สิ่งที่เรียนรู้กลับมาดูแลพื้นที่ร่วมกัน",
+              "mappingBasis": [
+                "tracker_scope",
+                "editorial_package_design"
+              ],
+              "audiences": [
                 {
-                  "code": "prevention",
-                  "label": "ป้องกันการเริ่มใช้บุหรี่และบุหรี่ไฟฟ้า",
-                  "audiences": [
-                    {
-                      "code": "primary_upper",
-                      "label": "นักเรียนประถมปลาย อายุประมาณ 10–12 ปี",
-                      "scenarioCode": "REAL-0004",
-                      "packageCode": "PK-EDU-C1"
-                    },
-                    {
-                      "code": "secondary",
-                      "label": "นักเรียนมัธยม",
-                      "scenarioCode": "REAL-0005",
-                      "packageCode": "PK-EDU-C1"
-                    },
-                    {
-                      "code": "vocational",
-                      "label": "นักเรียนอาชีวศึกษา",
-                      "scenarioCode": "REAL-0006",
-                      "packageCode": "PK-EDU-C1"
-                    },
-                    {
-                      "code": "university",
-                      "label": "นักศึกษาอุดมศึกษา",
-                      "scenarioCode": "REAL-0014",
-                      "packageCode": "PK-EDU-C1"
-                    }
-                  ]
+                  "code": "early_childhood",
+                  "label": "เด็กปฐมวัย อายุประมาณ 3–6 ปี",
+                  "scenarioCode": "REAL2-0002"
+                },
+                {
+                  "code": "primary_lower",
+                  "label": "นักเรียนประถมต้น อายุประมาณ 7–9 ปี",
+                  "scenarioCode": "REAL2-0007"
+                },
+                {
+                  "code": "primary_upper",
+                  "label": "นักเรียนประถมปลาย อายุประมาณ 10–12 ปี",
+                  "scenarioCode": "REAL2-0008"
+                },
+                {
+                  "code": "secondary",
+                  "label": "นักเรียนมัธยม",
+                  "scenarioCode": "REAL2-0016"
+                },
+                {
+                  "code": "vocational",
+                  "label": "นักเรียนอาชีวศึกษา",
+                  "scenarioCode": "REAL2-0021"
+                },
+                {
+                  "code": "ethnic_youth",
+                  "label": "เด็กและเยาวชนกลุ่มชาติพันธุ์ในสถานศึกษา",
+                  "scenarioCode": "REAL2-0026"
+                },
+                {
+                  "code": "university",
+                  "label": "นักศึกษาอุดมศึกษา",
+                  "scenarioCode": "REAL2-0031"
                 }
               ]
             },
             {
-              "code": "PK-EDU-C2",
-              "label": "อยากจัดการเรียนรู้เรื่องบุหรี่ไฟฟ้า",
-              "resultTitle": "จัดการเรียนรู้และกิจกรรมรู้เท่าทันบุหรี่ไฟฟ้า",
-              "levels": [
+              "code": "PK-EDU-CARE",
+              "settingCode": "EDU",
+              "componentCode": "C5",
+              "componentCodes": [
+                "C5"
+              ],
+              "title": "ชุดประสานโรงเรียนและครอบครัวเพื่อช่วยเหลือผู้เรียน",
+              "choiceLabel": "อยากจัดทีมพูดคุยกับครอบครัวและประสานความช่วยเหลือ",
+              "goal": "จัดระบบพูดคุยกับผู้เรียน ผู้ปกครอง และหน่วยบริการโดยไม่ตีตรา",
+              "mappingBasis": [
+                "tracker_scope",
+                "editorial_package_design"
+              ],
+              "audiences": [
                 {
-                  "code": "prevention",
-                  "label": "ป้องกันการเริ่มใช้บุหรี่และบุหรี่ไฟฟ้า",
-                  "audiences": [
-                    {
-                      "code": "early_childhood",
-                      "label": "เด็กปฐมวัย อายุประมาณ 3–6 ปี",
-                      "scenarioCode": "REAL-0017",
-                      "packageCode": "PK-EDU-C2"
-                    },
-                    {
-                      "code": "primary_lower",
-                      "label": "นักเรียนประถมต้น อายุประมาณ 7–9 ปี",
-                      "scenarioCode": "REAL-0020",
-                      "packageCode": "PK-EDU-C2"
-                    },
-                    {
-                      "code": "primary_upper",
-                      "label": "นักเรียนประถมปลาย อายุประมาณ 10–12 ปี",
-                      "scenarioCode": "REAL-0024",
-                      "packageCode": "PK-EDU-C2"
-                    },
-                    {
-                      "code": "secondary",
-                      "label": "นักเรียนมัธยม",
-                      "scenarioCode": "REAL-0028",
-                      "packageCode": "PK-EDU-C2"
-                    },
-                    {
-                      "code": "vocational",
-                      "label": "นักเรียนอาชีวศึกษา",
-                      "scenarioCode": "REAL-0032",
-                      "packageCode": "PK-EDU-C2"
-                    },
-                    {
-                      "code": "ethnic_youth",
-                      "label": "เด็กและเยาวชนกลุ่มชาติพันธุ์ในสถานศึกษา",
-                      "scenarioCode": "REAL-0036",
-                      "packageCode": "PK-EDU-C2"
-                    },
-                    {
-                      "code": "university",
-                      "label": "นักศึกษาอุดมศึกษา",
-                      "scenarioCode": "REAL-0040",
-                      "packageCode": "PK-EDU-C2"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "code": "PK-EDU-C3",
-              "label": "อยากดูแลพื้นที่และสร้างข้อตกลงร่วมกัน",
-              "resultTitle": "สร้างสภาพแวดล้อมสถานศึกษาปลอดบุหรี่ไฟฟ้า",
-              "levels": [
+                  "code": "primary_upper",
+                  "label": "นักเรียนประถมปลาย อายุประมาณ 10–12 ปี",
+                  "scenarioCode": "REAL2-0038"
+                },
                 {
-                  "code": "prevention",
-                  "label": "ป้องกันการเริ่มใช้บุหรี่และบุหรี่ไฟฟ้า",
-                  "audiences": [
-                    {
-                      "code": "primary_upper",
-                      "label": "นักเรียนประถมปลาย อายุประมาณ 10–12 ปี",
-                      "scenarioCode": "REAL-0047",
-                      "packageCode": "PK-EDU-C3"
-                    },
-                    {
-                      "code": "secondary",
-                      "label": "นักเรียนมัธยม",
-                      "scenarioCode": "REAL-0048",
-                      "packageCode": "PK-EDU-C3"
-                    },
-                    {
-                      "code": "vocational",
-                      "label": "นักเรียนอาชีวศึกษา",
-                      "scenarioCode": "REAL-0049",
-                      "packageCode": "PK-EDU-C3"
-                    },
-                    {
-                      "code": "university",
-                      "label": "นักศึกษาอุดมศึกษา",
-                      "scenarioCode": "REAL-0057",
-                      "packageCode": "PK-EDU-C3"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "code": "PK-EDU-C4",
-              "label": "อยากชวนเยาวชนมาร่วมขับเคลื่อน",
-              "resultTitle": "ชวนเยาวชนร่วมขับเคลื่อนพื้นที่ปลอดบุหรี่ไฟฟ้า",
-              "levels": [
+                  "code": "secondary",
+                  "label": "นักเรียนมัธยม",
+                  "scenarioCode": "REAL2-0039"
+                },
                 {
-                  "code": "prevention",
-                  "label": "ป้องกันการเริ่มใช้บุหรี่และบุหรี่ไฟฟ้า",
-                  "audiences": [
-                    {
-                      "code": "primary_upper",
-                      "label": "นักเรียนประถมปลาย อายุประมาณ 10–12 ปี",
-                      "scenarioCode": "REAL-0060",
-                      "packageCode": "PK-EDU-C4"
-                    },
-                    {
-                      "code": "secondary",
-                      "label": "นักเรียนมัธยม",
-                      "scenarioCode": "REAL-0061",
-                      "packageCode": "PK-EDU-C4"
-                    },
-                    {
-                      "code": "vocational",
-                      "label": "นักเรียนอาชีวศึกษา",
-                      "scenarioCode": "REAL-0062",
-                      "packageCode": "PK-EDU-C4"
-                    },
-                    {
-                      "code": "university",
-                      "label": "นักศึกษาอุดมศึกษา",
-                      "scenarioCode": "REAL-0072",
-                      "packageCode": "PK-EDU-C4"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "code": "PK-EDU-C5",
-              "label": "อยากจัดระบบดูแลและส่งต่อผู้เรียนที่ใช้อยู่แล้ว",
-              "resultTitle": "จัดระบบดูแลและส่งต่อผู้เรียนที่ใช้บุหรี่ไฟฟ้า",
-              "levels": [
-                {
-                  "code": "cessation",
-                  "label": "ดูแลและช่วยเหลือคนที่ใช้บุหรี่หรือบุหรี่ไฟฟ้าอยู่แล้ว",
-                  "audiences": [
-                    {
-                      "code": "primary_upper",
-                      "label": "นักเรียนประถมปลาย อายุประมาณ 10–12 ปี",
-                      "scenarioCode": "REAL-0076",
-                      "packageCode": "PK-EDU-C5"
-                    },
-                    {
-                      "code": "secondary",
-                      "label": "นักเรียนมัธยม",
-                      "scenarioCode": "REAL-0077",
-                      "packageCode": "PK-EDU-C5"
-                    },
-                    {
-                      "code": "vocational",
-                      "label": "นักเรียนอาชีวศึกษา",
-                      "scenarioCode": "REAL-0078",
-                      "packageCode": "PK-EDU-C5"
-                    },
-                    {
-                      "code": "university",
-                      "label": "นักศึกษาอุดมศึกษา",
-                      "scenarioCode": "REAL-0088",
-                      "packageCode": "PK-EDU-C5"
-                    }
-                  ]
+                  "code": "vocational",
+                  "label": "นักเรียนอาชีวศึกษา",
+                  "scenarioCode": "REAL2-0040"
                 }
               ]
             }
@@ -361,205 +244,89 @@
           "label": "บุคลากรในสถานศึกษา",
           "packages": [
             {
-              "code": "PK-EDU-C1",
-              "label": "อยากวางนโยบายและจัดทีมดูแลเรื่องบุหรี่ไฟฟ้า",
-              "resultTitle": "วางนโยบายและจัดระบบสถานศึกษาปลอดบุหรี่ไฟฟ้า",
-              "levels": [
+              "code": "PK-EDU-LEARN",
+              "settingCode": "EDU",
+              "componentCode": "C1",
+              "componentCodes": [
+                "C1",
+                "C2",
+                "C3",
+                "C4"
+              ],
+              "title": "ชุดเชื่อมทีม กิจกรรม และการเรียนรู้ในสถานศึกษา",
+              "choiceLabel": "อยากเชื่อมทีม กิจกรรม และการเรียนรู้ให้เป็นงานเดียวกัน",
+              "goal": "เริ่มจากทีมและข้อตกลง เลือกสื่อตามวัย แล้วใช้สิ่งที่เรียนรู้กลับมาดูแลพื้นที่ร่วมกัน",
+              "mappingBasis": [
+                "tracker_scope",
+                "editorial_package_design"
+              ],
+              "audiences": [
                 {
-                  "code": "prevention",
-                  "label": "ป้องกันการเริ่มใช้บุหรี่และบุหรี่ไฟฟ้า",
-                  "audiences": [
-                    {
-                      "code": "primary_upper",
-                      "label": "นักเรียนประถมปลาย อายุประมาณ 10–12 ปี",
-                      "scenarioCode": "REAL-0007",
-                      "packageCode": "PK-EDU-C1"
-                    },
-                    {
-                      "code": "secondary",
-                      "label": "นักเรียนมัธยม",
-                      "scenarioCode": "REAL-0008",
-                      "packageCode": "PK-EDU-C1"
-                    },
-                    {
-                      "code": "vocational",
-                      "label": "นักเรียนอาชีวศึกษา",
-                      "scenarioCode": "REAL-0009",
-                      "packageCode": "PK-EDU-C1"
-                    },
-                    {
-                      "code": "university",
-                      "label": "นักศึกษาอุดมศึกษา",
-                      "scenarioCode": "REAL-0015",
-                      "packageCode": "PK-EDU-C1"
-                    }
-                  ]
+                  "code": "early_childhood",
+                  "label": "เด็กปฐมวัย อายุประมาณ 3–6 ปี",
+                  "scenarioCode": "REAL2-0003"
+                },
+                {
+                  "code": "primary_lower",
+                  "label": "นักเรียนประถมต้น อายุประมาณ 7–9 ปี",
+                  "scenarioCode": "REAL2-0009"
+                },
+                {
+                  "code": "primary_upper",
+                  "label": "นักเรียนประถมปลาย อายุประมาณ 10–12 ปี",
+                  "scenarioCode": "REAL2-0010"
+                },
+                {
+                  "code": "secondary",
+                  "label": "นักเรียนมัธยม",
+                  "scenarioCode": "REAL2-0017"
+                },
+                {
+                  "code": "vocational",
+                  "label": "นักเรียนอาชีวศึกษา",
+                  "scenarioCode": "REAL2-0022"
+                },
+                {
+                  "code": "ethnic_youth",
+                  "label": "เด็กและเยาวชนกลุ่มชาติพันธุ์ในสถานศึกษา",
+                  "scenarioCode": "REAL2-0027"
+                },
+                {
+                  "code": "university",
+                  "label": "นักศึกษาอุดมศึกษา",
+                  "scenarioCode": "REAL2-0032"
                 }
               ]
             },
             {
-              "code": "PK-EDU-C2",
-              "label": "อยากจัดการเรียนรู้เรื่องบุหรี่ไฟฟ้า",
-              "resultTitle": "จัดการเรียนรู้และกิจกรรมรู้เท่าทันบุหรี่ไฟฟ้า",
-              "levels": [
+              "code": "PK-EDU-CARE",
+              "settingCode": "EDU",
+              "componentCode": "C5",
+              "componentCodes": [
+                "C5"
+              ],
+              "title": "ชุดประสานโรงเรียนและครอบครัวเพื่อช่วยเหลือผู้เรียน",
+              "choiceLabel": "อยากจัดทีมพูดคุยกับครอบครัวและประสานความช่วยเหลือ",
+              "goal": "จัดระบบพูดคุยกับผู้เรียน ผู้ปกครอง และหน่วยบริการโดยไม่ตีตรา",
+              "mappingBasis": [
+                "tracker_scope",
+                "editorial_package_design"
+              ],
+              "audiences": [
                 {
-                  "code": "prevention",
-                  "label": "ป้องกันการเริ่มใช้บุหรี่และบุหรี่ไฟฟ้า",
-                  "audiences": [
-                    {
-                      "code": "early_childhood",
-                      "label": "เด็กปฐมวัย อายุประมาณ 3–6 ปี",
-                      "scenarioCode": "REAL-0018",
-                      "packageCode": "PK-EDU-C2"
-                    },
-                    {
-                      "code": "primary_lower",
-                      "label": "นักเรียนประถมต้น อายุประมาณ 7–9 ปี",
-                      "scenarioCode": "REAL-0021",
-                      "packageCode": "PK-EDU-C2"
-                    },
-                    {
-                      "code": "primary_upper",
-                      "label": "นักเรียนประถมปลาย อายุประมาณ 10–12 ปี",
-                      "scenarioCode": "REAL-0025",
-                      "packageCode": "PK-EDU-C2"
-                    },
-                    {
-                      "code": "secondary",
-                      "label": "นักเรียนมัธยม",
-                      "scenarioCode": "REAL-0029",
-                      "packageCode": "PK-EDU-C2"
-                    },
-                    {
-                      "code": "vocational",
-                      "label": "นักเรียนอาชีวศึกษา",
-                      "scenarioCode": "REAL-0033",
-                      "packageCode": "PK-EDU-C2"
-                    },
-                    {
-                      "code": "ethnic_youth",
-                      "label": "เด็กและเยาวชนกลุ่มชาติพันธุ์ในสถานศึกษา",
-                      "scenarioCode": "REAL-0037",
-                      "packageCode": "PK-EDU-C2"
-                    },
-                    {
-                      "code": "university",
-                      "label": "นักศึกษาอุดมศึกษา",
-                      "scenarioCode": "REAL-0041",
-                      "packageCode": "PK-EDU-C2"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "code": "PK-EDU-C3",
-              "label": "อยากดูแลพื้นที่และสร้างข้อตกลงร่วมกัน",
-              "resultTitle": "สร้างสภาพแวดล้อมสถานศึกษาปลอดบุหรี่ไฟฟ้า",
-              "levels": [
+                  "code": "primary_upper",
+                  "label": "นักเรียนประถมปลาย อายุประมาณ 10–12 ปี",
+                  "scenarioCode": "REAL2-0041"
+                },
                 {
-                  "code": "prevention",
-                  "label": "ป้องกันการเริ่มใช้บุหรี่และบุหรี่ไฟฟ้า",
-                  "audiences": [
-                    {
-                      "code": "primary_upper",
-                      "label": "นักเรียนประถมปลาย อายุประมาณ 10–12 ปี",
-                      "scenarioCode": "REAL-0050",
-                      "packageCode": "PK-EDU-C3"
-                    },
-                    {
-                      "code": "secondary",
-                      "label": "นักเรียนมัธยม",
-                      "scenarioCode": "REAL-0051",
-                      "packageCode": "PK-EDU-C3"
-                    },
-                    {
-                      "code": "vocational",
-                      "label": "นักเรียนอาชีวศึกษา",
-                      "scenarioCode": "REAL-0052",
-                      "packageCode": "PK-EDU-C3"
-                    },
-                    {
-                      "code": "university",
-                      "label": "นักศึกษาอุดมศึกษา",
-                      "scenarioCode": "REAL-0058",
-                      "packageCode": "PK-EDU-C3"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "code": "PK-EDU-C4",
-              "label": "อยากชวนเยาวชนมาร่วมขับเคลื่อน",
-              "resultTitle": "ชวนเยาวชนร่วมขับเคลื่อนพื้นที่ปลอดบุหรี่ไฟฟ้า",
-              "levels": [
+                  "code": "secondary",
+                  "label": "นักเรียนมัธยม",
+                  "scenarioCode": "REAL2-0042"
+                },
                 {
-                  "code": "prevention",
-                  "label": "ป้องกันการเริ่มใช้บุหรี่และบุหรี่ไฟฟ้า",
-                  "audiences": [
-                    {
-                      "code": "primary_upper",
-                      "label": "นักเรียนประถมปลาย อายุประมาณ 10–12 ปี",
-                      "scenarioCode": "REAL-0063",
-                      "packageCode": "PK-EDU-C4"
-                    },
-                    {
-                      "code": "secondary",
-                      "label": "นักเรียนมัธยม",
-                      "scenarioCode": "REAL-0064",
-                      "packageCode": "PK-EDU-C4"
-                    },
-                    {
-                      "code": "vocational",
-                      "label": "นักเรียนอาชีวศึกษา",
-                      "scenarioCode": "REAL-0065",
-                      "packageCode": "PK-EDU-C4"
-                    },
-                    {
-                      "code": "university",
-                      "label": "นักศึกษาอุดมศึกษา",
-                      "scenarioCode": "REAL-0073",
-                      "packageCode": "PK-EDU-C4"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "code": "PK-EDU-C5",
-              "label": "อยากจัดระบบดูแลและส่งต่อผู้เรียนที่ใช้อยู่แล้ว",
-              "resultTitle": "จัดระบบดูแลและส่งต่อผู้เรียนที่ใช้บุหรี่ไฟฟ้า",
-              "levels": [
-                {
-                  "code": "cessation",
-                  "label": "ดูแลและช่วยเหลือคนที่ใช้บุหรี่หรือบุหรี่ไฟฟ้าอยู่แล้ว",
-                  "audiences": [
-                    {
-                      "code": "primary_upper",
-                      "label": "นักเรียนประถมปลาย อายุประมาณ 10–12 ปี",
-                      "scenarioCode": "REAL-0079",
-                      "packageCode": "PK-EDU-C5"
-                    },
-                    {
-                      "code": "secondary",
-                      "label": "นักเรียนมัธยม",
-                      "scenarioCode": "REAL-0080",
-                      "packageCode": "PK-EDU-C5"
-                    },
-                    {
-                      "code": "vocational",
-                      "label": "นักเรียนอาชีวศึกษา",
-                      "scenarioCode": "REAL-0081",
-                      "packageCode": "PK-EDU-C5"
-                    },
-                    {
-                      "code": "university",
-                      "label": "นักศึกษาอุดมศึกษา",
-                      "scenarioCode": "REAL-0089",
-                      "packageCode": "PK-EDU-C5"
-                    }
-                  ]
+                  "code": "vocational",
+                  "label": "นักเรียนอาชีวศึกษา",
+                  "scenarioCode": "REAL2-0043"
                 }
               ]
             }
@@ -570,205 +337,89 @@
           "label": "ทีมผู้บริหารและครู",
           "packages": [
             {
-              "code": "PK-EDU-C1",
-              "label": "อยากวางนโยบายและจัดทีมดูแลเรื่องบุหรี่ไฟฟ้า",
-              "resultTitle": "วางนโยบายและจัดระบบสถานศึกษาปลอดบุหรี่ไฟฟ้า",
-              "levels": [
+              "code": "PK-EDU-LEARN",
+              "settingCode": "EDU",
+              "componentCode": "C1",
+              "componentCodes": [
+                "C1",
+                "C2",
+                "C3",
+                "C4"
+              ],
+              "title": "ชุดเชื่อมทีม กิจกรรม และการเรียนรู้ในสถานศึกษา",
+              "choiceLabel": "อยากเชื่อมทีม กิจกรรม และการเรียนรู้ให้เป็นงานเดียวกัน",
+              "goal": "เริ่มจากทีมและข้อตกลง เลือกสื่อตามวัย แล้วใช้สิ่งที่เรียนรู้กลับมาดูแลพื้นที่ร่วมกัน",
+              "mappingBasis": [
+                "tracker_scope",
+                "editorial_package_design"
+              ],
+              "audiences": [
                 {
-                  "code": "prevention",
-                  "label": "ป้องกันการเริ่มใช้บุหรี่และบุหรี่ไฟฟ้า",
-                  "audiences": [
-                    {
-                      "code": "primary_upper",
-                      "label": "นักเรียนประถมปลาย อายุประมาณ 10–12 ปี",
-                      "scenarioCode": "REAL-0010",
-                      "packageCode": "PK-EDU-C1"
-                    },
-                    {
-                      "code": "secondary",
-                      "label": "นักเรียนมัธยม",
-                      "scenarioCode": "REAL-0011",
-                      "packageCode": "PK-EDU-C1"
-                    },
-                    {
-                      "code": "vocational",
-                      "label": "นักเรียนอาชีวศึกษา",
-                      "scenarioCode": "REAL-0012",
-                      "packageCode": "PK-EDU-C1"
-                    },
-                    {
-                      "code": "university",
-                      "label": "นักศึกษาอุดมศึกษา",
-                      "scenarioCode": "REAL-0016",
-                      "packageCode": "PK-EDU-C1"
-                    }
-                  ]
+                  "code": "early_childhood",
+                  "label": "เด็กปฐมวัย อายุประมาณ 3–6 ปี",
+                  "scenarioCode": "REAL2-0004"
+                },
+                {
+                  "code": "primary_lower",
+                  "label": "นักเรียนประถมต้น อายุประมาณ 7–9 ปี",
+                  "scenarioCode": "REAL2-0011"
+                },
+                {
+                  "code": "primary_upper",
+                  "label": "นักเรียนประถมปลาย อายุประมาณ 10–12 ปี",
+                  "scenarioCode": "REAL2-0012"
+                },
+                {
+                  "code": "secondary",
+                  "label": "นักเรียนมัธยม",
+                  "scenarioCode": "REAL2-0018"
+                },
+                {
+                  "code": "vocational",
+                  "label": "นักเรียนอาชีวศึกษา",
+                  "scenarioCode": "REAL2-0023"
+                },
+                {
+                  "code": "ethnic_youth",
+                  "label": "เด็กและเยาวชนกลุ่มชาติพันธุ์ในสถานศึกษา",
+                  "scenarioCode": "REAL2-0028"
+                },
+                {
+                  "code": "university",
+                  "label": "นักศึกษาอุดมศึกษา",
+                  "scenarioCode": "REAL2-0033"
                 }
               ]
             },
             {
-              "code": "PK-EDU-C2",
-              "label": "อยากจัดการเรียนรู้เรื่องบุหรี่ไฟฟ้า",
-              "resultTitle": "จัดการเรียนรู้และกิจกรรมรู้เท่าทันบุหรี่ไฟฟ้า",
-              "levels": [
+              "code": "PK-EDU-CARE",
+              "settingCode": "EDU",
+              "componentCode": "C5",
+              "componentCodes": [
+                "C5"
+              ],
+              "title": "ชุดประสานโรงเรียนและครอบครัวเพื่อช่วยเหลือผู้เรียน",
+              "choiceLabel": "อยากจัดทีมพูดคุยกับครอบครัวและประสานความช่วยเหลือ",
+              "goal": "จัดระบบพูดคุยกับผู้เรียน ผู้ปกครอง และหน่วยบริการโดยไม่ตีตรา",
+              "mappingBasis": [
+                "tracker_scope",
+                "editorial_package_design"
+              ],
+              "audiences": [
                 {
-                  "code": "prevention",
-                  "label": "ป้องกันการเริ่มใช้บุหรี่และบุหรี่ไฟฟ้า",
-                  "audiences": [
-                    {
-                      "code": "early_childhood",
-                      "label": "เด็กปฐมวัย อายุประมาณ 3–6 ปี",
-                      "scenarioCode": "REAL-0019",
-                      "packageCode": "PK-EDU-C2"
-                    },
-                    {
-                      "code": "primary_lower",
-                      "label": "นักเรียนประถมต้น อายุประมาณ 7–9 ปี",
-                      "scenarioCode": "REAL-0022",
-                      "packageCode": "PK-EDU-C2"
-                    },
-                    {
-                      "code": "primary_upper",
-                      "label": "นักเรียนประถมปลาย อายุประมาณ 10–12 ปี",
-                      "scenarioCode": "REAL-0026",
-                      "packageCode": "PK-EDU-C2"
-                    },
-                    {
-                      "code": "secondary",
-                      "label": "นักเรียนมัธยม",
-                      "scenarioCode": "REAL-0030",
-                      "packageCode": "PK-EDU-C2"
-                    },
-                    {
-                      "code": "vocational",
-                      "label": "นักเรียนอาชีวศึกษา",
-                      "scenarioCode": "REAL-0034",
-                      "packageCode": "PK-EDU-C2"
-                    },
-                    {
-                      "code": "ethnic_youth",
-                      "label": "เด็กและเยาวชนกลุ่มชาติพันธุ์ในสถานศึกษา",
-                      "scenarioCode": "REAL-0038",
-                      "packageCode": "PK-EDU-C2"
-                    },
-                    {
-                      "code": "university",
-                      "label": "นักศึกษาอุดมศึกษา",
-                      "scenarioCode": "REAL-0042",
-                      "packageCode": "PK-EDU-C2"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "code": "PK-EDU-C3",
-              "label": "อยากดูแลพื้นที่และสร้างข้อตกลงร่วมกัน",
-              "resultTitle": "สร้างสภาพแวดล้อมสถานศึกษาปลอดบุหรี่ไฟฟ้า",
-              "levels": [
+                  "code": "primary_upper",
+                  "label": "นักเรียนประถมปลาย อายุประมาณ 10–12 ปี",
+                  "scenarioCode": "REAL2-0044"
+                },
                 {
-                  "code": "prevention",
-                  "label": "ป้องกันการเริ่มใช้บุหรี่และบุหรี่ไฟฟ้า",
-                  "audiences": [
-                    {
-                      "code": "primary_upper",
-                      "label": "นักเรียนประถมปลาย อายุประมาณ 10–12 ปี",
-                      "scenarioCode": "REAL-0053",
-                      "packageCode": "PK-EDU-C3"
-                    },
-                    {
-                      "code": "secondary",
-                      "label": "นักเรียนมัธยม",
-                      "scenarioCode": "REAL-0054",
-                      "packageCode": "PK-EDU-C3"
-                    },
-                    {
-                      "code": "vocational",
-                      "label": "นักเรียนอาชีวศึกษา",
-                      "scenarioCode": "REAL-0055",
-                      "packageCode": "PK-EDU-C3"
-                    },
-                    {
-                      "code": "university",
-                      "label": "นักศึกษาอุดมศึกษา",
-                      "scenarioCode": "REAL-0059",
-                      "packageCode": "PK-EDU-C3"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "code": "PK-EDU-C4",
-              "label": "อยากชวนเยาวชนมาร่วมขับเคลื่อน",
-              "resultTitle": "ชวนเยาวชนร่วมขับเคลื่อนพื้นที่ปลอดบุหรี่ไฟฟ้า",
-              "levels": [
+                  "code": "secondary",
+                  "label": "นักเรียนมัธยม",
+                  "scenarioCode": "REAL2-0045"
+                },
                 {
-                  "code": "prevention",
-                  "label": "ป้องกันการเริ่มใช้บุหรี่และบุหรี่ไฟฟ้า",
-                  "audiences": [
-                    {
-                      "code": "primary_upper",
-                      "label": "นักเรียนประถมปลาย อายุประมาณ 10–12 ปี",
-                      "scenarioCode": "REAL-0066",
-                      "packageCode": "PK-EDU-C4"
-                    },
-                    {
-                      "code": "secondary",
-                      "label": "นักเรียนมัธยม",
-                      "scenarioCode": "REAL-0067",
-                      "packageCode": "PK-EDU-C4"
-                    },
-                    {
-                      "code": "vocational",
-                      "label": "นักเรียนอาชีวศึกษา",
-                      "scenarioCode": "REAL-0068",
-                      "packageCode": "PK-EDU-C4"
-                    },
-                    {
-                      "code": "university",
-                      "label": "นักศึกษาอุดมศึกษา",
-                      "scenarioCode": "REAL-0074",
-                      "packageCode": "PK-EDU-C4"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "code": "PK-EDU-C5",
-              "label": "อยากจัดระบบดูแลและส่งต่อผู้เรียนที่ใช้อยู่แล้ว",
-              "resultTitle": "จัดระบบดูแลและส่งต่อผู้เรียนที่ใช้บุหรี่ไฟฟ้า",
-              "levels": [
-                {
-                  "code": "cessation",
-                  "label": "ดูแลและช่วยเหลือคนที่ใช้บุหรี่หรือบุหรี่ไฟฟ้าอยู่แล้ว",
-                  "audiences": [
-                    {
-                      "code": "primary_upper",
-                      "label": "นักเรียนประถมปลาย อายุประมาณ 10–12 ปี",
-                      "scenarioCode": "REAL-0082",
-                      "packageCode": "PK-EDU-C5"
-                    },
-                    {
-                      "code": "secondary",
-                      "label": "นักเรียนมัธยม",
-                      "scenarioCode": "REAL-0083",
-                      "packageCode": "PK-EDU-C5"
-                    },
-                    {
-                      "code": "vocational",
-                      "label": "นักเรียนอาชีวศึกษา",
-                      "scenarioCode": "REAL-0084",
-                      "packageCode": "PK-EDU-C5"
-                    },
-                    {
-                      "code": "university",
-                      "label": "นักศึกษาอุดมศึกษา",
-                      "scenarioCode": "REAL-0090",
-                      "packageCode": "PK-EDU-C5"
-                    }
-                  ]
+                  "code": "vocational",
+                  "label": "นักเรียนอาชีวศึกษา",
+                  "scenarioCode": "REAL2-0046"
                 }
               ]
             }
@@ -779,107 +430,47 @@
           "label": "แกนนำนักเรียน",
           "packages": [
             {
-              "code": "PK-EDU-C2",
-              "label": "อยากจัดการเรียนรู้เรื่องบุหรี่ไฟฟ้า",
-              "resultTitle": "จัดการเรียนรู้และกิจกรรมรู้เท่าทันบุหรี่ไฟฟ้า",
-              "levels": [
+              "code": "PK-EDU-LEARN",
+              "settingCode": "EDU",
+              "componentCode": "C1",
+              "componentCodes": [
+                "C1",
+                "C2",
+                "C3",
+                "C4"
+              ],
+              "title": "ชุดเชื่อมทีม กิจกรรม และการเรียนรู้ในสถานศึกษา",
+              "choiceLabel": "อยากเชื่อมทีม กิจกรรม และการเรียนรู้ให้เป็นงานเดียวกัน",
+              "goal": "เริ่มจากทีมและข้อตกลง เลือกสื่อตามวัย แล้วใช้สิ่งที่เรียนรู้กลับมาดูแลพื้นที่ร่วมกัน",
+              "mappingBasis": [
+                "tracker_scope",
+                "editorial_package_design"
+              ],
+              "audiences": [
                 {
-                  "code": "prevention",
-                  "label": "ป้องกันการเริ่มใช้บุหรี่และบุหรี่ไฟฟ้า",
-                  "audiences": [
-                    {
-                      "code": "primary_lower",
-                      "label": "นักเรียนประถมต้น อายุประมาณ 7–9 ปี",
-                      "scenarioCode": "REAL-0023",
-                      "packageCode": "PK-EDU-C2"
-                    },
-                    {
-                      "code": "primary_upper",
-                      "label": "นักเรียนประถมปลาย อายุประมาณ 10–12 ปี",
-                      "scenarioCode": "REAL-0027",
-                      "packageCode": "PK-EDU-C2"
-                    },
-                    {
-                      "code": "secondary",
-                      "label": "นักเรียนมัธยม",
-                      "scenarioCode": "REAL-0031",
-                      "packageCode": "PK-EDU-C2"
-                    },
-                    {
-                      "code": "vocational",
-                      "label": "นักเรียนอาชีวศึกษา",
-                      "scenarioCode": "REAL-0035",
-                      "packageCode": "PK-EDU-C2"
-                    },
-                    {
-                      "code": "ethnic_youth",
-                      "label": "เด็กและเยาวชนกลุ่มชาติพันธุ์ในสถานศึกษา",
-                      "scenarioCode": "REAL-0039",
-                      "packageCode": "PK-EDU-C2"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "code": "PK-EDU-C4",
-              "label": "อยากชวนเยาวชนมาร่วมขับเคลื่อน",
-              "resultTitle": "ชวนเยาวชนร่วมขับเคลื่อนพื้นที่ปลอดบุหรี่ไฟฟ้า",
-              "levels": [
+                  "code": "primary_lower",
+                  "label": "นักเรียนประถมต้น อายุประมาณ 7–9 ปี",
+                  "scenarioCode": "REAL2-0013"
+                },
                 {
-                  "code": "prevention",
-                  "label": "ป้องกันการเริ่มใช้บุหรี่และบุหรี่ไฟฟ้า",
-                  "audiences": [
-                    {
-                      "code": "primary_upper",
-                      "label": "นักเรียนประถมปลาย อายุประมาณ 10–12 ปี",
-                      "scenarioCode": "REAL-0069",
-                      "packageCode": "PK-EDU-C4"
-                    },
-                    {
-                      "code": "secondary",
-                      "label": "นักเรียนมัธยม",
-                      "scenarioCode": "REAL-0070",
-                      "packageCode": "PK-EDU-C4"
-                    },
-                    {
-                      "code": "vocational",
-                      "label": "นักเรียนอาชีวศึกษา",
-                      "scenarioCode": "REAL-0071",
-                      "packageCode": "PK-EDU-C4"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "code": "PK-EDU-C5",
-              "label": "อยากจัดระบบดูแลและส่งต่อผู้เรียนที่ใช้อยู่แล้ว",
-              "resultTitle": "จัดระบบดูแลและส่งต่อผู้เรียนที่ใช้บุหรี่ไฟฟ้า",
-              "levels": [
+                  "code": "primary_upper",
+                  "label": "นักเรียนประถมปลาย อายุประมาณ 10–12 ปี",
+                  "scenarioCode": "REAL2-0014"
+                },
                 {
-                  "code": "cessation",
-                  "label": "ดูแลและช่วยเหลือคนที่ใช้บุหรี่หรือบุหรี่ไฟฟ้าอยู่แล้ว",
-                  "audiences": [
-                    {
-                      "code": "primary_upper",
-                      "label": "นักเรียนประถมปลาย อายุประมาณ 10–12 ปี",
-                      "scenarioCode": "REAL-0085",
-                      "packageCode": "PK-EDU-C5"
-                    },
-                    {
-                      "code": "secondary",
-                      "label": "นักเรียนมัธยม",
-                      "scenarioCode": "REAL-0086",
-                      "packageCode": "PK-EDU-C5"
-                    },
-                    {
-                      "code": "vocational",
-                      "label": "นักเรียนอาชีวศึกษา",
-                      "scenarioCode": "REAL-0087",
-                      "packageCode": "PK-EDU-C5"
-                    }
-                  ]
+                  "code": "secondary",
+                  "label": "นักเรียนมัธยม",
+                  "scenarioCode": "REAL2-0019"
+                },
+                {
+                  "code": "vocational",
+                  "label": "นักเรียนอาชีวศึกษา",
+                  "scenarioCode": "REAL2-0024"
+                },
+                {
+                  "code": "ethnic_youth",
+                  "label": "เด็กและเยาวชนกลุ่มชาติพันธุ์ในสถานศึกษา",
+                  "scenarioCode": "REAL2-0029"
                 }
               ]
             }
@@ -890,59 +481,27 @@
           "label": "แกนนำนักศึกษา",
           "packages": [
             {
-              "code": "PK-EDU-C2",
-              "label": "อยากจัดการเรียนรู้เรื่องบุหรี่ไฟฟ้า",
-              "resultTitle": "จัดการเรียนรู้และกิจกรรมรู้เท่าทันบุหรี่ไฟฟ้า",
-              "levels": [
+              "code": "PK-EDU-LEARN",
+              "settingCode": "EDU",
+              "componentCode": "C1",
+              "componentCodes": [
+                "C1",
+                "C2",
+                "C3",
+                "C4"
+              ],
+              "title": "ชุดเชื่อมทีม กิจกรรม และการเรียนรู้ในสถานศึกษา",
+              "choiceLabel": "อยากเชื่อมทีม กิจกรรม และการเรียนรู้ให้เป็นงานเดียวกัน",
+              "goal": "เริ่มจากทีมและข้อตกลง เลือกสื่อตามวัย แล้วใช้สิ่งที่เรียนรู้กลับมาดูแลพื้นที่ร่วมกัน",
+              "mappingBasis": [
+                "tracker_scope",
+                "editorial_package_design"
+              ],
+              "audiences": [
                 {
-                  "code": "prevention",
-                  "label": "ป้องกันการเริ่มใช้บุหรี่และบุหรี่ไฟฟ้า",
-                  "audiences": [
-                    {
-                      "code": "university",
-                      "label": "นักศึกษาอุดมศึกษา",
-                      "scenarioCode": "REAL-0043",
-                      "packageCode": "PK-EDU-C2"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "code": "PK-EDU-C4",
-              "label": "อยากชวนเยาวชนมาร่วมขับเคลื่อน",
-              "resultTitle": "ชวนเยาวชนร่วมขับเคลื่อนพื้นที่ปลอดบุหรี่ไฟฟ้า",
-              "levels": [
-                {
-                  "code": "prevention",
-                  "label": "ป้องกันการเริ่มใช้บุหรี่และบุหรี่ไฟฟ้า",
-                  "audiences": [
-                    {
-                      "code": "university",
-                      "label": "นักศึกษาอุดมศึกษา",
-                      "scenarioCode": "REAL-0075",
-                      "packageCode": "PK-EDU-C4"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "code": "PK-EDU-C5",
-              "label": "อยากจัดระบบดูแลและส่งต่อผู้เรียนที่ใช้อยู่แล้ว",
-              "resultTitle": "จัดระบบดูแลและส่งต่อผู้เรียนที่ใช้บุหรี่ไฟฟ้า",
-              "levels": [
-                {
-                  "code": "cessation",
-                  "label": "ดูแลและช่วยเหลือคนที่ใช้บุหรี่หรือบุหรี่ไฟฟ้าอยู่แล้ว",
-                  "audiences": [
-                    {
-                      "code": "university",
-                      "label": "นักศึกษาอุดมศึกษา",
-                      "scenarioCode": "REAL-0091",
-                      "packageCode": "PK-EDU-C5"
-                    }
-                  ]
+                  "code": "university",
+                  "label": "นักศึกษาอุดมศึกษา",
+                  "scenarioCode": "REAL2-0034"
                 }
               ]
             }
@@ -960,63 +519,48 @@
           "packages": [
             {
               "code": "PK-FAM-HOME",
-              "label": "อยากดูแลบ้านและคนในครอบครัวให้ปลอดควัน",
-              "resultTitle": "สร้างบ้านและความสัมพันธ์ที่ปลอดควัน",
-              "levels": [
+              "settingCode": "FAM",
+              "componentCode": "C3",
+              "componentCodes": [
+                "C3"
+              ],
+              "title": "ชุดคุยกันและสร้างข้อตกลงบ้านปลอดบุหรี่",
+              "choiceLabel": "อยากเริ่มคุยและดูแลคนในบ้านไปด้วยกัน",
+              "goal": "เริ่มจากความสัมพันธ์ แล้วร่วมกันทำกิจกรรมและข้อตกลงในบ้าน",
+              "mappingBasis": [
+                "tracker_scope",
+                "editorial_package_design"
+              ],
+              "audiences": [
                 {
-                  "code": "prevention",
-                  "label": "ป้องกันการเริ่มใช้บุหรี่และบุหรี่ไฟฟ้า",
-                  "audiences": [
-                    {
-                      "code": "early_childhood",
-                      "label": "เด็กปฐมวัย อายุประมาณ 3–6 ปี",
-                      "scenarioCode": "REAL-0092",
-                      "packageCode": "PK-FAM-HOME"
-                    },
-                    {
-                      "code": "primary_lower",
-                      "label": "นักเรียนประถมต้น อายุประมาณ 7–9 ปี",
-                      "scenarioCode": "REAL-0095",
-                      "packageCode": "PK-FAM-HOME"
-                    },
-                    {
-                      "code": "primary_upper",
-                      "label": "นักเรียนประถมปลาย อายุประมาณ 10–12 ปี",
-                      "scenarioCode": "REAL-0098",
-                      "packageCode": "PK-FAM-HOME"
-                    },
-                    {
-                      "code": "secondary",
-                      "label": "นักเรียนมัธยม",
-                      "scenarioCode": "REAL-0099",
-                      "packageCode": "PK-FAM-HOME"
-                    },
-                    {
-                      "code": "family_all",
-                      "label": "สมาชิกทุกคนในครอบครัว",
-                      "scenarioCode": "REAL-0104",
-                      "packageCode": "PK-FAM-HOME"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "code": "PK-FAM-SUPPORT",
-              "label": "อยากพูดคุยและให้กำลังใจคนในบ้านที่อยากเลิก",
-              "resultTitle": "สื่อสารและให้กำลังใจคนในบ้านที่อยากเลิก",
-              "levels": [
+                  "code": "early_childhood",
+                  "label": "เด็กปฐมวัย อายุประมาณ 3–6 ปี",
+                  "scenarioCode": "REAL2-0047"
+                },
                 {
-                  "code": "cessation",
-                  "label": "ดูแลและช่วยเหลือคนที่ใช้บุหรี่หรือบุหรี่ไฟฟ้าอยู่แล้ว",
-                  "audiences": [
-                    {
-                      "code": "family_who_use",
-                      "label": "คนในครอบครัวที่ใช้บุหรี่หรือบุหรี่ไฟฟ้า",
-                      "scenarioCode": "REAL-0115",
-                      "packageCode": "PK-FAM-SUPPORT"
-                    }
-                  ]
+                  "code": "primary_lower",
+                  "label": "นักเรียนประถมต้น อายุประมาณ 7–9 ปี",
+                  "scenarioCode": "REAL2-0050"
+                },
+                {
+                  "code": "primary_upper",
+                  "label": "นักเรียนประถมปลาย อายุประมาณ 10–12 ปี",
+                  "scenarioCode": "REAL2-0051"
+                },
+                {
+                  "code": "secondary",
+                  "label": "นักเรียนมัธยม",
+                  "scenarioCode": "REAL2-0052"
+                },
+                {
+                  "code": "family_all",
+                  "label": "สมาชิกทุกคนในครอบครัว",
+                  "scenarioCode": "REAL2-0059"
+                },
+                {
+                  "code": "family_who_use",
+                  "label": "คนในครอบครัวที่ใช้บุหรี่หรือบุหรี่ไฟฟ้า",
+                  "scenarioCode": "REAL2-0060"
                 }
               ]
             }
@@ -1028,63 +572,48 @@
           "packages": [
             {
               "code": "PK-FAM-HOME",
-              "label": "อยากดูแลบ้านและคนในครอบครัวให้ปลอดควัน",
-              "resultTitle": "สร้างบ้านและความสัมพันธ์ที่ปลอดควัน",
-              "levels": [
+              "settingCode": "FAM",
+              "componentCode": "C3",
+              "componentCodes": [
+                "C3"
+              ],
+              "title": "ชุดคุยกันและสร้างข้อตกลงบ้านปลอดบุหรี่",
+              "choiceLabel": "อยากเริ่มคุยและดูแลคนในบ้านไปด้วยกัน",
+              "goal": "เริ่มจากความสัมพันธ์ แล้วร่วมกันทำกิจกรรมและข้อตกลงในบ้าน",
+              "mappingBasis": [
+                "tracker_scope",
+                "editorial_package_design"
+              ],
+              "audiences": [
                 {
-                  "code": "prevention",
-                  "label": "ป้องกันการเริ่มใช้บุหรี่และบุหรี่ไฟฟ้า",
-                  "audiences": [
-                    {
-                      "code": "early_childhood",
-                      "label": "เด็กปฐมวัย อายุประมาณ 3–6 ปี",
-                      "scenarioCode": "REAL-0093",
-                      "packageCode": "PK-FAM-HOME"
-                    },
-                    {
-                      "code": "primary_lower",
-                      "label": "นักเรียนประถมต้น อายุประมาณ 7–9 ปี",
-                      "scenarioCode": "REAL-0096",
-                      "packageCode": "PK-FAM-HOME"
-                    },
-                    {
-                      "code": "primary_upper",
-                      "label": "นักเรียนประถมปลาย อายุประมาณ 10–12 ปี",
-                      "scenarioCode": "REAL-0100",
-                      "packageCode": "PK-FAM-HOME"
-                    },
-                    {
-                      "code": "secondary",
-                      "label": "นักเรียนมัธยม",
-                      "scenarioCode": "REAL-0101",
-                      "packageCode": "PK-FAM-HOME"
-                    },
-                    {
-                      "code": "family_all",
-                      "label": "สมาชิกทุกคนในครอบครัว",
-                      "scenarioCode": "REAL-0105",
-                      "packageCode": "PK-FAM-HOME"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "code": "PK-FAM-SUPPORT",
-              "label": "อยากพูดคุยและให้กำลังใจคนในบ้านที่อยากเลิก",
-              "resultTitle": "สื่อสารและให้กำลังใจคนในบ้านที่อยากเลิก",
-              "levels": [
+                  "code": "early_childhood",
+                  "label": "เด็กปฐมวัย อายุประมาณ 3–6 ปี",
+                  "scenarioCode": "REAL2-0048"
+                },
                 {
-                  "code": "cessation",
-                  "label": "ดูแลและช่วยเหลือคนที่ใช้บุหรี่หรือบุหรี่ไฟฟ้าอยู่แล้ว",
-                  "audiences": [
-                    {
-                      "code": "family_who_use",
-                      "label": "คนในครอบครัวที่ใช้บุหรี่หรือบุหรี่ไฟฟ้า",
-                      "scenarioCode": "REAL-0116",
-                      "packageCode": "PK-FAM-SUPPORT"
-                    }
-                  ]
+                  "code": "primary_lower",
+                  "label": "นักเรียนประถมต้น อายุประมาณ 7–9 ปี",
+                  "scenarioCode": "REAL2-0053"
+                },
+                {
+                  "code": "primary_upper",
+                  "label": "นักเรียนประถมปลาย อายุประมาณ 10–12 ปี",
+                  "scenarioCode": "REAL2-0054"
+                },
+                {
+                  "code": "secondary",
+                  "label": "นักเรียนมัธยม",
+                  "scenarioCode": "REAL2-0055"
+                },
+                {
+                  "code": "family_all",
+                  "label": "สมาชิกทุกคนในครอบครัว",
+                  "scenarioCode": "REAL2-0061"
+                },
+                {
+                  "code": "family_who_use",
+                  "label": "คนในครอบครัวที่ใช้บุหรี่หรือบุหรี่ไฟฟ้า",
+                  "scenarioCode": "REAL2-0062"
                 }
               ]
             }
@@ -1096,63 +625,48 @@
           "packages": [
             {
               "code": "PK-FAM-HOME",
-              "label": "อยากดูแลบ้านและคนในครอบครัวให้ปลอดควัน",
-              "resultTitle": "สร้างบ้านและความสัมพันธ์ที่ปลอดควัน",
-              "levels": [
+              "settingCode": "FAM",
+              "componentCode": "C3",
+              "componentCodes": [
+                "C3"
+              ],
+              "title": "ชุดคุยกันและสร้างข้อตกลงบ้านปลอดบุหรี่",
+              "choiceLabel": "อยากเริ่มคุยและดูแลคนในบ้านไปด้วยกัน",
+              "goal": "เริ่มจากความสัมพันธ์ แล้วร่วมกันทำกิจกรรมและข้อตกลงในบ้าน",
+              "mappingBasis": [
+                "tracker_scope",
+                "editorial_package_design"
+              ],
+              "audiences": [
                 {
-                  "code": "prevention",
-                  "label": "ป้องกันการเริ่มใช้บุหรี่และบุหรี่ไฟฟ้า",
-                  "audiences": [
-                    {
-                      "code": "early_childhood",
-                      "label": "เด็กปฐมวัย อายุประมาณ 3–6 ปี",
-                      "scenarioCode": "REAL-0094",
-                      "packageCode": "PK-FAM-HOME"
-                    },
-                    {
-                      "code": "primary_lower",
-                      "label": "นักเรียนประถมต้น อายุประมาณ 7–9 ปี",
-                      "scenarioCode": "REAL-0097",
-                      "packageCode": "PK-FAM-HOME"
-                    },
-                    {
-                      "code": "primary_upper",
-                      "label": "นักเรียนประถมปลาย อายุประมาณ 10–12 ปี",
-                      "scenarioCode": "REAL-0102",
-                      "packageCode": "PK-FAM-HOME"
-                    },
-                    {
-                      "code": "secondary",
-                      "label": "นักเรียนมัธยม",
-                      "scenarioCode": "REAL-0103",
-                      "packageCode": "PK-FAM-HOME"
-                    },
-                    {
-                      "code": "family_all",
-                      "label": "สมาชิกทุกคนในครอบครัว",
-                      "scenarioCode": "REAL-0106",
-                      "packageCode": "PK-FAM-HOME"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "code": "PK-FAM-SUPPORT",
-              "label": "อยากพูดคุยและให้กำลังใจคนในบ้านที่อยากเลิก",
-              "resultTitle": "สื่อสารและให้กำลังใจคนในบ้านที่อยากเลิก",
-              "levels": [
+                  "code": "early_childhood",
+                  "label": "เด็กปฐมวัย อายุประมาณ 3–6 ปี",
+                  "scenarioCode": "REAL2-0049"
+                },
                 {
-                  "code": "cessation",
-                  "label": "ดูแลและช่วยเหลือคนที่ใช้บุหรี่หรือบุหรี่ไฟฟ้าอยู่แล้ว",
-                  "audiences": [
-                    {
-                      "code": "family_who_use",
-                      "label": "คนในครอบครัวที่ใช้บุหรี่หรือบุหรี่ไฟฟ้า",
-                      "scenarioCode": "REAL-0117",
-                      "packageCode": "PK-FAM-SUPPORT"
-                    }
-                  ]
+                  "code": "primary_lower",
+                  "label": "นักเรียนประถมต้น อายุประมาณ 7–9 ปี",
+                  "scenarioCode": "REAL2-0056"
+                },
+                {
+                  "code": "primary_upper",
+                  "label": "นักเรียนประถมปลาย อายุประมาณ 10–12 ปี",
+                  "scenarioCode": "REAL2-0057"
+                },
+                {
+                  "code": "secondary",
+                  "label": "นักเรียนมัธยม",
+                  "scenarioCode": "REAL2-0058"
+                },
+                {
+                  "code": "family_all",
+                  "label": "สมาชิกทุกคนในครอบครัว",
+                  "scenarioCode": "REAL2-0063"
+                },
+                {
+                  "code": "family_who_use",
+                  "label": "คนในครอบครัวที่ใช้บุหรี่หรือบุหรี่ไฟฟ้า",
+                  "scenarioCode": "REAL2-0064"
                 }
               ]
             }
@@ -1163,46 +677,29 @@
           "label": "คณะทำงานครอบครัวปลอดบุหรี่",
           "packages": [
             {
-              "code": "PK-FAM-TEAM",
-              "label": "อยากจัดกิจกรรมให้พ่อแม่และแกนนำครอบครัว",
-              "resultTitle": "สร้างแกนนำและห้องเรียนครอบครัวปลอดบุหรี่",
-              "levels": [
+              "code": "PK-FAM-GROUP",
+              "settingCode": "FAM",
+              "componentCode": "C3",
+              "componentCodes": [
+                "C3"
+              ],
+              "title": "ชุดจัดวงเรียนรู้สำหรับพ่อแม่และแกนนำครอบครัว",
+              "choiceLabel": "อยากจัดวงเรียนรู้ให้พ่อแม่หรือแกนนำครอบครัว",
+              "goal": "เตรียมผู้จัดวง ฝึกสื่อสาร และต่อยอดกิจกรรมของแกนนำ",
+              "mappingBasis": [
+                "tracker_scope",
+                "editorial_package_design"
+              ],
+              "audiences": [
                 {
-                  "code": "prevention",
-                  "label": "ป้องกันการเริ่มใช้บุหรี่และบุหรี่ไฟฟ้า",
-                  "audiences": [
-                    {
-                      "code": "caregivers",
-                      "label": "พ่อแม่และผู้ดูแลเด็ก",
-                      "scenarioCode": "REAL-0107",
-                      "packageCode": "PK-FAM-TEAM"
-                    },
-                    {
-                      "code": "fathers",
-                      "label": "พ่อและแกนนำพ่อในพื้นที่",
-                      "scenarioCode": "REAL-0111",
-                      "packageCode": "PK-FAM-TEAM"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "code": "PK-FAM-SUPPORT",
-              "label": "อยากพูดคุยและให้กำลังใจคนในบ้านที่อยากเลิก",
-              "resultTitle": "สื่อสารและให้กำลังใจคนในบ้านที่อยากเลิก",
-              "levels": [
+                  "code": "caregivers",
+                  "label": "พ่อแม่และผู้ดูแลเด็ก",
+                  "scenarioCode": "REAL2-0065"
+                },
                 {
-                  "code": "cessation",
-                  "label": "ดูแลและช่วยเหลือคนที่ใช้บุหรี่หรือบุหรี่ไฟฟ้าอยู่แล้ว",
-                  "audiences": [
-                    {
-                      "code": "family_who_use",
-                      "label": "คนในครอบครัวที่ใช้บุหรี่หรือบุหรี่ไฟฟ้า",
-                      "scenarioCode": "REAL-0118",
-                      "packageCode": "PK-FAM-SUPPORT"
-                    }
-                  ]
+                  "code": "fathers",
+                  "label": "พ่อและแกนนำพ่อในพื้นที่",
+                  "scenarioCode": "REAL2-0069"
                 }
               ]
             }
@@ -1213,46 +710,29 @@
           "label": "แกนนำชุมชน",
           "packages": [
             {
-              "code": "PK-FAM-TEAM",
-              "label": "อยากจัดกิจกรรมให้พ่อแม่และแกนนำครอบครัว",
-              "resultTitle": "สร้างแกนนำและห้องเรียนครอบครัวปลอดบุหรี่",
-              "levels": [
+              "code": "PK-FAM-GROUP",
+              "settingCode": "FAM",
+              "componentCode": "C3",
+              "componentCodes": [
+                "C3"
+              ],
+              "title": "ชุดจัดวงเรียนรู้สำหรับพ่อแม่และแกนนำครอบครัว",
+              "choiceLabel": "อยากจัดวงเรียนรู้ให้พ่อแม่หรือแกนนำครอบครัว",
+              "goal": "เตรียมผู้จัดวง ฝึกสื่อสาร และต่อยอดกิจกรรมของแกนนำ",
+              "mappingBasis": [
+                "tracker_scope",
+                "editorial_package_design"
+              ],
+              "audiences": [
                 {
-                  "code": "prevention",
-                  "label": "ป้องกันการเริ่มใช้บุหรี่และบุหรี่ไฟฟ้า",
-                  "audiences": [
-                    {
-                      "code": "caregivers",
-                      "label": "พ่อแม่และผู้ดูแลเด็ก",
-                      "scenarioCode": "REAL-0108",
-                      "packageCode": "PK-FAM-TEAM"
-                    },
-                    {
-                      "code": "fathers",
-                      "label": "พ่อและแกนนำพ่อในพื้นที่",
-                      "scenarioCode": "REAL-0112",
-                      "packageCode": "PK-FAM-TEAM"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "code": "PK-FAM-SUPPORT",
-              "label": "อยากพูดคุยและให้กำลังใจคนในบ้านที่อยากเลิก",
-              "resultTitle": "สื่อสารและให้กำลังใจคนในบ้านที่อยากเลิก",
-              "levels": [
+                  "code": "caregivers",
+                  "label": "พ่อแม่และผู้ดูแลเด็ก",
+                  "scenarioCode": "REAL2-0066"
+                },
                 {
-                  "code": "cessation",
-                  "label": "ดูแลและช่วยเหลือคนที่ใช้บุหรี่หรือบุหรี่ไฟฟ้าอยู่แล้ว",
-                  "audiences": [
-                    {
-                      "code": "family_who_use",
-                      "label": "คนในครอบครัวที่ใช้บุหรี่หรือบุหรี่ไฟฟ้า",
-                      "scenarioCode": "REAL-0119",
-                      "packageCode": "PK-FAM-SUPPORT"
-                    }
-                  ]
+                  "code": "fathers",
+                  "label": "พ่อและแกนนำพ่อในพื้นที่",
+                  "scenarioCode": "REAL2-0070"
                 }
               ]
             }
@@ -1263,46 +743,29 @@
           "label": "เจ้าหน้าที่สาธารณสุข",
           "packages": [
             {
-              "code": "PK-FAM-TEAM",
-              "label": "อยากจัดกิจกรรมให้พ่อแม่และแกนนำครอบครัว",
-              "resultTitle": "สร้างแกนนำและห้องเรียนครอบครัวปลอดบุหรี่",
-              "levels": [
+              "code": "PK-FAM-GROUP",
+              "settingCode": "FAM",
+              "componentCode": "C3",
+              "componentCodes": [
+                "C3"
+              ],
+              "title": "ชุดจัดวงเรียนรู้สำหรับพ่อแม่และแกนนำครอบครัว",
+              "choiceLabel": "อยากจัดวงเรียนรู้ให้พ่อแม่หรือแกนนำครอบครัว",
+              "goal": "เตรียมผู้จัดวง ฝึกสื่อสาร และต่อยอดกิจกรรมของแกนนำ",
+              "mappingBasis": [
+                "tracker_scope",
+                "editorial_package_design"
+              ],
+              "audiences": [
                 {
-                  "code": "prevention",
-                  "label": "ป้องกันการเริ่มใช้บุหรี่และบุหรี่ไฟฟ้า",
-                  "audiences": [
-                    {
-                      "code": "caregivers",
-                      "label": "พ่อแม่และผู้ดูแลเด็ก",
-                      "scenarioCode": "REAL-0109",
-                      "packageCode": "PK-FAM-TEAM"
-                    },
-                    {
-                      "code": "fathers",
-                      "label": "พ่อและแกนนำพ่อในพื้นที่",
-                      "scenarioCode": "REAL-0113",
-                      "packageCode": "PK-FAM-TEAM"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "code": "PK-FAM-SUPPORT",
-              "label": "อยากพูดคุยและให้กำลังใจคนในบ้านที่อยากเลิก",
-              "resultTitle": "สื่อสารและให้กำลังใจคนในบ้านที่อยากเลิก",
-              "levels": [
+                  "code": "caregivers",
+                  "label": "พ่อแม่และผู้ดูแลเด็ก",
+                  "scenarioCode": "REAL2-0067"
+                },
                 {
-                  "code": "cessation",
-                  "label": "ดูแลและช่วยเหลือคนที่ใช้บุหรี่หรือบุหรี่ไฟฟ้าอยู่แล้ว",
-                  "audiences": [
-                    {
-                      "code": "family_who_use",
-                      "label": "คนในครอบครัวที่ใช้บุหรี่หรือบุหรี่ไฟฟ้า",
-                      "scenarioCode": "REAL-0120",
-                      "packageCode": "PK-FAM-SUPPORT"
-                    }
-                  ]
+                  "code": "fathers",
+                  "label": "พ่อและแกนนำพ่อในพื้นที่",
+                  "scenarioCode": "REAL2-0071"
                 }
               ]
             }
@@ -1313,46 +776,29 @@
           "label": "อสม.",
           "packages": [
             {
-              "code": "PK-FAM-TEAM",
-              "label": "อยากจัดกิจกรรมให้พ่อแม่และแกนนำครอบครัว",
-              "resultTitle": "สร้างแกนนำและห้องเรียนครอบครัวปลอดบุหรี่",
-              "levels": [
+              "code": "PK-FAM-GROUP",
+              "settingCode": "FAM",
+              "componentCode": "C3",
+              "componentCodes": [
+                "C3"
+              ],
+              "title": "ชุดจัดวงเรียนรู้สำหรับพ่อแม่และแกนนำครอบครัว",
+              "choiceLabel": "อยากจัดวงเรียนรู้ให้พ่อแม่หรือแกนนำครอบครัว",
+              "goal": "เตรียมผู้จัดวง ฝึกสื่อสาร และต่อยอดกิจกรรมของแกนนำ",
+              "mappingBasis": [
+                "tracker_scope",
+                "editorial_package_design"
+              ],
+              "audiences": [
                 {
-                  "code": "prevention",
-                  "label": "ป้องกันการเริ่มใช้บุหรี่และบุหรี่ไฟฟ้า",
-                  "audiences": [
-                    {
-                      "code": "caregivers",
-                      "label": "พ่อแม่และผู้ดูแลเด็ก",
-                      "scenarioCode": "REAL-0110",
-                      "packageCode": "PK-FAM-TEAM"
-                    },
-                    {
-                      "code": "fathers",
-                      "label": "พ่อและแกนนำพ่อในพื้นที่",
-                      "scenarioCode": "REAL-0114",
-                      "packageCode": "PK-FAM-TEAM"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "code": "PK-FAM-SUPPORT",
-              "label": "อยากพูดคุยและให้กำลังใจคนในบ้านที่อยากเลิก",
-              "resultTitle": "สื่อสารและให้กำลังใจคนในบ้านที่อยากเลิก",
-              "levels": [
+                  "code": "caregivers",
+                  "label": "พ่อแม่และผู้ดูแลเด็ก",
+                  "scenarioCode": "REAL2-0068"
+                },
                 {
-                  "code": "cessation",
-                  "label": "ดูแลและช่วยเหลือคนที่ใช้บุหรี่หรือบุหรี่ไฟฟ้าอยู่แล้ว",
-                  "audiences": [
-                    {
-                      "code": "family_who_use",
-                      "label": "คนในครอบครัวที่ใช้บุหรี่หรือบุหรี่ไฟฟ้า",
-                      "scenarioCode": "REAL-0121",
-                      "packageCode": "PK-FAM-SUPPORT"
-                    }
-                  ]
+                  "code": "fathers",
+                  "label": "พ่อและแกนนำพ่อในพื้นที่",
+                  "scenarioCode": "REAL2-0072"
                 }
               ]
             }
@@ -1369,64 +815,35 @@
           "label": "แกนนำชุมชน",
           "packages": [
             {
-              "code": "PK-COM-C3",
-              "label": "อยากชวนชุมชนและท้องถิ่นมาดูแลพื้นที่ร่วมกัน",
-              "resultTitle": "ขับเคลื่อนชุมชนและท้องถิ่นปลอดบุหรี่ไฟฟ้า",
-              "levels": [
+              "code": "PK-COM-TOGETHER",
+              "settingCode": "COM",
+              "componentCode": "C3",
+              "componentCodes": [
+                "C3",
+                "C5"
+              ],
+              "title": "ชุดชุมชนและครอบครัวร่วมดูแลพื้นที่ปลอดบุหรี่",
+              "choiceLabel": "อยากชวนชุมชน ครอบครัว และท้องถิ่นมาลงมือร่วมกัน",
+              "goal": "เชื่อมงานท้องถิ่น กิจกรรมครอบครัว และช่องทางประสานบริการ",
+              "mappingBasis": [
+                "tracker_scope",
+                "editorial_package_design"
+              ],
+              "audiences": [
                 {
-                  "code": "prevention",
-                  "label": "ป้องกันการเริ่มใช้บุหรี่และบุหรี่ไฟฟ้า",
-                  "audiences": [
-                    {
-                      "code": "community_all",
-                      "label": "ประชาชนในชุมชน",
-                      "scenarioCode": "REAL-0124",
-                      "packageCode": "PK-COM-C3"
-                    },
-                    {
-                      "code": "community_workers",
-                      "label": "คนวัยทำงานในชุมชน",
-                      "scenarioCode": "REAL-0125",
-                      "packageCode": "PK-COM-C3"
-                    },
-                    {
-                      "code": "community_youth",
-                      "label": "เด็กและเยาวชนในชุมชน",
-                      "scenarioCode": "REAL-0135",
-                      "packageCode": "PK-COM-C3"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "code": "PK-COM-C5",
-              "label": "อยากช่วยให้คนในชุมชนเข้าถึงบริการช่วยเลิก",
-              "resultTitle": "เชื่อมคนในชุมชนกับบริการช่วยเลิก",
-              "levels": [
+                  "code": "community_all",
+                  "label": "ประชาชนในชุมชน",
+                  "scenarioCode": "REAL2-0075"
+                },
                 {
-                  "code": "cessation",
-                  "label": "ดูแลและช่วยเหลือคนที่ใช้บุหรี่หรือบุหรี่ไฟฟ้าอยู่แล้ว",
-                  "audiences": [
-                    {
-                      "code": "community_all",
-                      "label": "ประชาชนในชุมชน",
-                      "scenarioCode": "REAL-0143",
-                      "packageCode": "PK-COM-C5"
-                    },
-                    {
-                      "code": "community_youth",
-                      "label": "เด็กและเยาวชนในชุมชน",
-                      "scenarioCode": "REAL-0144",
-                      "packageCode": "PK-COM-C5"
-                    },
-                    {
-                      "code": "community_workers",
-                      "label": "คนวัยทำงานในชุมชน",
-                      "scenarioCode": "REAL-0145",
-                      "packageCode": "PK-COM-C5"
-                    }
-                  ]
+                  "code": "community_workers",
+                  "label": "คนวัยทำงานในชุมชน",
+                  "scenarioCode": "REAL2-0076"
+                },
+                {
+                  "code": "community_youth",
+                  "label": "เด็กและเยาวชนในชุมชน",
+                  "scenarioCode": "REAL2-0086"
                 }
               ]
             }
@@ -1437,64 +854,35 @@
           "label": "ผู้รับผิดชอบงานของ อปท.",
           "packages": [
             {
-              "code": "PK-COM-C3",
-              "label": "อยากชวนชุมชนและท้องถิ่นมาดูแลพื้นที่ร่วมกัน",
-              "resultTitle": "ขับเคลื่อนชุมชนและท้องถิ่นปลอดบุหรี่ไฟฟ้า",
-              "levels": [
+              "code": "PK-COM-TOGETHER",
+              "settingCode": "COM",
+              "componentCode": "C3",
+              "componentCodes": [
+                "C3",
+                "C5"
+              ],
+              "title": "ชุดชุมชนและครอบครัวร่วมดูแลพื้นที่ปลอดบุหรี่",
+              "choiceLabel": "อยากชวนชุมชน ครอบครัว และท้องถิ่นมาลงมือร่วมกัน",
+              "goal": "เชื่อมงานท้องถิ่น กิจกรรมครอบครัว และช่องทางประสานบริการ",
+              "mappingBasis": [
+                "tracker_scope",
+                "editorial_package_design"
+              ],
+              "audiences": [
                 {
-                  "code": "prevention",
-                  "label": "ป้องกันการเริ่มใช้บุหรี่และบุหรี่ไฟฟ้า",
-                  "audiences": [
-                    {
-                      "code": "community_all",
-                      "label": "ประชาชนในชุมชน",
-                      "scenarioCode": "REAL-0122",
-                      "packageCode": "PK-COM-C3"
-                    },
-                    {
-                      "code": "community_workers",
-                      "label": "คนวัยทำงานในชุมชน",
-                      "scenarioCode": "REAL-0123",
-                      "packageCode": "PK-COM-C3"
-                    },
-                    {
-                      "code": "community_youth",
-                      "label": "เด็กและเยาวชนในชุมชน",
-                      "scenarioCode": "REAL-0134",
-                      "packageCode": "PK-COM-C3"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "code": "PK-COM-C5",
-              "label": "อยากช่วยให้คนในชุมชนเข้าถึงบริการช่วยเลิก",
-              "resultTitle": "เชื่อมคนในชุมชนกับบริการช่วยเลิก",
-              "levels": [
+                  "code": "community_all",
+                  "label": "ประชาชนในชุมชน",
+                  "scenarioCode": "REAL2-0073"
+                },
                 {
-                  "code": "cessation",
-                  "label": "ดูแลและช่วยเหลือคนที่ใช้บุหรี่หรือบุหรี่ไฟฟ้าอยู่แล้ว",
-                  "audiences": [
-                    {
-                      "code": "community_all",
-                      "label": "ประชาชนในชุมชน",
-                      "scenarioCode": "REAL-0140",
-                      "packageCode": "PK-COM-C5"
-                    },
-                    {
-                      "code": "community_youth",
-                      "label": "เด็กและเยาวชนในชุมชน",
-                      "scenarioCode": "REAL-0141",
-                      "packageCode": "PK-COM-C5"
-                    },
-                    {
-                      "code": "community_workers",
-                      "label": "คนวัยทำงานในชุมชน",
-                      "scenarioCode": "REAL-0142",
-                      "packageCode": "PK-COM-C5"
-                    }
-                  ]
+                  "code": "community_workers",
+                  "label": "คนวัยทำงานในชุมชน",
+                  "scenarioCode": "REAL2-0074"
+                },
+                {
+                  "code": "community_youth",
+                  "label": "เด็กและเยาวชนในชุมชน",
+                  "scenarioCode": "REAL2-0085"
                 }
               ]
             }
@@ -1505,64 +893,35 @@
           "label": "แกนนำชุมชนมุสลิม",
           "packages": [
             {
-              "code": "PK-COM-C3",
-              "label": "อยากชวนชุมชนและท้องถิ่นมาดูแลพื้นที่ร่วมกัน",
-              "resultTitle": "ขับเคลื่อนชุมชนและท้องถิ่นปลอดบุหรี่ไฟฟ้า",
-              "levels": [
+              "code": "PK-COM-TOGETHER",
+              "settingCode": "COM",
+              "componentCode": "C3",
+              "componentCodes": [
+                "C3",
+                "C5"
+              ],
+              "title": "ชุดชุมชนและครอบครัวร่วมดูแลพื้นที่ปลอดบุหรี่",
+              "choiceLabel": "อยากชวนชุมชน ครอบครัว และท้องถิ่นมาลงมือร่วมกัน",
+              "goal": "เชื่อมงานท้องถิ่น กิจกรรมครอบครัว และช่องทางประสานบริการ",
+              "mappingBasis": [
+                "tracker_scope",
+                "editorial_package_design"
+              ],
+              "audiences": [
                 {
-                  "code": "prevention",
-                  "label": "ป้องกันการเริ่มใช้บุหรี่และบุหรี่ไฟฟ้า",
-                  "audiences": [
-                    {
-                      "code": "community_all",
-                      "label": "ประชาชนในชุมชน",
-                      "scenarioCode": "REAL-0130",
-                      "packageCode": "PK-COM-C3"
-                    },
-                    {
-                      "code": "community_workers",
-                      "label": "คนวัยทำงานในชุมชน",
-                      "scenarioCode": "REAL-0131",
-                      "packageCode": "PK-COM-C3"
-                    },
-                    {
-                      "code": "community_youth",
-                      "label": "เด็กและเยาวชนในชุมชน",
-                      "scenarioCode": "REAL-0138",
-                      "packageCode": "PK-COM-C3"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "code": "PK-COM-C5",
-              "label": "อยากช่วยให้คนในชุมชนเข้าถึงบริการช่วยเลิก",
-              "resultTitle": "เชื่อมคนในชุมชนกับบริการช่วยเลิก",
-              "levels": [
+                  "code": "community_all",
+                  "label": "ประชาชนในชุมชน",
+                  "scenarioCode": "REAL2-0081"
+                },
                 {
-                  "code": "cessation",
-                  "label": "ดูแลและช่วยเหลือคนที่ใช้บุหรี่หรือบุหรี่ไฟฟ้าอยู่แล้ว",
-                  "audiences": [
-                    {
-                      "code": "community_all",
-                      "label": "ประชาชนในชุมชน",
-                      "scenarioCode": "REAL-0152",
-                      "packageCode": "PK-COM-C5"
-                    },
-                    {
-                      "code": "community_youth",
-                      "label": "เด็กและเยาวชนในชุมชน",
-                      "scenarioCode": "REAL-0153",
-                      "packageCode": "PK-COM-C5"
-                    },
-                    {
-                      "code": "community_workers",
-                      "label": "คนวัยทำงานในชุมชน",
-                      "scenarioCode": "REAL-0154",
-                      "packageCode": "PK-COM-C5"
-                    }
-                  ]
+                  "code": "community_workers",
+                  "label": "คนวัยทำงานในชุมชน",
+                  "scenarioCode": "REAL2-0082"
+                },
+                {
+                  "code": "community_youth",
+                  "label": "เด็กและเยาวชนในชุมชน",
+                  "scenarioCode": "REAL2-0089"
                 }
               ]
             }
@@ -1573,64 +932,35 @@
           "label": "คณะกรรมการมัสยิด",
           "packages": [
             {
-              "code": "PK-COM-C3",
-              "label": "อยากชวนชุมชนและท้องถิ่นมาดูแลพื้นที่ร่วมกัน",
-              "resultTitle": "ขับเคลื่อนชุมชนและท้องถิ่นปลอดบุหรี่ไฟฟ้า",
-              "levels": [
+              "code": "PK-COM-TOGETHER",
+              "settingCode": "COM",
+              "componentCode": "C3",
+              "componentCodes": [
+                "C3",
+                "C5"
+              ],
+              "title": "ชุดชุมชนและครอบครัวร่วมดูแลพื้นที่ปลอดบุหรี่",
+              "choiceLabel": "อยากชวนชุมชน ครอบครัว และท้องถิ่นมาลงมือร่วมกัน",
+              "goal": "เชื่อมงานท้องถิ่น กิจกรรมครอบครัว และช่องทางประสานบริการ",
+              "mappingBasis": [
+                "tracker_scope",
+                "editorial_package_design"
+              ],
+              "audiences": [
                 {
-                  "code": "prevention",
-                  "label": "ป้องกันการเริ่มใช้บุหรี่และบุหรี่ไฟฟ้า",
-                  "audiences": [
-                    {
-                      "code": "community_all",
-                      "label": "ประชาชนในชุมชน",
-                      "scenarioCode": "REAL-0132",
-                      "packageCode": "PK-COM-C3"
-                    },
-                    {
-                      "code": "community_workers",
-                      "label": "คนวัยทำงานในชุมชน",
-                      "scenarioCode": "REAL-0133",
-                      "packageCode": "PK-COM-C3"
-                    },
-                    {
-                      "code": "community_youth",
-                      "label": "เด็กและเยาวชนในชุมชน",
-                      "scenarioCode": "REAL-0139",
-                      "packageCode": "PK-COM-C3"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "code": "PK-COM-C5",
-              "label": "อยากช่วยให้คนในชุมชนเข้าถึงบริการช่วยเลิก",
-              "resultTitle": "เชื่อมคนในชุมชนกับบริการช่วยเลิก",
-              "levels": [
+                  "code": "community_all",
+                  "label": "ประชาชนในชุมชน",
+                  "scenarioCode": "REAL2-0083"
+                },
                 {
-                  "code": "cessation",
-                  "label": "ดูแลและช่วยเหลือคนที่ใช้บุหรี่หรือบุหรี่ไฟฟ้าอยู่แล้ว",
-                  "audiences": [
-                    {
-                      "code": "community_all",
-                      "label": "ประชาชนในชุมชน",
-                      "scenarioCode": "REAL-0155",
-                      "packageCode": "PK-COM-C5"
-                    },
-                    {
-                      "code": "community_youth",
-                      "label": "เด็กและเยาวชนในชุมชน",
-                      "scenarioCode": "REAL-0156",
-                      "packageCode": "PK-COM-C5"
-                    },
-                    {
-                      "code": "community_workers",
-                      "label": "คนวัยทำงานในชุมชน",
-                      "scenarioCode": "REAL-0157",
-                      "packageCode": "PK-COM-C5"
-                    }
-                  ]
+                  "code": "community_workers",
+                  "label": "คนวัยทำงานในชุมชน",
+                  "scenarioCode": "REAL2-0084"
+                },
+                {
+                  "code": "community_youth",
+                  "label": "เด็กและเยาวชนในชุมชน",
+                  "scenarioCode": "REAL2-0090"
                 }
               ]
             }
@@ -1641,64 +971,35 @@
           "label": "เจ้าหน้าที่สาธารณสุข",
           "packages": [
             {
-              "code": "PK-COM-C3",
-              "label": "อยากชวนชุมชนและท้องถิ่นมาดูแลพื้นที่ร่วมกัน",
-              "resultTitle": "ขับเคลื่อนชุมชนและท้องถิ่นปลอดบุหรี่ไฟฟ้า",
-              "levels": [
+              "code": "PK-COM-TOGETHER",
+              "settingCode": "COM",
+              "componentCode": "C3",
+              "componentCodes": [
+                "C3",
+                "C5"
+              ],
+              "title": "ชุดชุมชนและครอบครัวร่วมดูแลพื้นที่ปลอดบุหรี่",
+              "choiceLabel": "อยากชวนชุมชน ครอบครัว และท้องถิ่นมาลงมือร่วมกัน",
+              "goal": "เชื่อมงานท้องถิ่น กิจกรรมครอบครัว และช่องทางประสานบริการ",
+              "mappingBasis": [
+                "tracker_scope",
+                "editorial_package_design"
+              ],
+              "audiences": [
                 {
-                  "code": "prevention",
-                  "label": "ป้องกันการเริ่มใช้บุหรี่และบุหรี่ไฟฟ้า",
-                  "audiences": [
-                    {
-                      "code": "community_all",
-                      "label": "ประชาชนในชุมชน",
-                      "scenarioCode": "REAL-0126",
-                      "packageCode": "PK-COM-C3"
-                    },
-                    {
-                      "code": "community_workers",
-                      "label": "คนวัยทำงานในชุมชน",
-                      "scenarioCode": "REAL-0127",
-                      "packageCode": "PK-COM-C3"
-                    },
-                    {
-                      "code": "community_youth",
-                      "label": "เด็กและเยาวชนในชุมชน",
-                      "scenarioCode": "REAL-0136",
-                      "packageCode": "PK-COM-C3"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "code": "PK-COM-C5",
-              "label": "อยากช่วยให้คนในชุมชนเข้าถึงบริการช่วยเลิก",
-              "resultTitle": "เชื่อมคนในชุมชนกับบริการช่วยเลิก",
-              "levels": [
+                  "code": "community_all",
+                  "label": "ประชาชนในชุมชน",
+                  "scenarioCode": "REAL2-0077"
+                },
                 {
-                  "code": "cessation",
-                  "label": "ดูแลและช่วยเหลือคนที่ใช้บุหรี่หรือบุหรี่ไฟฟ้าอยู่แล้ว",
-                  "audiences": [
-                    {
-                      "code": "community_all",
-                      "label": "ประชาชนในชุมชน",
-                      "scenarioCode": "REAL-0146",
-                      "packageCode": "PK-COM-C5"
-                    },
-                    {
-                      "code": "community_youth",
-                      "label": "เด็กและเยาวชนในชุมชน",
-                      "scenarioCode": "REAL-0147",
-                      "packageCode": "PK-COM-C5"
-                    },
-                    {
-                      "code": "community_workers",
-                      "label": "คนวัยทำงานในชุมชน",
-                      "scenarioCode": "REAL-0148",
-                      "packageCode": "PK-COM-C5"
-                    }
-                  ]
+                  "code": "community_workers",
+                  "label": "คนวัยทำงานในชุมชน",
+                  "scenarioCode": "REAL2-0078"
+                },
+                {
+                  "code": "community_youth",
+                  "label": "เด็กและเยาวชนในชุมชน",
+                  "scenarioCode": "REAL2-0087"
                 }
               ]
             }
@@ -1709,64 +1010,35 @@
           "label": "อสม.",
           "packages": [
             {
-              "code": "PK-COM-C3",
-              "label": "อยากชวนชุมชนและท้องถิ่นมาดูแลพื้นที่ร่วมกัน",
-              "resultTitle": "ขับเคลื่อนชุมชนและท้องถิ่นปลอดบุหรี่ไฟฟ้า",
-              "levels": [
+              "code": "PK-COM-TOGETHER",
+              "settingCode": "COM",
+              "componentCode": "C3",
+              "componentCodes": [
+                "C3",
+                "C5"
+              ],
+              "title": "ชุดชุมชนและครอบครัวร่วมดูแลพื้นที่ปลอดบุหรี่",
+              "choiceLabel": "อยากชวนชุมชน ครอบครัว และท้องถิ่นมาลงมือร่วมกัน",
+              "goal": "เชื่อมงานท้องถิ่น กิจกรรมครอบครัว และช่องทางประสานบริการ",
+              "mappingBasis": [
+                "tracker_scope",
+                "editorial_package_design"
+              ],
+              "audiences": [
                 {
-                  "code": "prevention",
-                  "label": "ป้องกันการเริ่มใช้บุหรี่และบุหรี่ไฟฟ้า",
-                  "audiences": [
-                    {
-                      "code": "community_all",
-                      "label": "ประชาชนในชุมชน",
-                      "scenarioCode": "REAL-0128",
-                      "packageCode": "PK-COM-C3"
-                    },
-                    {
-                      "code": "community_workers",
-                      "label": "คนวัยทำงานในชุมชน",
-                      "scenarioCode": "REAL-0129",
-                      "packageCode": "PK-COM-C3"
-                    },
-                    {
-                      "code": "community_youth",
-                      "label": "เด็กและเยาวชนในชุมชน",
-                      "scenarioCode": "REAL-0137",
-                      "packageCode": "PK-COM-C3"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "code": "PK-COM-C5",
-              "label": "อยากช่วยให้คนในชุมชนเข้าถึงบริการช่วยเลิก",
-              "resultTitle": "เชื่อมคนในชุมชนกับบริการช่วยเลิก",
-              "levels": [
+                  "code": "community_all",
+                  "label": "ประชาชนในชุมชน",
+                  "scenarioCode": "REAL2-0079"
+                },
                 {
-                  "code": "cessation",
-                  "label": "ดูแลและช่วยเหลือคนที่ใช้บุหรี่หรือบุหรี่ไฟฟ้าอยู่แล้ว",
-                  "audiences": [
-                    {
-                      "code": "community_all",
-                      "label": "ประชาชนในชุมชน",
-                      "scenarioCode": "REAL-0149",
-                      "packageCode": "PK-COM-C5"
-                    },
-                    {
-                      "code": "community_youth",
-                      "label": "เด็กและเยาวชนในชุมชน",
-                      "scenarioCode": "REAL-0150",
-                      "packageCode": "PK-COM-C5"
-                    },
-                    {
-                      "code": "community_workers",
-                      "label": "คนวัยทำงานในชุมชน",
-                      "scenarioCode": "REAL-0151",
-                      "packageCode": "PK-COM-C5"
-                    }
-                  ]
+                  "code": "community_workers",
+                  "label": "คนวัยทำงานในชุมชน",
+                  "scenarioCode": "REAL2-0080"
+                },
+                {
+                  "code": "community_youth",
+                  "label": "เด็กและเยาวชนในชุมชน",
+                  "scenarioCode": "REAL2-0088"
                 }
               ]
             }
@@ -1783,52 +1055,29 @@
           "label": "เจ้าหน้าที่สาธารณสุข",
           "packages": [
             {
-              "code": "PK-HEA-QUIT",
-              "label": "อยากจัดบริการช่วยเลิกบุหรี่และนิโคติน",
-              "resultTitle": "จัดบริการช่วยเลิกบุหรี่และนิโคติน",
-              "levels": [
+              "code": "PK-HEA-SERVICE",
+              "settingCode": "HEA",
+              "componentCode": "C5",
+              "componentCodes": [
+                "C5"
+              ],
+              "title": "ชุดจัดระบบเฝ้าระวัง ส่งต่อ และบริการช่วยเลิก",
+              "choiceLabel": "อยากให้ทีมบริการเชื่อมการเฝ้าระวังกับงานช่วยเลิก",
+              "goal": "จัดบทบาทและช่องทางประสานงานระหว่างการเฝ้าระวังกับบริการช่วยเลิก",
+              "mappingBasis": [
+                "tracker_scope",
+                "editorial_package_design"
+              ],
+              "audiences": [
                 {
-                  "code": "cessation",
-                  "label": "ดูแลและช่วยเหลือคนที่ใช้บุหรี่หรือบุหรี่ไฟฟ้าอยู่แล้ว",
-                  "audiences": [
-                    {
-                      "code": "adult_service_users",
-                      "label": "ผู้รับบริการวัยผู้ใหญ่ที่ใช้บุหรี่หรือบุหรี่ไฟฟ้า",
-                      "scenarioCode": "REAL-0170",
-                      "packageCode": "PK-HEA-QUIT"
-                    },
-                    {
-                      "code": "adolescent_service_users",
-                      "label": "ผู้รับบริการวัยรุ่นที่ใช้บุหรี่หรือบุหรี่ไฟฟ้า",
-                      "scenarioCode": "REAL-0171",
-                      "packageCode": "PK-HEA-QUIT"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "code": "PK-HEA-SURVEILLANCE",
-              "label": "อยากเฝ้าระวังและส่งต่อผู้ได้รับผลกระทบจากบุหรี่ไฟฟ้า",
-              "resultTitle": "เฝ้าระวังและส่งต่อผลกระทบจากบุหรี่ไฟฟ้า",
-              "levels": [
+                  "code": "adult_service_users",
+                  "label": "ผู้รับบริการวัยผู้ใหญ่ที่ใช้บุหรี่หรือบุหรี่ไฟฟ้า",
+                  "scenarioCode": "REAL2-0099"
+                },
                 {
-                  "code": "cessation",
-                  "label": "ดูแลและช่วยเหลือคนที่ใช้บุหรี่หรือบุหรี่ไฟฟ้าอยู่แล้ว",
-                  "audiences": [
-                    {
-                      "code": "adult_service_users",
-                      "label": "ผู้รับบริการวัยผู้ใหญ่ที่ใช้บุหรี่หรือบุหรี่ไฟฟ้า",
-                      "scenarioCode": "REAL-0178",
-                      "packageCode": "PK-HEA-SURVEILLANCE"
-                    },
-                    {
-                      "code": "adolescent_service_users",
-                      "label": "ผู้รับบริการวัยรุ่นที่ใช้บุหรี่หรือบุหรี่ไฟฟ้า",
-                      "scenarioCode": "REAL-0179",
-                      "packageCode": "PK-HEA-SURVEILLANCE"
-                    }
-                  ]
+                  "code": "adolescent_service_users",
+                  "label": "ผู้รับบริการวัยรุ่นที่ใช้บุหรี่หรือบุหรี่ไฟฟ้า",
+                  "scenarioCode": "REAL2-0100"
                 }
               ]
             }
@@ -1839,27 +1088,29 @@
           "label": "เภสัชกร",
           "packages": [
             {
-              "code": "PK-HEA-QUIT",
-              "label": "อยากจัดบริการช่วยเลิกบุหรี่และนิโคติน",
-              "resultTitle": "จัดบริการช่วยเลิกบุหรี่และนิโคติน",
-              "levels": [
+              "code": "PK-HEA-SERVICE",
+              "settingCode": "HEA",
+              "componentCode": "C5",
+              "componentCodes": [
+                "C5"
+              ],
+              "title": "ชุดจัดระบบเฝ้าระวัง ส่งต่อ และบริการช่วยเลิก",
+              "choiceLabel": "อยากให้ทีมบริการเชื่อมการเฝ้าระวังกับงานช่วยเลิก",
+              "goal": "จัดบทบาทและช่องทางประสานงานระหว่างการเฝ้าระวังกับบริการช่วยเลิก",
+              "mappingBasis": [
+                "tracker_scope",
+                "editorial_package_design"
+              ],
+              "audiences": [
                 {
-                  "code": "cessation",
-                  "label": "ดูแลและช่วยเหลือคนที่ใช้บุหรี่หรือบุหรี่ไฟฟ้าอยู่แล้ว",
-                  "audiences": [
-                    {
-                      "code": "adult_service_users",
-                      "label": "ผู้รับบริการวัยผู้ใหญ่ที่ใช้บุหรี่หรือบุหรี่ไฟฟ้า",
-                      "scenarioCode": "REAL-0172",
-                      "packageCode": "PK-HEA-QUIT"
-                    },
-                    {
-                      "code": "adolescent_service_users",
-                      "label": "ผู้รับบริการวัยรุ่นที่ใช้บุหรี่หรือบุหรี่ไฟฟ้า",
-                      "scenarioCode": "REAL-0173",
-                      "packageCode": "PK-HEA-QUIT"
-                    }
-                  ]
+                  "code": "adult_service_users",
+                  "label": "ผู้รับบริการวัยผู้ใหญ่ที่ใช้บุหรี่หรือบุหรี่ไฟฟ้า",
+                  "scenarioCode": "REAL2-0101"
+                },
+                {
+                  "code": "adolescent_service_users",
+                  "label": "ผู้รับบริการวัยรุ่นที่ใช้บุหรี่หรือบุหรี่ไฟฟ้า",
+                  "scenarioCode": "REAL2-0102"
                 }
               ]
             }
@@ -1870,52 +1121,29 @@
           "label": "แพทย์",
           "packages": [
             {
-              "code": "PK-HEA-QUIT",
-              "label": "อยากจัดบริการช่วยเลิกบุหรี่และนิโคติน",
-              "resultTitle": "จัดบริการช่วยเลิกบุหรี่และนิโคติน",
-              "levels": [
+              "code": "PK-HEA-SERVICE",
+              "settingCode": "HEA",
+              "componentCode": "C5",
+              "componentCodes": [
+                "C5"
+              ],
+              "title": "ชุดจัดระบบเฝ้าระวัง ส่งต่อ และบริการช่วยเลิก",
+              "choiceLabel": "อยากให้ทีมบริการเชื่อมการเฝ้าระวังกับงานช่วยเลิก",
+              "goal": "จัดบทบาทและช่องทางประสานงานระหว่างการเฝ้าระวังกับบริการช่วยเลิก",
+              "mappingBasis": [
+                "tracker_scope",
+                "editorial_package_design"
+              ],
+              "audiences": [
                 {
-                  "code": "cessation",
-                  "label": "ดูแลและช่วยเหลือคนที่ใช้บุหรี่หรือบุหรี่ไฟฟ้าอยู่แล้ว",
-                  "audiences": [
-                    {
-                      "code": "adult_service_users",
-                      "label": "ผู้รับบริการวัยผู้ใหญ่ที่ใช้บุหรี่หรือบุหรี่ไฟฟ้า",
-                      "scenarioCode": "REAL-0166",
-                      "packageCode": "PK-HEA-QUIT"
-                    },
-                    {
-                      "code": "adolescent_service_users",
-                      "label": "ผู้รับบริการวัยรุ่นที่ใช้บุหรี่หรือบุหรี่ไฟฟ้า",
-                      "scenarioCode": "REAL-0167",
-                      "packageCode": "PK-HEA-QUIT"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "code": "PK-HEA-SURVEILLANCE",
-              "label": "อยากเฝ้าระวังและส่งต่อผู้ได้รับผลกระทบจากบุหรี่ไฟฟ้า",
-              "resultTitle": "เฝ้าระวังและส่งต่อผลกระทบจากบุหรี่ไฟฟ้า",
-              "levels": [
+                  "code": "adult_service_users",
+                  "label": "ผู้รับบริการวัยผู้ใหญ่ที่ใช้บุหรี่หรือบุหรี่ไฟฟ้า",
+                  "scenarioCode": "REAL2-0095"
+                },
                 {
-                  "code": "cessation",
-                  "label": "ดูแลและช่วยเหลือคนที่ใช้บุหรี่หรือบุหรี่ไฟฟ้าอยู่แล้ว",
-                  "audiences": [
-                    {
-                      "code": "adult_service_users",
-                      "label": "ผู้รับบริการวัยผู้ใหญ่ที่ใช้บุหรี่หรือบุหรี่ไฟฟ้า",
-                      "scenarioCode": "REAL-0174",
-                      "packageCode": "PK-HEA-SURVEILLANCE"
-                    },
-                    {
-                      "code": "adolescent_service_users",
-                      "label": "ผู้รับบริการวัยรุ่นที่ใช้บุหรี่หรือบุหรี่ไฟฟ้า",
-                      "scenarioCode": "REAL-0175",
-                      "packageCode": "PK-HEA-SURVEILLANCE"
-                    }
-                  ]
+                  "code": "adolescent_service_users",
+                  "label": "ผู้รับบริการวัยรุ่นที่ใช้บุหรี่หรือบุหรี่ไฟฟ้า",
+                  "scenarioCode": "REAL2-0096"
                 }
               ]
             }
@@ -1926,52 +1154,29 @@
           "label": "พยาบาล",
           "packages": [
             {
-              "code": "PK-HEA-QUIT",
-              "label": "อยากจัดบริการช่วยเลิกบุหรี่และนิโคติน",
-              "resultTitle": "จัดบริการช่วยเลิกบุหรี่และนิโคติน",
-              "levels": [
+              "code": "PK-HEA-SERVICE",
+              "settingCode": "HEA",
+              "componentCode": "C5",
+              "componentCodes": [
+                "C5"
+              ],
+              "title": "ชุดจัดระบบเฝ้าระวัง ส่งต่อ และบริการช่วยเลิก",
+              "choiceLabel": "อยากให้ทีมบริการเชื่อมการเฝ้าระวังกับงานช่วยเลิก",
+              "goal": "จัดบทบาทและช่องทางประสานงานระหว่างการเฝ้าระวังกับบริการช่วยเลิก",
+              "mappingBasis": [
+                "tracker_scope",
+                "editorial_package_design"
+              ],
+              "audiences": [
                 {
-                  "code": "cessation",
-                  "label": "ดูแลและช่วยเหลือคนที่ใช้บุหรี่หรือบุหรี่ไฟฟ้าอยู่แล้ว",
-                  "audiences": [
-                    {
-                      "code": "adult_service_users",
-                      "label": "ผู้รับบริการวัยผู้ใหญ่ที่ใช้บุหรี่หรือบุหรี่ไฟฟ้า",
-                      "scenarioCode": "REAL-0168",
-                      "packageCode": "PK-HEA-QUIT"
-                    },
-                    {
-                      "code": "adolescent_service_users",
-                      "label": "ผู้รับบริการวัยรุ่นที่ใช้บุหรี่หรือบุหรี่ไฟฟ้า",
-                      "scenarioCode": "REAL-0169",
-                      "packageCode": "PK-HEA-QUIT"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "code": "PK-HEA-SURVEILLANCE",
-              "label": "อยากเฝ้าระวังและส่งต่อผู้ได้รับผลกระทบจากบุหรี่ไฟฟ้า",
-              "resultTitle": "เฝ้าระวังและส่งต่อผลกระทบจากบุหรี่ไฟฟ้า",
-              "levels": [
+                  "code": "adult_service_users",
+                  "label": "ผู้รับบริการวัยผู้ใหญ่ที่ใช้บุหรี่หรือบุหรี่ไฟฟ้า",
+                  "scenarioCode": "REAL2-0097"
+                },
                 {
-                  "code": "cessation",
-                  "label": "ดูแลและช่วยเหลือคนที่ใช้บุหรี่หรือบุหรี่ไฟฟ้าอยู่แล้ว",
-                  "audiences": [
-                    {
-                      "code": "adult_service_users",
-                      "label": "ผู้รับบริการวัยผู้ใหญ่ที่ใช้บุหรี่หรือบุหรี่ไฟฟ้า",
-                      "scenarioCode": "REAL-0176",
-                      "packageCode": "PK-HEA-SURVEILLANCE"
-                    },
-                    {
-                      "code": "adolescent_service_users",
-                      "label": "ผู้รับบริการวัยรุ่นที่ใช้บุหรี่หรือบุหรี่ไฟฟ้า",
-                      "scenarioCode": "REAL-0177",
-                      "packageCode": "PK-HEA-SURVEILLANCE"
-                    }
-                  ]
+                  "code": "adolescent_service_users",
+                  "label": "ผู้รับบริการวัยรุ่นที่ใช้บุหรี่หรือบุหรี่ไฟฟ้า",
+                  "scenarioCode": "REAL2-0098"
                 }
               ]
             }
@@ -1988,40 +1193,24 @@
           "label": "ผู้บริหาร / เจ้าของสถานประกอบการ",
           "packages": [
             {
-              "code": "PK-WRK-SYSTEM",
-              "label": "อยากจัดระบบให้ที่ทำงานปลอดบุหรี่",
-              "resultTitle": "จัดระบบสถานประกอบการปลอดบุหรี่",
-              "levels": [
+              "code": "PK-WRK-TOGETHER",
+              "settingCode": "WRK",
+              "componentCode": "C3",
+              "componentCodes": [
+                "C3"
+              ],
+              "title": "ชุดขับเคลื่อนที่ทำงานปลอดบุหรี่ทั้งองค์กร",
+              "choiceLabel": "อยากชวนผู้บริหารและทีมงานจัดระบบที่ทำงานปลอดบุหรี่",
+              "goal": "เชื่อมการตัดสินใจของผู้บริหาร แผนคณะทำงาน และการทบทวนระบบ",
+              "mappingBasis": [
+                "tracker_scope",
+                "editorial_package_design"
+              ],
+              "audiences": [
                 {
-                  "code": "prevention",
-                  "label": "ป้องกันการเริ่มใช้บุหรี่และบุหรี่ไฟฟ้า",
-                  "audiences": [
-                    {
-                      "code": "workers",
-                      "label": "พนักงาน / คนวัยทำงานในสถานประกอบการ",
-                      "scenarioCode": "REAL-0158",
-                      "packageCode": "PK-WRK-SYSTEM"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "code": "PK-WRK-SUPPORT",
-              "label": "อยากช่วยให้พนักงานที่อยากเลิกได้รับการดูแล",
-              "resultTitle": "จัดระบบสนับสนุนพนักงานที่อยากเลิก",
-              "levels": [
-                {
-                  "code": "cessation",
-                  "label": "ดูแลและช่วยเหลือคนที่ใช้บุหรี่หรือบุหรี่ไฟฟ้าอยู่แล้ว",
-                  "audiences": [
-                    {
-                      "code": "workers",
-                      "label": "พนักงาน / คนวัยทำงานในสถานประกอบการ",
-                      "scenarioCode": "REAL-0162",
-                      "packageCode": "PK-WRK-SUPPORT"
-                    }
-                  ]
+                  "code": "workers",
+                  "label": "พนักงาน / คนวัยทำงานในสถานประกอบการ",
+                  "scenarioCode": "REAL2-0091"
                 }
               ]
             }
@@ -2032,40 +1221,24 @@
           "label": "ฝ่ายบุคคล / คณะทำงาน",
           "packages": [
             {
-              "code": "PK-WRK-SYSTEM",
-              "label": "อยากจัดระบบให้ที่ทำงานปลอดบุหรี่",
-              "resultTitle": "จัดระบบสถานประกอบการปลอดบุหรี่",
-              "levels": [
+              "code": "PK-WRK-TOGETHER",
+              "settingCode": "WRK",
+              "componentCode": "C3",
+              "componentCodes": [
+                "C3"
+              ],
+              "title": "ชุดขับเคลื่อนที่ทำงานปลอดบุหรี่ทั้งองค์กร",
+              "choiceLabel": "อยากชวนผู้บริหารและทีมงานจัดระบบที่ทำงานปลอดบุหรี่",
+              "goal": "เชื่อมการตัดสินใจของผู้บริหาร แผนคณะทำงาน และการทบทวนระบบ",
+              "mappingBasis": [
+                "tracker_scope",
+                "editorial_package_design"
+              ],
+              "audiences": [
                 {
-                  "code": "prevention",
-                  "label": "ป้องกันการเริ่มใช้บุหรี่และบุหรี่ไฟฟ้า",
-                  "audiences": [
-                    {
-                      "code": "workers",
-                      "label": "พนักงาน / คนวัยทำงานในสถานประกอบการ",
-                      "scenarioCode": "REAL-0159",
-                      "packageCode": "PK-WRK-SYSTEM"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "code": "PK-WRK-SUPPORT",
-              "label": "อยากช่วยให้พนักงานที่อยากเลิกได้รับการดูแล",
-              "resultTitle": "จัดระบบสนับสนุนพนักงานที่อยากเลิก",
-              "levels": [
-                {
-                  "code": "cessation",
-                  "label": "ดูแลและช่วยเหลือคนที่ใช้บุหรี่หรือบุหรี่ไฟฟ้าอยู่แล้ว",
-                  "audiences": [
-                    {
-                      "code": "workers",
-                      "label": "พนักงาน / คนวัยทำงานในสถานประกอบการ",
-                      "scenarioCode": "REAL-0163",
-                      "packageCode": "PK-WRK-SUPPORT"
-                    }
-                  ]
+                  "code": "workers",
+                  "label": "พนักงาน / คนวัยทำงานในสถานประกอบการ",
+                  "scenarioCode": "REAL2-0092"
                 }
               ]
             }
@@ -2076,40 +1249,24 @@
           "label": "แกนนำในสถานประกอบการ",
           "packages": [
             {
-              "code": "PK-WRK-SYSTEM",
-              "label": "อยากจัดระบบให้ที่ทำงานปลอดบุหรี่",
-              "resultTitle": "จัดระบบสถานประกอบการปลอดบุหรี่",
-              "levels": [
+              "code": "PK-WRK-TOGETHER",
+              "settingCode": "WRK",
+              "componentCode": "C3",
+              "componentCodes": [
+                "C3"
+              ],
+              "title": "ชุดขับเคลื่อนที่ทำงานปลอดบุหรี่ทั้งองค์กร",
+              "choiceLabel": "อยากชวนผู้บริหารและทีมงานจัดระบบที่ทำงานปลอดบุหรี่",
+              "goal": "เชื่อมการตัดสินใจของผู้บริหาร แผนคณะทำงาน และการทบทวนระบบ",
+              "mappingBasis": [
+                "tracker_scope",
+                "editorial_package_design"
+              ],
+              "audiences": [
                 {
-                  "code": "prevention",
-                  "label": "ป้องกันการเริ่มใช้บุหรี่และบุหรี่ไฟฟ้า",
-                  "audiences": [
-                    {
-                      "code": "workers",
-                      "label": "พนักงาน / คนวัยทำงานในสถานประกอบการ",
-                      "scenarioCode": "REAL-0160",
-                      "packageCode": "PK-WRK-SYSTEM"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "code": "PK-WRK-SUPPORT",
-              "label": "อยากช่วยให้พนักงานที่อยากเลิกได้รับการดูแล",
-              "resultTitle": "จัดระบบสนับสนุนพนักงานที่อยากเลิก",
-              "levels": [
-                {
-                  "code": "cessation",
-                  "label": "ดูแลและช่วยเหลือคนที่ใช้บุหรี่หรือบุหรี่ไฟฟ้าอยู่แล้ว",
-                  "audiences": [
-                    {
-                      "code": "workers",
-                      "label": "พนักงาน / คนวัยทำงานในสถานประกอบการ",
-                      "scenarioCode": "REAL-0164",
-                      "packageCode": "PK-WRK-SUPPORT"
-                    }
-                  ]
+                  "code": "workers",
+                  "label": "พนักงาน / คนวัยทำงานในสถานประกอบการ",
+                  "scenarioCode": "REAL2-0093"
                 }
               ]
             }
@@ -2120,40 +1277,24 @@
           "label": "บุคลากรในสถานประกอบการ",
           "packages": [
             {
-              "code": "PK-WRK-SYSTEM",
-              "label": "อยากจัดระบบให้ที่ทำงานปลอดบุหรี่",
-              "resultTitle": "จัดระบบสถานประกอบการปลอดบุหรี่",
-              "levels": [
+              "code": "PK-WRK-TOGETHER",
+              "settingCode": "WRK",
+              "componentCode": "C3",
+              "componentCodes": [
+                "C3"
+              ],
+              "title": "ชุดขับเคลื่อนที่ทำงานปลอดบุหรี่ทั้งองค์กร",
+              "choiceLabel": "อยากชวนผู้บริหารและทีมงานจัดระบบที่ทำงานปลอดบุหรี่",
+              "goal": "เชื่อมการตัดสินใจของผู้บริหาร แผนคณะทำงาน และการทบทวนระบบ",
+              "mappingBasis": [
+                "tracker_scope",
+                "editorial_package_design"
+              ],
+              "audiences": [
                 {
-                  "code": "prevention",
-                  "label": "ป้องกันการเริ่มใช้บุหรี่และบุหรี่ไฟฟ้า",
-                  "audiences": [
-                    {
-                      "code": "workers",
-                      "label": "พนักงาน / คนวัยทำงานในสถานประกอบการ",
-                      "scenarioCode": "REAL-0161",
-                      "packageCode": "PK-WRK-SYSTEM"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "code": "PK-WRK-SUPPORT",
-              "label": "อยากช่วยให้พนักงานที่อยากเลิกได้รับการดูแล",
-              "resultTitle": "จัดระบบสนับสนุนพนักงานที่อยากเลิก",
-              "levels": [
-                {
-                  "code": "cessation",
-                  "label": "ดูแลและช่วยเหลือคนที่ใช้บุหรี่หรือบุหรี่ไฟฟ้าอยู่แล้ว",
-                  "audiences": [
-                    {
-                      "code": "workers",
-                      "label": "พนักงาน / คนวัยทำงานในสถานประกอบการ",
-                      "scenarioCode": "REAL-0165",
-                      "packageCode": "PK-WRK-SUPPORT"
-                    }
-                  ]
+                  "code": "workers",
+                  "label": "พนักงาน / คนวัยทำงานในสถานประกอบการ",
+                  "scenarioCode": "REAL2-0094"
                 }
               ]
             }

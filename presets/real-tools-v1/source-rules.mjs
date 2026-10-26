@@ -1,6 +1,7 @@
+import { toolShortTitles } from './package-playbooks.mjs';
 // Content authoring rules. Source scope is transcribed from the supplied tracker.
 // Roles, audience routing and package outlines are editorial draft mappings.
-export const release = { code: 'real-tools-2026-10-26-v1', schemaVersion: 1, reviewStatus: 'working_draft', thresholdBytes: 6_000_000 };
+export const release = { code: 'real-tools-2026-10-26-v2', schemaVersion: 2, reviewStatus: 'working_draft', thresholdBytes: 6_000_000 };
 export const settings = [
   ['EDU', 'สถานศึกษา'], ['FAM', 'ครอบครัว'], ['COM', 'ชุมชน'], ['HEA', 'ระบบบริการสุขภาพ'], ['WRK', 'สถานประกอบการ'],
 ].map(([code, label]) => ({ code, label }));
@@ -71,7 +72,7 @@ const rawTools = [
 ];
 export const toolCode = number => `MAIN-${String(number).padStart(2, '0')}`;
 export const tools = rawTools.map(([number, title, kind, scope, source]) => ({
-  code: toolCode(number), sourceNumber: number, title, kind, scope, source, category: 'main',
+  code: toolCode(number), sourceNumber: number, title, shortTitle: toolShortTitles[number], kind, scope, source, category: 'main',
   trackerStatus: 'ผ่านการทดลองใช้ / พร้อมขยายผล (ตามเอกสารรายการ)',
   availableContent: number === 4 ? 'link_document' : number === 7 ? 'research_and_infographics' : 'source_files',
   editorialNote: number === 1 ? 'ไฟล์ที่แนบเป็นคู่มือโรงเรียน; ยังไม่พบไฟล์ 7 องค์ประกอบอุดมศึกษาแยกต่างหาก'
@@ -91,94 +92,8 @@ export const supplementaryTools = [
   'บทความ E-Cigarettes จาก INHPF', 'บอร์ดเกม Just Say No', 'สติ๊กเกอร์ Quit UP!', 'Vape Truth Mirror',
 ].map((title, index) => ({ code: `SUP-${String(index + 1).padStart(2, '0')}`, sourceNumber: index + 1, title, assetStatus: 'not_supplied', routingEnabled: false, sourceStatus: 'อยู่ระหว่างจัดทำ / ยังไม่ประเมิน (ตามเอกสารรายการ)' }));
 
-const packageChoiceLabels = {
-  'PK-EDU-C1': 'อยากวางนโยบายและจัดทีมดูแลเรื่องบุหรี่ไฟฟ้า',
-  'PK-EDU-C2': 'อยากจัดการเรียนรู้เรื่องบุหรี่ไฟฟ้า',
-  'PK-EDU-C3': 'อยากดูแลพื้นที่และสร้างข้อตกลงร่วมกัน',
-  'PK-EDU-C4': 'อยากชวนเยาวชนมาร่วมขับเคลื่อน',
-  'PK-EDU-C5': 'อยากจัดระบบดูแลและส่งต่อผู้เรียนที่ใช้อยู่แล้ว',
-  'PK-FAM-HOME': 'อยากดูแลบ้านและคนในครอบครัวให้ปลอดควัน',
-  'PK-FAM-TEAM': 'อยากจัดกิจกรรมให้พ่อแม่และแกนนำครอบครัว',
-  'PK-FAM-SUPPORT': 'อยากพูดคุยและให้กำลังใจคนในบ้านที่อยากเลิก',
-  'PK-COM-C3': 'อยากชวนชุมชนและท้องถิ่นมาดูแลพื้นที่ร่วมกัน',
-  'PK-COM-C5': 'อยากช่วยให้คนในชุมชนเข้าถึงบริการช่วยเลิก',
-  'PK-WRK-SYSTEM': 'อยากจัดระบบให้ที่ทำงานปลอดบุหรี่',
-  'PK-WRK-SUPPORT': 'อยากช่วยให้พนักงานที่อยากเลิกได้รับการดูแล',
-  'PK-HEA-QUIT': 'อยากจัดบริการช่วยเลิกบุหรี่และนิโคติน',
-  'PK-HEA-SURVEILLANCE': 'อยากเฝ้าระวังและส่งต่อผู้ได้รับผลกระทบจากบุหรี่ไฟฟ้า',
-};
-export const packages = [
-  ['PK-EDU-C1','EDU','C1','วางนโยบายและจัดระบบสถานศึกษาปลอดบุหรี่ไฟฟ้า','สถานศึกษามีนโยบายและผู้รับผิดชอบที่ชัดเจน'],
-  ['PK-EDU-C2','EDU','C2','จัดการเรียนรู้และกิจกรรมรู้เท่าทันบุหรี่ไฟฟ้า','เลือกสื่อและกิจกรรมให้เหมาะกับวัยของผู้เรียน'],
-  ['PK-EDU-C3','EDU','C3','สร้างสภาพแวดล้อมสถานศึกษาปลอดบุหรี่ไฟฟ้า','ร่วมกันดูแลพื้นที่และสร้างกติกาที่ปกป้องผู้เรียน'],
-  ['PK-EDU-C4','EDU','C4','ชวนเยาวชนร่วมขับเคลื่อนพื้นที่ปลอดบุหรี่ไฟฟ้า','เยาวชนมีส่วนร่วมออกแบบและทำกิจกรรมกับทีมสถานศึกษา'],
-  ['PK-EDU-C5','EDU','C5','จัดระบบดูแลและส่งต่อผู้เรียนที่ใช้บุหรี่ไฟฟ้า','สถานศึกษามีผู้ดูแลและทางส่งต่อผู้ที่ต้องการความช่วยเหลือ'],
-  ['PK-FAM-HOME','FAM','C3','สร้างบ้านและความสัมพันธ์ที่ปลอดควัน','ใช้การสื่อสารเชิงบวกและสื่อที่เหมาะกับวัยในครอบครัว'],
-  ['PK-FAM-TEAM','FAM','C3','สร้างแกนนำและห้องเรียนครอบครัวปลอดบุหรี่','คณะทำงานจัดการเรียนรู้ร่วมกับพ่อแม่และผู้ดูแลได้'],
-  ['PK-FAM-SUPPORT','FAM','C3','สื่อสารและให้กำลังใจคนในบ้านที่อยากเลิก','ครอบครัวพูดคุยและสนับสนุนการเข้าถึงบริการช่วยเลิก'],
-  ['PK-COM-C3','COM','C3','ขับเคลื่อนชุมชนและท้องถิ่นปลอดบุหรี่ไฟฟ้า','ชุมชนและ อปท. มีทีมทำงานและพื้นที่ดูแลร่วมกัน'],
-  ['PK-COM-C5','COM','C5','เชื่อมคนในชุมชนกับบริการช่วยเลิก','ทีมชุมชนและ อปท. มีแนวทางประสานบริการสุขภาพ'],
-  ['PK-WRK-SYSTEM','WRK','C3','จัดระบบสถานประกอบการปลอดบุหรี่','ผู้บริหาร คณะทำงาน และพนักงานร่วมกันดูแลที่ทำงาน'],
-  ['PK-WRK-SUPPORT','WRK','C3','จัดระบบสนับสนุนพนักงานที่อยากเลิก','สถานประกอบการมีผู้ประสานและติดตามการช่วยเหลือพนักงาน'],
-  ['PK-HEA-QUIT','HEA','C5','จัดบริการช่วยเลิกบุหรี่และนิโคติน','บุคลากรวิชาชีพวางระบบบริการตามแนวทางที่มีอยู่'],
-  ['PK-HEA-SURVEILLANCE','HEA','C5','เฝ้าระวังและส่งต่อผลกระทบจากบุหรี่ไฟฟ้า','ทีมวิชาชีพประสานการเฝ้าระวัง สอบสวน และดูแลตามหน้าที่'],
-].map(([code, settingCode, componentCode, title, goal]) => ({ code, settingCode, componentCode, title, choiceLabel: packageChoiceLabels[code], goal, mappingBasis: ['tracker_scope','editorial_routing'] }));
-
-const schoolAdults = ['school_admin','teacher','school_staff','school_team'];
-const schoolDelivery = ['teacher','school_staff','school_team'];
-const olderLearners = ['primary_upper','secondary','vocational'];
-const familyMembers = ['parent','family_member','father'];
-const familyFacilitators = ['family_team','community_leader','public_health','volunteer'];
-const communityRoles = ['local_authority','community_leader','public_health','volunteer','muslim_leader','mosque_team'];
-const rule = (id, packageId, roleCodes, audienceCodes, level, primary, supporting = [], measurement = [], reference = [], note = '', status = 'primary_available') => ({
-  id, packageId, roleCodes, audienceCodes, level, primary: primary.map(toolCode), supporting: supporting.map(toolCode), measurement: measurement.map(toolCode), reference: reference.map(toolCode), note, status,
-  mappingBasis: { scope: 'tracker_explicit', roleAndAudience: 'editorial_inference_from_tool_context', packageOutline: 'editorial_draft' },
-});
-const universityNote = 'ตารางต้นฉบับระบุอุดมศึกษา แต่ไฟล์ที่แนบเป็นคู่มือโรงเรียน จึงให้เฉพาะกรอบอ้างอิงและให้ทีมอุดมศึกษาปรับใช้; ยังไม่อ้างว่ามีคู่มืออุดมศึกษาครบชุด';
-const peerNote = 'แกนนำทำงานร่วมกับครูหรือทีมสถานศึกษา ไม่ทำหน้าที่วินิจฉัยหรือรักษา';
-export const rules = [
-  rule('EDU-POLICY-SCHOOL','PK-EDU-C1',schoolAdults,olderLearners,'prevention',[1]),
-  rule('EDU-POLICY-UNI','PK-EDU-C1',schoolAdults,['university'],'prevention',[],[1],[],[],universityNote,'support_only'),
-  rule('EDU-LEARN-EARLY','PK-EDU-C2',schoolDelivery,['early_childhood'],'prevention',[8,9],[4,5],[],[],'Survival Kit ใช้เฉพาะกิจกรรมวัย 3–6 ปี; ไฟล์ข้อ 4 เป็นลิงก์เข้าถึงชุดสื่อ'),
-  rule('EDU-LEARN-LOWER','PK-EDU-C2',[...schoolDelivery,'student_leader'],['primary_lower'],'prevention',[2,5],[],[3],[],'Survival Kit ใช้ช่วงวัย 7–9 ปี; แบบสำรวจข้อ 3 ใช้ส่วนประถม; แกนนำทำร่วมกับครู'),
-  rule('EDU-LEARN-UPPER','PK-EDU-C2',[...schoolDelivery,'student_leader'],['primary_upper'],'prevention',[2,5],[],[3],[],'Survival Kit ใช้ช่วงวัย 10–12 ปี; แบบสำรวจข้อ 3 ใช้ส่วนประถม; แกนนำทำร่วมกับครู'),
-  rule('EDU-LEARN-SECONDARY','PK-EDU-C2',[...schoolDelivery,'student_leader'],['secondary'],'prevention',[2],[],[6]),
-  rule('EDU-LEARN-VOCATIONAL','PK-EDU-C2',[...schoolDelivery,'student_leader'],['vocational'],'prevention',[2],[],[],[],'ปรับกิจกรรมจากคู่มือเด็กและเยาวชนตามบริบทอาชีวศึกษา; ไม่สวมแบบสำรวจมัธยมให้เป็นแบบเฉพาะอาชีวะ'),
-  rule('EDU-LEARN-ETHNIC','PK-EDU-C2',[...schoolDelivery,'student_leader'],['ethnic_youth'],'prevention',[2],[],[],[7],'ข้อ 7 จัดส่งรายงานวิจัยและภาพสรุปที่มีอยู่เป็นข้อมูลประกอบ; ไม่มีแบบประเมินเปล่าแยกต่างหาก'),
-  rule('EDU-LEARN-UNI','PK-EDU-C2',[...schoolDelivery,'university_leader'],['university'],'prevention',[],[1],[],[],universityNote,'support_only'),
-  rule('EDU-ENV-SCHOOL','PK-EDU-C3',schoolAdults,olderLearners,'prevention',[1]),
-  rule('EDU-ENV-UNI','PK-EDU-C3',schoolAdults,['university'],'prevention',[],[1],[],[],universityNote,'support_only'),
-  rule('EDU-YOUTH-SCHOOL','PK-EDU-C4',[...schoolDelivery,'student_leader'],olderLearners,'prevention',[1],[],[],[],'ใช้หัวข้อการมีส่วนร่วมของนักเรียนในคู่มือ 7 มาตรการ; ไม่ใช่คู่มือตั้งชมรมฉบับเฉพาะ'),
-  rule('EDU-YOUTH-UNI','PK-EDU-C4',[...schoolDelivery,'university_leader'],['university'],'prevention',[],[1],[],[],universityNote,'support_only'),
-  rule('EDU-CARE-SCHOOL','PK-EDU-C5',[...schoolDelivery,'student_leader'],olderLearners,'cessation',[1],[],[],[],peerNote),
-  rule('EDU-CARE-UNI','PK-EDU-C5',[...schoolDelivery,'university_leader'],['university'],'cessation',[],[1],[],[],`${universityNote}; ${peerNote}`,'support_only'),
-  rule('FAM-HOME-EARLY','PK-FAM-HOME',familyMembers,['early_childhood'],'prevention',[12,9],[4]),
-  rule('FAM-HOME-CHILD','PK-FAM-HOME',familyMembers,['primary_lower'],'prevention',[12]),
-  rule('FAM-HOME-OLDER','PK-FAM-HOME',familyMembers,['primary_upper','secondary'],'prevention',[12],[],[],[1],'คู่มือโรงเรียนใช้เฉพาะส่วนความร่วมมือระหว่างครอบครัวกับสถานศึกษา'),
-  rule('FAM-HOME-ALL','PK-FAM-HOME',familyMembers,['family_all'],'prevention',[12]),
-  rule('FAM-TEAM-CARE','PK-FAM-TEAM',familyFacilitators,['caregivers'],'prevention',[11],[12]),
-  rule('FAM-TEAM-FATHER','PK-FAM-TEAM',familyFacilitators,['fathers'],'prevention',[13],[11,12]),
-  rule('FAM-SUPPORT-MEMBER','PK-FAM-SUPPORT',familyMembers,['family_who_use'],'cessation',[12],[],[],[],'ใช้การสื่อสารเชิงบวกเพื่อสนับสนุนและเชื่อมบริการช่วยเลิก; ไม่ใช่แนวทางบำบัดทดแทนวิชาชีพ'),
-  rule('FAM-SUPPORT-TEAM','PK-FAM-SUPPORT',familyFacilitators,['family_who_use'],'cessation',[11,12],[],[],[],'คณะทำงานจัดวงพูดคุยกับครอบครัวและประสานบริการสุขภาพตามความยินยอม'),
-  rule('COM-ENV-ALL','PK-COM-C3',communityRoles,['community_all','community_workers'],'prevention',[10]),
-  rule('COM-ENV-YOUTH','PK-COM-C3',communityRoles,['community_youth'],'prevention',[10],[],[],[1],'ข้อ 1 ใช้ส่วนความร่วมมือชุมชน–สถานศึกษา; บทบาทศาสนสถานได้คู่มือชุมชนทั่วไป ไม่อ้างว่ามีคู่มือมัสยิดเฉพาะ'),
-  rule('COM-CARE','PK-COM-C5',communityRoles,['community_all','community_youth','community_workers'],'cessation',[10],[],[],[],'ใช้ส่วนสนับสนุนการลด ละ เลิกและประสานหน่วยบริการของ อปท.; ไม่เพิ่มแนวทางรักษา'),
-  rule('WRK-SYSTEM-ADMIN','PK-WRK-SYSTEM',['employer'],['workers'],'prevention',[16],[14]),
-  rule('WRK-SYSTEM-TEAM','PK-WRK-SYSTEM',['hr','work_leader'],['workers'],'prevention',[15],[14,16]),
-  rule('WRK-SYSTEM-EMPLOYEE','PK-WRK-SYSTEM',['employee'],['workers'],'prevention',[14],[15],[],[],'ผู้ร่วมดำเนินงานควรชวนฝ่ายบุคคลหรือคณะทำงานมารับผิดชอบร่วม'),
-  rule('WRK-CARE-ADMIN','PK-WRK-SUPPORT',['employer'],['workers'],'cessation',[16],[15],[],[],'เน้นจัดระบบสนับสนุนและประสานบริการช่วยเลิกตามคู่มือสถานประกอบการ'),
-  rule('WRK-CARE-TEAM','PK-WRK-SUPPORT',['hr','work_leader'],['workers'],'cessation',[15],[16],[],[],'ใช้กระบวนการสนับสนุนพนักงานในคู่มือ ไม่สร้างแนวทางรักษาขึ้นใหม่'),
-  rule('WRK-CARE-EMPLOYEE','PK-WRK-SUPPORT',['employee'],['workers'],'cessation',[],[15,16],[],[],'เป็นผู้ร่วมและผู้ประสาน ต้องมีฝ่ายบุคคลหรือคณะทำงานร่วมดำเนินการ','support_only'),
-  rule('HEA-QUIT','PK-HEA-QUIT',['doctor','nurse','public_health','pharmacist'],['adult_service_users','adolescent_service_users'],'cessation',[18],[],[],[],'บุคลากรใช้ตามขอบเขตวิชาชีพ; กลุ่มวัยรุ่นอ้างอิงหัวข้อเฉพาะในแนวทาง ไม่ย่อเป็นคำสั่งรักษาอัตโนมัติ'),
-  rule('HEA-SURVEILLANCE','PK-HEA-SURVEILLANCE',['doctor','nurse','public_health'],['adult_service_users','adolescent_service_users'],'cessation',[17],[],[],[],'แพทย์และทีมวิชาชีพใช้ตามบทบาท; เจ้าหน้าที่สาธารณสุขเน้นเฝ้าระวัง สอบสวน และส่งต่อ ไม่วินิจฉัยแทนแพทย์'),
-];
 export const hostFor = (setting, role) => setting === 'EDU' ? (role.includes('leader') ? 'ครูหรือทีมดูแลผู้เรียนร่วมกับแกนนำ' : 'ผู้บริหาร ครู และทีมดูแลผู้เรียน')
   : setting === 'FAM' ? 'สมาชิกครอบครัวและผู้รับผิดชอบกิจกรรมครอบครัว' : setting === 'COM' ? 'อปท. ทีมชุมชน และหน่วยบริการสุขภาพในพื้นที่'
   : setting === 'WRK' ? 'ผู้บริหาร ฝ่ายบุคคล และคณะทำงานสถานประกอบการ' : 'ทีมบุคลากรวิชาชีพของหน่วยบริการ';
-export const phasesFor = (pkg, roleLabel, audienceLabel) => {
-  const first = `ชวน${roleLabel}และทีมที่เกี่ยวข้องทบทวนบริบทของ${audienceLabel} และเลือกส่วนของคู่มือที่จะใช้`;
-  if (pkg.settingCode === 'HEA') return [first, 'ทบทวนแนวทางต้นฉบับและกำหนดผู้รับผิดชอบตามขอบเขตวิชาชีพ', 'ใช้แนวทางในระบบบริการและการประสานส่งต่อตามบริบทของหน่วยงาน', 'ทบทวนความครบถ้วนของการประสานงานและปรับขั้นตอนร่วมกับทีมบริการ'];
-  if (pkg.componentCode === 'C2') return [first, 'เตรียมสื่อ กิจกรรม และแบบสำรวจที่ตรงกับวัยและมีไฟล์อยู่จริง', 'จัดกิจกรรมตามคู่มือ โดยให้ผู้รับผิดชอบปรับเวลาและภาษาให้เหมาะกับกลุ่ม', 'เก็บข้อเสนอแนะและทบทวนผลจากกิจกรรมหรือแบบสำรวจที่เลือกใช้'];
-  if (pkg.componentCode === 'C5' || pkg.code.endsWith('SUPPORT')) return [first, 'ตกลงบทบาทของผู้ดูแลและช่องทางประสานบริการสุขภาพ', 'พูดคุย สนับสนุน และประสานผู้รับผิดชอบตามคู่มือและความยินยอม', 'ติดตามการเข้าถึงความช่วยเหลือและปรับการประสานงานร่วมกับทีม'];
-  return [first, 'เตรียมทีม แบ่งหน้าที่ และเลือกกิจกรรมจากคู่มือต้นฉบับ', 'เริ่มดำเนินงานกับกลุ่มเป้าหมายตามบทบาทและข้อตกลงร่วมกัน', 'ทบทวนสิ่งที่ทำได้ ปัญหาที่พบ และปรับแผนรอบถัดไป'];
-};
+
+export { packages, rules, usagePlanFor } from './package-playbooks.mjs';

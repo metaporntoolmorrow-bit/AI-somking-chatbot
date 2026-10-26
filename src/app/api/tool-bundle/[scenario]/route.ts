@@ -3,12 +3,13 @@ import { createHash } from 'node:crypto';
 import { getPublishedCatalog } from '@/lib/catalog';
 import { createServiceClient } from '@/lib/supabase/service';
 import { compatibleSelection, scenarioToolIds } from '@/lib/plan-flow';
+import { bundleIdentity } from '@/lib/package-identity.mjs';
 
 export const runtime = 'nodejs';
 
 export async function GET(request: Request, { params }: { params: Promise<{ scenario: string }> }) {
   const { scenario: code } = await params;
-  if (!/^(SC-\d{3}|REAL-\d{4})$/.test(code)) return new Response('ไม่พบแผน', { status: 404 });
+  if (!/^(SC-\d{3}|REAL2?-\d{4})$/.test(code)) return new Response('ไม่พบแผน', { status: 404 });
 
   const catalog = await getPublishedCatalog();
   const scenario = catalog.scenarios.find(item => item.id === code);
@@ -17,7 +18,8 @@ export async function GET(request: Request, { params }: { params: Promise<{ scen
     if(!selection.length) return new Response('กลุ่มเป้าหมายไม่ตรงกับแผน กรุณาสร้างแผนใหม่', {status:400});
     const ids=[...new Set(selection.flatMap(scenarioToolIds))].sort();
     if(!ids.length||ids.some(id=>!catalog.tools.find(t=>t.id===id)?.downloadReady)) return new Response('ไฟล์เครื่องมือยังไม่พร้อม', {status:409});
-    const key=createHash('sha256').update(ids.join('\n')).digest('hex');
+    const identity=catalog.bundleVersion===2?bundleIdentity(scenario.packageId,ids):ids.join('\n');
+    const key=createHash('sha256').update(identity).digest('hex');
     const {data,error}=await createServiceClient().storage.from(catalog.bundleBucket).createSignedUrl(`${catalog.releaseId}/bundles/${key}.zip`,300,{download:'ชุดเครื่องมือ.zip'});
     if(error||!data) return new Response('ดาวน์โหลดไม่สำเร็จ กรุณาลองใหม่อีกครั้ง', {status:502});
     return new Response(null,{status:302,headers:{Location:data.signedUrl,'Cache-Control':'private, no-store'}});

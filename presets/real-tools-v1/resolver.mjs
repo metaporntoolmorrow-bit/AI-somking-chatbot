@@ -31,11 +31,15 @@ export function resolvePreset(preset, answers) {
 
 export function buildDownloadManifest(preset, answers) {
   const result = resolvePreset(preset, answers);
+  const allSteps=result.results.flatMap(row=>row.useSequence||[]).sort((a,b)=>a.rank-b.rank||a.toolCode.localeCompare(b.toolCode));
+  const useSequence=[...new Map(allSteps.map(step=>[`${step.rank}:${step.toolCode}`,step])).values()].map((step,index)=>({...step,order:index+1}));
+  const orderedToolCodes=[...new Set([...useSequence.map(step=>step.toolCode),...result.toolCodes])];
   const assets = preset.assets.filter(asset => asset.toolCodes.some(code => result.toolCodes.includes(code)));
   const localFiles = assets.filter(asset => asset.hosting === 'bundle').map(asset => ({ assetCode: asset.code, relativePath: asset.relativePath, fileName: asset.fileName, fileKind: asset.fileKind, sizeBytes: asset.sizeBytes }));
   const externalFiles = assets.filter(asset => asset.hosting !== 'bundle').flatMap(asset => asset.downloads.map(download => ({ assetCode: asset.code, toolCodes: asset.toolCodes, ...download })));
   const contentLinks = preset.tools.filter(tool => result.toolCodes.includes(tool.code)).flatMap(tool => tool.contentLinks.map(url => ({ toolCode: tool.code, title: tool.title, url, provider: 'source_document_link' })));
-  return { release: result.release, scenarioCodes: result.scenarioCodes, toolCodes: result.toolCodes, localFiles, externalFiles, contentLinks, publicAccessVerified: externalFiles.every(file => file.publicAccessVerified === true) };
+  const packageCode=result.results[0].packageCode;
+  return { release: result.release, packageCode, scenarioCodes: result.scenarioCodes, toolCodes: orderedToolCodes, useSequence, localFiles, externalFiles, contentLinks, publicAccessVerified: externalFiles.every(file => file.publicAccessVerified === true) };
 }
 
 export function formatDownloadLinks(preset, manifest) {
