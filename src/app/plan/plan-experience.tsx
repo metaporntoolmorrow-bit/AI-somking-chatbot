@@ -1,82 +1,28 @@
 'use client';
 
-import { useEffect, useMemo, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { ArrowLeft, Check, Leaf } from 'lucide-react';
 import type { Package, Scenario } from '@/lib/catalog';
-
-type SingleKey = 'settingCode' | 'packageId' | 'roleCode' | 'level';
-type Answers = Record<SingleKey, string> & { audienceCodes: string[] };
-type Stage = { key: SingleKey | 'audienceCodes'; question: string; hint: string };
-type Option = { value: string; label: string };
-
-const stages: Stage[] = [
-  { key: 'settingCode', question: 'คุณทำงานอยู่ในพื้นที่แบบไหน?', hint: 'เลือกคำตอบที่ตรงกับพื้นที่ของคุณ' },
-  { key: 'packageId', question: 'อยากเริ่มจากเรื่องไหน?', hint: 'เลือกแนวทางที่เหมาะกับสิ่งที่อยากทำ' },
-  { key: 'roleCode', question: 'คุณมีบทบาทอะไรในพื้นที่นี้?', hint: 'เลือกบทบาทที่ใกล้กับงานของคุณที่สุด' },
-  { key: 'level', question: 'อยากดูแลเรื่องนี้ในระดับไหน?', hint: 'เลือกเป้าหมายของแผน' },
-  { key: 'audienceCodes', question: 'กลุ่มเป้าหมายที่อยากดูแลมีใครบ้าง?', hint: 'เลือกได้หลายข้อ แล้วกดยืนยันคำตอบ' },
-];
-
-const settingLabels: Record<string, string> = {
-  S1: 'สถานศึกษา',
-  S2: 'ครอบครัว / ชุมชน / ระบบสุขภาพ',
-  S3: 'สถานประกอบการ',
-};
-
-const emptyAnswers = (): Answers => ({
-  settingCode: '', packageId: '', roleCode: '', level: '', audienceCodes: [],
-});
-
-function distinct(options: Option[]): Option[] {
-  return [...new Map(options.map(option => [option.value, option])).values()];
-}
+import { emptyAnswers, planFlow, questions, type AnswerKey } from '@/lib/plan-flow';
 
 export function PlanExperience({ scenarios, packages }: { scenarios: Scenario[]; packages: Package[] }) {
   const router = useRouter();
-  const [answers, setAnswers] = useState<Answers>(emptyAnswers);
-  const [stageIndex, setStageIndex] = useState(0);
+  const [answers, setAnswers] = useState(emptyAnswers);
   const [submitting, setSubmitting] = useState(false);
   const endRef = useRef<HTMLDivElement>(null);
-  const current = stages[stageIndex];
+  const flow = planFlow(scenarios, packages, answers);
+  const { current, options, answered, pool: available } = flow;
+  const stageIndex = answered.length;
 
-  const available = useMemo(() => scenarios.filter(scenario =>
-    (!answers.settingCode || scenario.settingCode === answers.settingCode) &&
-    (!answers.packageId || scenario.packageId === answers.packageId) &&
-    (!answers.roleCode || scenario.roleCode === answers.roleCode) &&
-    (!answers.level || scenario.level === answers.level)
-  ), [answers.settingCode, answers.packageId, answers.roleCode, answers.level, scenarios]);
-
-  function optionsFor(key: Stage['key'], pool: Scenario[]): Option[] {
-    if (key === 'settingCode') return distinct(pool.map(scenario => ({ value: scenario.settingCode, label: settingLabels[scenario.settingCode] ?? scenario.settingCode })));
-    if (key === 'packageId') return distinct(pool.map(scenario => ({ value: scenario.packageId, label: packages.find(item => item.id === scenario.packageId)?.name ?? scenario.packageId })));
-    if (key === 'roleCode') return distinct(pool.map(scenario => ({ value: scenario.roleCode, label: scenario.role })));
-    if (key === 'level') return distinct(pool.map(scenario => ({ value: scenario.level, label: scenario.level })));
-    return distinct(pool.map(scenario => ({ value: scenario.audienceCode, label: scenario.audience })));
-  }
-
-  const options = optionsFor(current.key, available);
-
-  function previousAnswer(index: number): string {
-    const key = stages[index].key;
-    if (key === 'audienceCodes') return optionsFor(key, available).filter(option => answers.audienceCodes.includes(option.value)).map(option => option.label).join(', ');
-    const pool = scenarios.filter(scenario =>
-      (index < 1 || scenario.settingCode === answers.settingCode) &&
-      (index < 2 || scenario.packageId === answers.packageId) &&
-      (index < 3 || scenario.roleCode === answers.roleCode)
-    );
-    return optionsFor(key, pool).find(option => option.value === answers[key])?.label ?? answers[key];
-  }
-
-  function chooseSingle(key: SingleKey, value: string) {
-    const next: Answers = { ...answers, [key]: value };
-    for (const later of stages.slice(stageIndex + 1)) {
+  function chooseSingle(key: Exclude<AnswerKey, 'audienceCodes'>, value: string) {
+    const next = { ...answers, [key]: value };
+    for (const later of questions.slice(questions.findIndex(q => q.key === key) + 1)) {
       if (later.key === 'audienceCodes') next.audienceCodes = [];
       else next[later.key] = '';
     }
     setAnswers(next);
-    setStageIndex(stageIndex + 1);
   }
 
   function toggleAudience(value: string) {
@@ -90,15 +36,14 @@ export function PlanExperience({ scenarios, packages }: { scenarios: Scenario[];
 
   function goBack() {
     if (!stageIndex) return;
-    const previousIndex = stageIndex - 1;
+    const previousKey = answered.at(-1)!.stage.key;
     const next = { ...answers, audienceCodes: [...answers.audienceCodes] };
-    for (const later of stages.slice(previousIndex)) {
+    for (const later of questions.slice(questions.findIndex(q => q.key === previousKey))) {
       if (later.key === 'audienceCodes') next.audienceCodes = [];
       else next[later.key] = '';
     }
     setSubmitting(false);
     setAnswers(next);
-    setStageIndex(previousIndex);
   }
 
   function confirmAudiences() {
@@ -122,9 +67,9 @@ export function PlanExperience({ scenarios, packages }: { scenarios: Scenario[];
     </div></header>
     <div className="chat-stage"><div className="chat-transcript" aria-live="polite">
       <div className="chat-line assistant"><div className="chat-bubble greeting">สวัสดีค่ะ มาช่วยกันวางแผนให้เหมาะกับพื้นที่ของคุณนะคะ</div></div>
-      {stages.slice(0, stageIndex + 1).map((stage, index) => <div className="chat-exchange" key={stage.key}>
-        <div className="chat-line assistant"><div className="chat-bubble question"><span>คำถามที่ {index + 1} จาก {stages.length}</span><strong>{stage.question}</strong><small>{stage.hint}</small></div></div>
-        {index < stageIndex && <div className="chat-line user"><div className="chat-bubble answer">{previousAnswer(index)}</div></div>}
+      {[...answered, { stage: current, label: '' }].map(({stage,label}, index) => <div className="chat-exchange" key={stage.key}>
+        <div className="chat-line assistant"><div className="chat-bubble question"><span>คำถามที่ {index + 1}</span><strong>{stage.question}</strong><small>{stage.hint}</small></div></div>
+        {label && <div className="chat-line user"><div className="chat-bubble answer">{label}</div></div>}
       </div>)}
       <div ref={endRef} />
     </div></div>

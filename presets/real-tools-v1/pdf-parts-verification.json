@@ -1,0 +1,81 @@
+{
+  "sourcePages": 224,
+  "partCount": 6,
+  "coveredPages": 224,
+  "fullTextUnchanged": true,
+  "boundaryPagesCompared": 12,
+  "rendered": [
+    {
+      "sourcePage": 1,
+      "partFile": "tool15-pages-001-020.pdf",
+      "partPage": 1,
+      "pixelIdentical": true
+    },
+    {
+      "sourcePage": 20,
+      "partFile": "tool15-pages-001-020.pdf",
+      "partPage": 20,
+      "pixelIdentical": true
+    },
+    {
+      "sourcePage": 21,
+      "partFile": "tool15-pages-021-071.pdf",
+      "partPage": 1,
+      "pixelIdentical": true
+    },
+    {
+      "sourcePage": 71,
+      "partFile": "tool15-pages-021-071.pdf",
+      "partPage": 51,
+      "pixelIdentical": true
+    },
+    {
+      "sourcePage": 72,
+      "partFile": "tool15-pages-072-113.pdf",
+      "partPage": 1,
+      "pixelIdentical": true
+    },
+    {
+      "sourcePage": 113,
+      "partFile": "tool15-pages-072-113.pdf",
+      "partPage": 42,
+      "pixelIdentical": true
+    },
+    {
+      "sourcePage": 114,
+      "partFile": "tool15-pages-114-149.pdf",
+      "partPage": 1,
+      "pixelIdentical": true
+    },
+    {
+      "sourcePage": 149,
+      "partFile": "tool15-pages-114-149.pdf",
+      "partPage": 36,
+      "pixelIdentical": true
+    },
+    {
+      "sourcePage": 150,
+      "partFile": "tool15-pages-150-171.pdf",
+      "partPage": 1,
+      "pixelIdentical": true
+    },
+    {
+      "sourcePage": 171,
+      "partFile": "tool15-pages-150-171.pdf",
+      "partPage": 22,
+      "pixelIdentical": true
+    },
+    {
+      "sourcePage": 172,
+      "partFile": "tool15-pages-172-224.pdf",
+      "partPage": 1,
+      "pixelIdentical": true
+    },
+    {
+      "sourcePage": 224,
+      "partFile": "tool15-pages-172-224.pdf",
+      "partPage": 53,
+      "pixelIdentical": true
+    }
+  ]
+}

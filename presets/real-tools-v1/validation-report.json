@@ -1,0 +1,31 @@
+{
+  "release": "real-tools-2026-10-26-v1",
+  "settings": 5,
+  "questions": 5,
+  "packages": 14,
+  "mainTools": 18,
+  "supplementaryToolsWithoutFiles": 21,
+  "originalAssets": 30,
+  "smallFiles": 10,
+  "largeOriginalFiles": 20,
+  "driveFiles": 25,
+  "answerPaths": 179,
+  "primaryPaths": 158,
+  "supportingPaths": 21,
+  "multiAudienceGroups": 64,
+  "missingDriveUrls": [],
+  "publicDriveAccessVerified": true,
+  "productionDatabaseChanged": false,
+  "productionDeployed": false,
+  "conversation": {
+    "mainQuestions": 4,
+    "conditionalQuestion": "level",
+    "actualVisibleQuestionCounts": [
+      4
+    ],
+    "groupsChecked": 64,
+    "automaticallyDerivedLevelGroups": 64,
+    "conditionalQuestionFutureCaseVerified": true,
+    "mappingUnchanged": null
+  }
+}
