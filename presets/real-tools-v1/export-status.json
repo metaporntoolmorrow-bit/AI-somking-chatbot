@@ -1,10 +1,5 @@
 {
   "release": "real-tools-2026-10-27-v4",
-  "presetCsv": "presets-v4.csv",
-  "lockedExports": [
-    {
-      "locked": "presets.csv",
-      "written": "presets-v4.csv"
-    }
-  ]
+  "presetCsv": "presets.csv",
+  "lockedExports": []
 }

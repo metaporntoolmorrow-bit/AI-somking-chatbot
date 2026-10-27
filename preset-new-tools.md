@@ -31,4 +31,4 @@
 
 ผลตรวจ: 187 เส้นทาง, 47 กลุ่มบริบท, 1983 การเลือกหลายกลุ่ม, 31 ชุด ZIP ที่ไม่ซ้ำ
 
-ดู [ตัวอย่างบทสนทนา](presets/real-tools-v1/chat-preview.md) และ [ตาราง CSV](presets/real-tools-v1/presets-v4.csv)
+ดู [ตัวอย่างบทสนทนา](presets/real-tools-v1/chat-preview.md) และ [ตาราง CSV](presets/real-tools-v1/presets.csv)
