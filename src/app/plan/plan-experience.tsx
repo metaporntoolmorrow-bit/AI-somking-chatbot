@@ -77,7 +77,7 @@ export function PlanExperience({ scenarios, packages }: { scenarios: Scenario[];
     </div></div>
     <div className="chat-composer"><div className="chat-composer-inner">
       <p className="chat-choice-label">เลือกคำตอบของคุณ <span>{current.key === 'audienceCodes' ? 'เลือกได้หลายข้อ' : 'เลือกได้ 1 ข้อ'}</span></p>
-      {options.length ? <div className="chat-options">{options.map(option => {
+      {options.length ? <div className={`chat-options${current.key==='packageId'?' chat-options-goals':''}`}>{options.map(option => {
         const selected = current.key === 'audienceCodes' && answers.audienceCodes.includes(option.value);
         return <button key={option.value} type="button" className={`chat-choice${selected ? ' selected' : ''}`} aria-pressed={current.key === 'audienceCodes' ? selected : undefined} onClick={() => current.key === 'audienceCodes' ? toggleAudience(option.value) : chooseSingle(current.key, option.value)}>{selected && <Check size={16} aria-hidden="true" />}{option.label}</button>;
       })}</div> : <div className="chat-no-options">ยังไม่มีตัวเลือกที่ตรงกับคำตอบก่อนหน้า ลองย้อนกลับไปเลือกใหม่</div>}

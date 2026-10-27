@@ -3,7 +3,7 @@ import { createServiceClient } from '@/lib/supabase/service';
 
 export async function GET(request: Request, { params }: { params: Promise<{ code: string }> }) {
   const { code } = await params;
-  if (!/^(T\d{2}|MAIN-\d{2})$/.test(code)) return new Response('ไม่พบไฟล์', { status: 404 });
+  if (!/^(T\d{2}|MAIN-\d{2}|GUIDE-0[1-4])$/.test(code)) return new Response('ไม่พบไฟล์', { status: 404 });
   const catalog = await getPublishedCatalog();
   const tool = catalog.tools.find(item => item.id === code);
   if(catalog.bundleBucket&&catalog.releaseId&&tool){

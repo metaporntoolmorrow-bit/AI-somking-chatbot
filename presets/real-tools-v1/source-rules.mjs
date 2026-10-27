@@ -1,19 +1,20 @@
 import { toolShortTitles } from './package-playbooks.mjs';
+import { componentGuides } from './component-framework.mjs';
 // Content authoring rules. Source scope is transcribed from the supplied tracker.
 // Roles, audience routing and package outlines are editorial draft mappings.
-export const release = { code: 'real-tools-2026-10-26-v2', schemaVersion: 2, reviewStatus: 'working_draft', thresholdBytes: 6_000_000 };
+export const release = { code: 'real-tools-2026-10-27-v3', scenarioPrefix:'REAL3', schemaVersion: 2, reviewStatus: 'source_informed_review', thresholdBytes: 6_000_000 };
 export const settings = [
   ['EDU', 'สถานศึกษา'], ['FAM', 'ครอบครัว'], ['COM', 'ชุมชน'], ['HEA', 'ระบบบริการสุขภาพ'], ['WRK', 'สถานประกอบการ'],
 ].map(([code, label]) => ({ code, label }));
 export const questions = [
-  { order: 1, key: 'settingCode', text: 'คุณอยากเริ่มสร้างพื้นที่ปลอดบุหรี่ไฟฟ้าที่ไหน?', hint: 'เลือกพื้นที่ที่คุณอยากนำแผนไปใช้', selection: 'single', autoAdvance: true, askWhen: 'always' },
-  { order: 2, key: 'roleCode', text: 'คุณจะช่วยดูแลพื้นที่นี้ในบทบาทไหน?', hint: 'เลือกบทบาทที่ใกล้กับสิ่งที่คุณจะทำมากที่สุด', selection: 'single', autoAdvance: true, askWhen: 'always' },
-  { order: 3, key: 'packageId', text: 'ในบทบาทนี้ คุณอยากเริ่มทำเรื่องไหน?', hint: 'เลือกเรื่องที่อยากลงมือทำก่อน', selection: 'single', autoAdvance: true, askWhen: 'always' },
-  { order: 4, key: 'level', text: 'แผนนี้ควรเน้นป้องกัน หรือดูแลคนที่ใช้อยู่แล้ว?', hint: 'เลือกเป้าหมายที่ตรงกับคนที่คุณอยากดูแล', selection: 'single', autoAdvance: true, askWhen: 'multiple_options', singleOptionBehavior: 'derive_without_prompt' },
-  { order: 5, key: 'audienceCodes', text: 'คุณอยากให้แผนนี้ช่วยดูแลใครบ้าง?', hint: 'เลือกได้มากกว่าหนึ่งกลุ่ม แล้วกดยืนยันคำตอบ', selection: 'multiple', autoAdvance: false, confirmationRequired: true, askWhen: 'always' },
+  { order: 1, key: 'settingCode', text: 'คุณอยากเริ่มดูแลปัญหาบุหรี่ไฟฟ้าในพื้นที่ไหน?', hint: 'เลือกพื้นที่ที่จะนำแผนไปใช้จริง', selection: 'single', autoAdvance: true, askWhen: 'always' },
+  { order: 2, key: 'roleCode', text: 'คุณจะร่วมดูแลพื้นที่นี้ในบทบาทไหน?', hint: 'เลือกบทบาทที่ใกล้กับงานที่คุณจะทำ', selection: 'single', autoAdvance: true, askWhen: 'always' },
+  { order: 3, key: 'packageId', text: 'เรื่องไหนที่คุณอยากเริ่มทำให้เป็นระบบ?', hint: 'เลือกจุดเริ่มต้น แล้วเราจะเรียงเครื่องมือให้ใช้ต่อกัน', selection: 'single', autoAdvance: true, askWhen: 'always' },
+  { order: 4, key: 'level', text: 'อยากเน้นป้องกันการเริ่มใช้ หรือช่วยคนที่เริ่มใช้แล้ว?', hint: 'เลือกสถานการณ์ที่ต้องการดูแล', selection: 'single', autoAdvance: true, askWhen: 'multiple_options', singleOptionBehavior: 'derive_without_prompt' },
+  { order: 5, key: 'audienceCodes', text: 'คุณอยากเริ่มทำงานกับกลุ่มไหนบ้าง?', hint: 'เลือกกลุ่มที่จะทำงานด้วยจริง เลือกได้หลายข้อแล้วกดยืนยัน', selection: 'multiple', autoAdvance: false, confirmationRequired: true, askWhen: 'always' },
 ];
 export const conversationPolicy = {
-  version: 'conversational-copy-1',
+  version: 'source-informed-five-components-3',
   requiredQuestionKeys: ['settingCode','roleCode','packageId','audienceCodes'],
   conditionalQuestionKey: 'level',
   conditionalRule: 'Ask only when more than one valid level remains after the preceding answers; otherwise derive the sole valid value.',
@@ -72,7 +73,7 @@ const rawTools = [
 ];
 export const toolCode = number => `MAIN-${String(number).padStart(2, '0')}`;
 export const tools = rawTools.map(([number, title, kind, scope, source]) => ({
-  code: toolCode(number), sourceNumber: number, title, shortTitle: toolShortTitles[number], kind, scope, source, category: 'main',
+  code: toolCode(number), sourceNumber: number, title:[1,7].includes(number)?toolShortTitles[number]:title, trackerTitle:title, shortTitle: toolShortTitles[number], kind:number===7?'รายงานและภาพสรุป':kind, scope, source, category: 'main',
   trackerStatus: 'ผ่านการทดลองใช้ / พร้อมขยายผล (ตามเอกสารรายการ)',
   availableContent: number === 4 ? 'link_document' : number === 7 ? 'research_and_infographics' : 'source_files',
   editorialNote: number === 1 ? 'ไฟล์ที่แนบเป็นคู่มือโรงเรียน; ยังไม่พบไฟล์ 7 องค์ประกอบอุดมศึกษาแยกต่างหาก'
@@ -82,7 +83,7 @@ export const tools = rawTools.map(([number, title, kind, scope, source]) => ({
     : [14,15,16].includes(number) ? 'เนื้อหาบางส่วนกล่าวถึงบุหรี่โดยรวม ให้ใช้ตามบริบทสถานประกอบการ'
     : [17,18].includes(number) ? 'จัดเส้นทางสำหรับบุคลากรวิชาชีพตามขอบเขตงาน; ไม่มีการสร้างคำแนะนำรักษาหรือขนาดยาเพิ่ม'
     : '',
-}));
+})).concat(componentGuides);
 export const supplementaryTools = [
   'Application TUM', 'แบบสำรวจพฤติกรรมบุหรี่และบุหรี่ไฟฟ้า', 'G-RDU ระบบเฝ้าระวังสินค้าไม่ปลอดภัย', 'คู่มือ CIB เรื่องบุหรี่ไฟฟ้า',
   '7 ชุดกิจกรรม ควบคุมการบริโภคบุหรี่และบุหรี่ไฟฟ้า', 'Child Impact Platform', 'สื่อรณรงค์และช่องทางเลิกบุหรี่ไฟฟ้า',

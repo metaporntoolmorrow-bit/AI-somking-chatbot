@@ -3,6 +3,7 @@ import { readdir, readFile } from 'node:fs/promises';
 import path from 'node:path';
 import { createHash } from 'node:crypto';
 import { release, settings, questions, conversationPolicy, levels, components, roles, audiences, tools, supplementaryTools, packages, rules, hostFor, usagePlanFor, toolCode } from '../presets/real-tools-v1/source-rules.mjs';
+import { componentGuides, frameworkEvidence } from '../presets/real-tools-v1/component-framework.mjs';
 
 const root = process.cwd();
 const destination = path.join(root, 'presets', 'real-tools-v1');
@@ -49,6 +50,22 @@ for (const file of contentFiles) {
   })() : [];
   assets.push({ code:`FILE-${String(assets.length+1).padStart(2,'0')}`, toolCodes:codes, fileName, relativePath:posix(path.relative(root,file)), sizeBytes:bytes.length, sha256:digest(bytes), extension, mimeType, fileKind, hosting, downloads });
 }
+const guideFiles=componentGuides.map(guide=>{
+  const matches=sourceFiles.filter(file=>path.basename(path.dirname(file))==='ไฟล์ข้อมูลองค์ประกอบ'&&path.basename(file).startsWith('องค์ประกอบที่ '+guide.number+' ')&&file.endsWith('.pdf'));
+  if(matches.length!==1)throw new Error('Expected exactly one component guide '+guide.code);
+  return {guide,file:matches[0]};
+});
+for(const {guide,file} of guideFiles){
+  const bytes=await readFile(file);
+  if(bytes.length>release.thresholdBytes||bytes.subarray(0,5).toString()!=='%PDF-')throw new Error('Invalid component PDF '+guide.code);
+  assets.push({code:'FILE-'+String(assets.length+1).padStart(2,'0'),toolCodes:[guide.code],fileName:path.basename(file),relativePath:posix(path.relative(root,file)),sizeBytes:bytes.length,sha256:digest(bytes),extension:'.pdf',mimeType:'application/pdf',fileKind:'component_guidance',hosting:'bundle',downloads:[]});
+}
+const conceptName=(await readdir(root)).find(name=>name.endsWith('11.8.69.pdf'));
+const outline=sourceFiles.find(file=>path.basename(file).startsWith('โครงร่างการเรียบเรียง 7 มาตรการ')&&file.endsWith('.docx'));
+const trackerPdf=sourceFiles.find(file=>path.basename(file).startsWith('รายการเครื่องมือ')&&file.endsWith('.pdf'));
+if(!conceptName||!outline||!trackerPdf)throw new Error('Missing concept, component outline, or tracker');
+const evidenceFiles=[path.join(root,conceptName),tracker,trackerPdf,...guideFiles.map(g=>g.file),outline];
+const sourceEvidence=await Promise.all(evidenceFiles.map(async file=>({relativePath:posix(path.relative(root,file)),sha256:digest(await readFile(file))})));
 const sourceTools = tools.map(tool => ({ ...tool, assetCodes:assets.filter(file => file.toolCodes.includes(tool.code)).map(file => file.code), contentLinks:tool.sourceNumber === 4 ? ['https://drive.google.com/drive/folders/1qB-KK6lIX6UUKQhpt8z1NjWCnU2Ev2tS'] : [] }));
 
-await buildPackageCatalog({release,settings,questions,conversationPolicy,levels,components,roles,audiences,tools,supplementaryTools,packages,rules,hostFor,usagePlanFor,assets,sourceTools,tracker,parts,destination,reviewFile,drive,root,previous});
+await buildPackageCatalog({release:{...release,sourceEvidence},frameworkEvidence,settings,questions,conversationPolicy,levels,components,roles,audiences,tools,supplementaryTools,packages,rules,hostFor,usagePlanFor,assets,sourceTools,tracker,parts,destination,reviewFile,drive,root,previous});

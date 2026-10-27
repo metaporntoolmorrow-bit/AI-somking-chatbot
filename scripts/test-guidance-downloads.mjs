@@ -15,7 +15,7 @@ assert.equal(new Set(editions.map(s=>s.cautions.join('\n'))).size,20);
 assert.equal(new Set(editions.map(s=>s.benefits.join('\n'))).size,20);
 const groups=new Map();
 for(const row of preset.scenarios){const a=row.answers,key=[a.settingCode,a.roleCode,a.packageId,a.level].join('|');if(!groups.has(key))groups.set(key,[]);groups.get(key).push(row);}
-const cases=preset.settings.map(s=>[...groups.values()].find(rows=>rows[0].answers.settingCode===s.code));
+const cases=preset.settings.map(s=>[...groups.values()].filter(rows=>rows[0].answers.settingCode===s.code).sort((a,b)=>new Set(b.flatMap(r=>r.useSequence.map(s=>`${s.rank}:${s.toolCode}`))).size-new Set(a.flatMap(r=>r.useSequence.map(s=>`${s.rank}:${s.toolCode}`))).size)[0]);
 const dir='output/qa/guidance-downloads';
 await mkdir(dir,{recursive:true});
 const urlFor=(rows,id)=>`${base}/result?${new URLSearchParams({scenario:rows[0].code,scenarios:rows.map(s=>s.code).join(','),guidance:String(id)})}`;

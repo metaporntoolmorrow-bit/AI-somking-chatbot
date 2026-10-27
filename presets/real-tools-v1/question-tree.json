@@ -3,8 +3,8 @@
     {
       "order": 1,
       "key": "settingCode",
-      "text": "คุณอยากเริ่มสร้างพื้นที่ปลอดบุหรี่ไฟฟ้าที่ไหน?",
-      "hint": "เลือกพื้นที่ที่คุณอยากนำแผนไปใช้",
+      "text": "คุณอยากเริ่มดูแลปัญหาบุหรี่ไฟฟ้าในพื้นที่ไหน?",
+      "hint": "เลือกพื้นที่ที่จะนำแผนไปใช้จริง",
       "selection": "single",
       "autoAdvance": true,
       "askWhen": "always"
@@ -12,8 +12,8 @@
     {
       "order": 2,
       "key": "roleCode",
-      "text": "คุณจะช่วยดูแลพื้นที่นี้ในบทบาทไหน?",
-      "hint": "เลือกบทบาทที่ใกล้กับสิ่งที่คุณจะทำมากที่สุด",
+      "text": "คุณจะร่วมดูแลพื้นที่นี้ในบทบาทไหน?",
+      "hint": "เลือกบทบาทที่ใกล้กับงานที่คุณจะทำ",
       "selection": "single",
       "autoAdvance": true,
       "askWhen": "always"
@@ -21,8 +21,8 @@
     {
       "order": 3,
       "key": "packageId",
-      "text": "ในบทบาทนี้ คุณอยากเริ่มทำเรื่องไหน?",
-      "hint": "เลือกเรื่องที่อยากลงมือทำก่อน",
+      "text": "เรื่องไหนที่คุณอยากเริ่มทำให้เป็นระบบ?",
+      "hint": "เลือกจุดเริ่มต้น แล้วเราจะเรียงเครื่องมือให้ใช้ต่อกัน",
       "selection": "single",
       "autoAdvance": true,
       "askWhen": "always"
@@ -30,8 +30,8 @@
     {
       "order": 4,
       "key": "level",
-      "text": "แผนนี้ควรเน้นป้องกัน หรือดูแลคนที่ใช้อยู่แล้ว?",
-      "hint": "เลือกเป้าหมายที่ตรงกับคนที่คุณอยากดูแล",
+      "text": "อยากเน้นป้องกันการเริ่มใช้ หรือช่วยคนที่เริ่มใช้แล้ว?",
+      "hint": "เลือกสถานการณ์ที่ต้องการดูแล",
       "selection": "single",
       "autoAdvance": true,
       "askWhen": "multiple_options",
@@ -40,8 +40,8 @@
     {
       "order": 5,
       "key": "audienceCodes",
-      "text": "คุณอยากให้แผนนี้ช่วยดูแลใครบ้าง?",
-      "hint": "เลือกได้มากกว่าหนึ่งกลุ่ม แล้วกดยืนยันคำตอบ",
+      "text": "คุณอยากเริ่มทำงานกับกลุ่มไหนบ้าง?",
+      "hint": "เลือกกลุ่มที่จะทำงานด้วยจริง เลือกได้หลายข้อแล้วกดยืนยัน",
       "selection": "multiple",
       "autoAdvance": false,
       "confirmationRequired": true,
@@ -58,57 +58,206 @@
           "label": "ผู้บริหารสถานศึกษา",
           "packages": [
             {
-              "code": "PK-EDU-LEARN",
+              "code": "PK-EDU-POLICY",
               "settingCode": "EDU",
               "componentCode": "C1",
               "componentCodes": [
-                "C1",
-                "C2",
-                "C3",
-                "C4"
+                "C1"
               ],
-              "title": "ชุดเชื่อมทีม กิจกรรม และการเรียนรู้ในสถานศึกษา",
-              "choiceLabel": "อยากเชื่อมทีม กิจกรรม และการเรียนรู้ให้เป็นงานเดียวกัน",
-              "goal": "เริ่มจากทีมและข้อตกลง เลือกสื่อตามวัย แล้วใช้สิ่งที่เรียนรู้กลับมาดูแลพื้นที่ร่วมกัน",
+              "title": "ชุดร่วมกำหนดนโยบายและจัดทีมสถานศึกษา",
+              "choiceLabel": "อยากชวนทีมกำหนดนโยบายและแบ่งหน้าที่ให้ชัด",
+              "goal": "ใช้ข้อมูลพื้นที่และเสียงของผู้เรียนร่วมกำหนดนโยบาย แบ่งหน้าที่ และทบทวนการทำงาน",
               "mappingBasis": [
+                "concept_framework",
                 "tracker_scope",
-                "editorial_package_design"
+                "component_manuscripts"
               ],
               "audiences": [
                 {
                   "code": "early_childhood",
                   "label": "เด็กปฐมวัย อายุประมาณ 3–6 ปี",
-                  "scenarioCode": "REAL2-0001"
+                  "scenarioCode": "REAL3-0001"
                 },
                 {
                   "code": "primary_lower",
                   "label": "นักเรียนประถมต้น อายุประมาณ 7–9 ปี",
-                  "scenarioCode": "REAL2-0005"
+                  "scenarioCode": "REAL3-0002"
                 },
                 {
                   "code": "primary_upper",
                   "label": "นักเรียนประถมปลาย อายุประมาณ 10–12 ปี",
-                  "scenarioCode": "REAL2-0006"
+                  "scenarioCode": "REAL3-0003"
                 },
                 {
                   "code": "secondary",
                   "label": "นักเรียนมัธยม",
-                  "scenarioCode": "REAL2-0015"
+                  "scenarioCode": "REAL3-0004"
                 },
                 {
                   "code": "vocational",
                   "label": "นักเรียนอาชีวศึกษา",
-                  "scenarioCode": "REAL2-0020"
+                  "scenarioCode": "REAL3-0005"
                 },
                 {
                   "code": "ethnic_youth",
                   "label": "เด็กและเยาวชนกลุ่มชาติพันธุ์ในสถานศึกษา",
-                  "scenarioCode": "REAL2-0025"
+                  "scenarioCode": "REAL3-0006"
                 },
                 {
                   "code": "university",
                   "label": "นักศึกษาอุดมศึกษา",
-                  "scenarioCode": "REAL2-0030"
+                  "scenarioCode": "REAL3-0025"
+                }
+              ]
+            },
+            {
+              "code": "PK-EDU-LEARN",
+              "settingCode": "EDU",
+              "componentCode": "C2",
+              "componentCodes": [
+                "C2"
+              ],
+              "title": "ชุดออกแบบบทเรียนและกิจกรรมรู้เท่าทันบุหรี่ไฟฟ้า",
+              "choiceLabel": "อยากเชื่อมเรื่องบุหรี่ไฟฟ้ากับบทเรียนและกิจกรรม",
+              "goal": "เตรียมทีมและเป้าหมายการเรียนรู้ เลือกสื่อตามวัย แล้วใช้ผลจากกิจกรรมกลับมาปรับการสอน",
+              "mappingBasis": [
+                "concept_framework",
+                "tracker_scope",
+                "component_manuscripts"
+              ],
+              "audiences": [
+                {
+                  "code": "early_childhood",
+                  "label": "เด็กปฐมวัย อายุประมาณ 3–6 ปี",
+                  "scenarioCode": "REAL3-0029"
+                },
+                {
+                  "code": "primary_lower",
+                  "label": "นักเรียนประถมต้น อายุประมาณ 7–9 ปี",
+                  "scenarioCode": "REAL3-0033"
+                },
+                {
+                  "code": "primary_upper",
+                  "label": "นักเรียนประถมปลาย อายุประมาณ 10–12 ปี",
+                  "scenarioCode": "REAL3-0037"
+                },
+                {
+                  "code": "secondary",
+                  "label": "นักเรียนมัธยม",
+                  "scenarioCode": "REAL3-0042"
+                },
+                {
+                  "code": "vocational",
+                  "label": "นักเรียนอาชีวศึกษา",
+                  "scenarioCode": "REAL3-0047"
+                },
+                {
+                  "code": "ethnic_youth",
+                  "label": "เด็กและเยาวชนกลุ่มชาติพันธุ์ในสถานศึกษา",
+                  "scenarioCode": "REAL3-0052"
+                },
+                {
+                  "code": "university",
+                  "label": "นักศึกษาอุดมศึกษา",
+                  "scenarioCode": "REAL3-0057"
+                }
+              ]
+            },
+            {
+              "code": "PK-EDU-ENV",
+              "settingCode": "EDU",
+              "componentCode": "C3",
+              "componentCodes": [
+                "C3"
+              ],
+              "title": "ชุดเชื่อมสถานศึกษา บ้าน และชุมชนให้เป็นพื้นที่ปลอดภัย",
+              "choiceLabel": "อยากดูแลพื้นที่และทำงานร่วมกับบ้านและชุมชน",
+              "goal": "สำรวจจุดที่ต้องดูแล สร้างข้อตกลงร่วมกับครอบครัว และประสานผู้รับผิดชอบในพื้นที่",
+              "mappingBasis": [
+                "concept_framework",
+                "tracker_scope",
+                "component_manuscripts"
+              ],
+              "audiences": [
+                {
+                  "code": "early_childhood",
+                  "label": "เด็กปฐมวัย อายุประมาณ 3–6 ปี",
+                  "scenarioCode": "REAL3-0062"
+                },
+                {
+                  "code": "primary_lower",
+                  "label": "นักเรียนประถมต้น อายุประมาณ 7–9 ปี",
+                  "scenarioCode": "REAL3-0063"
+                },
+                {
+                  "code": "primary_upper",
+                  "label": "นักเรียนประถมปลาย อายุประมาณ 10–12 ปี",
+                  "scenarioCode": "REAL3-0064"
+                },
+                {
+                  "code": "secondary",
+                  "label": "นักเรียนมัธยม",
+                  "scenarioCode": "REAL3-0065"
+                },
+                {
+                  "code": "vocational",
+                  "label": "นักเรียนอาชีวศึกษา",
+                  "scenarioCode": "REAL3-0066"
+                },
+                {
+                  "code": "ethnic_youth",
+                  "label": "เด็กและเยาวชนกลุ่มชาติพันธุ์ในสถานศึกษา",
+                  "scenarioCode": "REAL3-0067"
+                },
+                {
+                  "code": "university",
+                  "label": "นักศึกษาอุดมศึกษา",
+                  "scenarioCode": "REAL3-0090"
+                }
+              ]
+            },
+            {
+              "code": "PK-EDU-YOUTH",
+              "settingCode": "EDU",
+              "componentCode": "C4",
+              "componentCodes": [
+                "C4",
+                "C1",
+                "C2"
+              ],
+              "title": "ชุดเสริมพลังแกนนำและกิจกรรมที่เยาวชนร่วมออกแบบ",
+              "choiceLabel": "อยากให้เยาวชนมีส่วนตัดสินใจและเป็นแกนนำกิจกรรม",
+              "goal": "มีครูพี่เลี้ยงให้เยาวชนร่วมวางแผน สร้างสื่อ และส่งต่องานรุ่นสู่รุ่นอย่างปลอดภัย",
+              "mappingBasis": [
+                "concept_framework",
+                "tracker_scope",
+                "component_manuscripts"
+              ],
+              "audiences": [
+                {
+                  "code": "primary_upper",
+                  "label": "นักเรียนประถมปลาย อายุประมาณ 10–12 ปี",
+                  "scenarioCode": "REAL3-0095"
+                },
+                {
+                  "code": "secondary",
+                  "label": "นักเรียนมัธยม",
+                  "scenarioCode": "REAL3-0096"
+                },
+                {
+                  "code": "vocational",
+                  "label": "นักเรียนอาชีวศึกษา",
+                  "scenarioCode": "REAL3-0097"
+                },
+                {
+                  "code": "ethnic_youth",
+                  "label": "เด็กและเยาวชนกลุ่มชาติพันธุ์ในสถานศึกษา",
+                  "scenarioCode": "REAL3-0098"
+                },
+                {
+                  "code": "university",
+                  "label": "นักศึกษาอุดมศึกษา",
+                  "scenarioCode": "REAL3-0115"
                 }
               ]
             },
@@ -119,28 +268,29 @@
               "componentCodes": [
                 "C5"
               ],
-              "title": "ชุดประสานโรงเรียนและครอบครัวเพื่อช่วยเหลือผู้เรียน",
-              "choiceLabel": "อยากจัดทีมพูดคุยกับครอบครัวและประสานความช่วยเหลือ",
-              "goal": "จัดระบบพูดคุยกับผู้เรียน ผู้ปกครอง และหน่วยบริการโดยไม่ตีตรา",
+              "title": "ชุดประสานสถานศึกษาและครอบครัวเพื่อช่วยเหลือผู้เรียน",
+              "choiceLabel": "อยากจัดระบบพูดคุย ช่วยเหลือ และประสานบริการ",
+              "goal": "จัดทีมรับฟังผู้เรียน คุยกับผู้ปกครองเป็นส่วนตัว และประสานความช่วยเหลือตามขอบเขตงาน",
               "mappingBasis": [
+                "concept_framework",
                 "tracker_scope",
-                "editorial_package_design"
+                "component_manuscripts"
               ],
               "audiences": [
                 {
                   "code": "primary_upper",
                   "label": "นักเรียนประถมปลาย อายุประมาณ 10–12 ปี",
-                  "scenarioCode": "REAL2-0035"
+                  "scenarioCode": "REAL3-0120"
                 },
                 {
                   "code": "secondary",
                   "label": "นักเรียนมัธยม",
-                  "scenarioCode": "REAL2-0036"
+                  "scenarioCode": "REAL3-0121"
                 },
                 {
                   "code": "vocational",
                   "label": "นักเรียนอาชีวศึกษา",
-                  "scenarioCode": "REAL2-0037"
+                  "scenarioCode": "REAL3-0122"
                 }
               ]
             }
@@ -151,57 +301,206 @@
           "label": "ครู / อาจารย์ / ครู ศพด.",
           "packages": [
             {
-              "code": "PK-EDU-LEARN",
+              "code": "PK-EDU-POLICY",
               "settingCode": "EDU",
               "componentCode": "C1",
               "componentCodes": [
-                "C1",
-                "C2",
-                "C3",
-                "C4"
+                "C1"
               ],
-              "title": "ชุดเชื่อมทีม กิจกรรม และการเรียนรู้ในสถานศึกษา",
-              "choiceLabel": "อยากเชื่อมทีม กิจกรรม และการเรียนรู้ให้เป็นงานเดียวกัน",
-              "goal": "เริ่มจากทีมและข้อตกลง เลือกสื่อตามวัย แล้วใช้สิ่งที่เรียนรู้กลับมาดูแลพื้นที่ร่วมกัน",
+              "title": "ชุดร่วมกำหนดนโยบายและจัดทีมสถานศึกษา",
+              "choiceLabel": "อยากชวนทีมกำหนดนโยบายและแบ่งหน้าที่ให้ชัด",
+              "goal": "ใช้ข้อมูลพื้นที่และเสียงของผู้เรียนร่วมกำหนดนโยบาย แบ่งหน้าที่ และทบทวนการทำงาน",
               "mappingBasis": [
+                "concept_framework",
                 "tracker_scope",
-                "editorial_package_design"
+                "component_manuscripts"
               ],
               "audiences": [
                 {
                   "code": "early_childhood",
                   "label": "เด็กปฐมวัย อายุประมาณ 3–6 ปี",
-                  "scenarioCode": "REAL2-0002"
+                  "scenarioCode": "REAL3-0007"
                 },
                 {
                   "code": "primary_lower",
                   "label": "นักเรียนประถมต้น อายุประมาณ 7–9 ปี",
-                  "scenarioCode": "REAL2-0007"
+                  "scenarioCode": "REAL3-0008"
                 },
                 {
                   "code": "primary_upper",
                   "label": "นักเรียนประถมปลาย อายุประมาณ 10–12 ปี",
-                  "scenarioCode": "REAL2-0008"
+                  "scenarioCode": "REAL3-0009"
                 },
                 {
                   "code": "secondary",
                   "label": "นักเรียนมัธยม",
-                  "scenarioCode": "REAL2-0016"
+                  "scenarioCode": "REAL3-0010"
                 },
                 {
                   "code": "vocational",
                   "label": "นักเรียนอาชีวศึกษา",
-                  "scenarioCode": "REAL2-0021"
+                  "scenarioCode": "REAL3-0011"
                 },
                 {
                   "code": "ethnic_youth",
                   "label": "เด็กและเยาวชนกลุ่มชาติพันธุ์ในสถานศึกษา",
-                  "scenarioCode": "REAL2-0026"
+                  "scenarioCode": "REAL3-0012"
                 },
                 {
                   "code": "university",
                   "label": "นักศึกษาอุดมศึกษา",
-                  "scenarioCode": "REAL2-0031"
+                  "scenarioCode": "REAL3-0026"
+                }
+              ]
+            },
+            {
+              "code": "PK-EDU-LEARN",
+              "settingCode": "EDU",
+              "componentCode": "C2",
+              "componentCodes": [
+                "C2"
+              ],
+              "title": "ชุดออกแบบบทเรียนและกิจกรรมรู้เท่าทันบุหรี่ไฟฟ้า",
+              "choiceLabel": "อยากเชื่อมเรื่องบุหรี่ไฟฟ้ากับบทเรียนและกิจกรรม",
+              "goal": "เตรียมทีมและเป้าหมายการเรียนรู้ เลือกสื่อตามวัย แล้วใช้ผลจากกิจกรรมกลับมาปรับการสอน",
+              "mappingBasis": [
+                "concept_framework",
+                "tracker_scope",
+                "component_manuscripts"
+              ],
+              "audiences": [
+                {
+                  "code": "early_childhood",
+                  "label": "เด็กปฐมวัย อายุประมาณ 3–6 ปี",
+                  "scenarioCode": "REAL3-0030"
+                },
+                {
+                  "code": "primary_lower",
+                  "label": "นักเรียนประถมต้น อายุประมาณ 7–9 ปี",
+                  "scenarioCode": "REAL3-0034"
+                },
+                {
+                  "code": "primary_upper",
+                  "label": "นักเรียนประถมปลาย อายุประมาณ 10–12 ปี",
+                  "scenarioCode": "REAL3-0038"
+                },
+                {
+                  "code": "secondary",
+                  "label": "นักเรียนมัธยม",
+                  "scenarioCode": "REAL3-0043"
+                },
+                {
+                  "code": "vocational",
+                  "label": "นักเรียนอาชีวศึกษา",
+                  "scenarioCode": "REAL3-0048"
+                },
+                {
+                  "code": "ethnic_youth",
+                  "label": "เด็กและเยาวชนกลุ่มชาติพันธุ์ในสถานศึกษา",
+                  "scenarioCode": "REAL3-0053"
+                },
+                {
+                  "code": "university",
+                  "label": "นักศึกษาอุดมศึกษา",
+                  "scenarioCode": "REAL3-0058"
+                }
+              ]
+            },
+            {
+              "code": "PK-EDU-ENV",
+              "settingCode": "EDU",
+              "componentCode": "C3",
+              "componentCodes": [
+                "C3"
+              ],
+              "title": "ชุดเชื่อมสถานศึกษา บ้าน และชุมชนให้เป็นพื้นที่ปลอดภัย",
+              "choiceLabel": "อยากดูแลพื้นที่และทำงานร่วมกับบ้านและชุมชน",
+              "goal": "สำรวจจุดที่ต้องดูแล สร้างข้อตกลงร่วมกับครอบครัว และประสานผู้รับผิดชอบในพื้นที่",
+              "mappingBasis": [
+                "concept_framework",
+                "tracker_scope",
+                "component_manuscripts"
+              ],
+              "audiences": [
+                {
+                  "code": "early_childhood",
+                  "label": "เด็กปฐมวัย อายุประมาณ 3–6 ปี",
+                  "scenarioCode": "REAL3-0068"
+                },
+                {
+                  "code": "primary_lower",
+                  "label": "นักเรียนประถมต้น อายุประมาณ 7–9 ปี",
+                  "scenarioCode": "REAL3-0069"
+                },
+                {
+                  "code": "primary_upper",
+                  "label": "นักเรียนประถมปลาย อายุประมาณ 10–12 ปี",
+                  "scenarioCode": "REAL3-0070"
+                },
+                {
+                  "code": "secondary",
+                  "label": "นักเรียนมัธยม",
+                  "scenarioCode": "REAL3-0071"
+                },
+                {
+                  "code": "vocational",
+                  "label": "นักเรียนอาชีวศึกษา",
+                  "scenarioCode": "REAL3-0072"
+                },
+                {
+                  "code": "ethnic_youth",
+                  "label": "เด็กและเยาวชนกลุ่มชาติพันธุ์ในสถานศึกษา",
+                  "scenarioCode": "REAL3-0073"
+                },
+                {
+                  "code": "university",
+                  "label": "นักศึกษาอุดมศึกษา",
+                  "scenarioCode": "REAL3-0091"
+                }
+              ]
+            },
+            {
+              "code": "PK-EDU-YOUTH",
+              "settingCode": "EDU",
+              "componentCode": "C4",
+              "componentCodes": [
+                "C4",
+                "C1",
+                "C2"
+              ],
+              "title": "ชุดเสริมพลังแกนนำและกิจกรรมที่เยาวชนร่วมออกแบบ",
+              "choiceLabel": "อยากให้เยาวชนมีส่วนตัดสินใจและเป็นแกนนำกิจกรรม",
+              "goal": "มีครูพี่เลี้ยงให้เยาวชนร่วมวางแผน สร้างสื่อ และส่งต่องานรุ่นสู่รุ่นอย่างปลอดภัย",
+              "mappingBasis": [
+                "concept_framework",
+                "tracker_scope",
+                "component_manuscripts"
+              ],
+              "audiences": [
+                {
+                  "code": "primary_upper",
+                  "label": "นักเรียนประถมปลาย อายุประมาณ 10–12 ปี",
+                  "scenarioCode": "REAL3-0099"
+                },
+                {
+                  "code": "secondary",
+                  "label": "นักเรียนมัธยม",
+                  "scenarioCode": "REAL3-0100"
+                },
+                {
+                  "code": "vocational",
+                  "label": "นักเรียนอาชีวศึกษา",
+                  "scenarioCode": "REAL3-0101"
+                },
+                {
+                  "code": "ethnic_youth",
+                  "label": "เด็กและเยาวชนกลุ่มชาติพันธุ์ในสถานศึกษา",
+                  "scenarioCode": "REAL3-0102"
+                },
+                {
+                  "code": "university",
+                  "label": "นักศึกษาอุดมศึกษา",
+                  "scenarioCode": "REAL3-0116"
                 }
               ]
             },
@@ -212,28 +511,29 @@
               "componentCodes": [
                 "C5"
               ],
-              "title": "ชุดประสานโรงเรียนและครอบครัวเพื่อช่วยเหลือผู้เรียน",
-              "choiceLabel": "อยากจัดทีมพูดคุยกับครอบครัวและประสานความช่วยเหลือ",
-              "goal": "จัดระบบพูดคุยกับผู้เรียน ผู้ปกครอง และหน่วยบริการโดยไม่ตีตรา",
+              "title": "ชุดประสานสถานศึกษาและครอบครัวเพื่อช่วยเหลือผู้เรียน",
+              "choiceLabel": "อยากจัดระบบพูดคุย ช่วยเหลือ และประสานบริการ",
+              "goal": "จัดทีมรับฟังผู้เรียน คุยกับผู้ปกครองเป็นส่วนตัว และประสานความช่วยเหลือตามขอบเขตงาน",
               "mappingBasis": [
+                "concept_framework",
                 "tracker_scope",
-                "editorial_package_design"
+                "component_manuscripts"
               ],
               "audiences": [
                 {
                   "code": "primary_upper",
                   "label": "นักเรียนประถมปลาย อายุประมาณ 10–12 ปี",
-                  "scenarioCode": "REAL2-0038"
+                  "scenarioCode": "REAL3-0123"
                 },
                 {
                   "code": "secondary",
                   "label": "นักเรียนมัธยม",
-                  "scenarioCode": "REAL2-0039"
+                  "scenarioCode": "REAL3-0124"
                 },
                 {
                   "code": "vocational",
                   "label": "นักเรียนอาชีวศึกษา",
-                  "scenarioCode": "REAL2-0040"
+                  "scenarioCode": "REAL3-0125"
                 }
               ]
             }
@@ -244,57 +544,206 @@
           "label": "บุคลากรในสถานศึกษา",
           "packages": [
             {
-              "code": "PK-EDU-LEARN",
+              "code": "PK-EDU-POLICY",
               "settingCode": "EDU",
               "componentCode": "C1",
               "componentCodes": [
-                "C1",
-                "C2",
-                "C3",
-                "C4"
+                "C1"
               ],
-              "title": "ชุดเชื่อมทีม กิจกรรม และการเรียนรู้ในสถานศึกษา",
-              "choiceLabel": "อยากเชื่อมทีม กิจกรรม และการเรียนรู้ให้เป็นงานเดียวกัน",
-              "goal": "เริ่มจากทีมและข้อตกลง เลือกสื่อตามวัย แล้วใช้สิ่งที่เรียนรู้กลับมาดูแลพื้นที่ร่วมกัน",
+              "title": "ชุดร่วมกำหนดนโยบายและจัดทีมสถานศึกษา",
+              "choiceLabel": "อยากชวนทีมกำหนดนโยบายและแบ่งหน้าที่ให้ชัด",
+              "goal": "ใช้ข้อมูลพื้นที่และเสียงของผู้เรียนร่วมกำหนดนโยบาย แบ่งหน้าที่ และทบทวนการทำงาน",
               "mappingBasis": [
+                "concept_framework",
                 "tracker_scope",
-                "editorial_package_design"
+                "component_manuscripts"
               ],
               "audiences": [
                 {
                   "code": "early_childhood",
                   "label": "เด็กปฐมวัย อายุประมาณ 3–6 ปี",
-                  "scenarioCode": "REAL2-0003"
+                  "scenarioCode": "REAL3-0013"
                 },
                 {
                   "code": "primary_lower",
                   "label": "นักเรียนประถมต้น อายุประมาณ 7–9 ปี",
-                  "scenarioCode": "REAL2-0009"
+                  "scenarioCode": "REAL3-0014"
                 },
                 {
                   "code": "primary_upper",
                   "label": "นักเรียนประถมปลาย อายุประมาณ 10–12 ปี",
-                  "scenarioCode": "REAL2-0010"
+                  "scenarioCode": "REAL3-0015"
                 },
                 {
                   "code": "secondary",
                   "label": "นักเรียนมัธยม",
-                  "scenarioCode": "REAL2-0017"
+                  "scenarioCode": "REAL3-0016"
                 },
                 {
                   "code": "vocational",
                   "label": "นักเรียนอาชีวศึกษา",
-                  "scenarioCode": "REAL2-0022"
+                  "scenarioCode": "REAL3-0017"
                 },
                 {
                   "code": "ethnic_youth",
                   "label": "เด็กและเยาวชนกลุ่มชาติพันธุ์ในสถานศึกษา",
-                  "scenarioCode": "REAL2-0027"
+                  "scenarioCode": "REAL3-0018"
                 },
                 {
                   "code": "university",
                   "label": "นักศึกษาอุดมศึกษา",
-                  "scenarioCode": "REAL2-0032"
+                  "scenarioCode": "REAL3-0027"
+                }
+              ]
+            },
+            {
+              "code": "PK-EDU-LEARN",
+              "settingCode": "EDU",
+              "componentCode": "C2",
+              "componentCodes": [
+                "C2"
+              ],
+              "title": "ชุดออกแบบบทเรียนและกิจกรรมรู้เท่าทันบุหรี่ไฟฟ้า",
+              "choiceLabel": "อยากเชื่อมเรื่องบุหรี่ไฟฟ้ากับบทเรียนและกิจกรรม",
+              "goal": "เตรียมทีมและเป้าหมายการเรียนรู้ เลือกสื่อตามวัย แล้วใช้ผลจากกิจกรรมกลับมาปรับการสอน",
+              "mappingBasis": [
+                "concept_framework",
+                "tracker_scope",
+                "component_manuscripts"
+              ],
+              "audiences": [
+                {
+                  "code": "early_childhood",
+                  "label": "เด็กปฐมวัย อายุประมาณ 3–6 ปี",
+                  "scenarioCode": "REAL3-0031"
+                },
+                {
+                  "code": "primary_lower",
+                  "label": "นักเรียนประถมต้น อายุประมาณ 7–9 ปี",
+                  "scenarioCode": "REAL3-0035"
+                },
+                {
+                  "code": "primary_upper",
+                  "label": "นักเรียนประถมปลาย อายุประมาณ 10–12 ปี",
+                  "scenarioCode": "REAL3-0039"
+                },
+                {
+                  "code": "secondary",
+                  "label": "นักเรียนมัธยม",
+                  "scenarioCode": "REAL3-0044"
+                },
+                {
+                  "code": "vocational",
+                  "label": "นักเรียนอาชีวศึกษา",
+                  "scenarioCode": "REAL3-0049"
+                },
+                {
+                  "code": "ethnic_youth",
+                  "label": "เด็กและเยาวชนกลุ่มชาติพันธุ์ในสถานศึกษา",
+                  "scenarioCode": "REAL3-0054"
+                },
+                {
+                  "code": "university",
+                  "label": "นักศึกษาอุดมศึกษา",
+                  "scenarioCode": "REAL3-0059"
+                }
+              ]
+            },
+            {
+              "code": "PK-EDU-ENV",
+              "settingCode": "EDU",
+              "componentCode": "C3",
+              "componentCodes": [
+                "C3"
+              ],
+              "title": "ชุดเชื่อมสถานศึกษา บ้าน และชุมชนให้เป็นพื้นที่ปลอดภัย",
+              "choiceLabel": "อยากดูแลพื้นที่และทำงานร่วมกับบ้านและชุมชน",
+              "goal": "สำรวจจุดที่ต้องดูแล สร้างข้อตกลงร่วมกับครอบครัว และประสานผู้รับผิดชอบในพื้นที่",
+              "mappingBasis": [
+                "concept_framework",
+                "tracker_scope",
+                "component_manuscripts"
+              ],
+              "audiences": [
+                {
+                  "code": "early_childhood",
+                  "label": "เด็กปฐมวัย อายุประมาณ 3–6 ปี",
+                  "scenarioCode": "REAL3-0074"
+                },
+                {
+                  "code": "primary_lower",
+                  "label": "นักเรียนประถมต้น อายุประมาณ 7–9 ปี",
+                  "scenarioCode": "REAL3-0075"
+                },
+                {
+                  "code": "primary_upper",
+                  "label": "นักเรียนประถมปลาย อายุประมาณ 10–12 ปี",
+                  "scenarioCode": "REAL3-0076"
+                },
+                {
+                  "code": "secondary",
+                  "label": "นักเรียนมัธยม",
+                  "scenarioCode": "REAL3-0077"
+                },
+                {
+                  "code": "vocational",
+                  "label": "นักเรียนอาชีวศึกษา",
+                  "scenarioCode": "REAL3-0078"
+                },
+                {
+                  "code": "ethnic_youth",
+                  "label": "เด็กและเยาวชนกลุ่มชาติพันธุ์ในสถานศึกษา",
+                  "scenarioCode": "REAL3-0079"
+                },
+                {
+                  "code": "university",
+                  "label": "นักศึกษาอุดมศึกษา",
+                  "scenarioCode": "REAL3-0092"
+                }
+              ]
+            },
+            {
+              "code": "PK-EDU-YOUTH",
+              "settingCode": "EDU",
+              "componentCode": "C4",
+              "componentCodes": [
+                "C4",
+                "C1",
+                "C2"
+              ],
+              "title": "ชุดเสริมพลังแกนนำและกิจกรรมที่เยาวชนร่วมออกแบบ",
+              "choiceLabel": "อยากให้เยาวชนมีส่วนตัดสินใจและเป็นแกนนำกิจกรรม",
+              "goal": "มีครูพี่เลี้ยงให้เยาวชนร่วมวางแผน สร้างสื่อ และส่งต่องานรุ่นสู่รุ่นอย่างปลอดภัย",
+              "mappingBasis": [
+                "concept_framework",
+                "tracker_scope",
+                "component_manuscripts"
+              ],
+              "audiences": [
+                {
+                  "code": "primary_upper",
+                  "label": "นักเรียนประถมปลาย อายุประมาณ 10–12 ปี",
+                  "scenarioCode": "REAL3-0103"
+                },
+                {
+                  "code": "secondary",
+                  "label": "นักเรียนมัธยม",
+                  "scenarioCode": "REAL3-0104"
+                },
+                {
+                  "code": "vocational",
+                  "label": "นักเรียนอาชีวศึกษา",
+                  "scenarioCode": "REAL3-0105"
+                },
+                {
+                  "code": "ethnic_youth",
+                  "label": "เด็กและเยาวชนกลุ่มชาติพันธุ์ในสถานศึกษา",
+                  "scenarioCode": "REAL3-0106"
+                },
+                {
+                  "code": "university",
+                  "label": "นักศึกษาอุดมศึกษา",
+                  "scenarioCode": "REAL3-0117"
                 }
               ]
             },
@@ -305,28 +754,29 @@
               "componentCodes": [
                 "C5"
               ],
-              "title": "ชุดประสานโรงเรียนและครอบครัวเพื่อช่วยเหลือผู้เรียน",
-              "choiceLabel": "อยากจัดทีมพูดคุยกับครอบครัวและประสานความช่วยเหลือ",
-              "goal": "จัดระบบพูดคุยกับผู้เรียน ผู้ปกครอง และหน่วยบริการโดยไม่ตีตรา",
+              "title": "ชุดประสานสถานศึกษาและครอบครัวเพื่อช่วยเหลือผู้เรียน",
+              "choiceLabel": "อยากจัดระบบพูดคุย ช่วยเหลือ และประสานบริการ",
+              "goal": "จัดทีมรับฟังผู้เรียน คุยกับผู้ปกครองเป็นส่วนตัว และประสานความช่วยเหลือตามขอบเขตงาน",
               "mappingBasis": [
+                "concept_framework",
                 "tracker_scope",
-                "editorial_package_design"
+                "component_manuscripts"
               ],
               "audiences": [
                 {
                   "code": "primary_upper",
                   "label": "นักเรียนประถมปลาย อายุประมาณ 10–12 ปี",
-                  "scenarioCode": "REAL2-0041"
+                  "scenarioCode": "REAL3-0126"
                 },
                 {
                   "code": "secondary",
                   "label": "นักเรียนมัธยม",
-                  "scenarioCode": "REAL2-0042"
+                  "scenarioCode": "REAL3-0127"
                 },
                 {
                   "code": "vocational",
                   "label": "นักเรียนอาชีวศึกษา",
-                  "scenarioCode": "REAL2-0043"
+                  "scenarioCode": "REAL3-0128"
                 }
               ]
             }
@@ -337,57 +787,206 @@
           "label": "ทีมผู้บริหารและครู",
           "packages": [
             {
-              "code": "PK-EDU-LEARN",
+              "code": "PK-EDU-POLICY",
               "settingCode": "EDU",
               "componentCode": "C1",
               "componentCodes": [
-                "C1",
-                "C2",
-                "C3",
-                "C4"
+                "C1"
               ],
-              "title": "ชุดเชื่อมทีม กิจกรรม และการเรียนรู้ในสถานศึกษา",
-              "choiceLabel": "อยากเชื่อมทีม กิจกรรม และการเรียนรู้ให้เป็นงานเดียวกัน",
-              "goal": "เริ่มจากทีมและข้อตกลง เลือกสื่อตามวัย แล้วใช้สิ่งที่เรียนรู้กลับมาดูแลพื้นที่ร่วมกัน",
+              "title": "ชุดร่วมกำหนดนโยบายและจัดทีมสถานศึกษา",
+              "choiceLabel": "อยากชวนทีมกำหนดนโยบายและแบ่งหน้าที่ให้ชัด",
+              "goal": "ใช้ข้อมูลพื้นที่และเสียงของผู้เรียนร่วมกำหนดนโยบาย แบ่งหน้าที่ และทบทวนการทำงาน",
               "mappingBasis": [
+                "concept_framework",
                 "tracker_scope",
-                "editorial_package_design"
+                "component_manuscripts"
               ],
               "audiences": [
                 {
                   "code": "early_childhood",
                   "label": "เด็กปฐมวัย อายุประมาณ 3–6 ปี",
-                  "scenarioCode": "REAL2-0004"
+                  "scenarioCode": "REAL3-0019"
                 },
                 {
                   "code": "primary_lower",
                   "label": "นักเรียนประถมต้น อายุประมาณ 7–9 ปี",
-                  "scenarioCode": "REAL2-0011"
+                  "scenarioCode": "REAL3-0020"
                 },
                 {
                   "code": "primary_upper",
                   "label": "นักเรียนประถมปลาย อายุประมาณ 10–12 ปี",
-                  "scenarioCode": "REAL2-0012"
+                  "scenarioCode": "REAL3-0021"
                 },
                 {
                   "code": "secondary",
                   "label": "นักเรียนมัธยม",
-                  "scenarioCode": "REAL2-0018"
+                  "scenarioCode": "REAL3-0022"
                 },
                 {
                   "code": "vocational",
                   "label": "นักเรียนอาชีวศึกษา",
-                  "scenarioCode": "REAL2-0023"
+                  "scenarioCode": "REAL3-0023"
                 },
                 {
                   "code": "ethnic_youth",
                   "label": "เด็กและเยาวชนกลุ่มชาติพันธุ์ในสถานศึกษา",
-                  "scenarioCode": "REAL2-0028"
+                  "scenarioCode": "REAL3-0024"
                 },
                 {
                   "code": "university",
                   "label": "นักศึกษาอุดมศึกษา",
-                  "scenarioCode": "REAL2-0033"
+                  "scenarioCode": "REAL3-0028"
+                }
+              ]
+            },
+            {
+              "code": "PK-EDU-LEARN",
+              "settingCode": "EDU",
+              "componentCode": "C2",
+              "componentCodes": [
+                "C2"
+              ],
+              "title": "ชุดออกแบบบทเรียนและกิจกรรมรู้เท่าทันบุหรี่ไฟฟ้า",
+              "choiceLabel": "อยากเชื่อมเรื่องบุหรี่ไฟฟ้ากับบทเรียนและกิจกรรม",
+              "goal": "เตรียมทีมและเป้าหมายการเรียนรู้ เลือกสื่อตามวัย แล้วใช้ผลจากกิจกรรมกลับมาปรับการสอน",
+              "mappingBasis": [
+                "concept_framework",
+                "tracker_scope",
+                "component_manuscripts"
+              ],
+              "audiences": [
+                {
+                  "code": "early_childhood",
+                  "label": "เด็กปฐมวัย อายุประมาณ 3–6 ปี",
+                  "scenarioCode": "REAL3-0032"
+                },
+                {
+                  "code": "primary_lower",
+                  "label": "นักเรียนประถมต้น อายุประมาณ 7–9 ปี",
+                  "scenarioCode": "REAL3-0036"
+                },
+                {
+                  "code": "primary_upper",
+                  "label": "นักเรียนประถมปลาย อายุประมาณ 10–12 ปี",
+                  "scenarioCode": "REAL3-0040"
+                },
+                {
+                  "code": "secondary",
+                  "label": "นักเรียนมัธยม",
+                  "scenarioCode": "REAL3-0045"
+                },
+                {
+                  "code": "vocational",
+                  "label": "นักเรียนอาชีวศึกษา",
+                  "scenarioCode": "REAL3-0050"
+                },
+                {
+                  "code": "ethnic_youth",
+                  "label": "เด็กและเยาวชนกลุ่มชาติพันธุ์ในสถานศึกษา",
+                  "scenarioCode": "REAL3-0055"
+                },
+                {
+                  "code": "university",
+                  "label": "นักศึกษาอุดมศึกษา",
+                  "scenarioCode": "REAL3-0060"
+                }
+              ]
+            },
+            {
+              "code": "PK-EDU-ENV",
+              "settingCode": "EDU",
+              "componentCode": "C3",
+              "componentCodes": [
+                "C3"
+              ],
+              "title": "ชุดเชื่อมสถานศึกษา บ้าน และชุมชนให้เป็นพื้นที่ปลอดภัย",
+              "choiceLabel": "อยากดูแลพื้นที่และทำงานร่วมกับบ้านและชุมชน",
+              "goal": "สำรวจจุดที่ต้องดูแล สร้างข้อตกลงร่วมกับครอบครัว และประสานผู้รับผิดชอบในพื้นที่",
+              "mappingBasis": [
+                "concept_framework",
+                "tracker_scope",
+                "component_manuscripts"
+              ],
+              "audiences": [
+                {
+                  "code": "early_childhood",
+                  "label": "เด็กปฐมวัย อายุประมาณ 3–6 ปี",
+                  "scenarioCode": "REAL3-0080"
+                },
+                {
+                  "code": "primary_lower",
+                  "label": "นักเรียนประถมต้น อายุประมาณ 7–9 ปี",
+                  "scenarioCode": "REAL3-0081"
+                },
+                {
+                  "code": "primary_upper",
+                  "label": "นักเรียนประถมปลาย อายุประมาณ 10–12 ปี",
+                  "scenarioCode": "REAL3-0082"
+                },
+                {
+                  "code": "secondary",
+                  "label": "นักเรียนมัธยม",
+                  "scenarioCode": "REAL3-0083"
+                },
+                {
+                  "code": "vocational",
+                  "label": "นักเรียนอาชีวศึกษา",
+                  "scenarioCode": "REAL3-0084"
+                },
+                {
+                  "code": "ethnic_youth",
+                  "label": "เด็กและเยาวชนกลุ่มชาติพันธุ์ในสถานศึกษา",
+                  "scenarioCode": "REAL3-0085"
+                },
+                {
+                  "code": "university",
+                  "label": "นักศึกษาอุดมศึกษา",
+                  "scenarioCode": "REAL3-0093"
+                }
+              ]
+            },
+            {
+              "code": "PK-EDU-YOUTH",
+              "settingCode": "EDU",
+              "componentCode": "C4",
+              "componentCodes": [
+                "C4",
+                "C1",
+                "C2"
+              ],
+              "title": "ชุดเสริมพลังแกนนำและกิจกรรมที่เยาวชนร่วมออกแบบ",
+              "choiceLabel": "อยากให้เยาวชนมีส่วนตัดสินใจและเป็นแกนนำกิจกรรม",
+              "goal": "มีครูพี่เลี้ยงให้เยาวชนร่วมวางแผน สร้างสื่อ และส่งต่องานรุ่นสู่รุ่นอย่างปลอดภัย",
+              "mappingBasis": [
+                "concept_framework",
+                "tracker_scope",
+                "component_manuscripts"
+              ],
+              "audiences": [
+                {
+                  "code": "primary_upper",
+                  "label": "นักเรียนประถมปลาย อายุประมาณ 10–12 ปี",
+                  "scenarioCode": "REAL3-0107"
+                },
+                {
+                  "code": "secondary",
+                  "label": "นักเรียนมัธยม",
+                  "scenarioCode": "REAL3-0108"
+                },
+                {
+                  "code": "vocational",
+                  "label": "นักเรียนอาชีวศึกษา",
+                  "scenarioCode": "REAL3-0109"
+                },
+                {
+                  "code": "ethnic_youth",
+                  "label": "เด็กและเยาวชนกลุ่มชาติพันธุ์ในสถานศึกษา",
+                  "scenarioCode": "REAL3-0110"
+                },
+                {
+                  "code": "university",
+                  "label": "นักศึกษาอุดมศึกษา",
+                  "scenarioCode": "REAL3-0118"
                 }
               ]
             },
@@ -398,28 +997,29 @@
               "componentCodes": [
                 "C5"
               ],
-              "title": "ชุดประสานโรงเรียนและครอบครัวเพื่อช่วยเหลือผู้เรียน",
-              "choiceLabel": "อยากจัดทีมพูดคุยกับครอบครัวและประสานความช่วยเหลือ",
-              "goal": "จัดระบบพูดคุยกับผู้เรียน ผู้ปกครอง และหน่วยบริการโดยไม่ตีตรา",
+              "title": "ชุดประสานสถานศึกษาและครอบครัวเพื่อช่วยเหลือผู้เรียน",
+              "choiceLabel": "อยากจัดระบบพูดคุย ช่วยเหลือ และประสานบริการ",
+              "goal": "จัดทีมรับฟังผู้เรียน คุยกับผู้ปกครองเป็นส่วนตัว และประสานความช่วยเหลือตามขอบเขตงาน",
               "mappingBasis": [
+                "concept_framework",
                 "tracker_scope",
-                "editorial_package_design"
+                "component_manuscripts"
               ],
               "audiences": [
                 {
                   "code": "primary_upper",
                   "label": "นักเรียนประถมปลาย อายุประมาณ 10–12 ปี",
-                  "scenarioCode": "REAL2-0044"
+                  "scenarioCode": "REAL3-0129"
                 },
                 {
                   "code": "secondary",
                   "label": "นักเรียนมัธยม",
-                  "scenarioCode": "REAL2-0045"
+                  "scenarioCode": "REAL3-0130"
                 },
                 {
                   "code": "vocational",
                   "label": "นักเรียนอาชีวศึกษา",
-                  "scenarioCode": "REAL2-0046"
+                  "scenarioCode": "REAL3-0131"
                 }
               ]
             }
@@ -432,45 +1032,116 @@
             {
               "code": "PK-EDU-LEARN",
               "settingCode": "EDU",
-              "componentCode": "C1",
+              "componentCode": "C2",
               "componentCodes": [
-                "C1",
-                "C2",
-                "C3",
-                "C4"
+                "C2"
               ],
-              "title": "ชุดเชื่อมทีม กิจกรรม และการเรียนรู้ในสถานศึกษา",
-              "choiceLabel": "อยากเชื่อมทีม กิจกรรม และการเรียนรู้ให้เป็นงานเดียวกัน",
-              "goal": "เริ่มจากทีมและข้อตกลง เลือกสื่อตามวัย แล้วใช้สิ่งที่เรียนรู้กลับมาดูแลพื้นที่ร่วมกัน",
+              "title": "ชุดออกแบบบทเรียนและกิจกรรมรู้เท่าทันบุหรี่ไฟฟ้า",
+              "choiceLabel": "อยากเชื่อมเรื่องบุหรี่ไฟฟ้ากับบทเรียนและกิจกรรม",
+              "goal": "เตรียมทีมและเป้าหมายการเรียนรู้ เลือกสื่อตามวัย แล้วใช้ผลจากกิจกรรมกลับมาปรับการสอน",
               "mappingBasis": [
+                "concept_framework",
                 "tracker_scope",
-                "editorial_package_design"
+                "component_manuscripts"
               ],
               "audiences": [
                 {
-                  "code": "primary_lower",
-                  "label": "นักเรียนประถมต้น อายุประมาณ 7–9 ปี",
-                  "scenarioCode": "REAL2-0013"
-                },
-                {
                   "code": "primary_upper",
                   "label": "นักเรียนประถมปลาย อายุประมาณ 10–12 ปี",
-                  "scenarioCode": "REAL2-0014"
+                  "scenarioCode": "REAL3-0041"
                 },
                 {
                   "code": "secondary",
                   "label": "นักเรียนมัธยม",
-                  "scenarioCode": "REAL2-0019"
+                  "scenarioCode": "REAL3-0046"
                 },
                 {
                   "code": "vocational",
                   "label": "นักเรียนอาชีวศึกษา",
-                  "scenarioCode": "REAL2-0024"
+                  "scenarioCode": "REAL3-0051"
                 },
                 {
                   "code": "ethnic_youth",
                   "label": "เด็กและเยาวชนกลุ่มชาติพันธุ์ในสถานศึกษา",
-                  "scenarioCode": "REAL2-0029"
+                  "scenarioCode": "REAL3-0056"
+                }
+              ]
+            },
+            {
+              "code": "PK-EDU-ENV",
+              "settingCode": "EDU",
+              "componentCode": "C3",
+              "componentCodes": [
+                "C3"
+              ],
+              "title": "ชุดเชื่อมสถานศึกษา บ้าน และชุมชนให้เป็นพื้นที่ปลอดภัย",
+              "choiceLabel": "อยากดูแลพื้นที่และทำงานร่วมกับบ้านและชุมชน",
+              "goal": "สำรวจจุดที่ต้องดูแล สร้างข้อตกลงร่วมกับครอบครัว และประสานผู้รับผิดชอบในพื้นที่",
+              "mappingBasis": [
+                "concept_framework",
+                "tracker_scope",
+                "component_manuscripts"
+              ],
+              "audiences": [
+                {
+                  "code": "primary_upper",
+                  "label": "นักเรียนประถมปลาย อายุประมาณ 10–12 ปี",
+                  "scenarioCode": "REAL3-0086"
+                },
+                {
+                  "code": "secondary",
+                  "label": "นักเรียนมัธยม",
+                  "scenarioCode": "REAL3-0087"
+                },
+                {
+                  "code": "vocational",
+                  "label": "นักเรียนอาชีวศึกษา",
+                  "scenarioCode": "REAL3-0088"
+                },
+                {
+                  "code": "ethnic_youth",
+                  "label": "เด็กและเยาวชนกลุ่มชาติพันธุ์ในสถานศึกษา",
+                  "scenarioCode": "REAL3-0089"
+                }
+              ]
+            },
+            {
+              "code": "PK-EDU-YOUTH",
+              "settingCode": "EDU",
+              "componentCode": "C4",
+              "componentCodes": [
+                "C4",
+                "C1",
+                "C2"
+              ],
+              "title": "ชุดเสริมพลังแกนนำและกิจกรรมที่เยาวชนร่วมออกแบบ",
+              "choiceLabel": "อยากให้เยาวชนมีส่วนตัดสินใจและเป็นแกนนำกิจกรรม",
+              "goal": "มีครูพี่เลี้ยงให้เยาวชนร่วมวางแผน สร้างสื่อ และส่งต่องานรุ่นสู่รุ่นอย่างปลอดภัย",
+              "mappingBasis": [
+                "concept_framework",
+                "tracker_scope",
+                "component_manuscripts"
+              ],
+              "audiences": [
+                {
+                  "code": "primary_upper",
+                  "label": "นักเรียนประถมปลาย อายุประมาณ 10–12 ปี",
+                  "scenarioCode": "REAL3-0111"
+                },
+                {
+                  "code": "secondary",
+                  "label": "นักเรียนมัธยม",
+                  "scenarioCode": "REAL3-0112"
+                },
+                {
+                  "code": "vocational",
+                  "label": "นักเรียนอาชีวศึกษา",
+                  "scenarioCode": "REAL3-0113"
+                },
+                {
+                  "code": "ethnic_youth",
+                  "label": "เด็กและเยาวชนกลุ่มชาติพันธุ์ในสถานศึกษา",
+                  "scenarioCode": "REAL3-0114"
                 }
               ]
             }
@@ -483,25 +1154,71 @@
             {
               "code": "PK-EDU-LEARN",
               "settingCode": "EDU",
-              "componentCode": "C1",
+              "componentCode": "C2",
               "componentCodes": [
-                "C1",
-                "C2",
-                "C3",
-                "C4"
+                "C2"
               ],
-              "title": "ชุดเชื่อมทีม กิจกรรม และการเรียนรู้ในสถานศึกษา",
-              "choiceLabel": "อยากเชื่อมทีม กิจกรรม และการเรียนรู้ให้เป็นงานเดียวกัน",
-              "goal": "เริ่มจากทีมและข้อตกลง เลือกสื่อตามวัย แล้วใช้สิ่งที่เรียนรู้กลับมาดูแลพื้นที่ร่วมกัน",
+              "title": "ชุดออกแบบบทเรียนและกิจกรรมรู้เท่าทันบุหรี่ไฟฟ้า",
+              "choiceLabel": "อยากเชื่อมเรื่องบุหรี่ไฟฟ้ากับบทเรียนและกิจกรรม",
+              "goal": "เตรียมทีมและเป้าหมายการเรียนรู้ เลือกสื่อตามวัย แล้วใช้ผลจากกิจกรรมกลับมาปรับการสอน",
               "mappingBasis": [
+                "concept_framework",
                 "tracker_scope",
-                "editorial_package_design"
+                "component_manuscripts"
               ],
               "audiences": [
                 {
                   "code": "university",
                   "label": "นักศึกษาอุดมศึกษา",
-                  "scenarioCode": "REAL2-0034"
+                  "scenarioCode": "REAL3-0061"
+                }
+              ]
+            },
+            {
+              "code": "PK-EDU-ENV",
+              "settingCode": "EDU",
+              "componentCode": "C3",
+              "componentCodes": [
+                "C3"
+              ],
+              "title": "ชุดเชื่อมสถานศึกษา บ้าน และชุมชนให้เป็นพื้นที่ปลอดภัย",
+              "choiceLabel": "อยากดูแลพื้นที่และทำงานร่วมกับบ้านและชุมชน",
+              "goal": "สำรวจจุดที่ต้องดูแล สร้างข้อตกลงร่วมกับครอบครัว และประสานผู้รับผิดชอบในพื้นที่",
+              "mappingBasis": [
+                "concept_framework",
+                "tracker_scope",
+                "component_manuscripts"
+              ],
+              "audiences": [
+                {
+                  "code": "university",
+                  "label": "นักศึกษาอุดมศึกษา",
+                  "scenarioCode": "REAL3-0094"
+                }
+              ]
+            },
+            {
+              "code": "PK-EDU-YOUTH",
+              "settingCode": "EDU",
+              "componentCode": "C4",
+              "componentCodes": [
+                "C4",
+                "C1",
+                "C2"
+              ],
+              "title": "ชุดเสริมพลังแกนนำและกิจกรรมที่เยาวชนร่วมออกแบบ",
+              "choiceLabel": "อยากให้เยาวชนมีส่วนตัดสินใจและเป็นแกนนำกิจกรรม",
+              "goal": "มีครูพี่เลี้ยงให้เยาวชนร่วมวางแผน สร้างสื่อ และส่งต่องานรุ่นสู่รุ่นอย่างปลอดภัย",
+              "mappingBasis": [
+                "concept_framework",
+                "tracker_scope",
+                "component_manuscripts"
+              ],
+              "audiences": [
+                {
+                  "code": "university",
+                  "label": "นักศึกษาอุดมศึกษา",
+                  "scenarioCode": "REAL3-0119"
                 }
               ]
             }
@@ -526,41 +1243,42 @@
               ],
               "title": "ชุดคุยกันและสร้างข้อตกลงบ้านปลอดบุหรี่",
               "choiceLabel": "อยากเริ่มคุยและดูแลคนในบ้านไปด้วยกัน",
-              "goal": "เริ่มจากความสัมพันธ์ แล้วร่วมกันทำกิจกรรมและข้อตกลงในบ้าน",
+              "goal": "เริ่มจากความสัมพันธ์ เลือกกิจกรรมตามวัย แล้วตกลงวิธีดูแลบ้านร่วมกัน",
               "mappingBasis": [
+                "concept_framework",
                 "tracker_scope",
-                "editorial_package_design"
+                "component_manuscripts"
               ],
               "audiences": [
                 {
                   "code": "early_childhood",
                   "label": "เด็กปฐมวัย อายุประมาณ 3–6 ปี",
-                  "scenarioCode": "REAL2-0047"
+                  "scenarioCode": "REAL3-0132"
                 },
                 {
                   "code": "primary_lower",
                   "label": "นักเรียนประถมต้น อายุประมาณ 7–9 ปี",
-                  "scenarioCode": "REAL2-0050"
+                  "scenarioCode": "REAL3-0135"
                 },
                 {
                   "code": "primary_upper",
                   "label": "นักเรียนประถมปลาย อายุประมาณ 10–12 ปี",
-                  "scenarioCode": "REAL2-0051"
+                  "scenarioCode": "REAL3-0136"
                 },
                 {
                   "code": "secondary",
                   "label": "นักเรียนมัธยม",
-                  "scenarioCode": "REAL2-0052"
+                  "scenarioCode": "REAL3-0137"
                 },
                 {
                   "code": "family_all",
                   "label": "สมาชิกทุกคนในครอบครัว",
-                  "scenarioCode": "REAL2-0059"
+                  "scenarioCode": "REAL3-0144"
                 },
                 {
                   "code": "family_who_use",
                   "label": "คนในครอบครัวที่ใช้บุหรี่หรือบุหรี่ไฟฟ้า",
-                  "scenarioCode": "REAL2-0060"
+                  "scenarioCode": "REAL3-0145"
                 }
               ]
             }
@@ -579,41 +1297,42 @@
               ],
               "title": "ชุดคุยกันและสร้างข้อตกลงบ้านปลอดบุหรี่",
               "choiceLabel": "อยากเริ่มคุยและดูแลคนในบ้านไปด้วยกัน",
-              "goal": "เริ่มจากความสัมพันธ์ แล้วร่วมกันทำกิจกรรมและข้อตกลงในบ้าน",
+              "goal": "เริ่มจากความสัมพันธ์ เลือกกิจกรรมตามวัย แล้วตกลงวิธีดูแลบ้านร่วมกัน",
               "mappingBasis": [
+                "concept_framework",
                 "tracker_scope",
-                "editorial_package_design"
+                "component_manuscripts"
               ],
               "audiences": [
                 {
                   "code": "early_childhood",
                   "label": "เด็กปฐมวัย อายุประมาณ 3–6 ปี",
-                  "scenarioCode": "REAL2-0048"
+                  "scenarioCode": "REAL3-0133"
                 },
                 {
                   "code": "primary_lower",
                   "label": "นักเรียนประถมต้น อายุประมาณ 7–9 ปี",
-                  "scenarioCode": "REAL2-0053"
+                  "scenarioCode": "REAL3-0138"
                 },
                 {
                   "code": "primary_upper",
                   "label": "นักเรียนประถมปลาย อายุประมาณ 10–12 ปี",
-                  "scenarioCode": "REAL2-0054"
+                  "scenarioCode": "REAL3-0139"
                 },
                 {
                   "code": "secondary",
                   "label": "นักเรียนมัธยม",
-                  "scenarioCode": "REAL2-0055"
+                  "scenarioCode": "REAL3-0140"
                 },
                 {
                   "code": "family_all",
                   "label": "สมาชิกทุกคนในครอบครัว",
-                  "scenarioCode": "REAL2-0061"
+                  "scenarioCode": "REAL3-0146"
                 },
                 {
                   "code": "family_who_use",
                   "label": "คนในครอบครัวที่ใช้บุหรี่หรือบุหรี่ไฟฟ้า",
-                  "scenarioCode": "REAL2-0062"
+                  "scenarioCode": "REAL3-0147"
                 }
               ]
             }
@@ -632,41 +1351,42 @@
               ],
               "title": "ชุดคุยกันและสร้างข้อตกลงบ้านปลอดบุหรี่",
               "choiceLabel": "อยากเริ่มคุยและดูแลคนในบ้านไปด้วยกัน",
-              "goal": "เริ่มจากความสัมพันธ์ แล้วร่วมกันทำกิจกรรมและข้อตกลงในบ้าน",
+              "goal": "เริ่มจากความสัมพันธ์ เลือกกิจกรรมตามวัย แล้วตกลงวิธีดูแลบ้านร่วมกัน",
               "mappingBasis": [
+                "concept_framework",
                 "tracker_scope",
-                "editorial_package_design"
+                "component_manuscripts"
               ],
               "audiences": [
                 {
                   "code": "early_childhood",
                   "label": "เด็กปฐมวัย อายุประมาณ 3–6 ปี",
-                  "scenarioCode": "REAL2-0049"
+                  "scenarioCode": "REAL3-0134"
                 },
                 {
                   "code": "primary_lower",
                   "label": "นักเรียนประถมต้น อายุประมาณ 7–9 ปี",
-                  "scenarioCode": "REAL2-0056"
+                  "scenarioCode": "REAL3-0141"
                 },
                 {
                   "code": "primary_upper",
                   "label": "นักเรียนประถมปลาย อายุประมาณ 10–12 ปี",
-                  "scenarioCode": "REAL2-0057"
+                  "scenarioCode": "REAL3-0142"
                 },
                 {
                   "code": "secondary",
                   "label": "นักเรียนมัธยม",
-                  "scenarioCode": "REAL2-0058"
+                  "scenarioCode": "REAL3-0143"
                 },
                 {
                   "code": "family_all",
                   "label": "สมาชิกทุกคนในครอบครัว",
-                  "scenarioCode": "REAL2-0063"
+                  "scenarioCode": "REAL3-0148"
                 },
                 {
                   "code": "family_who_use",
                   "label": "คนในครอบครัวที่ใช้บุหรี่หรือบุหรี่ไฟฟ้า",
-                  "scenarioCode": "REAL2-0064"
+                  "scenarioCode": "REAL3-0149"
                 }
               ]
             }
@@ -685,21 +1405,22 @@
               ],
               "title": "ชุดจัดวงเรียนรู้สำหรับพ่อแม่และแกนนำครอบครัว",
               "choiceLabel": "อยากจัดวงเรียนรู้ให้พ่อแม่หรือแกนนำครอบครัว",
-              "goal": "เตรียมผู้จัดวง ฝึกสื่อสาร และต่อยอดกิจกรรมของแกนนำ",
+              "goal": "เตรียมผู้จัดวง ฝึกสื่อสาร และเชื่อมกิจกรรมกับการดูแลสภาพแวดล้อมในบ้าน",
               "mappingBasis": [
+                "concept_framework",
                 "tracker_scope",
-                "editorial_package_design"
+                "component_manuscripts"
               ],
               "audiences": [
                 {
                   "code": "caregivers",
                   "label": "พ่อแม่และผู้ดูแลเด็ก",
-                  "scenarioCode": "REAL2-0065"
+                  "scenarioCode": "REAL3-0150"
                 },
                 {
                   "code": "fathers",
                   "label": "พ่อและแกนนำพ่อในพื้นที่",
-                  "scenarioCode": "REAL2-0069"
+                  "scenarioCode": "REAL3-0154"
                 }
               ]
             }
@@ -718,21 +1439,22 @@
               ],
               "title": "ชุดจัดวงเรียนรู้สำหรับพ่อแม่และแกนนำครอบครัว",
               "choiceLabel": "อยากจัดวงเรียนรู้ให้พ่อแม่หรือแกนนำครอบครัว",
-              "goal": "เตรียมผู้จัดวง ฝึกสื่อสาร และต่อยอดกิจกรรมของแกนนำ",
+              "goal": "เตรียมผู้จัดวง ฝึกสื่อสาร และเชื่อมกิจกรรมกับการดูแลสภาพแวดล้อมในบ้าน",
               "mappingBasis": [
+                "concept_framework",
                 "tracker_scope",
-                "editorial_package_design"
+                "component_manuscripts"
               ],
               "audiences": [
                 {
                   "code": "caregivers",
                   "label": "พ่อแม่และผู้ดูแลเด็ก",
-                  "scenarioCode": "REAL2-0066"
+                  "scenarioCode": "REAL3-0151"
                 },
                 {
                   "code": "fathers",
                   "label": "พ่อและแกนนำพ่อในพื้นที่",
-                  "scenarioCode": "REAL2-0070"
+                  "scenarioCode": "REAL3-0155"
                 }
               ]
             }
@@ -751,21 +1473,22 @@
               ],
               "title": "ชุดจัดวงเรียนรู้สำหรับพ่อแม่และแกนนำครอบครัว",
               "choiceLabel": "อยากจัดวงเรียนรู้ให้พ่อแม่หรือแกนนำครอบครัว",
-              "goal": "เตรียมผู้จัดวง ฝึกสื่อสาร และต่อยอดกิจกรรมของแกนนำ",
+              "goal": "เตรียมผู้จัดวง ฝึกสื่อสาร และเชื่อมกิจกรรมกับการดูแลสภาพแวดล้อมในบ้าน",
               "mappingBasis": [
+                "concept_framework",
                 "tracker_scope",
-                "editorial_package_design"
+                "component_manuscripts"
               ],
               "audiences": [
                 {
                   "code": "caregivers",
                   "label": "พ่อแม่และผู้ดูแลเด็ก",
-                  "scenarioCode": "REAL2-0067"
+                  "scenarioCode": "REAL3-0152"
                 },
                 {
                   "code": "fathers",
                   "label": "พ่อและแกนนำพ่อในพื้นที่",
-                  "scenarioCode": "REAL2-0071"
+                  "scenarioCode": "REAL3-0156"
                 }
               ]
             }
@@ -784,21 +1507,22 @@
               ],
               "title": "ชุดจัดวงเรียนรู้สำหรับพ่อแม่และแกนนำครอบครัว",
               "choiceLabel": "อยากจัดวงเรียนรู้ให้พ่อแม่หรือแกนนำครอบครัว",
-              "goal": "เตรียมผู้จัดวง ฝึกสื่อสาร และต่อยอดกิจกรรมของแกนนำ",
+              "goal": "เตรียมผู้จัดวง ฝึกสื่อสาร และเชื่อมกิจกรรมกับการดูแลสภาพแวดล้อมในบ้าน",
               "mappingBasis": [
+                "concept_framework",
                 "tracker_scope",
-                "editorial_package_design"
+                "component_manuscripts"
               ],
               "audiences": [
                 {
                   "code": "caregivers",
                   "label": "พ่อแม่และผู้ดูแลเด็ก",
-                  "scenarioCode": "REAL2-0068"
+                  "scenarioCode": "REAL3-0153"
                 },
                 {
                   "code": "fathers",
                   "label": "พ่อและแกนนำพ่อในพื้นที่",
-                  "scenarioCode": "REAL2-0072"
+                  "scenarioCode": "REAL3-0157"
                 }
               ]
             }
@@ -823,27 +1547,28 @@
                 "C5"
               ],
               "title": "ชุดชุมชนและครอบครัวร่วมดูแลพื้นที่ปลอดบุหรี่",
-              "choiceLabel": "อยากชวนชุมชน ครอบครัว และท้องถิ่นมาลงมือร่วมกัน",
-              "goal": "เชื่อมงานท้องถิ่น กิจกรรมครอบครัว และช่องทางประสานบริการ",
+              "choiceLabel": "อยากเชื่อมชุมชน ครอบครัว และท้องถิ่นให้ทำงานร่วมกัน",
+              "goal": "ใช้ทีมท้องถิ่นเชื่อมพื้นที่ กิจกรรมครอบครัว และช่องทางประสานบริการอย่างต่อเนื่อง",
               "mappingBasis": [
+                "concept_framework",
                 "tracker_scope",
-                "editorial_package_design"
+                "component_manuscripts"
               ],
               "audiences": [
                 {
                   "code": "community_all",
                   "label": "ประชาชนในชุมชน",
-                  "scenarioCode": "REAL2-0075"
+                  "scenarioCode": "REAL3-0160"
                 },
                 {
                   "code": "community_workers",
                   "label": "คนวัยทำงานในชุมชน",
-                  "scenarioCode": "REAL2-0076"
+                  "scenarioCode": "REAL3-0161"
                 },
                 {
                   "code": "community_youth",
                   "label": "เด็กและเยาวชนในชุมชน",
-                  "scenarioCode": "REAL2-0086"
+                  "scenarioCode": "REAL3-0171"
                 }
               ]
             }
@@ -862,27 +1587,28 @@
                 "C5"
               ],
               "title": "ชุดชุมชนและครอบครัวร่วมดูแลพื้นที่ปลอดบุหรี่",
-              "choiceLabel": "อยากชวนชุมชน ครอบครัว และท้องถิ่นมาลงมือร่วมกัน",
-              "goal": "เชื่อมงานท้องถิ่น กิจกรรมครอบครัว และช่องทางประสานบริการ",
+              "choiceLabel": "อยากเชื่อมชุมชน ครอบครัว และท้องถิ่นให้ทำงานร่วมกัน",
+              "goal": "ใช้ทีมท้องถิ่นเชื่อมพื้นที่ กิจกรรมครอบครัว และช่องทางประสานบริการอย่างต่อเนื่อง",
               "mappingBasis": [
+                "concept_framework",
                 "tracker_scope",
-                "editorial_package_design"
+                "component_manuscripts"
               ],
               "audiences": [
                 {
                   "code": "community_all",
                   "label": "ประชาชนในชุมชน",
-                  "scenarioCode": "REAL2-0073"
+                  "scenarioCode": "REAL3-0158"
                 },
                 {
                   "code": "community_workers",
                   "label": "คนวัยทำงานในชุมชน",
-                  "scenarioCode": "REAL2-0074"
+                  "scenarioCode": "REAL3-0159"
                 },
                 {
                   "code": "community_youth",
                   "label": "เด็กและเยาวชนในชุมชน",
-                  "scenarioCode": "REAL2-0085"
+                  "scenarioCode": "REAL3-0170"
                 }
               ]
             }
@@ -901,27 +1627,28 @@
                 "C5"
               ],
               "title": "ชุดชุมชนและครอบครัวร่วมดูแลพื้นที่ปลอดบุหรี่",
-              "choiceLabel": "อยากชวนชุมชน ครอบครัว และท้องถิ่นมาลงมือร่วมกัน",
-              "goal": "เชื่อมงานท้องถิ่น กิจกรรมครอบครัว และช่องทางประสานบริการ",
+              "choiceLabel": "อยากเชื่อมชุมชน ครอบครัว และท้องถิ่นให้ทำงานร่วมกัน",
+              "goal": "ใช้ทีมท้องถิ่นเชื่อมพื้นที่ กิจกรรมครอบครัว และช่องทางประสานบริการอย่างต่อเนื่อง",
               "mappingBasis": [
+                "concept_framework",
                 "tracker_scope",
-                "editorial_package_design"
+                "component_manuscripts"
               ],
               "audiences": [
                 {
                   "code": "community_all",
                   "label": "ประชาชนในชุมชน",
-                  "scenarioCode": "REAL2-0081"
+                  "scenarioCode": "REAL3-0166"
                 },
                 {
                   "code": "community_workers",
                   "label": "คนวัยทำงานในชุมชน",
-                  "scenarioCode": "REAL2-0082"
+                  "scenarioCode": "REAL3-0167"
                 },
                 {
                   "code": "community_youth",
                   "label": "เด็กและเยาวชนในชุมชน",
-                  "scenarioCode": "REAL2-0089"
+                  "scenarioCode": "REAL3-0174"
                 }
               ]
             }
@@ -940,27 +1667,28 @@
                 "C5"
               ],
               "title": "ชุดชุมชนและครอบครัวร่วมดูแลพื้นที่ปลอดบุหรี่",
-              "choiceLabel": "อยากชวนชุมชน ครอบครัว และท้องถิ่นมาลงมือร่วมกัน",
-              "goal": "เชื่อมงานท้องถิ่น กิจกรรมครอบครัว และช่องทางประสานบริการ",
+              "choiceLabel": "อยากเชื่อมชุมชน ครอบครัว และท้องถิ่นให้ทำงานร่วมกัน",
+              "goal": "ใช้ทีมท้องถิ่นเชื่อมพื้นที่ กิจกรรมครอบครัว และช่องทางประสานบริการอย่างต่อเนื่อง",
               "mappingBasis": [
+                "concept_framework",
                 "tracker_scope",
-                "editorial_package_design"
+                "component_manuscripts"
               ],
               "audiences": [
                 {
                   "code": "community_all",
                   "label": "ประชาชนในชุมชน",
-                  "scenarioCode": "REAL2-0083"
+                  "scenarioCode": "REAL3-0168"
                 },
                 {
                   "code": "community_workers",
                   "label": "คนวัยทำงานในชุมชน",
-                  "scenarioCode": "REAL2-0084"
+                  "scenarioCode": "REAL3-0169"
                 },
                 {
                   "code": "community_youth",
                   "label": "เด็กและเยาวชนในชุมชน",
-                  "scenarioCode": "REAL2-0090"
+                  "scenarioCode": "REAL3-0175"
                 }
               ]
             }
@@ -979,27 +1707,28 @@
                 "C5"
               ],
               "title": "ชุดชุมชนและครอบครัวร่วมดูแลพื้นที่ปลอดบุหรี่",
-              "choiceLabel": "อยากชวนชุมชน ครอบครัว และท้องถิ่นมาลงมือร่วมกัน",
-              "goal": "เชื่อมงานท้องถิ่น กิจกรรมครอบครัว และช่องทางประสานบริการ",
+              "choiceLabel": "อยากเชื่อมชุมชน ครอบครัว และท้องถิ่นให้ทำงานร่วมกัน",
+              "goal": "ใช้ทีมท้องถิ่นเชื่อมพื้นที่ กิจกรรมครอบครัว และช่องทางประสานบริการอย่างต่อเนื่อง",
               "mappingBasis": [
+                "concept_framework",
                 "tracker_scope",
-                "editorial_package_design"
+                "component_manuscripts"
               ],
               "audiences": [
                 {
                   "code": "community_all",
                   "label": "ประชาชนในชุมชน",
-                  "scenarioCode": "REAL2-0077"
+                  "scenarioCode": "REAL3-0162"
                 },
                 {
                   "code": "community_workers",
                   "label": "คนวัยทำงานในชุมชน",
-                  "scenarioCode": "REAL2-0078"
+                  "scenarioCode": "REAL3-0163"
                 },
                 {
                   "code": "community_youth",
                   "label": "เด็กและเยาวชนในชุมชน",
-                  "scenarioCode": "REAL2-0087"
+                  "scenarioCode": "REAL3-0172"
                 }
               ]
             }
@@ -1018,27 +1747,28 @@
                 "C5"
               ],
               "title": "ชุดชุมชนและครอบครัวร่วมดูแลพื้นที่ปลอดบุหรี่",
-              "choiceLabel": "อยากชวนชุมชน ครอบครัว และท้องถิ่นมาลงมือร่วมกัน",
-              "goal": "เชื่อมงานท้องถิ่น กิจกรรมครอบครัว และช่องทางประสานบริการ",
+              "choiceLabel": "อยากเชื่อมชุมชน ครอบครัว และท้องถิ่นให้ทำงานร่วมกัน",
+              "goal": "ใช้ทีมท้องถิ่นเชื่อมพื้นที่ กิจกรรมครอบครัว และช่องทางประสานบริการอย่างต่อเนื่อง",
               "mappingBasis": [
+                "concept_framework",
                 "tracker_scope",
-                "editorial_package_design"
+                "component_manuscripts"
               ],
               "audiences": [
                 {
                   "code": "community_all",
                   "label": "ประชาชนในชุมชน",
-                  "scenarioCode": "REAL2-0079"
+                  "scenarioCode": "REAL3-0164"
                 },
                 {
                   "code": "community_workers",
                   "label": "คนวัยทำงานในชุมชน",
-                  "scenarioCode": "REAL2-0080"
+                  "scenarioCode": "REAL3-0165"
                 },
                 {
                   "code": "community_youth",
                   "label": "เด็กและเยาวชนในชุมชน",
-                  "scenarioCode": "REAL2-0088"
+                  "scenarioCode": "REAL3-0173"
                 }
               ]
             }
@@ -1062,22 +1792,23 @@
                 "C5"
               ],
               "title": "ชุดจัดระบบเฝ้าระวัง ส่งต่อ และบริการช่วยเลิก",
-              "choiceLabel": "อยากให้ทีมบริการเชื่อมการเฝ้าระวังกับงานช่วยเลิก",
-              "goal": "จัดบทบาทและช่องทางประสานงานระหว่างการเฝ้าระวังกับบริการช่วยเลิก",
+              "choiceLabel": "อยากเชื่อมงานเฝ้าระวัง ส่งต่อ และบริการช่วยเลิก",
+              "goal": "จัดบทบาทและช่องทางประสานงานระหว่างการเฝ้าระวังกับบริการช่วยเลิกตามขอบเขตวิชาชีพ",
               "mappingBasis": [
+                "concept_framework",
                 "tracker_scope",
-                "editorial_package_design"
+                "component_manuscripts"
               ],
               "audiences": [
                 {
                   "code": "adult_service_users",
                   "label": "ผู้รับบริการวัยผู้ใหญ่ที่ใช้บุหรี่หรือบุหรี่ไฟฟ้า",
-                  "scenarioCode": "REAL2-0099"
+                  "scenarioCode": "REAL3-0184"
                 },
                 {
                   "code": "adolescent_service_users",
                   "label": "ผู้รับบริการวัยรุ่นที่ใช้บุหรี่หรือบุหรี่ไฟฟ้า",
-                  "scenarioCode": "REAL2-0100"
+                  "scenarioCode": "REAL3-0185"
                 }
               ]
             }
@@ -1095,22 +1826,23 @@
                 "C5"
               ],
               "title": "ชุดจัดระบบเฝ้าระวัง ส่งต่อ และบริการช่วยเลิก",
-              "choiceLabel": "อยากให้ทีมบริการเชื่อมการเฝ้าระวังกับงานช่วยเลิก",
-              "goal": "จัดบทบาทและช่องทางประสานงานระหว่างการเฝ้าระวังกับบริการช่วยเลิก",
+              "choiceLabel": "อยากเชื่อมงานเฝ้าระวัง ส่งต่อ และบริการช่วยเลิก",
+              "goal": "จัดบทบาทและช่องทางประสานงานระหว่างการเฝ้าระวังกับบริการช่วยเลิกตามขอบเขตวิชาชีพ",
               "mappingBasis": [
+                "concept_framework",
                 "tracker_scope",
-                "editorial_package_design"
+                "component_manuscripts"
               ],
               "audiences": [
                 {
                   "code": "adult_service_users",
                   "label": "ผู้รับบริการวัยผู้ใหญ่ที่ใช้บุหรี่หรือบุหรี่ไฟฟ้า",
-                  "scenarioCode": "REAL2-0101"
+                  "scenarioCode": "REAL3-0186"
                 },
                 {
                   "code": "adolescent_service_users",
                   "label": "ผู้รับบริการวัยรุ่นที่ใช้บุหรี่หรือบุหรี่ไฟฟ้า",
-                  "scenarioCode": "REAL2-0102"
+                  "scenarioCode": "REAL3-0187"
                 }
               ]
             }
@@ -1128,22 +1860,23 @@
                 "C5"
               ],
               "title": "ชุดจัดระบบเฝ้าระวัง ส่งต่อ และบริการช่วยเลิก",
-              "choiceLabel": "อยากให้ทีมบริการเชื่อมการเฝ้าระวังกับงานช่วยเลิก",
-              "goal": "จัดบทบาทและช่องทางประสานงานระหว่างการเฝ้าระวังกับบริการช่วยเลิก",
+              "choiceLabel": "อยากเชื่อมงานเฝ้าระวัง ส่งต่อ และบริการช่วยเลิก",
+              "goal": "จัดบทบาทและช่องทางประสานงานระหว่างการเฝ้าระวังกับบริการช่วยเลิกตามขอบเขตวิชาชีพ",
               "mappingBasis": [
+                "concept_framework",
                 "tracker_scope",
-                "editorial_package_design"
+                "component_manuscripts"
               ],
               "audiences": [
                 {
                   "code": "adult_service_users",
                   "label": "ผู้รับบริการวัยผู้ใหญ่ที่ใช้บุหรี่หรือบุหรี่ไฟฟ้า",
-                  "scenarioCode": "REAL2-0095"
+                  "scenarioCode": "REAL3-0180"
                 },
                 {
                   "code": "adolescent_service_users",
                   "label": "ผู้รับบริการวัยรุ่นที่ใช้บุหรี่หรือบุหรี่ไฟฟ้า",
-                  "scenarioCode": "REAL2-0096"
+                  "scenarioCode": "REAL3-0181"
                 }
               ]
             }
@@ -1161,22 +1894,23 @@
                 "C5"
               ],
               "title": "ชุดจัดระบบเฝ้าระวัง ส่งต่อ และบริการช่วยเลิก",
-              "choiceLabel": "อยากให้ทีมบริการเชื่อมการเฝ้าระวังกับงานช่วยเลิก",
-              "goal": "จัดบทบาทและช่องทางประสานงานระหว่างการเฝ้าระวังกับบริการช่วยเลิก",
+              "choiceLabel": "อยากเชื่อมงานเฝ้าระวัง ส่งต่อ และบริการช่วยเลิก",
+              "goal": "จัดบทบาทและช่องทางประสานงานระหว่างการเฝ้าระวังกับบริการช่วยเลิกตามขอบเขตวิชาชีพ",
               "mappingBasis": [
+                "concept_framework",
                 "tracker_scope",
-                "editorial_package_design"
+                "component_manuscripts"
               ],
               "audiences": [
                 {
                   "code": "adult_service_users",
                   "label": "ผู้รับบริการวัยผู้ใหญ่ที่ใช้บุหรี่หรือบุหรี่ไฟฟ้า",
-                  "scenarioCode": "REAL2-0097"
+                  "scenarioCode": "REAL3-0182"
                 },
                 {
                   "code": "adolescent_service_users",
                   "label": "ผู้รับบริการวัยรุ่นที่ใช้บุหรี่หรือบุหรี่ไฟฟ้า",
-                  "scenarioCode": "REAL2-0098"
+                  "scenarioCode": "REAL3-0183"
                 }
               ]
             }
@@ -1200,17 +1934,18 @@
                 "C3"
               ],
               "title": "ชุดขับเคลื่อนที่ทำงานปลอดบุหรี่ทั้งองค์กร",
-              "choiceLabel": "อยากชวนผู้บริหารและทีมงานจัดระบบที่ทำงานปลอดบุหรี่",
+              "choiceLabel": "อยากให้ผู้บริหารและทีมงานร่วมจัดระบบที่ทำงานปลอดบุหรี่",
               "goal": "เชื่อมการตัดสินใจของผู้บริหาร แผนคณะทำงาน และการทบทวนระบบ",
               "mappingBasis": [
+                "concept_framework",
                 "tracker_scope",
-                "editorial_package_design"
+                "component_manuscripts"
               ],
               "audiences": [
                 {
                   "code": "workers",
                   "label": "พนักงาน / คนวัยทำงานในสถานประกอบการ",
-                  "scenarioCode": "REAL2-0091"
+                  "scenarioCode": "REAL3-0176"
                 }
               ]
             }
@@ -1228,17 +1963,18 @@
                 "C3"
               ],
               "title": "ชุดขับเคลื่อนที่ทำงานปลอดบุหรี่ทั้งองค์กร",
-              "choiceLabel": "อยากชวนผู้บริหารและทีมงานจัดระบบที่ทำงานปลอดบุหรี่",
+              "choiceLabel": "อยากให้ผู้บริหารและทีมงานร่วมจัดระบบที่ทำงานปลอดบุหรี่",
               "goal": "เชื่อมการตัดสินใจของผู้บริหาร แผนคณะทำงาน และการทบทวนระบบ",
               "mappingBasis": [
+                "concept_framework",
                 "tracker_scope",
-                "editorial_package_design"
+                "component_manuscripts"
               ],
               "audiences": [
                 {
                   "code": "workers",
                   "label": "พนักงาน / คนวัยทำงานในสถานประกอบการ",
-                  "scenarioCode": "REAL2-0092"
+                  "scenarioCode": "REAL3-0177"
                 }
               ]
             }
@@ -1256,17 +1992,18 @@
                 "C3"
               ],
               "title": "ชุดขับเคลื่อนที่ทำงานปลอดบุหรี่ทั้งองค์กร",
-              "choiceLabel": "อยากชวนผู้บริหารและทีมงานจัดระบบที่ทำงานปลอดบุหรี่",
+              "choiceLabel": "อยากให้ผู้บริหารและทีมงานร่วมจัดระบบที่ทำงานปลอดบุหรี่",
               "goal": "เชื่อมการตัดสินใจของผู้บริหาร แผนคณะทำงาน และการทบทวนระบบ",
               "mappingBasis": [
+                "concept_framework",
                 "tracker_scope",
-                "editorial_package_design"
+                "component_manuscripts"
               ],
               "audiences": [
                 {
                   "code": "workers",
                   "label": "พนักงาน / คนวัยทำงานในสถานประกอบการ",
-                  "scenarioCode": "REAL2-0093"
+                  "scenarioCode": "REAL3-0178"
                 }
               ]
             }
@@ -1284,17 +2021,18 @@
                 "C3"
               ],
               "title": "ชุดขับเคลื่อนที่ทำงานปลอดบุหรี่ทั้งองค์กร",
-              "choiceLabel": "อยากชวนผู้บริหารและทีมงานจัดระบบที่ทำงานปลอดบุหรี่",
+              "choiceLabel": "อยากให้ผู้บริหารและทีมงานร่วมจัดระบบที่ทำงานปลอดบุหรี่",
               "goal": "เชื่อมการตัดสินใจของผู้บริหาร แผนคณะทำงาน และการทบทวนระบบ",
               "mappingBasis": [
+                "concept_framework",
                 "tracker_scope",
-                "editorial_package_design"
+                "component_manuscripts"
               ],
               "audiences": [
                 {
                   "code": "workers",
                   "label": "พนักงาน / คนวัยทำงานในสถานประกอบการ",
-                  "scenarioCode": "REAL2-0094"
+                  "scenarioCode": "REAL3-0179"
                 }
               ]
             }

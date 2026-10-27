@@ -10,7 +10,7 @@ export const runtime = 'nodejs';
 
 export async function GET(request: Request, { params }: { params: Promise<{ scenario: string }> }) {
   const { scenario: code } = await params;
-  if (!/^(SC-\d{3}|REAL2?-\d{4})$/.test(code)) return new Response('ไม่พบแผน', { status: 404 });
+  if (!/^(SC-\d{3}|REAL(?:2|3)?-\d{4})$/.test(code)) return new Response('ไม่พบแผน', { status: 404 });
 
   const catalog = await getPublishedCatalog();
   const scenario = catalog.scenarios.find(item => item.id === code);
