@@ -1,0 +1,101 @@
+{
+  "release": "real-tools-2026-10-27-v4",
+  "guidanceVersion": "package-specific-guidance-v4",
+  "packages": [
+    {
+      "packageId": "PK-EDU-POLICY",
+      "title": "ชุดร่วมกำหนดนโยบายและจัดทีมสถานศึกษา",
+      "setting": "EDU",
+      "singlePaths": 28,
+      "multiPaths": 508,
+      "roleContexts": 4,
+      "toolSets": 1
+    },
+    {
+      "packageId": "PK-EDU-LEARN",
+      "title": "ชุดออกแบบบทเรียนและกิจกรรมรู้เท่าทันบุหรี่ไฟฟ้า",
+      "setting": "EDU",
+      "singlePaths": 33,
+      "multiPaths": 524,
+      "roleContexts": 6,
+      "toolSets": 17
+    },
+    {
+      "packageId": "PK-EDU-ENV",
+      "title": "ชุดเชื่อมสถานศึกษา บ้าน และชุมชนให้เป็นพื้นที่ปลอดภัย",
+      "setting": "EDU",
+      "singlePaths": 33,
+      "multiPaths": 524,
+      "roleContexts": 6,
+      "toolSets": 1
+    },
+    {
+      "packageId": "PK-EDU-YOUTH",
+      "title": "ชุดเสริมพลังแกนนำและกิจกรรมที่เยาวชนร่วมออกแบบ",
+      "setting": "EDU",
+      "singlePaths": 25,
+      "multiPaths": 140,
+      "roleContexts": 6,
+      "toolSets": 1
+    },
+    {
+      "packageId": "PK-EDU-CARE",
+      "title": "ชุดประสานสถานศึกษาและครอบครัวเพื่อช่วยเหลือผู้เรียน",
+      "setting": "EDU",
+      "singlePaths": 12,
+      "multiPaths": 28,
+      "roleContexts": 4,
+      "toolSets": 1
+    },
+    {
+      "packageId": "PK-FAM-HOME",
+      "title": "ชุดคุยกันและสร้างข้อตกลงบ้านปลอดบุหรี่",
+      "setting": "FAM",
+      "singlePaths": 18,
+      "multiPaths": 189,
+      "roleContexts": 3,
+      "toolSets": 4
+    },
+    {
+      "packageId": "PK-FAM-GROUP",
+      "title": "ชุดจัดวงเรียนรู้สำหรับพ่อแม่และแกนนำครอบครัว",
+      "setting": "FAM",
+      "singlePaths": 8,
+      "multiPaths": 12,
+      "roleContexts": 4,
+      "toolSets": 2
+    },
+    {
+      "packageId": "PK-COM-TOGETHER",
+      "title": "ชุดชุมชนและครอบครัวร่วมดูแลพื้นที่ปลอดบุหรี่",
+      "setting": "COM",
+      "singlePaths": 18,
+      "multiPaths": 42,
+      "roleContexts": 6,
+      "toolSets": 2
+    },
+    {
+      "packageId": "PK-WRK-TOGETHER",
+      "title": "ชุดขับเคลื่อนที่ทำงานปลอดบุหรี่ทั้งองค์กร",
+      "setting": "WRK",
+      "singlePaths": 4,
+      "multiPaths": 4,
+      "roleContexts": 4,
+      "toolSets": 1
+    },
+    {
+      "packageId": "PK-HEA-SERVICE",
+      "title": "ชุดจัดระบบเฝ้าระวัง ส่งต่อ และบริการช่วยเลิก",
+      "setting": "HEA",
+      "singlePaths": 8,
+      "multiPaths": 12,
+      "roleContexts": 4,
+      "toolSets": 1
+    }
+  ],
+  "totals": {
+    "singlePaths": 187,
+    "multiPaths": 1983,
+    "toolSets": 31
+  }
+}

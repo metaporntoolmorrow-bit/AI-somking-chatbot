@@ -2,7 +2,7 @@ import { toolShortTitles } from './package-playbooks.mjs';
 import { componentGuides } from './component-framework.mjs';
 // Content authoring rules. Source scope is transcribed from the supplied tracker.
 // Roles, audience routing and package outlines are editorial draft mappings.
-export const release = { code: 'real-tools-2026-10-27-v3', scenarioPrefix:'REAL3', schemaVersion: 2, reviewStatus: 'source_informed_review', thresholdBytes: 6_000_000 };
+export const release = { code: 'real-tools-2026-10-27-v4', scenarioPrefix:'REAL3', schemaVersion: 2, reviewStatus: 'package_specific_guidance', thresholdBytes: 6_000_000 };
 export const settings = [
   ['EDU', 'สถานศึกษา'], ['FAM', 'ครอบครัว'], ['COM', 'ชุมชน'], ['HEA', 'ระบบบริการสุขภาพ'], ['WRK', 'สถานประกอบการ'],
 ].map(([code, label]) => ({ code, label }));

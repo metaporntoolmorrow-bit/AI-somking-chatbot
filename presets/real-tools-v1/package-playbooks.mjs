@@ -1,6 +1,7 @@
 // Source-informed packages: concept framework + current tracker + four supplied implementation guides.
 // Clinical files are routed only to the professional healthcare roles.
 import { componentGuides } from './component-framework.mjs';
+import { guidanceForContext,packageGuidanceVersion } from '../../src/lib/package-guidance-core.mjs';
 export const toolShortTitles = {
   1:'7 มาตรการโรงเรียนปลอดบุหรี่',2:'คู่มือสื่อและกิจกรรมรู้เท่าทัน',
   3:'แบบทดสอบความรอบรู้สำหรับประถม',4:'ชุดสื่อเรียนรู้สำหรับปฐมวัย',
@@ -144,11 +145,7 @@ export function usagePlanFor(pkg,toolSlots,audienceCode){
     item(50,18,'ทบทวนความต่อเนื่องของบริการ','ใช้แนวทางต้นฉบับทบทวนการนัดหมาย ติดตาม และประสานงานของทีม','จุดที่ต้องปรับในระบบบริการ'),
   ];
   sequence=sequence.filter(step=>codes.includes(step.toolCode)).sort((a,b)=>a.rank-b.rank).map((step,index)=>({...step,order:index+1,shortTitle:title(step.toolCode)}));
-  const cautions=pkg.settingCode==='HEA'
-    ?['ใช้คู่มือต้นฉบับตามขอบเขตวิชาชีพ ไม่ใช้ลำดับนี้แทนคำสั่งวินิจฉัยหรือรักษา','แยกข้อมูลผู้รับบริการออกจากเอกสารสรุปหรือเผยแพร่']
-    :['เข้าร่วมโดยสมัครใจ ไม่ตีตรา และไม่ใช้กิจกรรมแทนการรักษา','เก็บข้อมูลเท่าที่จำเป็น ไม่เปิดเผยเรื่องส่วนตัวของผู้เข้าร่วม'];
-  if(has(7))cautions.push('รายงานและภาพสรุปไม่ใช่แบบประเมินเปล่าหรือแบบวัดรายบุคคล');
-  if(audienceCode==='university')cautions.push(uniNote);
-  const benefits=['ดูเป้าหมายและสิ่งที่อยากได้จากแต่ละขั้นก่อนเริ่ม','ใช้ข้อมูลภาพรวมและเสียงของผู้ร่วมงานมาปรับรอบถัดไป'];
-  return {useSequence:sequence,cautions,benefits,guidanceBasis:'concept_tracker_and_component_sources',guidanceNote:'เรียงแนวทางจากเอกสารคอนเซปต์ ตารางเครื่องมือ และคู่มือต้นฉบับ ปรับใช้ร่วมกับผู้รับผิดชอบตามบริบท'};
+  const guidance=guidanceForContext({packageId:pkg.code,audienceCodes:[audienceCode],toolCodes:codes,edition:1});
+  if(!guidance)throw new Error('Missing package guidance: '+pkg.code);
+  return {useSequence:sequence,...guidance,guidanceEdition:1,guidanceVersion:packageGuidanceVersion,guidanceBasis:'package_specific_concept_sources',guidanceNote:'แนวทางประกอบเฉพาะชุดนี้ ปรับใช้ร่วมกับผู้รับผิดชอบตามบริบทและคู่มือต้นฉบับ'};
 }

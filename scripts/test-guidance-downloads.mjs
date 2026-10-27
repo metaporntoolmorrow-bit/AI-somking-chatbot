@@ -5,17 +5,18 @@ import { execFileSync } from 'node:child_process';
 import { chromium } from '@playwright/test';
 import JSZip from 'jszip';
 import { conversationState } from '../presets/real-tools-v1/conversation.mjs';
+import {guidanceEditionsFor} from '../src/lib/package-guidance-core.mjs';
 
 const base=process.env.TEST_BASE_URL||'http://localhost:3000';
 const preset=JSON.parse(await readFile('presets/real-tools-v1/presets.json','utf8'));
-const editions=JSON.parse(await readFile('src/content/package-guidance.json','utf8'));
+const groups=new Map();
+for(const row of preset.scenarios){const a=row.answers,key=[a.settingCode,a.roleCode,a.packageId,a.level].join('|');if(!groups.has(key))groups.set(key,[]);groups.get(key).push(row);}
+const cases=preset.settings.map(s=>[...groups.values()].filter(rows=>rows[0].answers.settingCode===s.code).sort((a,b)=>new Set(b.flatMap(r=>r.useSequence.map(s=>`${s.rank}:${s.toolCode}`))).size-new Set(a.flatMap(r=>r.useSequence.map(s=>`${s.rank}:${s.toolCode}`))).size)[0]);
+const editions=guidanceEditionsFor({packageId:cases[0][0].packageCode,audienceCodes:cases[0].map(s=>s.answers.audienceCode),toolCodes:[...new Set(cases[0].flatMap(s=>Object.values(s.tools).flat()))]});
 assert.equal(editions.length,20);
 assert.deepEqual(editions.map(s=>s.id),Array.from({length:20},(_,i)=>i+1));
 assert.equal(new Set(editions.map(s=>s.cautions.join('\n'))).size,20);
 assert.equal(new Set(editions.map(s=>s.benefits.join('\n'))).size,20);
-const groups=new Map();
-for(const row of preset.scenarios){const a=row.answers,key=[a.settingCode,a.roleCode,a.packageId,a.level].join('|');if(!groups.has(key))groups.set(key,[]);groups.get(key).push(row);}
-const cases=preset.settings.map(s=>[...groups.values()].filter(rows=>rows[0].answers.settingCode===s.code).sort((a,b)=>new Set(b.flatMap(r=>r.useSequence.map(s=>`${s.rank}:${s.toolCode}`))).size-new Set(a.flatMap(r=>r.useSequence.map(s=>`${s.rank}:${s.toolCode}`))).size)[0]);
 const dir='output/qa/guidance-downloads';
 await mkdir(dir,{recursive:true});
 const urlFor=(rows,id)=>`${base}/result?${new URLSearchParams({scenario:rows[0].code,scenarios:rows.map(s=>s.code).join(','),guidance:String(id)})}`;
@@ -53,8 +54,7 @@ try{
   for(let i=0;i<(exportsOnly?0:21);i++){
     await complete(cases[0]);const id=Number(new URL(page.url()).searchParams.get('guidance'));
     assert.equal(id,i%20+1);const advice=await visibleAdvice();
-    assert.ok(advice.includes(editions[id-1].cautions[0]));
-    assert.ok(advice.includes(editions[id-1].benefits[0]));
+    assert.deepEqual(advice,[...editions[id-1].cautions,...editions[id-1].benefits]);
     if(i<20){assert.ok(!seen.has(advice.join('\n')));seen.add(advice.join('\n'));await pdf(`EDU-${id}`);}
     else assert.deepEqual(advice,firstAdvice);
     if(i===0){

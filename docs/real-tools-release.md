@@ -1,6 +1,6 @@
 # การเผยแพร่ชุดเครื่องมือจริง
 
-ชุดข้อมูล: `real-tools-2026-10-27-v3` — 5 พื้นที่, 10 แพ็กเกจ, เครื่องมือหลัก 18 ชิ้น + แนวทางองค์ประกอบ 4 ฉบับ, 187 เส้นทางคำตอบ
+ชุดข้อมูล: `real-tools-2026-10-27-v4` — 5 พื้นที่, 10 แพ็กเกจ, เครื่องมือหลัก 18 ชิ้น + แนวทางองค์ประกอบ 4 ฉบับ, 187 เส้นทางคำตอบ
 
 รุ่นนี้ใช้คอนเซปต์ ตารางติดตาม และข้อมูลองค์ประกอบรวม 8 ไฟล์ แยกตัวเลือกสถานศึกษาเป็น 5 องค์ประกอบ พร้อมลำดับใช้ที่เชื่อมกันและคู่มือจริง ทุกเส้นทางมีหลายเครื่องมือ ไม่สร้างคำสั่งรักษาหรือขนาดยา อ่านผลวิเคราะห์ใน `docs/concept-v3-analysis.md` และชุดที่เปิดใช้ใน `presets/real-tools-v1/package-review.md`
 
@@ -9,7 +9,7 @@
 ## แหล่งข้อมูลและไฟล์
 
 - กฎต้นทาง: `presets/real-tools-v1/source-rules.mjs`
-- การประกอบชุดและลำดับ: `presets/real-tools-v1/package-playbooks.mjs` (ชื่อโฟลเดอร์เดิม แต่ version label เป็น v3)
+- การประกอบชุดและลำดับ: `presets/real-tools-v1/package-playbooks.mjs` (ชื่อโฟลเดอร์เดิม แต่ version label เป็น v4)
 - ที่มาและขอบเขตของคู่มือองค์ประกอบ: `presets/real-tools-v1/component-framework.mjs`
 - ข้อมูลที่ตรวจสอบแล้ว: `presets/real-tools-v1/presets.json`
 - ไฟล์ขนาดไม่เกิน 6,000,000 ไบต์ 14 ไฟล์: Supabase Storage ถังส่วนตัว `real-tool-assets` รวมคู่มือองค์ประกอบ 4 ฉบับ
@@ -20,11 +20,11 @@
 
 ไฟล์ต้นฉบับและไฟล์ทดสอบไม่ขึ้น Git/Vercel ใช้ Storage และ Drive สำหรับไฟล์จริง API ตรวจแผนและกลุ่มที่เลือกก่อนออกลิงก์ Storage อายุ 5 นาที แล้วเปลี่ยนทางให้ดาวน์โหลดจาก Storage โดยตรง
 
-## ชื่อ ZIP และชุดคำแนะนำ 20 ชุด
+## ชื่อ ZIP และคำแนะนำเฉพาะแพ็กเกจ
 
 - ชื่อที่ผู้ใช้ได้รับคือ `ชุดเครื่องมือสำหรับคุณ.zip` เว็บอ่าน ZIP จาก signed Storage โดยตรง แล้วกำหนดชื่อภาษาไทยผ่าน Blob download จึงไม่ต้องส่งไฟล์ใหญ่ผ่านขีดจำกัด response ของ Vercel
 - ก่อนบันทึก ZIP เว็บปรับเฉพาะ `00-เริ่มใช้แพ็กเกจ.txt` ให้ตรงกับหน้าผลลัพธ์และ PDF ไฟล์ต้นฉบับ ลิงก์ Drive และลำดับโฟลเดอร์อื่นคงเดิม
-- คลังคำแนะนำ: `src/content/package-guidance.json` มี 20 ชุดที่จัดทำเพื่อช่วยดำเนินกิจกรรม ไม่ใช่การเปลี่ยนเนื้อหาทางคลินิกหรือการจับคู่เครื่องมือใน Supabase อ่านฉบับตรวจข้อความได้ใน `presets/real-tools-v1/guidance-sets.md`
+- คลังคำแนะนำ: `src/content/package-guidance.json` มี 10 คลังเฉพาะแพ็กเกจ คลังละ 6 ประเด็น เลือกครั้งละ 3 ประเด็นเป็น 20 ชุดต่อแพ็กเกจ รวม 200 ชุดเพื่อช่วยดำเนินกิจกรรม ไม่ใช่การเปลี่ยนเนื้อหาทางคลินิกหรือการจับคู่เครื่องมือใน Supabase อ่านฉบับตรวจข้อความได้ใน `presets/real-tools-v1/guidance-sets.md`
 - การยืนยันคำตอบครั้งสุดท้ายของแชทบอตจะเลือกชุดถัดไป เก็บเพียงตัวนับ `package-guidance-cycle-v1` ใน localStorage ของเบราว์เซอร์นั้น ครบ 20 แล้ววนกลับชุดแรก หากใช้ storage ไม่ได้จะวนในหน่วยความจำระหว่างการใช้งานนั้น
 - เลขชุดอยู่ในพารามิเตอร์ `guidance` ของ URL เดิมจึงเปิดซ้ำได้ข้อความเดิม การรีเฟรชหรือกดดาวน์โหลดไม่ใช้โควตาชุดใหม่ ลิงก์เก่าที่ไม่มีเลขชุดและเลขที่ไม่ถูกต้องใช้ชุด 1
 - ข้อจำกัดเฉพาะเครื่องมือ เช่น รายงานที่ไม่ใช่แบบประเมิน คู่มือโรงเรียนที่ต้องปรับในอุดมศึกษา และขอบเขตวิชาชีพบริการสุขภาพ ไม่ถูกสุ่มออก
@@ -37,7 +37,7 @@
 ```powershell
 node scripts/build-real-tool-presets.mjs --require-drive --require-public
 node --env-file=.env.local scripts/release-real-tools.mjs --stage
-$env:CONTENT_PREVIEW_VERSION='real-tools-2026-10-27-v3'
+$env:CONTENT_PREVIEW_VERSION='real-tools-2026-10-27-v4'
 npm.cmd run dev
 # อีก terminal
 node scripts/test-real-tools.mjs
@@ -62,7 +62,7 @@ node scripts/test-real-tools.mjs --smoke
 
 ## การย้อนกลับ
 
-ตัวนำเข้าจะไม่เขียนทับ release หรือไฟล์รุ่นเก่า และไม่อนุญาต stage ทับรุ่นที่เผยแพร่แล้ว เก็บค่า active ก่อนเปลี่ยนไว้ใน `.prd-analysis/real-tools-2026-10-27-v3-release.json` ซึ่งไม่ขึ้น Git
+ตัวนำเข้าจะไม่เขียนทับ release หรือไฟล์รุ่นเก่า และไม่อนุญาต stage ทับรุ่นที่เผยแพร่แล้ว เก็บค่า active ก่อนเปลี่ยนไว้ใน `.prd-analysis/real-tools-2026-10-27-v4-release.json` ซึ่งไม่ขึ้น Git
 
 ```powershell
 node --env-file=.env.local scripts/release-real-tools.mjs --rollback
@@ -71,3 +71,5 @@ node --env-file=.env.local scripts/release-real-tools.mjs --rollback
 ตรวจรุ่น 3 ด้วย `node scripts/test-concept-v3.mjs` ครอบคลุมทุกการเลือกหลายกลุ่ม บทสนทนาทั้ง 10 แพ็กเกจ PDF ทั้ง 47 บริบท การนำรายการไฟล์ซ้ำออก และ hash คู่มือใหม่ทั้ง 4 ฉบับ จากนั้นใช้ `node scripts/test-guidance-downloads.mjs --downloads-only` ตรวจชื่อ ZIP คำแนะนำและไฟล์ต้นฉบับที่ดาวน์โหลดจริงทั้ง 5 พื้นที่
 
 คำสั่งนี้คืนค่า active เดิม โดยเก็บข้อมูลและไฟล์รุ่นใหม่ไว้ตรวจสอบ หากแก้เนื้อหาในอนาคตให้ใช้ version label ใหม่ นำเข้าและทดสอบก่อนสลับอีกครั้ง ส่วนระบบสมาชิกและการเข้าสู่ระบบไม่เกี่ยวกับกระบวนการนี้
+
+รุ่น 4 ใช้ `src/lib/package-guidance-core.mjs` เป็นแหล่งเดียวสำหรับเว็บ Preset และ ZIP ตารางจำนวนเส้นทางอยู่ใน `docs/package-path-summary.md` ข้อความที่วนเปลี่ยนมาจากแพ็กเกจนั้นเอง ข้อจำกัดสำคัญคงไว้เสมอ ตรวจด้วย `node scripts/test-package-guidance.mjs` และอ่านคำแนะนำครบ 200 ชุดใน `presets/real-tools-v1/guidance-by-package.csv` ไฟล์ CSV ล่าสุดระบุใน `presets/real-tools-v1/export-status.json`

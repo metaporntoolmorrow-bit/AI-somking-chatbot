@@ -7,6 +7,7 @@ import { createClient } from '@supabase/supabase-js';
 import JSZip from 'jszip';
 import { buildDownloadManifest, formatDownloadLinks } from '../presets/real-tools-v1/resolver.mjs';
 import { bundleIdentity } from '../src/lib/package-identity.mjs';
+import {guidanceForContext} from '../src/lib/package-guidance-core.mjs';
 
 const root=process.cwd();
 const bytes=await readFile('presets/real-tools-v1/presets.json');
@@ -91,7 +92,11 @@ if(mode==='--stage'){
     const selectedTools=preset.tools.filter(t=>manifest.toolCodes.includes(t.code));
     const pkg=preset.packages.find(p=>p.code===manifest.packageCode);
     const common=preset.scenarios.find(s=>s.packageCode===manifest.packageCode);
-    zip.file('00-เริ่มใช้แพ็กเกจ.txt','\uFEFF'+[pkg.title,pkg.goal,'','ลำดับการใช้เครื่องมือ',...manifest.useSequence.map(s=>`${s.order}. ${s.shortTitle} — ${s.stage}\n   ${s.action}\n   สิ่งที่อยากได้: ${s.outcome}`),'','ข้อควรระวัง',...common.cautions.map(s=>'- '+s),'','แนวทางการใช้ประโยชน์',...common.benefits.map(s=>'- '+s),'',common.guidanceNote,'','ไฟล์ต้นฉบับขนาดไม่เกิน 6 MB อยู่ในโฟลเดอร์เครื่องมือ ไฟล์ใหญ่เปิดจากลิงก์ใน TXT','รายงานและภาพสรุปแยกไว้เป็นข้อมูลประกอบ ไม่ใช่แบบประเมินเปล่า'].join('\n'));
+    // A shared archive cannot assume the first scenario's audience. The browser
+    // adds the selected audience and edition to this same package-specific guide.
+    const guidance=guidanceForContext({packageId:pkg.code,toolCodes:manifest.toolCodes,edition:1});
+    if(!guidance)throw new Error('Missing bundle guidance '+pkg.code);
+    zip.file('00-เริ่มใช้แพ็กเกจ.txt','\uFEFF'+[pkg.title,pkg.goal,'','ลำดับการใช้เครื่องมือ',...manifest.useSequence.map(s=>`${s.order}. ${s.shortTitle} — ${s.stage}\n   ${s.action}\n   สิ่งที่อยากได้: ${s.outcome}`),'','ข้อควรระวัง',...guidance.cautions.map(s=>'- '+s),'','แนวทางการใช้ประโยชน์',...guidance.benefits.map(s=>'- '+s),'',common.guidanceNote,'','ไฟล์ต้นฉบับขนาดไม่เกิน 6 MB อยู่ในโฟลเดอร์เครื่องมือ ไฟล์ใหญ่เปิดจากลิงก์ใน TXT','รายงานและภาพสรุปแยกไว้เป็นข้อมูลประกอบ ไม่ใช่แบบประเมินเปล่า'].join('\n'));
     zip.file('รายการชุดเครื่องมือ.txt','\uFEFF'+['ชุดเครื่องมือสำหรับแผนที่คุณเลือก','',...selectedTools.flatMap(t=>[t.title,...(t.editorialNote?[t.editorialNote]:[]),'']),'ไฟล์ขนาดใหญ่เปิดจาก ลิงก์เครื่องมือ.txt'].join('\n'));
     const data=await zip.generateAsync({type:'nodebuffer',compression:'DEFLATE',compressionOptions:{level:6}});
     const reopened=await JSZip.loadAsync(data,{checkCRC32:true});
