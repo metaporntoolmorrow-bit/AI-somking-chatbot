@@ -5,6 +5,7 @@ import {createHash} from 'node:crypto';
 import {chromium} from '@playwright/test';
 import {guidanceForContext,guidanceEditionsFor,packageGuidanceProfiles,guidanceCombinations} from '../src/lib/package-guidance-core.mjs';
 import {summarizePackages} from './lib/write-package-guidance.mjs';
+import {situationSummary} from '../src/lib/situation-summary.mjs';
 
 const preset=JSON.parse(await readFile('presets/real-tools-v1/presets.json','utf8'));
 const summary=summarizePackages(preset),dir='output/qa/package-guidance';await mkdir(dir,{recursive:true});
@@ -36,6 +37,21 @@ for(let id=1;id<=20;id++){
   assert.ok(health.cautions.some(t=>t.includes('ไม่ใช่คำสั่งวินิจฉัย')));
 }
 assert.equal(guidanceForContext({packageId:'__proto__'}),null);
+// Every valid answer selection must retain its own situation. Only selected
+// labels are passed in; no invented team size, duration, or inferred level.
+const situationGroups=new Map();
+for(const row of preset.scenarios){const a=row.answers,key=[a.settingCode,a.roleCode,a.packageId,a.level].join('|');if(!situationGroups.has(key))situationGroups.set(key,[]);situationGroups.get(key).push(row);}
+const situations=new Set();
+for(const group of situationGroups.values())for(let mask=1;mask<2**group.length;mask++){
+  const selected=group.filter((_,i)=>mask&(1<<i)),first=selected[0];
+  const text=situationSummary({role:first.answerLabels.role,setting:first.answerLabels.setting,purpose:preset.packages.find(p=>p.code===first.packageCode).choiceLabel,audiences:selected.map(s=>s.answerLabels.audience)});
+  for(const row of selected)assert.ok(text.includes(row.answerLabels.audience),'Selected audience omitted');
+  assert.ok(text.includes(first.answerLabels.setting));
+  assert.ok(text.includes(preset.packages.find(p=>p.code===first.packageCode).choiceLabel.replace(/^อยาก/,'')));
+  assert.ok(!/2[–-]5 คน|3 เดือน|ครูแนะแนว/.test(text),'Situation invented an unselected detail');
+  assert.ok(!situations.has(text),'Different selected answers collapsed into one situation');situations.add(text);
+}
+assert.equal(situations.size,1983);
 const baselineFlag=process.argv.find(a=>a.startsWith('--baseline='));
 if(baselineFlag){
   const before=JSON.parse(await readFile(baselineFlag.slice('--baseline='.length),'utf8'));
@@ -78,6 +94,21 @@ try{
       await page.goto(`${base}/result?${params}`,{waitUntil:'networkidle'});
       const expected=guidanceForContext({packageId:first.packageCode,audienceCodes:rows.map(r=>r.answers.audienceCode),toolCodes:[...new Set(rows.flatMap(r=>Object.values(r.tools).flat()))],edition:id});
       const advice=[...expected.cautions,...expected.benefits];
+      const situation=situationSummary({role:first.answerLabels.role,setting:first.answerLabels.setting,purpose:preset.packages.find(p=>p.code===first.packageCode).choiceLabel,audiences:rows.map(r=>r.answerLabels.audience)});
+      assert.equal(await page.locator('.package-context p').count(),1);
+      assert.equal(await page.locator('.package-context p').innerText(),situation);
+      assert.equal(await page.locator('.usage-number').count(),0);
+      assert.equal(await page.locator('.usage-list').evaluate(e=>getComputedStyle(e).listStyleType),'decimal');
+      const stepItems=page.locator('.usage-list > li');
+      for(const step of await stepItems.all()){
+        const code=decodeURIComponent((await step.locator('h3 a').getAttribute('href')).split('/').at(-1));
+        const stage=await step.locator('.usage-stage').innerText();
+        const source=rows.flatMap(r=>r.useSequence).find(s=>s.toolCode===code&&s.stage===stage);assert.ok(source);
+        assert.equal(await step.locator('.usage-description').count(),1);
+        assert.equal(await step.locator('.usage-description').innerText(),source.action);
+      }
+      const nested=await page.locator('.usage-list').evaluate(e=>e.getBoundingClientRect().left-document.getElementById('result-sequence-title').parentElement.getBoundingClientRect().left);
+      assert.ok(nested>=30,'Step numbering is not indented beneath the section heading');
       assert.deepEqual(await page.locator('.result-section h2').allTextContents(),['สถานการณ์','เครื่องมือหลัก / เสริม','ลำดับการใช้เครื่องมือ']);
       assert.equal(await page.locator('.usage-guidance, .usage-guidance-note, .usage-source-note').count(),0,'Expert guidance must not appear in the result preview');
       const toolCodes=[...new Set(rows.flatMap(r=>Object.values(r.tools).flat()))];

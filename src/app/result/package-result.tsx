@@ -6,6 +6,7 @@ import { getPackage, getPublishedCatalog, getScenario, getTool, settingNames } f
 import { compatibleSelection } from '@/lib/plan-flow';
 import { packageSummary } from '@/lib/package-summary';
 import { parseGuidanceId } from '@/lib/guidance-cycle';
+import { situationSummary } from '@/lib/situation-summary.mjs';
 
 export default async function PackageResult({searchParams}:{searchParams:Promise<{scenario?:string;scenarios?:string;guidance?:string}>}){
   const {scenario:code,scenarios:selection,guidance}=await searchParams;
@@ -15,6 +16,7 @@ export default async function PackageResult({searchParams}:{searchParams:Promise
   const selected=compatibleSelection(catalog.scenarios,code??'',selection);
   const item=scenario?getPackage(catalog,scenario.packageId):undefined;
   const plan=packageSummary(catalog,selected,guidanceId);
+  const situation=scenario&&item?situationSummary({role:scenario.role,setting:settingNames[scenario.settingCode]||item.setting,purpose:item.choiceLabel||item.name,audiences:selected.map(s=>s.audience)}):'';
   const primaryIds=new Set(selected.flatMap(s=>s.primaryIds));
   const complete=Boolean(scenario&&item&&selected.length&&plan.steps.length&&plan.toolIds.every(id=>getTool(catalog,id)));
   const zipAvailable=Boolean(complete&&plan.toolIds.every(id=>{const tool=getTool(catalog,id);return tool?.downloadReady||tool?.hasSamplePdf;}));
@@ -24,7 +26,7 @@ export default async function PackageResult({searchParams}:{searchParams:Promise
       <div className="package-overview"><h1>{item.name}</h1><p>{item.goal}</p></div>
       <section className="result-section" aria-labelledby="result-context-title">
         <div className="result-section-heading"><span aria-hidden="true">1</span><h2 id="result-context-title">สถานการณ์</h2></div>
-        <div className="package-context"><p><strong>{scenario.role}</strong> ใน{settingNames[scenario.settingCode]||item.setting}</p><p>กลุ่มที่อยากดูแล: <strong>{plan.audiences.join(' · ')}</strong></p></div>
+        <div className="package-context"><p>{situation}</p></div>
       </section>
       <section className="result-section" aria-labelledby="result-tools-title">
         <div className="result-section-heading"><span aria-hidden="true">2</span><h2 id="result-tools-title">เครื่องมือหลัก / เสริม</h2></div>
@@ -36,7 +38,7 @@ export default async function PackageResult({searchParams}:{searchParams:Promise
       </section>
       <section className="result-section" aria-labelledby="result-sequence-title">
         <div className="result-section-heading"><span aria-hidden="true">3</span><h2 id="result-sequence-title">ลำดับการใช้เครื่องมือ</h2></div>
-        <ol className="usage-list">{plan.steps.map(step=><li key={`${step.rank}-${step.toolCode}`}><span className="usage-number" aria-hidden="true">{step.order}</span><div><span className="usage-stage">{step.stage}</span><h3><Link href={`/tools/card/${encodeURIComponent(step.toolCode)}`}>{step.shortTitle}</Link></h3></div></li>)}</ol>
+        <ol className="usage-list">{plan.steps.map(step=><li key={`${step.rank}-${step.toolCode}`}><span className="usage-stage">{step.stage}</span><h3><Link href={`/tools/card/${encodeURIComponent(step.toolCode)}`}>{step.shortTitle}</Link></h3><p className="usage-description">{step.action}</p></li>)}</ol>
       </section>
       <ExportActions planName={item.name} scenarioCode={scenario.id} selection={selected.map(s=>s.id).join(',')} zipAvailable={zipAvailable} bundleGuide={bundleGuide}/>
       <div className="result-gap-actions"><Link href="/plan" className="button button-outline">เลือกบริบทใหม่</Link></div>
