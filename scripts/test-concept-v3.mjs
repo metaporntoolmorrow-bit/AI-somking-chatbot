@@ -70,8 +70,9 @@ try{
     const expected=new Set(rows.flatMap(r=>r.useSequence.map(s=>`${s.rank}:${s.toolCode}`)));
     assert.equal(await page.locator('.usage-list>li').count(),expected.size);
     assert.equal(await page.locator('.usage-list h3 a').count(),expected.size);
-    assert.deepEqual(await page.locator('.usage-guidance ul li').allTextContents(),await page.locator('.print-guidance li').allTextContents());
-    if(pkg.code==='PK-EDU-YOUTH')assert.ok((await page.locator('.usage-guidance').innerText()).includes('ครูพี่เลี้ยง'));
+    assert.deepEqual(await page.locator('.result-section h2').allTextContents(),['สถานการณ์','เครื่องมือหลัก / เสริม','ลำดับการใช้เครื่องมือ']);
+    assert.equal(await page.locator('.usage-guidance').count(),0);
+    if(pkg.code==='PK-EDU-YOUTH')assert.ok((await page.locator('.print-guidance').textContent()).includes('ครูพี่เลี้ยง'));
     if(index<4){await page.screenshot({path:`${dir}/result-${pkg.code}.png`,fullPage:true});}
     report.conversations.push(pkg.code);console.log(`Conversation passed ${pkg.code}.`);
   }

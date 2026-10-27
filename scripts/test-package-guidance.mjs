@@ -77,13 +77,27 @@ try{
       const {rows,id}=jobs[next++],first=rows[0];const params=new URLSearchParams({scenario:first.code,scenarios:rows.map(r=>r.code).join(','),guidance:String(id)});
       await page.goto(`${base}/result?${params}`,{waitUntil:'networkidle'});
       const expected=guidanceForContext({packageId:first.packageCode,audienceCodes:rows.map(r=>r.answers.audienceCode),toolCodes:[...new Set(rows.flatMap(r=>Object.values(r.tools).flat()))],edition:id});
-      const advice=[...expected.cautions,...expected.benefits];assert.deepEqual(await page.locator('.usage-guidance ul li').allTextContents(),advice);
+      const advice=[...expected.cautions,...expected.benefits];
+      assert.deepEqual(await page.locator('.result-section h2').allTextContents(),['สถานการณ์','เครื่องมือหลัก / เสริม','ลำดับการใช้เครื่องมือ']);
+      assert.equal(await page.locator('.usage-guidance, .usage-guidance-note, .usage-source-note').count(),0,'Expert guidance must not appear in the result preview');
+      const toolCodes=[...new Set(rows.flatMap(r=>Object.values(r.tools).flat()))];
+      const primaryCodes=new Set(rows.flatMap(r=>r.tools.primary));
+      const toolRows=page.locator('.result-tools li');assert.equal(await toolRows.count(),toolCodes.length);
+      for(const row of await toolRows.all()){
+        const code=await row.getAttribute('data-tool-id');assert.ok(toolCodes.includes(code));
+        assert.equal(await row.locator('.result-tool-kind').innerText(),primaryCodes.has(code)?'หลัก':'เสริม');
+      }
       assert.deepEqual(await page.locator('.print-guidance li').allTextContents(),advice);
       assert.equal(await page.locator('.package-files').count(),0);
-      if(first.packageCode==='PK-EDU-LEARN'&&id===(smoke?7:1)){
-        await page.setViewportSize({width:1365,height:900});await page.screenshot({path:`${dir}/desktop.png`,fullPage:true});
+      if(['PK-EDU-LEARN','PK-EDU-ENV'].includes(first.packageCode)&&id===(smoke?7:1)){
+        const prefix=first.packageCode==='PK-EDU-ENV'?'reference-':'';
+        await page.setViewportSize({width:1365,height:900});await page.screenshot({path:`${dir}/${prefix}desktop.png`,fullPage:true});
+        await page.setViewportSize({width:320,height:740});assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));
         await page.setViewportSize({width:390,height:844});assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));
-        await page.screenshot({path:`${dir}/mobile.png`,fullPage:true});await page.setViewportSize({width:1047,height:718});
+        const controls=await page.locator('.export-buttons .button').evaluateAll(elements=>elements.map(e=>{const r=e.getBoundingClientRect();return {x:r.x,y:r.y,right:r.right,bottom:r.bottom,height:r.height};}));
+        assert.equal(controls.length,2);assert.equal(controls[0].y,controls[1].y);
+        for(const control of controls){assert.ok(control.x>=0&&control.right<=390);assert.ok(control.y>=0&&control.bottom<=844);assert.ok(control.height>=44);}
+        await page.screenshot({path:`${dir}/${prefix}mobile.png`,fullPage:true});await page.setViewportSize({width:1047,height:718});
       }
       await page.emulateMedia({media:'print'});await page.evaluate(()=>document.fonts.ready);
       const height=await page.locator('.print-sheet').evaluate(e=>e.getBoundingClientRect().height);

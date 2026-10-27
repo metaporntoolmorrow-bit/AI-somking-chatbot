@@ -5,7 +5,7 @@ import { execFileSync } from 'node:child_process';
 import { chromium } from '@playwright/test';
 import JSZip from 'jszip';
 import { conversationState } from '../presets/real-tools-v1/conversation.mjs';
-import {guidanceEditionsFor} from '../src/lib/package-guidance-core.mjs';
+import {guidanceEditionsFor,guidanceForContext} from '../src/lib/package-guidance-core.mjs';
 
 const base=process.env.TEST_BASE_URL||'http://localhost:3000';
 const preset=JSON.parse(await readFile('presets/real-tools-v1/presets.json','utf8'));
@@ -24,13 +24,13 @@ const browser=await chromium.launch({headless:true,executablePath:'C:/Program Fi
 const context=await browser.newContext({viewport:{width:1365,height:900},acceptDownloads:true});
 const errors=[];context.on('page',p=>p.on('pageerror',e=>errors.push(e.message)));
 const page=await context.newPage();
-const visibleAdvice=()=>page.locator('.usage-guidance ul li').allTextContents();
+const exportAdvice=()=>page.locator('.print-guidance li').allTextContents();
 const results={base,cycle:[],pdfs:[],downloads:[]};
 const downloadsOnly=process.argv.includes('--downloads-only');
 const exportsOnly=downloadsOnly||process.argv.includes('--exports-only');
 async function pdf(name){
   await page.emulateMedia({media:'print'});await page.evaluate(()=>document.fonts.ready);
-  assert.deepEqual(await page.locator('.print-guidance li').allTextContents(),await visibleAdvice());
+  assert.equal(await page.locator('.usage-guidance').count(),0);
   const file=`${dir}/${name}.pdf`;
   await page.pdf({path:file,preferCSSPageSize:true,printBackground:true});
   assert.match(execFileSync('pdfinfo',[file]).toString(),/Pages:\s+1\b/,file+' overflowed');
@@ -53,12 +53,12 @@ try{
   const seen=new Set();let firstAdvice;
   for(let i=0;i<(exportsOnly?0:21);i++){
     await complete(cases[0]);const id=Number(new URL(page.url()).searchParams.get('guidance'));
-    assert.equal(id,i%20+1);const advice=await visibleAdvice();
+    assert.equal(id,i%20+1);const advice=await exportAdvice();
     assert.deepEqual(advice,[...editions[id-1].cautions,...editions[id-1].benefits]);
     if(i<20){assert.ok(!seen.has(advice.join('\n')));seen.add(advice.join('\n'));await pdf(`EDU-${id}`);}
     else assert.deepEqual(advice,firstAdvice);
     if(i===0){
-      firstAdvice=advice;await page.reload({waitUntil:'networkidle'});assert.deepEqual(await visibleAdvice(),advice);
+      firstAdvice=advice;await page.reload({waitUntil:'networkidle'});assert.deepEqual(await exportAdvice(),advice);
       await page.screenshot({path:`${dir}/desktop.png`,fullPage:true});
       await page.setViewportSize({width:390,height:844});
       assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));
@@ -69,13 +69,16 @@ try{
   // Clinical role restrictions remain present in every edition; no new treatment instructions.
   for(let id=1;id<=(downloadsOnly?0:20);id++){
     await page.goto(urlFor(cases.find(rows=>rows[0].answers.settingCode==='HEA'),id),{waitUntil:'networkidle'});
-    assert.ok((await visibleAdvice()).some(s=>s.includes('ไม่ใช่คำสั่งวินิจฉัย')));
+    assert.ok((await exportAdvice()).some(s=>s.includes('ไม่ใช่คำสั่งวินิจฉัย')));
     await pdf(`HEA-${id}`);
   }
   for(const [i,rows] of cases.entries()){
     const setting=rows[0].answers.settingCode,id=[1,5,9,14,20][i];
     await page.goto(urlFor(rows,id),{waitUntil:'networkidle'});
-    const advice=await visibleAdvice();
+    const advice=await exportAdvice();
+    const expected=guidanceForContext({packageId:rows[0].packageCode,audienceCodes:rows.map(r=>r.answers.audienceCode),toolCodes:[...new Set(rows.flatMap(r=>Object.values(r.tools).flat()))],edition:id});
+    assert.deepEqual(advice,[...expected.cautions,...expected.benefits]);
+    assert.equal(await page.locator('.usage-guidance').count(),0);
     const zip=page.getByRole('link',{name:'ดาวน์โหลดชุดเครื่องมือ ZIP',exact:true});
     if(i===0){
       await page.route('**/api/tool-bundle/**',route=>route.fulfill({status:503,body:'unavailable'}));
@@ -89,7 +92,7 @@ try{
     assert.equal(await page.locator('.export-wrap [role="alert"]').count(),0);
     const archive=await JSZip.loadAsync(await readFile(file),{checkCRC32:true});
     const guide=await archive.file('00-เริ่มใช้แพ็กเกจ.txt').async('string');
-    for(const line of advice)assert.ok(guide.includes(line),'ZIP guide differs from screen: '+line);
+    for(const line of advice)assert.ok(guide.includes(line),'ZIP guide differs from the selected PDF guidance: '+line);
     const links=await archive.file('ลิงก์เครื่องมือ.txt').async('string');
     const codes=[...new Set(rows.flatMap(r=>Object.values(r.tools).flat()))];
     const assets=preset.assets.filter(a=>a.toolCodes.some(c=>codes.includes(c)));
@@ -105,7 +108,7 @@ try{
     console.log(`Real browser ZIP passed ${setting}.`);
   }
   await page.goto(urlFor(cases[0],'invalid'),{waitUntil:'networkidle'});
-  assert.ok((await visibleAdvice()).includes(editions[0].cautions[0]));
+  assert.ok((await exportAdvice()).includes(editions[0].cautions[0]));
   assert.deepEqual(errors,[]);
   await writeFile(`${dir}/report.json`,JSON.stringify(results,null,2));
   console.log(JSON.stringify({base,cycleTested:!exportsOnly,uniqueEditions:seen.size,wrapsAfter20:!exportsOnly,pdfOnePage:results.pdfs.length,zipSettings:results.downloads.length,errors}));
