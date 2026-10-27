@@ -41,7 +41,7 @@ for (const code of selectedCodes) {
     expectedFiles.push(archivePath);
   }
   const txt = formatDownloadLinks(preset,manifest);
-  zip.file('00-เริ่มใช้แพ็กเกจ.txt','\uFEFF'+[scenario.title,'','ลำดับการใช้เครื่องมือ',...manifest.useSequence.map(step=>`${step.order}. ${step.shortTitle} — ${step.action}\n   สิ่งที่อยากได้: ${step.outcome}`),'','ข้อควรระวัง',...scenario.cautions.map(s=>'- '+s),'','แนวทางการใช้ประโยชน์',...scenario.benefits.map(s=>'- '+s),'',scenario.guidanceNote].join('\n'));
+  zip.file('00-เริ่มใช้แพ็กเกจ.txt','\uFEFF'+[scenario.title,'','ลำดับการใช้เครื่องมือ',...manifest.useSequence.map(step=>`${step.order}. ${step.shortTitle} — ${step.action}\n   สิ่งที่อยากได้: ${step.outcome}`)].join('\n'));
   zip.file('ลิงก์เครื่องมือ.txt',txt);
   zip.file('รายการชุดเครื่องมือ.txt','\uFEFF'+[scenario.title,`พื้นที่: ${scenario.answerLabels.setting}`,`ผู้ดำเนินการ: ${scenario.answerLabels.role}`,`กลุ่มเป้าหมาย: ${scenario.answerLabels.audience}`,'',...manifest.toolCodes.map(code=>preset.tools.find(row=>row.code===code).title),'','ไฟล์ใหญ่ให้เปิดจาก ลิงก์เครื่องมือ.txt'].join('\n'));
   const bytes = await zip.generateAsync({type:'nodebuffer',compression:'DEFLATE',compressionOptions:{level:6}});

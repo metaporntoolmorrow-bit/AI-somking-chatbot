@@ -2,6 +2,7 @@ import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
 import {createHash} from 'node:crypto';
 import JSZip from 'jszip';
+import {assertPlanContentPolicy} from '../src/lib/plan-content-policy.mjs';
 import {assertToolSourcePolicy,isAllowedToolAsset,TOOL_ASSET_ROOT} from '../src/lib/tool-source-policy.mjs';
 
 const preset=JSON.parse(await readFile('presets/real-tools-v1/presets.json','utf8'));
@@ -10,6 +11,7 @@ const before=baselineFlag?JSON.parse(await readFile(baselineFlag.slice('--baseli
 const sha=bytes=>createHash('sha256').update(bytes).digest('hex');
 const eligible=code=>/^MAIN-\d{2}$/.test(code);
 assertToolSourcePolicy(preset);
+assertPlanContentPolicy(preset);
 assert.equal(preset.tools.length,18);
 assert.equal(preset.assets.length,30);
 assert.equal(preset.assets.filter(a=>a.hosting==='bundle').length,10);
@@ -44,6 +46,7 @@ if(process.argv.includes('--bundles')){
     assert.ok(bundle.toolCodes.every(eligible));
     const bytes=await readFile(`output/bundles/release/${bundle.key}.zip`);assert.equal(sha(bytes),bundle.sha256);
     const zip=await JSZip.loadAsync(bytes,{checkCRC32:true});
+    assert.ok(!/ข้อควรระวัง|แนวทางการใช้ประโยชน์/.test(await zip.file('00-เริ่มใช้แพ็กเกจ.txt').async('string')),'Withdrawn sections in stored ZIP guide');
     const expected=new Set(preset.assets.filter(a=>a.hosting==='bundle'&&a.toolCodes.some(c=>bundle.toolCodes.includes(c))).map(a=>a.sha256));
     const actual=new Set();
     for(const file of Object.values(zip.files).filter(f=>!f.dir)){

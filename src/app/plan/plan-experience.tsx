@@ -6,7 +6,6 @@ import Link from 'next/link';
 import { ArrowLeft, Check, Leaf } from 'lucide-react';
 import type { Package, Scenario } from '@/lib/catalog';
 import { emptyAnswers, planFlow, questions, type AnswerKey } from '@/lib/plan-flow';
-import { nextGuidanceId } from '@/lib/guidance-cycle';
 
 export function PlanExperience({ scenarios, packages }: { scenarios: Scenario[]; packages: Package[] }) {
   const router = useRouter();
@@ -55,7 +54,6 @@ export function PlanExperience({ scenarios, packages }: { scenarios: Scenario[];
     setSubmitting(true);
     const params = new URLSearchParams({ scenario: ids[0] });
     if (ids.length > 1) params.set('scenarios', ids.join(','));
-    params.set('guidance', String(nextGuidanceId()));
     router.push(`/result?${params.toString()}`);
   }
 

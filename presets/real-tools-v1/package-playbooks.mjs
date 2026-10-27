@@ -1,6 +1,5 @@
 // Package goals use the concept framework; distributable tools come only from the supplied tool database.
 // Clinical files are routed only to the professional healthcare roles.
-import { guidanceForContext,packageGuidanceVersion } from '../../src/lib/package-guidance-core.mjs';
 export const toolShortTitles = {
   1:'7 มาตรการโรงเรียนปลอดบุหรี่',2:'คู่มือสื่อและกิจกรรมรู้เท่าทัน',
   3:'แบบทดสอบความรอบรู้สำหรับประถม',4:'ชุดสื่อเรียนรู้สำหรับปฐมวัย',
@@ -64,7 +63,7 @@ export const rules=[
   rule('HEALTH-SERVICE','PK-HEA-SERVICE',['doctor','nurse','public_health','pharmacist'],['adult_service_users','adolescent_service_users'],[17,18],[],[],[],'ทีมวิชาชีพใช้ตามขอบเขตงาน ผู้ประสานงานไม่วินิจฉัยแทนแพทย์'),
 ];
 const item=(rank,number,stage,action,outcome)=>({rank,toolCode:tc(number),stage,action,outcome,basis:'source_informed_facilitation'});
-export function usagePlanFor(pkg,toolSlots,audienceCode){
+export function usagePlanFor(pkg,toolSlots){
   const codes=Object.values(toolSlots).flat(),has=n=>codes.includes(tc(n));
   let sequence=[];
   if(pkg.code==='PK-EDU-POLICY')sequence=[
@@ -129,7 +128,5 @@ export function usagePlanFor(pkg,toolSlots,audienceCode){
     item(50,18,'ทบทวนความต่อเนื่องของบริการ','ใช้แนวทางต้นฉบับทบทวนการนัดหมาย ติดตาม และประสานงานของทีม','จุดที่ต้องปรับในระบบบริการ'),
   ];
   sequence=sequence.filter(step=>codes.includes(step.toolCode)).sort((a,b)=>a.rank-b.rank).map((step,index)=>({...step,order:index+1,shortTitle:title(step.toolCode)}));
-  const guidance=guidanceForContext({packageId:pkg.code,audienceCodes:[audienceCode],toolCodes:codes,edition:1});
-  if(!guidance)throw new Error('Missing package guidance: '+pkg.code);
-  return {useSequence:sequence,...guidance,guidanceEdition:1,guidanceVersion:packageGuidanceVersion,guidanceBasis:'package_specific_concept_sources',guidanceNote:'แนวทางประกอบเฉพาะชุดนี้ ปรับใช้ร่วมกับผู้รับผิดชอบตามบริบทและคู่มือต้นฉบับ'};
+  return {useSequence:sequence};
 }

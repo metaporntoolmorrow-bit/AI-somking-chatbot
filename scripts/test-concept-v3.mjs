@@ -44,7 +44,7 @@ const context=await browser.newContext({viewport:{width:1365,height:900}});
 const errors=[];context.on('page',p=>p.on('pageerror',e=>errors.push(e.message)));
 const rowsForPackage=code=>[...groups.values()].filter(rows=>rows[0].packageCode===code).sort((a,b)=>b.length-a.length)[0];
 const urlFor=(rows,id=1)=>`${base}/result?${new URLSearchParams({scenario:rows[0].code,scenarios:rows.map(r=>r.code).join(','),guidance:String(id)})}`;
-const report={base,paths:preset.scenarios.length,combinations,conversations:[],pdfs:[],editionPages:[],originalFiles:[]};
+const report={base,paths:preset.scenarios.length,combinations,conversations:[],pdfs:[],originalFiles:[]};
 try{
   const page=await context.newPage();
   for(const [index,pkg] of preset.packages.entries()){
@@ -75,7 +75,8 @@ try{
     assert.equal(await page.locator('.print-tool-follow').count(),toolCodes.size>1?1:0);
     assert.deepEqual(await page.locator('.result-section h2').allTextContents(),['สถานการณ์','เครื่องมือหลัก / เสริม','ลำดับการใช้เครื่องมือ']);
     assert.equal(await page.locator('.usage-guidance').count(),0);
-    if(pkg.code==='PK-EDU-YOUTH')assert.ok((await page.locator('.print-guidance').textContent()).includes('ครูพี่เลี้ยง'));
+    assert.equal(await page.locator('.print-guidance').count(),0);
+    assert.ok(!/ข้อควรระวัง|แนวทางการใช้ประโยชน์/.test(await page.locator('.print-document').textContent()));
     if(index<4){await page.screenshot({path:`${dir}/result-${pkg.code}.png`,fullPage:true});}
     report.conversations.push(pkg.code);console.log(`Conversation passed ${pkg.code}.`);
   }
@@ -92,12 +93,6 @@ try{
       report.pdfs.push({context:i+1,package:rows[0].packageCode,pages:1});
     }await p.close();
   }));
-  const largest=rowsForPackage('PK-EDU-LEARN');const editionPage=await context.newPage();
-  for(let id=1;id<=(smoke?1:20);id++){
-    await editionPage.goto(urlFor(largest,id),{waitUntil:'networkidle'});await editionPage.emulateMedia({media:'print'});await editionPage.evaluate(()=>document.fonts.ready);
-    const file=`${dir}/edition-${id}.pdf`;await editionPage.pdf({path:file,preferCSSPageSize:true,printBackground:true});
-    assert.match(execFileSync('pdfinfo',[file]).toString(),/Pages:\s+1\b/,file+' overflowed');report.editionPages.push(id);
-  }await editionPage.close();
   for(const asset of preset.assets.filter(a=>a.hosting==='bundle')){
     const tool=preset.tools.find(t=>asset.toolCodes.includes(t.code));
     const response=await context.request.get(`${base}/api/tool-file/${tool.code}?asset=${asset.code}`,{maxRedirects:0});assert.equal(response.status(),302);
@@ -108,5 +103,5 @@ try{
   for(let number=1;number<=5;number++)assert.equal((await context.request.get(`${base}/api/tool-file/GUIDE-0${number}?asset=FILE-${30+number}`,{maxRedirects:0})).status(),404);
   const admin=await context.request.get(`${base}/admin`,{maxRedirects:0});assert.ok([302,303,307,308].includes(admin.status()));assert.ok(admin.headers().location.includes('/login'));
   assert.deepEqual(errors,[]);await writeFile(`${dir}/report.json`,JSON.stringify(report,null,2));
-  console.log(JSON.stringify({base,conversations:report.conversations.length,onePageContexts:report.pdfs.length,onePageEditions:report.editionPages.length,originalFiles:report.originalFiles.length,duplicateListRemoved:true,errors}));
+  console.log(JSON.stringify({base,conversations:report.conversations.length,onePageContexts:report.pdfs.length,originalFiles:report.originalFiles.length,duplicateListRemoved:true,errors}));
 }finally{await browser.close();}

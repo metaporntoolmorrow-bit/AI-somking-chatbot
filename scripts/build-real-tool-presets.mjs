@@ -4,6 +4,7 @@ import path from 'node:path';
 import { createHash } from 'node:crypto';
 import { release, settings, questions, conversationPolicy, levels, components, roles, audiences, tools, supplementaryTools, packages, rules, hostFor, usagePlanFor, toolCode } from '../presets/real-tools-v1/source-rules.mjs';
 import { componentDocuments, frameworkEvidence } from '../presets/real-tools-v1/component-framework.mjs';
+import {PLAN_CONTENT_POLICY} from '../src/lib/plan-content-policy.mjs';
 import { TOOL_SOURCE_ROOT, TOOL_ASSET_ROOT } from '../src/lib/tool-source-policy.mjs';
 
 const root = process.cwd();
@@ -65,4 +66,4 @@ const evidenceFiles=[path.join(root,conceptName),tracker,trackerPdf,...reference
 const sourceEvidence=await Promise.all(evidenceFiles.map(async file=>({relativePath:posix(path.relative(root,file)),sha256:digest(await readFile(file))})));
 const sourceTools = tools.map(tool => ({ ...tool, assetCodes:assets.filter(file => file.toolCodes.includes(tool.code)).map(file => file.code), contentLinks:tool.sourceNumber === 4 ? ['https://drive.google.com/drive/folders/1qB-KK6lIX6UUKQhpt8z1NjWCnU2Ev2tS'] : [] }));
 
-await buildPackageCatalog({release:{...release,sourceEvidence,toolAssetRoot:TOOL_ASSET_ROOT},frameworkEvidence,settings,questions,conversationPolicy,levels,components,roles,audiences,tools,supplementaryTools,packages,rules,hostFor,usagePlanFor,assets,sourceTools,tracker,parts,destination,reviewFile,drive,root,previous});
+await buildPackageCatalog({release:{...release,sourceEvidence,toolAssetRoot:TOOL_ASSET_ROOT,planContentPolicy:PLAN_CONTENT_POLICY},frameworkEvidence,settings,questions,conversationPolicy,levels,components,roles,audiences,tools,supplementaryTools,packages,rules,hostFor,usagePlanFor,assets,sourceTools,tracker,parts,destination,reviewFile,drive,root,previous});

@@ -5,22 +5,20 @@ import { PackagePrintablePlan } from '@/components/package-printable-plan';
 import { getPackage, getPublishedCatalog, getScenario, getTool, settingNames } from '@/lib/catalog';
 import { compatibleSelection } from '@/lib/plan-flow';
 import { packageSummary } from '@/lib/package-summary';
-import { parseGuidanceId } from '@/lib/guidance-cycle';
 import { situationSummary } from '@/lib/situation-summary.mjs';
 
-export default async function PackageResult({searchParams}:{searchParams:Promise<{scenario?:string;scenarios?:string;guidance?:string}>}){
-  const {scenario:code,scenarios:selection,guidance}=await searchParams;
-  const guidanceId=parseGuidanceId(guidance);
+export default async function PackageResult({searchParams}:{searchParams:Promise<{scenario?:string;scenarios?:string}>}){
+  const {scenario:code,scenarios:selection}=await searchParams;
   const catalog=await getPublishedCatalog();
   const scenario=getScenario(catalog,code??'');
   const selected=compatibleSelection(catalog.scenarios,code??'',selection);
   const item=scenario?getPackage(catalog,scenario.packageId):undefined;
-  const plan=packageSummary(catalog,selected,guidanceId);
+  const plan=packageSummary(catalog,selected);
   const situation=scenario&&item?situationSummary({role:scenario.role,setting:settingNames[scenario.settingCode]||item.setting,purpose:item.choiceLabel||item.name,audiences:selected.map(s=>s.audience)}):'';
   const primaryIds=new Set(selected.flatMap(s=>s.primaryIds));
   const complete=Boolean(scenario&&item&&selected.length&&plan.steps.length&&plan.toolIds.every(id=>getTool(catalog,id)));
   const zipAvailable=Boolean(complete&&plan.toolIds.every(id=>{const tool=getTool(catalog,id);return tool?.downloadReady||tool?.hasSamplePdf;}));
-  const bundleGuide=item?[item.name,item.goal,`พื้นที่: ${settingNames[scenario?.settingCode??'']||item.setting}`,`ผู้ขับเคลื่อน: ${scenario?.role??''}`,`กลุ่มเป้าหมาย: ${plan.audiences.join(' · ')}`,'','ลำดับการใช้เครื่องมือ',...plan.steps.map(step=>`${step.order}. ${step.shortTitle} — ${step.stage}\n   ${step.action}\n   สิ่งที่อยากได้: ${step.outcome}`),'','ข้อควรระวัง',...plan.cautions.map(text=>'- '+text),'','แนวทางการใช้ประโยชน์',...plan.benefits.map(text=>'- '+text),'',plan.guidanceNote,'','ไฟล์ต้นฉบับอยู่ในโฟลเดอร์เครื่องมือ ไฟล์ใหญ่เปิดจากลิงก์ใน TXT'].join('\n'):'';
+  const bundleGuide=item?[item.name,item.goal,`พื้นที่: ${settingNames[scenario?.settingCode??'']||item.setting}`,`ผู้ขับเคลื่อน: ${scenario?.role??''}`,`กลุ่มเป้าหมาย: ${plan.audiences.join(' · ')}`,'','ลำดับการใช้เครื่องมือ',...plan.steps.map(step=>`${step.order}. ${step.shortTitle} — ${step.stage}\n   ${step.action}\n   สิ่งที่อยากได้: ${step.outcome}`),'','ไฟล์ต้นฉบับอยู่ในโฟลเดอร์เครื่องมือ ไฟล์ใหญ่เปิดจากลิงก์ใน TXT'].join('\n'):'';
   return <><div className="result-screen"><header className="result-appbar"><div className="result-appbar-inner"><span className="result-bot"><Leaf size={26}/></span><div><strong>ผู้ช่วยวางแผนพื้นที่ปลอดบุหรี่ไฟฟ้า</strong><small>ชุดเครื่องมือที่ต่อกันเป็นแผนของคุณ</small></div><Link href="/plan" aria-label="กลับไปตอบคำถามใหม่"><ArrowLeft size={20}/></Link></div></header><main className="result-body">
     {!complete||!scenario||!item?<div className="result-empty"><h1>{catalog.status==='unavailable'?'เชื่อมต่อข้อมูลไม่ได้':'ยังไม่พบชุดแผนสำหรับข้อมูลนี้'}</h1><p>ลองตอบคำถามอีกครั้งเพื่อรับชุดเครื่องมือปัจจุบัน</p><Link href="/plan" className="button button-dark">กลับไปเลือกข้อมูล <ArrowRight size={18}/></Link></div>:<>
       <div className="package-overview"><h1>{item.name}</h1><p>{item.goal}</p></div>
@@ -43,5 +41,5 @@ export default async function PackageResult({searchParams}:{searchParams:Promise
       <ExportActions planName={item.name} scenarioCode={scenario.id} selection={selected.map(s=>s.id).join(',')} zipAvailable={zipAvailable} bundleGuide={bundleGuide}/>
       <div className="result-gap-actions"><Link href="/plan" className="button button-outline">เลือกบริบทใหม่</Link></div>
     </>}
-  </main></div>{complete&&item&&<PackagePrintablePlan catalog={catalog} scenarios={selected} item={item} guidanceId={guidanceId}/>}</>;
+  </main></div>{complete&&item&&<PackagePrintablePlan catalog={catalog} scenarios={selected} item={item}/>}</>;
 }
