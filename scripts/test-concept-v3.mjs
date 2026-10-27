@@ -11,7 +11,7 @@ const base=process.env.TEST_BASE_URL||'http://localhost:3000';
 const dir='output/qa/concept-v3';await mkdir(dir,{recursive:true});
 const smoke=process.argv.includes('--smoke');
 assert.equal(preset.packages.length,10);assert.equal(preset.tools.filter(t=>t.category==='main').length,18);
-assert.equal(preset.tools.filter(t=>t.category==='component_guidance').length,4);
+assert.equal(preset.tools.length,18);assert.equal(preset.tools.filter(t=>t.category==='component_guidance').length,0);
 assert.equal(preset.release.sourceEvidence.length,8);
 assert.equal(preset.tools.find(t=>t.code==='MAIN-07').kind,'รายงานและภาพสรุป');
 assert.equal(preset.tools.find(t=>t.code==='MAIN-01').title.includes('อุดมศึกษา'),false);
@@ -27,13 +27,14 @@ for(const row of preset.scenarios){
   if(row.tools.measurement.includes('MAIN-06'))assert.equal(a.audienceCode,'secondary');
   assert.ok(!row.tools.measurement.includes('MAIN-07'));
   if(['student_leader','university_leader'].includes(a.roleCode))assert.ok(!['early_childhood','primary_lower'].includes(a.audienceCode));
-  if(a.packageId==='PK-EDU-YOUTH')assert.ok(codes.includes('GUIDE-04'));
+  assert.ok(codes.every(code=>/^MAIN-\d{2}$/.test(code)));
+  if(a.packageId==='PK-EDU-YOUTH')assert.ok(codes.includes('MAIN-01')&&codes.includes('MAIN-02'));
 }
 let combinations=0;
 for(const rows of groups.values())for(let mask=1;mask<2**rows.length;mask++){
   const selected=rows.filter((_,i)=>mask&(1<<i));const input={...selected[0].answers,audienceCodes:selected.map(s=>s.answers.audienceCode)};
   assert.deepEqual(resolveConversationPreset(preset,input).scenarioCodes,selected.map(s=>s.code));
-  const m=buildDownloadManifest(preset,input);assert.ok(m.toolCodes.length>=2);
+  const m=buildDownloadManifest(preset,input);assert.ok(m.toolCodes.length>=1);
   assert.ok(m.toolCodes.every(code=>m.useSequence.some(step=>step.toolCode===code)),'Tool lacks an ordered use step');
   assert.equal(new Set(m.localFiles.map(f=>f.assetCode)).size,m.localFiles.length);combinations++;
 }
@@ -43,7 +44,7 @@ const context=await browser.newContext({viewport:{width:1365,height:900}});
 const errors=[];context.on('page',p=>p.on('pageerror',e=>errors.push(e.message)));
 const rowsForPackage=code=>[...groups.values()].filter(rows=>rows[0].packageCode===code).sort((a,b)=>b.length-a.length)[0];
 const urlFor=(rows,id=1)=>`${base}/result?${new URLSearchParams({scenario:rows[0].code,scenarios:rows.map(r=>r.code).join(','),guidance:String(id)})}`;
-const report={base,paths:preset.scenarios.length,combinations,conversations:[],pdfs:[],editionPages:[],guideFiles:[]};
+const report={base,paths:preset.scenarios.length,combinations,conversations:[],pdfs:[],editionPages:[],originalFiles:[]};
 try{
   const page=await context.newPage();
   for(const [index,pkg] of preset.packages.entries()){
@@ -70,6 +71,8 @@ try{
     const expected=new Set(rows.flatMap(r=>r.useSequence.map(s=>`${s.rank}:${s.toolCode}`)));
     assert.equal(await page.locator('.usage-list>li').count(),expected.size);
     assert.equal(await page.locator('.usage-list h3 a').count(),expected.size);
+    const toolCodes=new Set(rows.flatMap(r=>Object.values(r.tools).flat()));
+    assert.equal(await page.locator('.print-tool-follow').count(),toolCodes.size>1?1:0);
     assert.deepEqual(await page.locator('.result-section h2').allTextContents(),['สถานการณ์','เครื่องมือหลัก / เสริม','ลำดับการใช้เครื่องมือ']);
     assert.equal(await page.locator('.usage-guidance').count(),0);
     if(pkg.code==='PK-EDU-YOUTH')assert.ok((await page.locator('.print-guidance').textContent()).includes('ครูพี่เลี้ยง'));
@@ -95,15 +98,15 @@ try{
     const file=`${dir}/edition-${id}.pdf`;await editionPage.pdf({path:file,preferCSSPageSize:true,printBackground:true});
     assert.match(execFileSync('pdfinfo',[file]).toString(),/Pages:\s+1\b/,file+' overflowed');report.editionPages.push(id);
   }await editionPage.close();
-  for(const tool of preset.tools.filter(t=>t.category==='component_guidance')){
-    const asset=preset.assets.find(a=>a.toolCodes.includes(tool.code));
+  for(const asset of preset.assets.filter(a=>a.hosting==='bundle')){
+    const tool=preset.tools.find(t=>asset.toolCodes.includes(t.code));
     const response=await context.request.get(`${base}/api/tool-file/${tool.code}?asset=${asset.code}`,{maxRedirects:0});assert.equal(response.status(),302);
     const file=await context.request.get(response.headers().location);assert.equal(file.status(),200);
     assert.equal(createHash('sha256').update(await file.body()).digest('hex'),asset.sha256);
-    report.guideFiles.push(tool.code);
+    report.originalFiles.push({tool:tool.code,asset:asset.code});
   }
-  assert.equal((await context.request.get(`${base}/api/tool-file/GUIDE-05?asset=FILE-35`,{maxRedirects:0})).status(),404);
+  for(let number=1;number<=5;number++)assert.equal((await context.request.get(`${base}/api/tool-file/GUIDE-0${number}?asset=FILE-${30+number}`,{maxRedirects:0})).status(),404);
   const admin=await context.request.get(`${base}/admin`,{maxRedirects:0});assert.ok([302,303,307,308].includes(admin.status()));assert.ok(admin.headers().location.includes('/login'));
   assert.deepEqual(errors,[]);await writeFile(`${dir}/report.json`,JSON.stringify(report,null,2));
-  console.log(JSON.stringify({base,conversations:report.conversations.length,onePageContexts:report.pdfs.length,onePageEditions:report.editionPages.length,originalGuides:report.guideFiles,duplicateListRemoved:true,errors}));
+  console.log(JSON.stringify({base,conversations:report.conversations.length,onePageContexts:report.pdfs.length,onePageEditions:report.editionPages.length,originalFiles:report.originalFiles.length,duplicateListRemoved:true,errors}));
 }finally{await browser.close();}

@@ -1,4 +1,4 @@
-# ชุดเครื่องมือจริง — real-tools-2026-10-27-v4
+# ชุดเครื่องมือจริง — real-tools-2026-10-27-v5
 
 แก้ข้อมูลเครื่องมือที่ source-rules.mjs และชุด/ลำดับที่ package-playbooks.mjs แล้วรัน node scripts/build-real-tool-presets.mjs --require-public
 

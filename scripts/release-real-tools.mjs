@@ -8,10 +8,12 @@ import JSZip from 'jszip';
 import { buildDownloadManifest, formatDownloadLinks } from '../presets/real-tools-v1/resolver.mjs';
 import { bundleIdentity } from '../src/lib/package-identity.mjs';
 import {guidanceForContext} from '../src/lib/package-guidance-core.mjs';
+import {assertToolSourcePolicy,TOOL_ASSET_ROOT} from '../src/lib/tool-source-policy.mjs';
 
 const root=process.cwd();
 const bytes=await readFile('presets/real-tools-v1/presets.json');
 const preset=JSON.parse(bytes);
+assertToolSourcePolicy(preset);
 const hash=value=>createHash('sha256').update(value).digest('hex');
 const bundleKey=manifest=>hash(bundleIdentity(manifest.packageCode,manifest.toolCodes));
 const client=createClient(process.env.NEXT_PUBLIC_SUPABASE_URL,process.env.SUPABASE_SECRET_KEY,{auth:{persistSession:false,autoRefreshToken:false}});
@@ -55,7 +57,7 @@ if(mode==='--stage'){
   const buckets=must(await client.storage.listBuckets(),'buckets');
   if(!buckets.some(b=>b.id===bucket))must(await client.storage.createBucket(bucket,{public:false,fileSizeLimit:50000000}),'create private assets bucket');
   const cache=new Map();
-  const sourceRoot=await realpath(path.join(root,'ชุดเครื่องมือใหม่+track'));
+  const sourceRoot=await realpath(path.join(root,TOOL_ASSET_ROOT));
   const upload=async(objectPath,buffer,type)=>{
     const result=await client.storage.from(bucket).upload(objectPath,buffer,{contentType:type,upsert:true,cacheControl:'3600'});
     must(result,'upload '+objectPath);

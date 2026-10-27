@@ -1,8 +1,7 @@
 import { toolShortTitles } from './package-playbooks.mjs';
-import { componentGuides } from './component-framework.mjs';
 // Content authoring rules. Source scope is transcribed from the supplied tracker.
 // Roles, audience routing and package outlines are editorial draft mappings.
-export const release = { code: 'real-tools-2026-10-27-v4', scenarioPrefix:'REAL3', schemaVersion: 2, reviewStatus: 'package_specific_guidance', thresholdBytes: 6_000_000 };
+export const release = { code: 'real-tools-2026-10-27-v5', scenarioPrefix:'REAL3', schemaVersion: 2, reviewStatus: 'eligible_tool_sources_only', thresholdBytes: 6_000_000 };
 export const settings = [
   ['EDU', 'สถานศึกษา'], ['FAM', 'ครอบครัว'], ['COM', 'ชุมชน'], ['HEA', 'ระบบบริการสุขภาพ'], ['WRK', 'สถานประกอบการ'],
 ].map(([code, label]) => ({ code, label }));
@@ -83,7 +82,7 @@ export const tools = rawTools.map(([number, title, kind, scope, source]) => ({
     : [14,15,16].includes(number) ? 'เนื้อหาบางส่วนกล่าวถึงบุหรี่โดยรวม ให้ใช้ตามบริบทสถานประกอบการ'
     : [17,18].includes(number) ? 'จัดเส้นทางสำหรับบุคลากรวิชาชีพตามขอบเขตงาน; ไม่มีการสร้างคำแนะนำรักษาหรือขนาดยาเพิ่ม'
     : '',
-})).concat(componentGuides);
+}));
 export const supplementaryTools = [
   'Application TUM', 'แบบสำรวจพฤติกรรมบุหรี่และบุหรี่ไฟฟ้า', 'G-RDU ระบบเฝ้าระวังสินค้าไม่ปลอดภัย', 'คู่มือ CIB เรื่องบุหรี่ไฟฟ้า',
   '7 ชุดกิจกรรม ควบคุมการบริโภคบุหรี่และบุหรี่ไฟฟ้า', 'Child Impact Platform', 'สื่อรณรงค์และช่องทางเลิกบุหรี่ไฟฟ้า',

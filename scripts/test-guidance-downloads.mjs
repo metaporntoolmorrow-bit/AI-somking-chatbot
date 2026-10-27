@@ -96,6 +96,11 @@ try{
     const links=await archive.file('ลิงก์เครื่องมือ.txt').async('string');
     const codes=[...new Set(rows.flatMap(r=>Object.values(r.tools).flat()))];
     const assets=preset.assets.filter(a=>a.toolCodes.some(c=>codes.includes(c)));
+    const allowedHashes=new Set(assets.filter(a=>a.hosting==='bundle').map(a=>a.sha256));
+    for(const entry of Object.values(archive.files).filter(f=>!f.dir)){
+      assert.ok(!entry.name.includes('GUIDE-'),'Excluded document in downloaded ZIP');
+      if(/\.(pdf|png|docx|pptx)$/i.test(entry.name))assert.ok(allowedHashes.has(createHash('sha256').update(await entry.async('nodebuffer')).digest('hex')),'Unexpected original file in downloaded ZIP');
+    }
     for(const asset of assets){
       if(asset.hosting==='bundle'){
         const name=asset.fileName.replace(/[\\/:*?"<>|\u0000-\u001f]/g,' ').trim();

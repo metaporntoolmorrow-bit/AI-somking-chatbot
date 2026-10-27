@@ -1,6 +1,5 @@
-// Source-informed packages: concept framework + current tracker + four supplied implementation guides.
+// Package goals use the concept framework; distributable tools come only from the supplied tool database.
 // Clinical files are routed only to the professional healthcare roles.
-import { componentGuides } from './component-framework.mjs';
 import { guidanceForContext,packageGuidanceVersion } from '../../src/lib/package-guidance-core.mjs';
 export const toolShortTitles = {
   1:'7 มาตรการโรงเรียนปลอดบุหรี่',2:'คู่มือสื่อและกิจกรรมรู้เท่าทัน',
@@ -14,8 +13,7 @@ export const toolShortTitles = {
   17:'แนวทางเฝ้าระวังและส่งต่อภาวะปอดอักเสบ',18:'แนวทางบำบัดภาวะติดนิโคติน',
 };
 const tc=n=>typeof n==='string'?n:'MAIN-'+String(n).padStart(2,'0');
-const gc=n=>'GUIDE-'+String(n).padStart(2,'0');
-const title=code=>code.startsWith('GUIDE-')?componentGuides.find(g=>g.code===code).shortTitle:toolShortTitles[Number(code.slice(-2))];
+const title=code=>toolShortTitles[Number(code.slice(-2))];
 const pkg=(code,settingCode,componentCodes,title,choiceLabel,goal)=>({code,settingCode,componentCode:componentCodes[0],componentCodes,title,choiceLabel,goal,mappingBasis:['concept_framework','tracker_scope','component_manuscripts']});
 export const packages=[
   pkg('PK-EDU-POLICY','EDU',['C1'],'ชุดร่วมกำหนดนโยบายและจัดทีมสถานศึกษา','อยากชวนทีมกำหนดนโยบายและแบ่งหน้าที่ให้ชัด','ใช้ข้อมูลพื้นที่และเสียงของผู้เรียนร่วมกำหนดนโยบาย แบ่งหน้าที่ และทบทวนการทำงาน'),
@@ -35,33 +33,33 @@ const older=['primary_upper','secondary','vocational','ethnic_youth'];
 const family=['parent','family_member','father'];
 const facilitators=['family_team','community_leader','public_health','volunteer'];
 const community=['local_authority','community_leader','public_health','volunteer','muslim_leader','mosque_team'];
-const rule=(id,packageId,roleCodes,audienceCodes,primary,supporting=[],measurement=[],reference=[],note='',bridges={},status='primary_available')=>({id,packageId,roleCodes,audienceCodes,level:['PK-EDU-CARE','PK-HEA-SERVICE'].includes(packageId)?'cessation':'prevention',primary:primary.map(tc),supporting:supporting.map(tc),measurement:measurement.map(tc),reference:reference.map(tc),note,bridges,status,mappingBasis:{scope:'current_tracker_and_component_guides',roleAndAudience:'source_informed_editorial_routing',packageOutline:'five_component_setting_based_framework'}});
+const rule=(id,packageId,roleCodes,audienceCodes,primary,supporting=[],measurement=[],reference=[],note='',bridges={},status='primary_available')=>({id,packageId,roleCodes,audienceCodes,level:['PK-EDU-CARE','PK-HEA-SERVICE'].includes(packageId)?'cessation':'prevention',primary:primary.map(tc),supporting:supporting.map(tc),measurement:measurement.map(tc),reference:reference.map(tc),note,bridges,status,mappingBasis:{scope:'current_tracker_eligible_tools',roleAndAudience:'source_informed_editorial_routing',packageOutline:'five_component_setting_based_framework'}});
 const familyBridge={'MAIN-12':'ใช้การสื่อสารกับผู้ปกครองโดยมีผู้ประสานรับผิดชอบ ไม่ใช้คู่มือครอบครัวแทนการดูแลโดยผู้เชี่ยวชาญ'};
 const communityBridges={'MAIN-11':'ใช้กิจกรรมครอบครัวในงานชุมชนโดยมีผู้จัดวงรับผิดชอบ','MAIN-12':'ใช้สนับสนุนการพูดคุยกับครอบครัวที่เข้าร่วม ไม่ใช่คู่มือรักษา'};
 const uniNote='แนวทางอ้างอิงงานสถานศึกษา ต้องปรับร่วมกับทีมอุดมศึกษา ยังไม่มีไฟล์คู่มืออุดมศึกษาเฉพาะ';
 export const rules=[
-  rule('POLICY-SCHOOL','PK-EDU-POLICY',adults,allSchool,[gc(1),1]),
-  rule('POLICY-UNIVERSITY','PK-EDU-POLICY',adults,['university'],[],[gc(1),1],[],[],uniNote,{},'support_only'),
-  rule('LEARN-EARLY','PK-EDU-LEARN',adults,['early_childhood'],[gc(2),8,9],[4,5]),
-  rule('LEARN-LOWER','PK-EDU-LEARN',adults,['primary_lower'],[gc(2),2,5],[],[3]),
-  rule('LEARN-UPPER','PK-EDU-LEARN',[...adults,'student_leader'],['primary_upper'],[gc(2),2,5],[],[3]),
-  rule('LEARN-SECONDARY','PK-EDU-LEARN',[...adults,'student_leader'],['secondary'],[gc(2),2],[],[6]),
-  rule('LEARN-VOCATIONAL','PK-EDU-LEARN',[...adults,'student_leader'],['vocational'],[gc(2),2]),
-  rule('LEARN-ETHNIC','PK-EDU-LEARN',[...adults,'student_leader'],['ethnic_youth'],[gc(2),2],[],[],[7]),
-  rule('LEARN-UNIVERSITY','PK-EDU-LEARN',[...adults,'university_leader'],['university'],[],[gc(2),2],[],[],uniNote,{},'support_only'),
-  rule('ENV-SCHOOL','PK-EDU-ENV',adults,allSchool,[gc(3),1],[12],[],[],'เลือกส่วนของสถานศึกษา บ้าน และชุมชนร่วมกับผู้รับผิดชอบ ไม่ให้เด็กตรวจค้นหรือเผชิญหน้าผู้อื่น',familyBridge),
-  rule('ENV-STUDENT','PK-EDU-ENV',['student_leader'],older,[gc(3),1],[12],[],[],'ทำร่วมกับครูพี่เลี้ยงและผู้ประสานผู้ปกครอง ไม่ให้แกนนำตรวจค้นหรือจับผิดเพื่อน',familyBridge),
-  rule('ENV-UNIVERSITY','PK-EDU-ENV',[...adults,'university_leader'],['university'],[],[gc(3),1,12],[],[],uniNote,familyBridge,'support_only'),
-  rule('YOUTH-SCHOOL','PK-EDU-YOUTH',[...adults,'student_leader'],older,[gc(4),1],[2],[],[],'แกนนำร่วมตัดสินใจและสร้างสื่อโดยมีครูพี่เลี้ยง ไม่รับหน้าที่ตรวจค้น สืบสวน หรือเผชิญหน้า'),
-  rule('YOUTH-UNIVERSITY','PK-EDU-YOUTH',[...adults,'university_leader'],['university'],[],[gc(4),1,2],[],[],uniNote,{},'support_only'),
+  rule('POLICY-SCHOOL','PK-EDU-POLICY',adults,allSchool,[1]),
+  rule('POLICY-UNIVERSITY','PK-EDU-POLICY',adults,['university'],[],[1],[],[],uniNote,{},'support_only'),
+  rule('LEARN-EARLY','PK-EDU-LEARN',adults,['early_childhood'],[8,9],[4,5]),
+  rule('LEARN-LOWER','PK-EDU-LEARN',adults,['primary_lower'],[2,5],[],[3]),
+  rule('LEARN-UPPER','PK-EDU-LEARN',[...adults,'student_leader'],['primary_upper'],[2,5],[],[3]),
+  rule('LEARN-SECONDARY','PK-EDU-LEARN',[...adults,'student_leader'],['secondary'],[2],[],[6]),
+  rule('LEARN-VOCATIONAL','PK-EDU-LEARN',[...adults,'student_leader'],['vocational'],[2]),
+  rule('LEARN-ETHNIC','PK-EDU-LEARN',[...adults,'student_leader'],['ethnic_youth'],[2],[],[],[7]),
+  rule('LEARN-UNIVERSITY','PK-EDU-LEARN',[...adults,'university_leader'],['university'],[],[2],[],[],uniNote,{},'support_only'),
+  rule('ENV-SCHOOL','PK-EDU-ENV',adults,allSchool,[1],[12],[],[],'เลือกส่วนของสถานศึกษา บ้าน และชุมชนร่วมกับผู้รับผิดชอบ ไม่ให้เด็กตรวจค้นหรือเผชิญหน้าผู้อื่น',familyBridge),
+  rule('ENV-STUDENT','PK-EDU-ENV',['student_leader'],older,[1],[12],[],[],'ทำร่วมกับครูพี่เลี้ยงและผู้ประสานผู้ปกครอง ไม่ให้แกนนำตรวจค้นหรือจับผิดเพื่อน',familyBridge),
+  rule('ENV-UNIVERSITY','PK-EDU-ENV',[...adults,'university_leader'],['university'],[],[1,12],[],[],uniNote,familyBridge,'support_only'),
+  rule('YOUTH-SCHOOL','PK-EDU-YOUTH',[...adults,'student_leader'],older,[1],[2],[],[],'แกนนำร่วมตัดสินใจและสร้างสื่อโดยมีครูพี่เลี้ยง ไม่รับหน้าที่ตรวจค้น สืบสวน หรือเผชิญหน้า'),
+  rule('YOUTH-UNIVERSITY','PK-EDU-YOUTH',[...adults,'university_leader'],['university'],[],[1,2],[],[],uniNote,{},'support_only'),
   rule('SCHOOL-CARE','PK-EDU-CARE',adults,['primary_upper','secondary','vocational'],[1],[12],[],[],'ประสานผู้เรียน ครอบครัว และหน่วยบริการโดยรักษาความลับ ไม่วินิจฉัย รักษา หรือสั่งยาแทนวิชาชีพ',familyBridge),
-  rule('HOME-EARLY','PK-FAM-HOME',family,['early_childhood'],[12,11],[gc(3),9,4]),
-  rule('HOME-CHILD','PK-FAM-HOME',family,['primary_lower','primary_upper','secondary'],[12,11],[gc(3)],[],[1],'ใช้คู่มือสถานศึกษาเฉพาะส่วนประสานบ้านและโรงเรียน'),
-  rule('HOME-ALL','PK-FAM-HOME',family,['family_all','family_who_use'],[12,11],[gc(3)]),
-  rule('GROUP-PARENTS','PK-FAM-GROUP',facilitators,['caregivers'],[11,12],[gc(3)]),
-  rule('GROUP-FATHERS','PK-FAM-GROUP',facilitators,['fathers'],[11,13],[12,gc(3)]),
-  rule('COMMUNITY-ALL','PK-COM-TOGETHER',community,['community_all','community_workers'],[10,gc(3)],[11,12],[],[],'เชื่อมกิจกรรมกับวิถีชุมชนและหน่วยบริการ โดยตกลงบทบาทผู้รับผิดชอบก่อนลงมือ',communityBridges),
-  rule('COMMUNITY-YOUTH','PK-COM-TOGETHER',community,['community_youth'],[10,gc(3)],[11,12],[],[1],'ประสานสถานศึกษาเมื่องานเกี่ยวข้องกับเยาวชน ไม่มอบบทบาทบังคับใช้กฎหมายให้เด็ก',communityBridges),
+  rule('HOME-EARLY','PK-FAM-HOME',family,['early_childhood'],[12,11],[9,4]),
+  rule('HOME-CHILD','PK-FAM-HOME',family,['primary_lower','primary_upper','secondary'],[12,11],[],[],[1],'ใช้คู่มือสถานศึกษาเฉพาะส่วนประสานบ้านและโรงเรียน'),
+  rule('HOME-ALL','PK-FAM-HOME',family,['family_all','family_who_use'],[12,11],[]),
+  rule('GROUP-PARENTS','PK-FAM-GROUP',facilitators,['caregivers'],[11,12],[]),
+  rule('GROUP-FATHERS','PK-FAM-GROUP',facilitators,['fathers'],[11,13],[12]),
+  rule('COMMUNITY-ALL','PK-COM-TOGETHER',community,['community_all','community_workers'],[10],[11,12],[],[],'เชื่อมกิจกรรมกับวิถีชุมชนและหน่วยบริการ โดยตกลงบทบาทผู้รับผิดชอบก่อนลงมือ',communityBridges),
+  rule('COMMUNITY-YOUTH','PK-COM-TOGETHER',community,['community_youth'],[10],[11,12],[],[1],'ประสานสถานศึกษาเมื่องานเกี่ยวข้องกับเยาวชน ไม่มอบบทบาทบังคับใช้กฎหมายให้เด็ก',communityBridges),
   rule('WORKPLACE','PK-WRK-TOGETHER',['employer','hr','work_leader','employee'],['workers'],[16,15],[14]),
   rule('HEALTH-SERVICE','PK-HEA-SERVICE',['doctor','nurse','public_health','pharmacist'],['adult_service_users','adolescent_service_users'],[17,18],[],[],[],'ทีมวิชาชีพใช้ตามขอบเขตงาน ผู้ประสานงานไม่วินิจฉัยแทนแพทย์'),
 ];
@@ -70,14 +68,10 @@ export function usagePlanFor(pkg,toolSlots,audienceCode){
   const codes=Object.values(toolSlots).flat(),has=n=>codes.includes(tc(n));
   let sequence=[];
   if(pkg.code==='PK-EDU-POLICY')sequence=[
-    item(10,gc(1),'เข้าใจพื้นที่และตั้งทีม','อ่านขั้นตอนศึกษาบริบท แล้วตกลงทีมงาน ข้อมูลที่จำเป็น และเสียงของผู้เรียนที่จะรับฟัง','ประเด็นพื้นที่และผู้รับผิดชอบร่วมกัน'),
     item(20,1,'ร่วมนโยบายและข้อตกลง','ใช้ส่วนการกำหนดนโยบาย เปิดให้ครู ผู้เรียน และผู้ปกครองร่วมเสนอแนวทาง','ร่างข้อตกลงที่คุ้มครองผู้เรียน'),
-    item(30,gc(1),'แบ่งหน้าที่และเตรียมปฏิบัติ','กำหนดคนประสาน งานที่ต้องทำ ช่องทางช่วยเหลือ และหลักฐานที่จะทบทวน','แผนที่ลงมือทำได้และแบ่งหน้าที่ชัดเจน'),
     item(40,1,'สื่อสารและเชื่อมงานดูแล','เลือกส่วนสื่อสารนโยบายและระบบช่วยเหลือ ให้ทุกฝ่ายเข้าใจวิธีทำงานร่วมกัน','ความเข้าใจร่วมและช่องทางขอความช่วยเหลือ'),
-    item(50,gc(1),'ทบทวนระบบร่วมกัน','ดูการรับรู้นโยบาย การทำงานจริง และเสียงสะท้อน โดยสรุปข้อมูลเป็นภาพรวม','ข้อปรับปรุงนโยบายและงานรอบถัดไป'),
   ];
   else if(pkg.code==='PK-EDU-LEARN')sequence=[
-    item(5,gc(2),'เตรียมเป้าหมายการเรียนรู้','ดูพื้นฐานและวัยของกลุ่ม เลือกผลการเรียนรู้ แล้วเชื่อมกับบทเรียนหรือกิจกรรมที่มีอยู่','เป้าหมายและแผนที่ไม่เพิ่มงานซ้ำ'),
     ...(has(8)?[item(10,8,'วางบทเรียนปฐมวัย','เลือกแผนตามวัยและเตรียมครูผู้จัดกิจกรรมก่อนใช้กับเด็ก','บทเรียนและผู้จัดกิจกรรมพร้อม')]:[]),
     ...(has(7)?[item(15,7,'เข้าใจภาษาและบริบท','อ่านรายงานและภาพสรุปเพื่อปรับภาษาและตัวอย่าง ไม่ใช้เป็นแบบประเมินรายบุคคล','ประเด็นที่เหมาะกับกลุ่มชาติพันธุ์')]:[]),
     ...[3,6].filter(has).map(n=>item(20,n,'สำรวจก่อนเรียนรู้','ใช้แบบที่ตรงกับวัยตามวิธีในต้นฉบับ เก็บผลเป็นภาพรวมเพื่อเลือกประเด็นเรียนรู้','ข้อมูลก่อนกิจกรรมที่ไม่ระบุตัวบุคคล')),
@@ -87,21 +81,14 @@ export function usagePlanFor(pkg,toolSlots,audienceCode){
     ...(has(5)?[item(42,5,'ลงมือเรียนรู้','เลือกกิจกรรมตามช่วงวัยจากคู่มือ ให้ผู้เรียนฝึกคิดและสรุปสิ่งที่ได้เรียนรู้','ผลงานหรือข้อสรุปของผู้เรียน')]:[]),
     ...[3,6].filter(has).map(n=>item(50,n,'ทบทวนหลังเรียนรู้','ใช้แบบเดิมตามวิธีในต้นฉบับ แล้วเทียบผลภาพรวมเพื่อปรับการเรียนรู้','ข้อค้นพบก่อนและหลังกิจกรรม')),
     ...(has(8)?[item(55,8,'ทบทวนบทเรียนปฐมวัย','บันทึกสิ่งที่เด็กสื่อสารและปรับวิธีจัดกิจกรรมให้เหมาะกับครั้งต่อไป','สิ่งที่จะปรับในแผนการเรียนรู้')]:[]),
-    item(60,gc(2),'สรุปและเชื่อมกลับการสอน','คุยผลการเรียนรู้กับทีม ใช้ผลงานและเสียงของผู้เรียนปรับบทเรียนรอบถัดไป','บทเรียนต่อเนื่องและสิ่งที่จะปรับ'),
   ];
   else if(pkg.code==='PK-EDU-ENV')sequence=[
-    item(10,gc(3),'มองพื้นที่ร่วมกัน','เลือกส่วนสถานศึกษา สำรวจจุดที่ควรปรับโดยมีผู้ใหญ่รับผิดชอบ ไม่ระบุตัวผู้ใช้บุหรี่','รายการพื้นที่และปัจจัยที่ต้องดูแล'),
     item(20,1,'ตกลงงานดูแลพื้นที่','ใช้ส่วนสภาพแวดล้อม กำหนดข้อตกลงและผู้รับผิดชอบให้ต่อกับระบบสถานศึกษา','ข้อตกลงและผู้รับผิดชอบงานพื้นที่'),
     item(30,12,'เชื่อมบ้านด้วยการรับฟัง','ให้ผู้ประสานใช้การสื่อสารเชิงบวกร่วมกับผู้ปกครอง เลือกสิ่งที่พร้อมทำ','ข้อตกลงที่บ้านและสถานศึกษาร่วมเลือก'),
-    item(40,gc(3),'ร่วมงานกับชุมชน','เลือกวิธีประสานภาคีและปรับกิจกรรมให้เข้ากับวิถีพื้นที่ ไม่ให้เด็กเผชิญหน้า','ผู้ร่วมงานและทางประสานความช่วยเหลือ'),
-    item(50,gc(3),'ทบทวนความปลอดภัยของพื้นที่','ฟังผู้เรียนและครอบครัว ดูการใช้พื้นที่และการประสานงาน แล้วปรับร่วมกัน','สิ่งที่พื้นที่ บ้าน และชุมชนจะทำต่อ'),
   ];
   else if(pkg.code==='PK-EDU-YOUTH')sequence=[
-    item(10,gc(4),'ตั้งทีมและครูพี่เลี้ยง','ให้เยาวชนเลือกบทบาทและเป้าหมายร่วมกัน โดยมีครูดูแลความปลอดภัยและภาระงาน','ทีมเยาวชนและผู้ใหญ่ที่คอยสนับสนุน'),
     item(20,1,'ร่วมตัดสินใจเรื่องพื้นที่','ใช้ส่วนการมีส่วนร่วม ให้แกนนำเสนอสิ่งที่อยากปรับกับทีมสถานศึกษา','ข้อเสนอที่เยาวชนมีสิทธิตัดสินใจร่วม'),
     item(30,2,'ร่วมออกแบบสื่อและกิจกรรม','ให้เยาวชนเลือกกิจกรรมและฝึกตรวจข้อมูลก่อนสื่อสาร โดยไม่เปิดเผยเรื่องส่วนตัวของเพื่อน','สื่อหรือกิจกรรมที่กลุ่มออกแบบเอง'),
-    item(40,gc(4),'ลงมืออย่างปลอดภัย','ใช้แนวทางเพื่อนช่วยเพื่อนและการทำงานกับครู ไม่ตรวจค้น จับผิด หรือเผชิญหน้าผู้อื่น','กิจกรรมที่เคารพสิทธิและมีผู้รับช่วง'),
-    item(50,gc(4),'สะท้อนผลและส่งต่อรุ่นถัดไป','ให้แกนนำทบทวนการมีส่วนตัดสินใจ เก็บวิธีทำงาน และชวนรุ่นน้องรับช่วง','บทเรียนและทีมที่ทำงานต่อได้'),
   ];
   else if(pkg.code==='PK-EDU-CARE')sequence=[
     item(10,1,'จัดทีมประสานช่วยเหลือ','เลือกส่วนระบบดูแลผู้เรียน กำหนดผู้รับเรื่อง ช่องทางคุยเป็นส่วนตัว และผู้ประสานบริการ','ทีมและช่องทางช่วยเหลือที่ชัดเจน'),
@@ -115,19 +102,16 @@ export function usagePlanFor(pkg,toolSlots,audienceCode){
     ...(has(4)?[item(25,4,'เตรียมสื่อสำหรับเด็กเล็ก','เปิดชุดสื่อจากลิงก์ในเอกสาร แล้วเลือกชิ้นที่เหมาะกับเด็ก','สื่อที่เปิดและเตรียมไว้แล้ว')]:[]),
     ...(has(9)?[item(30,9,'อ่านและคุยกับเด็ก','อ่านนิทานร่วมกัน เปิดโอกาสให้เด็กเล่าสิ่งที่เข้าใจ','สิ่งที่เด็กอยากถามและสิ่งที่บ้านจะช่วย')]:[]),
     ...(has(1)?[item(35,1,'ประสานสถานศึกษา','ใช้เฉพาะส่วนความร่วมมือระหว่างบ้านกับสถานศึกษา คุยกับผู้ประสานที่เกี่ยวข้อง','วิธีร่วมดูแลที่บ้านและสถานศึกษา')]:[]),
-    item(40,gc(3),'เลือกข้อตกลงเรื่องพื้นที่บ้าน','อ่านเฉพาะส่วนบ้านและครอบครัว เลือกสิ่งที่ทำได้ร่วมกัน ไม่ผลักให้เด็กควบคุมผู้ใหญ่','ข้อตกลงบ้านและผู้ใหญ่ที่รับผิดชอบ'),
     item(50,12,'กลับมาคุยและปรับร่วมกัน','ถามสิ่งที่ลองทำและสิ่งที่ต้องการแรงสนับสนุน แล้วปรับข้อตกลง','สิ่งที่จะทำต่อโดยไม่กดดันกัน'),
   ];
   else if(pkg.code==='PK-FAM-GROUP')sequence=[
     item(10,11,'เตรียมผู้จัดวง','ทบทวนวิธีจัดห้องเรียนครอบครัว กำหนดผู้ดำเนินวงและขอบเขตการพูดคุย','ทีมและข้อตกลงของวงเรียนรู้'),
     item(20,12,'ฝึกการรับฟังและสื่อสาร','เลือกกิจกรรมฝึกพูดคุยตามบริบท ใช้ตัวอย่างที่ไม่เปิดเผยเรื่องของผู้อื่น','วิธีพูดคุยที่ครอบครัวนำไปลองได้'),
     ...(has(13)?[item(30,13,'ต่อยอดพ่อแกนนำ','เลือกส่วนหลักสูตรที่ตรงกับกลุ่มพ่อและเชื่อมกับทักษะที่ฝึกร่วมกัน','กิจกรรมต่อยอดของพ่อแกนนำ')]:[]),
-    item(40,gc(3),'เชื่อมการเรียนรู้กับบ้าน','ใช้เฉพาะส่วนครอบครัว ให้แต่ละบ้านเลือกข้อตกลงพื้นที่ที่พร้อมเริ่ม','สิ่งที่แต่ละครอบครัวจะนำกลับไปลอง'),
     item(50,11,'สรุปและนัดแลกเปลี่ยนผล','ตกลงช่องทางกลับมาเล่าสิ่งที่ลองทำและความช่วยเหลือที่ต้องการ','แนวทางติดตามที่ครอบครัวร่วมเลือก'),
   ];
   else if(pkg.code==='PK-COM-TOGETHER')sequence=[
     item(10,10,'ตั้งทีมและเลือกประเด็นพื้นที่','ใช้คู่มือท้องถิ่นเลือกงาน ผู้ร่วมดำเนินการ และผู้ประสานบริการ','ทีมและงานที่เริ่มได้ในพื้นที่'),
-    item(20,gc(3),'เชื่อมพื้นที่กับวิถีชุมชน','เลือกส่วนเครือข่ายชุมชนร่วมกับภาคี กำหนดผู้ใหญ่รับผิดชอบและช่องทางประสาน','ข้อตกลงที่เข้ากับวิถีชุมชน'),
     item(30,11,'ชวนครอบครัวลงมือร่วมกัน','เลือกกิจกรรมครอบครัวให้เป็นส่วนหนึ่งของงานชุมชน โดยมีผู้จัดวงดูแล','กิจกรรมที่ครอบครัวเข้าร่วมได้'),
     item(40,12,'สนับสนุนการพูดคุย','ใช้การสื่อสารเชิงบวก ให้ครอบครัวเลือกสิ่งที่พร้อมทำโดยไม่ตีตรา','ข้อตกลงที่ครอบครัวร่วมเลือก'),
     ...(has(1)?[item(45,1,'เชื่อมกับสถานศึกษา','อ่านส่วนความร่วมมือชุมชน แล้วประสานครูหรือผู้รับผิดชอบงานเยาวชน','ผู้ประสานร่วมดูแลเด็กและเยาวชน')]:[]),

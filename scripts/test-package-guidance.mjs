@@ -112,6 +112,7 @@ try{
       assert.deepEqual(await page.locator('.result-section h2').allTextContents(),['สถานการณ์','เครื่องมือหลัก / เสริม','ลำดับการใช้เครื่องมือ']);
       assert.equal(await page.locator('.usage-guidance, .usage-guidance-note, .usage-source-note').count(),0,'Expert guidance must not appear in the result preview');
       const toolCodes=[...new Set(rows.flatMap(r=>Object.values(r.tools).flat()))];
+      assert.equal(await page.locator('.print-tool-follow').count(),toolCodes.length>1?1:0,'PDF shows an empty follow-on tool');
       const primaryCodes=new Set(rows.flatMap(r=>r.tools.primary));
       const toolRows=page.locator('.result-tools li');assert.equal(await toolRows.count(),toolCodes.length);
       for(const row of await toolRows.all()){
