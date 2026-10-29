@@ -1,0 +1,617 @@
+{
+  "source": "user_master_brief_2026_10_29",
+  "main": [
+    {
+      "id": "MAIN-01",
+      "type": "main",
+      "title": "7 มาตรการโรงเรียนปลอดบุหรี่",
+      "format": "คู่มือ / แนวปฏิบัติ",
+      "trackerScope": {
+        "setting_school": [
+          "C1",
+          "C2",
+          "C3",
+          "C4",
+          "C5"
+        ],
+        "setting_community": [
+          "C3"
+        ],
+        "setting_family": [
+          "C3"
+        ]
+      },
+      "settings": [
+        "setting_school",
+        "setting_community"
+      ],
+      "goals": [
+        "goal_c1",
+        "goal_c3",
+        "goal_c4",
+        "goal_c5"
+      ],
+      "bureau": "สน.1",
+      "availability": "available",
+      "assetCodes": [
+        "FILE-01"
+      ]
+    },
+    {
+      "id": "MAIN-02",
+      "type": "main",
+      "title": "คู่มือสื่อและกิจกรรมเพื่อเสริมสร้างภูมิคุ้มกันสุขภาวะต่อการใช้บุหรี่ไฟฟ้าในเด็กและเยาวชน",
+      "format": "คู่มือ / แนวปฏิบัติ",
+      "trackerScope": {
+        "setting_school": [
+          "C2"
+        ]
+      },
+      "settings": [
+        "setting_school"
+      ],
+      "goals": [
+        "goal_c2",
+        "goal_c4"
+      ],
+      "bureau": "สน.1",
+      "availability": "available",
+      "assetCodes": [
+        "FILE-12"
+      ]
+    },
+    {
+      "id": "MAIN-03",
+      "type": "main",
+      "title": "แบบทดสอบความรอบรู้ทางสุขภาพด้านการควบคุมยาสูบ (ประถม)",
+      "format": "แบบสำรวจ / แบบประเมิน",
+      "trackerScope": {
+        "setting_school": [
+          "C2"
+        ]
+      },
+      "settings": [
+        "setting_school"
+      ],
+      "goals": [
+        "goal_c2"
+      ],
+      "bureau": "สน.1",
+      "availability": "available",
+      "assetCodes": [
+        "FILE-13",
+        "FILE-14"
+      ]
+    },
+    {
+      "id": "MAIN-04",
+      "type": "main",
+      "title": "ชุดสื่อกิจกรรมการเรียนรู้พัฒนาจิตสำนึกเด็กปฐมวัยรู้เท่าทันบุหรี่ไฟฟ้า",
+      "format": "สื่อการเรียนรู้ / เกม",
+      "trackerScope": {
+        "setting_school": [
+          "C2"
+        ],
+        "setting_family": [
+          "C3"
+        ]
+      },
+      "settings": [
+        "setting_school",
+        "setting_family"
+      ],
+      "goals": [
+        "goal_c2",
+        "goal_c3"
+      ],
+      "bureau": "สน.1",
+      "availability": "available",
+      "assetCodes": [
+        "FILE-15"
+      ]
+    },
+    {
+      "id": "MAIN-05",
+      "type": "main",
+      "title": "Survival Kit 7+1: เครื่องมือพร้อมใช้ที่สอดคล้องกับธรรมชาติการเรียนรู้",
+      "format": "สื่อการเรียนรู้ / เกม",
+      "trackerScope": {
+        "setting_school": [
+          "C2"
+        ]
+      },
+      "settings": [
+        "setting_school"
+      ],
+      "goals": [
+        "goal_c2",
+        "goal_c4"
+      ],
+      "bureau": "สน.4",
+      "availability": "available",
+      "assetCodes": [
+        "FILE-16",
+        "FILE-17"
+      ]
+    },
+    {
+      "id": "MAIN-06",
+      "type": "main",
+      "title": "แบบสำรวจความรอบรู้ด้านสุขภาพในประเด็นบุหรี่ไฟฟ้า (มัธยม)",
+      "format": "แบบสำรวจ / แบบประเมิน",
+      "trackerScope": {
+        "setting_school": [
+          "C2"
+        ]
+      },
+      "settings": [
+        "setting_school"
+      ],
+      "goals": [
+        "goal_c2"
+      ],
+      "bureau": "สน.6",
+      "availability": "available",
+      "assetCodes": [
+        "FILE-18",
+        "FILE-19"
+      ]
+    },
+    {
+      "id": "MAIN-07",
+      "type": "main",
+      "title": "รายงานและภาพสรุปเยาวชนชาติพันธุ์",
+      "format": "รายงานและภาพสรุป",
+      "trackerScope": {
+        "setting_school": [
+          "C2"
+        ]
+      },
+      "settings": [
+        "setting_school"
+      ],
+      "goals": [
+        "goal_c2"
+      ],
+      "bureau": "สน.9",
+      "availability": "available",
+      "assetCodes": [
+        "FILE-20",
+        "FILE-21",
+        "FILE-22",
+        "FILE-23",
+        "FILE-24",
+        "FILE-25"
+      ]
+    },
+    {
+      "id": "MAIN-08",
+      "type": "main",
+      "title": "แผนการจัดการเรียนรู้เตือนภัยบุหรี่ไฟฟ้า สำหรับครู ศพด.",
+      "format": "หลักสูตร",
+      "trackerScope": {
+        "setting_school": [
+          "C2"
+        ]
+      },
+      "settings": [
+        "setting_school"
+      ],
+      "goals": [
+        "goal_c2"
+      ],
+      "bureau": "สน.11",
+      "availability": "available",
+      "assetCodes": [
+        "FILE-26",
+        "FILE-27",
+        "FILE-28"
+      ]
+    },
+    {
+      "id": "MAIN-09",
+      "type": "main",
+      "title": "หนังสือนิทาน เด็กปลอดพอต",
+      "format": "สื่อการเรียนรู้ / เกม",
+      "trackerScope": {
+        "setting_school": [
+          "C2"
+        ],
+        "setting_family": [
+          "C3"
+        ]
+      },
+      "settings": [
+        "setting_school",
+        "setting_family"
+      ],
+      "goals": [
+        "goal_c2",
+        "goal_c3"
+      ],
+      "bureau": "สน.11",
+      "availability": "available",
+      "assetCodes": [
+        "FILE-29",
+        "FILE-30"
+      ]
+    },
+    {
+      "id": "MAIN-10",
+      "type": "main",
+      "title": "8 วิธีขับเคลื่อน อปท.ปลอดบุหรี่ บุหรี่ไฟฟ้า ยาเส้น ตามเกณฑ์ LPA",
+      "format": "คู่มือ / แนวปฏิบัติ",
+      "trackerScope": {
+        "setting_community": [
+          "C3",
+          "C5"
+        ]
+      },
+      "settings": [
+        "setting_community"
+      ],
+      "goals": [
+        "goal_c3",
+        "goal_c5"
+      ],
+      "bureau": "สน.1",
+      "availability": "available",
+      "assetCodes": [
+        "FILE-02"
+      ]
+    },
+    {
+      "id": "MAIN-11",
+      "type": "main",
+      "title": "คู่มืออบรมเชิงปฏิบัติการคณะทำงานและห้องเรียนครอบครัวปลอดบุหรี่",
+      "format": "คู่มือ / แนวปฏิบัติ",
+      "trackerScope": {
+        "setting_family": [
+          "C3"
+        ]
+      },
+      "settings": [
+        "setting_school",
+        "setting_community",
+        "setting_family"
+      ],
+      "goals": [
+        "goal_c3"
+      ],
+      "bureau": "สน.1",
+      "availability": "available",
+      "assetCodes": [
+        "FILE-03"
+      ]
+    },
+    {
+      "id": "MAIN-12",
+      "type": "main",
+      "title": "คู่มือสร้างความสัมพันธ์ในครอบครัวและสื่อสารเชิงบวก",
+      "format": "คู่มือ / แนวปฏิบัติ",
+      "trackerScope": {
+        "setting_family": [
+          "C3"
+        ]
+      },
+      "settings": [
+        "setting_school",
+        "setting_community",
+        "setting_family"
+      ],
+      "goals": [
+        "goal_c3",
+        "goal_c5"
+      ],
+      "bureau": "สน.1",
+      "availability": "available",
+      "assetCodes": [
+        "FILE-04"
+      ]
+    },
+    {
+      "id": "MAIN-13",
+      "type": "main",
+      "title": "คู่มือการจัดอบรมหลักสูตรพ่อแกนนำไร้ควันบุหรี่ / บุหรี่ไฟฟ้า",
+      "format": "คู่มือ / แนวปฏิบัติ",
+      "trackerScope": {
+        "setting_family": [
+          "C3"
+        ]
+      },
+      "settings": [
+        "setting_family"
+      ],
+      "goals": [
+        "goal_c3"
+      ],
+      "bureau": "สน.1",
+      "availability": "available",
+      "assetCodes": [
+        "FILE-05"
+      ]
+    },
+    {
+      "id": "MAIN-14",
+      "type": "main",
+      "title": "Smoke-Free Organization องค์กรปลอดบุหรี่",
+      "format": "คู่มือ / แนวปฏิบัติ",
+      "trackerScope": {
+        "setting_workplace": [
+          "C3"
+        ]
+      },
+      "settings": [
+        "setting_workplace"
+      ],
+      "goals": [
+        "goal_c3"
+      ],
+      "bureau": "สน.8",
+      "availability": "available",
+      "assetCodes": [
+        "FILE-06"
+      ]
+    },
+    {
+      "id": "MAIN-15",
+      "type": "main",
+      "title": "ถอดรหัสสถานประกอบการปลอดบุหรี่: คู่มือคณะทำงาน",
+      "format": "คู่มือ / แนวปฏิบัติ",
+      "trackerScope": {
+        "setting_workplace": [
+          "C3"
+        ]
+      },
+      "settings": [
+        "setting_workplace"
+      ],
+      "goals": [
+        "goal_c3"
+      ],
+      "bureau": "สน.1 + สน.8",
+      "availability": "available",
+      "assetCodes": [
+        "FILE-07",
+        "FILE-08"
+      ]
+    },
+    {
+      "id": "MAIN-16",
+      "type": "main",
+      "title": "ถอดรหัสสถานประกอบการปลอดบุหรี่: คู่มือผู้บริหาร",
+      "format": "คู่มือ / แนวปฏิบัติ",
+      "trackerScope": {
+        "setting_workplace": [
+          "C3"
+        ]
+      },
+      "settings": [
+        "setting_workplace"
+      ],
+      "goals": [
+        "goal_c3"
+      ],
+      "bureau": "สน.1 + สน.8",
+      "availability": "available",
+      "assetCodes": [
+        "FILE-08",
+        "FILE-09"
+      ]
+    },
+    {
+      "id": "MAIN-17",
+      "type": "main",
+      "title": "แนวทางการเฝ้าระวัง สอบสวน วินิจฉัย และรักษาภาวะปอดอักเสบเฉียบพลันจากการสูบบุหรี่ไฟฟ้า",
+      "format": "คู่มือ / แนวปฏิบัติ",
+      "trackerScope": {
+        "setting_health": [
+          "C5"
+        ]
+      },
+      "settings": [
+        "setting_health"
+      ],
+      "goals": [
+        "goal_c5"
+      ],
+      "bureau": "สน.1",
+      "availability": "available",
+      "assetCodes": [
+        "FILE-10"
+      ]
+    },
+    {
+      "id": "MAIN-18",
+      "type": "main",
+      "title": "แนวทางเวชปฏิบัติ สำหรับการบำบัดภาวะติดนิโคติน",
+      "format": "คู่มือ / แนวปฏิบัติ",
+      "trackerScope": {
+        "setting_health": [
+          "C5"
+        ]
+      },
+      "settings": [
+        "setting_health"
+      ],
+      "goals": [
+        "goal_c5"
+      ],
+      "bureau": "สน.1",
+      "availability": "available",
+      "assetCodes": [
+        "FILE-11"
+      ]
+    }
+  ],
+  "supplementary": [
+    {
+      "id": "SUP-01",
+      "type": "supplementary",
+      "title": "Application TUM",
+      "availability": "not_supplied",
+      "fileUrl": null,
+      "routingEnabled": false
+    },
+    {
+      "id": "SUP-02",
+      "type": "supplementary",
+      "title": "แบบสำรวจพฤติกรรมบุหรี่และบุหรี่ไฟฟ้า",
+      "availability": "not_supplied",
+      "fileUrl": null,
+      "routingEnabled": false
+    },
+    {
+      "id": "SUP-03",
+      "type": "supplementary",
+      "title": "G-RDU ระบบเฝ้าระวังสินค้าไม่ปลอดภัย",
+      "availability": "not_supplied",
+      "fileUrl": null,
+      "routingEnabled": false
+    },
+    {
+      "id": "SUP-04",
+      "type": "supplementary",
+      "title": "คู่มือ CIB เรื่องบุหรี่ไฟฟ้า",
+      "availability": "not_supplied",
+      "fileUrl": null,
+      "routingEnabled": false
+    },
+    {
+      "id": "SUP-05",
+      "type": "supplementary",
+      "title": "7 ชุดกิจกรรม ควบคุมการบริโภคบุหรี่และบุหรี่ไฟฟ้า",
+      "availability": "not_supplied",
+      "fileUrl": null,
+      "routingEnabled": false
+    },
+    {
+      "id": "SUP-06",
+      "type": "supplementary",
+      "title": "Child Impact Platform",
+      "availability": "not_supplied",
+      "fileUrl": null,
+      "routingEnabled": false
+    },
+    {
+      "id": "SUP-07",
+      "type": "supplementary",
+      "title": "สื่อรณรงค์และช่องทางเลิกบุหรี่ไฟฟ้า",
+      "availability": "not_supplied",
+      "fileUrl": null,
+      "routingEnabled": false
+    },
+    {
+      "id": "SUP-08",
+      "type": "supplementary",
+      "title": "Uni-Health Platform",
+      "availability": "not_supplied",
+      "fileUrl": null,
+      "routingEnabled": false
+    },
+    {
+      "id": "SUP-09",
+      "type": "supplementary",
+      "title": "SOP Harmony มหาวิทยาลัยปลอดควัน",
+      "availability": "not_supplied",
+      "fileUrl": null,
+      "routingEnabled": false
+    },
+    {
+      "id": "SUP-10",
+      "type": "supplementary",
+      "title": "ชุดเครื่องมือความรู้เพื่อเครือข่ายสถานประกอบการ",
+      "availability": "not_supplied",
+      "fileUrl": null,
+      "routingEnabled": false
+    },
+    {
+      "id": "SUP-11",
+      "type": "supplementary",
+      "title": "เลิกบุหรี่เริ่มที่บ้าน / เลิกบุหรี่บ้านละคน",
+      "availability": "not_supplied",
+      "fileUrl": null,
+      "routingEnabled": false
+    },
+    {
+      "id": "SUP-12",
+      "type": "supplementary",
+      "title": "มัสยิดปลอดบุหรี่",
+      "availability": "not_supplied",
+      "fileUrl": null,
+      "routingEnabled": false
+    },
+    {
+      "id": "SUP-13",
+      "type": "supplementary",
+      "title": "Youth Club เด็กมีภูมิ",
+      "availability": "not_supplied",
+      "fileUrl": null,
+      "routingEnabled": false
+    },
+    {
+      "id": "SUP-14",
+      "type": "supplementary",
+      "title": "ชุดสื่อสร้างความตระหนักรู้",
+      "availability": "not_supplied",
+      "fileUrl": null,
+      "routingEnabled": false
+    },
+    {
+      "id": "SUP-15",
+      "type": "supplementary",
+      "title": "นิทรรศการรู้ทันกลลวงบุหรี่ไฟฟ้า",
+      "availability": "not_supplied",
+      "fileUrl": null,
+      "routingEnabled": false
+    },
+    {
+      "id": "SUP-16",
+      "type": "supplementary",
+      "title": "คู่มือกิจกรรมสำหรับครูและผู้ปกครอง",
+      "availability": "not_supplied",
+      "fileUrl": null,
+      "routingEnabled": false
+    },
+    {
+      "id": "SUP-17",
+      "type": "supplementary",
+      "title": "Report Card Tobacco Control",
+      "availability": "not_supplied",
+      "fileUrl": null,
+      "routingEnabled": false
+    },
+    {
+      "id": "SUP-18",
+      "type": "supplementary",
+      "title": "บทความ E-Cigarettes จาก INHPF",
+      "availability": "not_supplied",
+      "fileUrl": null,
+      "routingEnabled": false
+    },
+    {
+      "id": "SUP-19",
+      "type": "supplementary",
+      "title": "บอร์ดเกม Just Say No",
+      "availability": "not_supplied",
+      "fileUrl": null,
+      "routingEnabled": false
+    },
+    {
+      "id": "SUP-20",
+      "type": "supplementary",
+      "title": "สติ๊กเกอร์ Quit UP!",
+      "availability": "not_supplied",
+      "fileUrl": null,
+      "routingEnabled": false
+    },
+    {
+      "id": "SUP-21",
+      "type": "supplementary",
+      "title": "Vape Truth Mirror",
+      "availability": "not_supplied",
+      "fileUrl": null,
+      "routingEnabled": false
+    }
+  ]
+}

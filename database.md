@@ -264,3 +264,19 @@ PK/UNIQUE สร้างดัชนีอยู่แล้ว ไม่สร
 - [Supabase: Storage Buckets](https://supabase.com/docs/guides/storage/buckets/fundamentals)
 - [Supabase: Storage Access Control](https://supabase.com/docs/guides/storage/security/access-control)
 - [Supabase: Serving private assets](https://supabase.com/docs/guides/storage/serving/downloads)
+
+## ส่วนที่ใช้งานจริงเพิ่มเติม — Master Spec รุ่น 7 (29 ตุลาคม 2569)
+
+คำตอบ 4 มิติใช้แท็ก `setting`, `role`, `targetYouth`, `goalC` เก็บใน `scenarios.source_payload.context` และ `goalC` ใน payload เดียวกัน ส่วนคอลัมน์เดิมเก็บ setting/role/target ตามแท็กใหม่ และระดับ prevention/cessation อนุมานจากเป้าหมาย ไม่ได้ถามผู้ใช้เพิ่ม
+
+`implementationGuidance` เก็บข้อความคงที่ `successFactors`, `cautions`, `keyStandards` และต้นทาง `user_master_brief_2026_10_29` ตามบรีฟใหม่ ไม่ใช้ฟิลด์ข้อควรระวัง/ประโยชน์ที่ถอนในรุ่น 6 ไม่มีการสร้างหรือวนข้อความสด
+
+แบบประเมินความพึงพอใจของรุ่นนี้บันทึกจริงใน **Supabase Storage bucket ส่วนตัว `plan-feedback`** ยังไม่ใช้ตาราง `feedback` ของแผน schema เต็มด้านบน:
+
+- path `<release_id>/<signed_nonce>.json`; ค่าที่บันทึก version, releaseId, scenarioId, rating (1–5), comment (≤1,000 ตัวอักษร), createdAt
+- อ่าน/เขียนได้ผ่าน service ฝั่ง server เท่านั้น ไม่มี policy ให้ anon/authenticated เข้าถึง bucket โดยตรง
+- token HMAC อายุ 24 ชั่วโมง ผูก nonce กับแผนและรุ่น ใช้ path เดิมและไม่ upsert เพื่อป้องกันข้อมูลซ้ำเมื่อ retry
+- ไม่เก็บชื่อ อีเมล IP หรือ user agent; ผู้ใช้เห็นคำขอให้ไม่ใส่ข้อมูลส่วนตัวและสุขภาพของเยาวชน
+- ไม่เปลี่ยนตารางสมาชิก Auth สิทธิ์ผู้ดูแล หรือ RLS ของคลังเดิม
+
+ดูรายละเอียดข้อจำกัดและขั้นตอนเผยแพร่ใน [docs/master-spec-v7.md](docs/master-spec-v7.md)

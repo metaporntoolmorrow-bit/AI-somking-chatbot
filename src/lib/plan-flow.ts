@@ -1,6 +1,7 @@
 import type { Package, Scenario } from './catalog';
 
 export const settingNames: Record<string, string> = {
+  setting_school:'สถานศึกษา',setting_family:'ครอบครัว',setting_community:'ชุมชน / ท้องถิ่น',setting_health:'ระบบบริการสุขภาพ',setting_workplace:'สถานประกอบการ / องค์กร',
   EDU: 'สถานศึกษา', FAM: 'ครอบครัว', COM: 'ชุมชน', HEA: 'ระบบบริการสุขภาพ', WRK: 'สถานประกอบการ',
   S1: 'สถานศึกษา', S2: 'ครอบครัว / ชุมชน / ระบบสุขภาพ', S3: 'สถานประกอบการ',
 };
@@ -45,6 +46,7 @@ export function compatibleSelection(scenarios: Scenario[], code: string, selecti
   const first = scenarios.find(s => s.id === code);
   if (!first) return [];
   const ids = [...new Set([code, ...(selection || '').split(',').filter(Boolean)])];
+  if(first.context&&ids.length>1)return [];
   if (ids.length > 12) return [];
   const rows = ids.map(id => scenarios.find(s => s.id === id));
   if (rows.some(s => !s || s.settingCode !== first.settingCode || s.packageId !== first.packageId || s.roleCode !== first.roleCode || s.level !== first.level)) return [];

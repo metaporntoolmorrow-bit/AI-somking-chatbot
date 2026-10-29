@@ -11,7 +11,8 @@ import {assertPlanContentPolicy} from '../src/lib/plan-content-policy.mjs';
 import {assertToolSourcePolicy,TOOL_ASSET_ROOT} from '../src/lib/tool-source-policy.mjs';
 
 const root=process.cwd();
-const bytes=await readFile('presets/real-tools-v1/presets.json');
+const presetPath=process.argv.find(arg=>arg.startsWith('--preset='))?.slice(9)||'presets/real-tools-v1/presets.json';
+const bytes=await readFile(presetPath);
 const preset=JSON.parse(bytes);
 assertToolSourcePolicy(preset);
 assertPlanContentPolicy(preset);
@@ -31,8 +32,7 @@ if(!['--stage','--publish','--rollback','--verify'].includes(mode))throw new Err
 const groups=new Map();
 for(const row of preset.scenarios){const a=row.answers;const key=[a.settingCode,a.roleCode,a.packageId,a.level].join('|');if(!groups.has(key))groups.set(key,[]);groups.get(key).push(row);}
 const bundles=new Map();let selections=0;
-for(const rows of groups.values())for(let mask=1;mask<2**rows.length;mask++){
-  const selected=rows.filter((_,i)=>mask&(1<<i));
+for(const rows of groups.values())for(const selected of preset.release.schemaVersion>=3?rows.map(row=>[row]):Array.from({length:2**rows.length-1},(_,i)=>rows.filter((_,j)=>(i+1)&(1<<j)))){
   const answers={...selected[0].answers,audienceCodes:selected.map(s=>s.answers.audienceCode)};
   const manifest=buildDownloadManifest(preset,answers);
   bundles.set(bundleKey(manifest),manifest);selections++;
@@ -57,6 +57,7 @@ if(mode==='--stage'){
   await writeFile(checkpointPath,JSON.stringify({releaseId:release.id,version:release.version_label,previousActive:saved?.releaseId===release.id?saved.previousActive:previousActive},null,2));
   const buckets=must(await client.storage.listBuckets(),'buckets');
   if(!buckets.some(b=>b.id===bucket))must(await client.storage.createBucket(bucket,{public:false,fileSizeLimit:50000000}),'create private assets bucket');
+  if(!buckets.some(b=>b.id==='plan-feedback'))must(await client.storage.createBucket('plan-feedback',{public:false,fileSizeLimit:8192,allowedMimeTypes:['application/json']}),'create private feedback bucket');
   const cache=new Map();
   const sourceRoot=await realpath(path.join(root,TOOL_ASSET_ROOT));
   const upload=async(objectPath,buffer,type)=>{
@@ -94,7 +95,9 @@ if(mode==='--stage'){
     }
     const selectedTools=preset.tools.filter(t=>manifest.toolCodes.includes(t.code));
     const pkg=preset.packages.find(p=>p.code===manifest.packageCode);
-    zip.file('00-เริ่มใช้แพ็กเกจ.txt','\uFEFF'+[pkg.title,pkg.goal,'','ลำดับการใช้เครื่องมือ',...manifest.useSequence.map(s=>`${s.order}. ${s.shortTitle} — ${s.stage}\n   ${s.action}\n   สิ่งที่อยากได้: ${s.outcome}`),'','ไฟล์ต้นฉบับขนาดไม่เกิน 6 MB อยู่ในโฟลเดอร์เครื่องมือ ไฟล์ใหญ่เปิดจากลิงก์ใน TXT','รายงานและภาพสรุปแยกไว้เป็นข้อมูลประกอบ ไม่ใช่แบบประเมินเปล่า'].join('\n'));
+    const guidance=preset.scenarios.find(s=>manifest.scenarioCodes.includes(s.code))?.implementationGuidance;
+    const guidanceLines=guidance?['','ปัจจัยความสำเร็จ',...guidance.successFactors,'','ข้อควรระวัง',...guidance.cautions,'','มาตรฐานความสำเร็จ',...guidance.keyStandards]:[];
+    zip.file('00-เริ่มใช้แพ็กเกจ.txt','\uFEFF'+[pkg.title,pkg.goal,'','ลำดับการใช้เครื่องมือ',...manifest.useSequence.map(s=>`${s.order}. ${s.shortTitle} — ${s.stage}\n   ${s.action}\n   สิ่งที่อยากได้: ${s.outcome}`),...guidanceLines,'','ไฟล์ต้นฉบับขนาดไม่เกิน 6 MB อยู่ในโฟลเดอร์เครื่องมือ ไฟล์ใหญ่เปิดจากลิงก์ใน TXT','รายงานและภาพสรุปแยกไว้เป็นข้อมูลประกอบ ไม่ใช่แบบประเมินเปล่า'].join('\n'));
     zip.file('รายการชุดเครื่องมือ.txt','\uFEFF'+['ชุดเครื่องมือสำหรับแผนที่คุณเลือก','',...selectedTools.flatMap(t=>[t.title,...(t.editorialNote?[t.editorialNote]:[]),'']),'ไฟล์ขนาดใหญ่เปิดจาก ลิงก์เครื่องมือ.txt'].join('\n'));
     const data=await zip.generateAsync({type:'nodebuffer',compression:'DEFLATE',compressionOptions:{level:6}});
     const reopened=await JSZip.loadAsync(data,{checkCRC32:true});
@@ -117,7 +120,7 @@ if(mode==='--stage'){
   });
   must(await client.from('tools').upsert(tools,{onConflict:'release_id,code'}),'tools');
   const toolNames=new Map(preset.tools.map(t=>[t.code,t.title]));
-  const scenarios=preset.scenarios.map(s=>({release_id:release.id,code:s.code,package_code:s.packageCode,setting_code:s.answers.settingCode,operator_role_code:s.answers.roleCode,target_group_code:s.answers.audienceCode,intervention_level:s.answers.level,catalogue_status:s.catalogueStatus,content_status:'partially_verified',summary_th:s.summary,source_payload:{role:s.answerLabels.role,audience:s.answerLabels.audience,level:s.answerLabels.level,activity:s.title,intro:s.editorialNote,host:s.host,phases:s.phases,useSequence:s.useSequence,steps:s.steps.map(step=>({...step,tool:step.tool.split(/[,;]\s*/).map(code=>toolNames.get(code)||code).join(' / ')})),packageChoiceLabel:preset.packages.find(p=>p.code===s.packageCode).choiceLabel,bundleReady:true,source:s}}));
+  const scenarios=preset.scenarios.map(s=>({release_id:release.id,code:s.code,package_code:s.packageCode,setting_code:s.answers.settingCode,operator_role_code:s.answers.roleCode,target_group_code:s.answers.audienceCode,intervention_level:s.answers.level,catalogue_status:s.catalogueStatus,content_status:'partially_verified',summary_th:s.summary,source_payload:{role:s.answerLabels.role,audience:s.answerLabels.audience,level:s.answerLabels.level,activity:s.title,intro:s.editorialNote,host:s.host,phases:s.phases,useSequence:s.useSequence,...(s.context?{context:s.context,goalC:s.context.goalC,implementationGuidance:s.implementationGuidance}:{}),steps:s.steps.map(step=>({...step,tool:step.tool.split(/[,;]\s*/).map(code=>toolNames.get(code)||code).join(' / ')})),packageChoiceLabel:preset.packages.find(p=>p.code===s.packageCode).choiceLabel,bundleReady:true,source:s}}));
   must(await client.from('scenarios').upsert(scenarios,{onConflict:'release_id,code'}),'scenarios');
   const links=preset.scenarios.flatMap(s=>Object.entries(s.tools).flatMap(([slot,codes])=>codes.map((tool_code,i)=>({release_id:release.id,scenario_code:s.code,tool_code,slot,display_order:i+1,reason_th:s.editorialNote||null}))));
   for(let i=0;i<links.length;i+=250)must(await client.from('scenario_tools').upsert(links.slice(i,i+250),{onConflict:'release_id,scenario_code,tool_code,slot'}),'scenario links');
@@ -131,7 +134,7 @@ if(mode==='--stage'){
     const r=await client.from(table).select('code',{count:'exact',head:true}).eq('release_id',release.id);must(r,table);if(r.count!==expected)throw new Error('Incomplete '+table);
   }
   const objects=must(await client.storage.from(bucket).list(`${release.id}/bundles`,{limit:1000}),'bundle storage');
-  if(objects.filter(o=>o.name.endsWith('.zip')).length!==bundles.size)throw new Error('Missing prepared ZIPs');
+  if([...bundles.keys()].some(key=>!objects.some(o=>o.name===`${key}.zip`)))throw new Error('Missing prepared ZIPs');
   const assets=must(await client.storage.from(bucket).list(`${release.id}/assets`,{limit:100}),'asset storage');
   if(assets.length!==preset.assets.filter(a=>a.hosting==='bundle').length)throw new Error('Missing original small files');
   if(mode==='--publish'){

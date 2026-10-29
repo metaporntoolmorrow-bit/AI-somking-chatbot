@@ -6,9 +6,13 @@ import { getPackage, getPublishedCatalog, getScenario, getTool, settingNames } f
 import { compatibleSelection } from '@/lib/plan-flow';
 import { packageSummary } from '@/lib/package-summary';
 import { situationSummary } from '@/lib/situation-summary.mjs';
+import ContextPackageResult, {type ResultQuery} from './context-package-result';
 
-export default async function PackageResult({searchParams}:{searchParams:Promise<{scenario?:string;scenarios?:string}>}){
-  const {scenario:code,scenarios:selection}=await searchParams;
+export default async function PackageResult({searchParams}:{searchParams:Promise<ResultQuery>}){
+  const raw=await searchParams;
+  const query=Object.fromEntries(Object.entries(raw).map(([key,value])=>[key,typeof value==='string'?value:undefined])) as ResultQuery;
+  if(query.setting!==undefined||query.role!==undefined||query.targetYouth!==undefined||query.goalC!==undefined||query.scenario?.startsWith('REAL4-'))return <ContextPackageResult query={query}/>;
+  const {scenario:code,scenarios:selection}=query;
   const catalog=await getPublishedCatalog();
   const scenario=getScenario(catalog,code??'');
   const selected=compatibleSelection(catalog.scenarios,code??'',selection);

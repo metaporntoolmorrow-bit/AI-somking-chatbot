@@ -1,0 +1,12 @@
+{
+  "release": "real-tools-2026-10-29-v7",
+  "totalCombinations": 625,
+  "matched": 176,
+  "noMatch": 449,
+  "packages": 10,
+  "tools": 18,
+  "missingSupplementary": 21,
+  "assets": 30,
+  "bundles": 15,
+  "sourceHash": "da8a5beef1995b17b9500749ae384f0d27f974733e04402beb1f5ac179cd4f66"
+}

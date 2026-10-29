@@ -6,6 +6,6 @@ export function packageSummary(catalog:Catalog,scenarios:Scenario[]){
   const allSteps=scenarios.flatMap(s=>s.useSequence.length?s.useSequence:scenarioToolIds(s).map((id,index):UseStep=>({order:index+1,rank:index*10,toolCode:id,shortTitle:catalog.tools.find(t=>t.id===id)?.shortName||catalog.tools.find(t=>t.id===id)?.name||'',stage:'ใช้ร่วมกับทีม',action:'เปิดคู่มือต้นฉบับ เลือกส่วนที่ตรงกับบริบท และตกลงวิธีใช้ร่วมกับผู้รับผิดชอบ',outcome:'แนวทางที่ทีมเลือกใช้'})));
   allSteps.sort((a,b)=>a.rank-b.rank||a.toolCode.localeCompare(b.toolCode));
   const steps=[...new Map(allSteps.map(s=>[`${s.rank}:${s.toolCode}`,s])).values()].map((s,index)=>({...s,order:index+1}));
-  const toolIds=[...new Set(steps.map(s=>s.toolCode))];
+  const toolIds=[...new Set([...steps.flatMap(s=>s.toolCodes?.length?s.toolCodes:[s.toolCode]),...scenarios.flatMap(scenarioToolIds)])];
   return {steps,toolIds,audiences:[...new Set(scenarios.map(s=>audienceNames[s.audienceCode]||s.audience))]};
 }

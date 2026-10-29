@@ -1,0 +1,5995 @@
+[
+  {
+    "setting": "setting_school",
+    "role": "role_teacher",
+    "targetYouth": "youth_early",
+    "goalC": "goal_c1",
+    "status": "matched",
+    "scenarioCode": "REAL4-0001",
+    "packageCode": "PK7-EDU-C1",
+    "tools": [
+      "MAIN-01"
+    ]
+  },
+  {
+    "setting": "setting_school",
+    "role": "role_teacher",
+    "targetYouth": "youth_early",
+    "goalC": "goal_c2",
+    "status": "matched",
+    "scenarioCode": "REAL4-0002",
+    "packageCode": "PK7-EDU-C2",
+    "tools": [
+      "MAIN-08",
+      "MAIN-04",
+      "MAIN-09"
+    ]
+  },
+  {
+    "setting": "setting_school",
+    "role": "role_teacher",
+    "targetYouth": "youth_early",
+    "goalC": "goal_c3",
+    "status": "matched",
+    "scenarioCode": "REAL4-0003",
+    "packageCode": "PK7-EDU-C3",
+    "tools": [
+      "MAIN-01",
+      "MAIN-11",
+      "MAIN-12"
+    ]
+  },
+  {
+    "setting": "setting_school",
+    "role": "role_teacher",
+    "targetYouth": "youth_early",
+    "goalC": "goal_c4",
+    "status": "no_match",
+    "reason": "ยังไม่มีชุดกิจกรรมแกนนำเยาวชนที่ระบุว่าเหมาะกับเด็กปฐมวัยในคลังปัจจุบัน"
+  },
+  {
+    "setting": "setting_school",
+    "role": "role_teacher",
+    "targetYouth": "youth_early",
+    "goalC": "goal_c5",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_school",
+    "role": "role_teacher",
+    "targetYouth": "youth_primary",
+    "goalC": "goal_c1",
+    "status": "matched",
+    "scenarioCode": "REAL4-0004",
+    "packageCode": "PK7-EDU-C1",
+    "tools": [
+      "MAIN-01"
+    ]
+  },
+  {
+    "setting": "setting_school",
+    "role": "role_teacher",
+    "targetYouth": "youth_primary",
+    "goalC": "goal_c2",
+    "status": "matched",
+    "scenarioCode": "REAL4-0005",
+    "packageCode": "PK7-EDU-C2",
+    "tools": [
+      "MAIN-03",
+      "MAIN-02",
+      "MAIN-05"
+    ]
+  },
+  {
+    "setting": "setting_school",
+    "role": "role_teacher",
+    "targetYouth": "youth_primary",
+    "goalC": "goal_c3",
+    "status": "matched",
+    "scenarioCode": "REAL4-0006",
+    "packageCode": "PK7-EDU-C3",
+    "tools": [
+      "MAIN-01",
+      "MAIN-11",
+      "MAIN-12"
+    ]
+  },
+  {
+    "setting": "setting_school",
+    "role": "role_teacher",
+    "targetYouth": "youth_primary",
+    "goalC": "goal_c4",
+    "status": "matched",
+    "scenarioCode": "REAL4-0007",
+    "packageCode": "PK7-EDU-C4",
+    "tools": [
+      "MAIN-01",
+      "MAIN-02",
+      "MAIN-05"
+    ]
+  },
+  {
+    "setting": "setting_school",
+    "role": "role_teacher",
+    "targetYouth": "youth_primary",
+    "goalC": "goal_c5",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_school",
+    "role": "role_teacher",
+    "targetYouth": "youth_secondary",
+    "goalC": "goal_c1",
+    "status": "matched",
+    "scenarioCode": "REAL4-0008",
+    "packageCode": "PK7-EDU-C1",
+    "tools": [
+      "MAIN-01"
+    ]
+  },
+  {
+    "setting": "setting_school",
+    "role": "role_teacher",
+    "targetYouth": "youth_secondary",
+    "goalC": "goal_c2",
+    "status": "matched",
+    "scenarioCode": "REAL4-0009",
+    "packageCode": "PK7-EDU-C2",
+    "tools": [
+      "MAIN-06",
+      "MAIN-02",
+      "MAIN-05"
+    ]
+  },
+  {
+    "setting": "setting_school",
+    "role": "role_teacher",
+    "targetYouth": "youth_secondary",
+    "goalC": "goal_c3",
+    "status": "matched",
+    "scenarioCode": "REAL4-0010",
+    "packageCode": "PK7-EDU-C3",
+    "tools": [
+      "MAIN-01",
+      "MAIN-11",
+      "MAIN-12"
+    ]
+  },
+  {
+    "setting": "setting_school",
+    "role": "role_teacher",
+    "targetYouth": "youth_secondary",
+    "goalC": "goal_c4",
+    "status": "matched",
+    "scenarioCode": "REAL4-0011",
+    "packageCode": "PK7-EDU-C4",
+    "tools": [
+      "MAIN-01",
+      "MAIN-02",
+      "MAIN-05"
+    ]
+  },
+  {
+    "setting": "setting_school",
+    "role": "role_teacher",
+    "targetYouth": "youth_secondary",
+    "goalC": "goal_c5",
+    "status": "matched",
+    "scenarioCode": "REAL4-0012",
+    "packageCode": "PK7-EDU-C5",
+    "tools": [
+      "MAIN-01",
+      "MAIN-12"
+    ]
+  },
+  {
+    "setting": "setting_school",
+    "role": "role_teacher",
+    "targetYouth": "youth_university",
+    "goalC": "goal_c1",
+    "status": "matched",
+    "scenarioCode": "REAL4-0013",
+    "packageCode": "PK7-EDU-C1",
+    "tools": [
+      "MAIN-01"
+    ]
+  },
+  {
+    "setting": "setting_school",
+    "role": "role_teacher",
+    "targetYouth": "youth_university",
+    "goalC": "goal_c2",
+    "status": "matched",
+    "scenarioCode": "REAL4-0014",
+    "packageCode": "PK7-EDU-C2",
+    "tools": [
+      "MAIN-02",
+      "MAIN-05"
+    ]
+  },
+  {
+    "setting": "setting_school",
+    "role": "role_teacher",
+    "targetYouth": "youth_university",
+    "goalC": "goal_c3",
+    "status": "matched",
+    "scenarioCode": "REAL4-0015",
+    "packageCode": "PK7-EDU-C3",
+    "tools": [
+      "MAIN-01",
+      "MAIN-11",
+      "MAIN-12"
+    ]
+  },
+  {
+    "setting": "setting_school",
+    "role": "role_teacher",
+    "targetYouth": "youth_university",
+    "goalC": "goal_c4",
+    "status": "matched",
+    "scenarioCode": "REAL4-0016",
+    "packageCode": "PK7-EDU-C4",
+    "tools": [
+      "MAIN-01",
+      "MAIN-02",
+      "MAIN-05"
+    ]
+  },
+  {
+    "setting": "setting_school",
+    "role": "role_teacher",
+    "targetYouth": "youth_university",
+    "goalC": "goal_c5",
+    "status": "matched",
+    "scenarioCode": "REAL4-0017",
+    "packageCode": "PK7-EDU-C5",
+    "tools": [
+      "MAIN-01",
+      "MAIN-12"
+    ]
+  },
+  {
+    "setting": "setting_school",
+    "role": "role_teacher",
+    "targetYouth": "youth_vulnerable",
+    "goalC": "goal_c1",
+    "status": "matched",
+    "scenarioCode": "REAL4-0018",
+    "packageCode": "PK7-EDU-C1",
+    "tools": [
+      "MAIN-01"
+    ]
+  },
+  {
+    "setting": "setting_school",
+    "role": "role_teacher",
+    "targetYouth": "youth_vulnerable",
+    "goalC": "goal_c2",
+    "status": "matched",
+    "scenarioCode": "REAL4-0019",
+    "packageCode": "PK7-EDU-C2",
+    "tools": [
+      "MAIN-02",
+      "MAIN-05",
+      "MAIN-07"
+    ]
+  },
+  {
+    "setting": "setting_school",
+    "role": "role_teacher",
+    "targetYouth": "youth_vulnerable",
+    "goalC": "goal_c3",
+    "status": "matched",
+    "scenarioCode": "REAL4-0020",
+    "packageCode": "PK7-EDU-C3",
+    "tools": [
+      "MAIN-01",
+      "MAIN-11",
+      "MAIN-12"
+    ]
+  },
+  {
+    "setting": "setting_school",
+    "role": "role_teacher",
+    "targetYouth": "youth_vulnerable",
+    "goalC": "goal_c4",
+    "status": "matched",
+    "scenarioCode": "REAL4-0021",
+    "packageCode": "PK7-EDU-C4",
+    "tools": [
+      "MAIN-01",
+      "MAIN-02",
+      "MAIN-05"
+    ]
+  },
+  {
+    "setting": "setting_school",
+    "role": "role_teacher",
+    "targetYouth": "youth_vulnerable",
+    "goalC": "goal_c5",
+    "status": "matched",
+    "scenarioCode": "REAL4-0022",
+    "packageCode": "PK7-EDU-C5",
+    "tools": [
+      "MAIN-01",
+      "MAIN-12"
+    ]
+  },
+  {
+    "setting": "setting_school",
+    "role": "role_health_agent",
+    "targetYouth": "youth_early",
+    "goalC": "goal_c1",
+    "status": "matched",
+    "scenarioCode": "REAL4-0023",
+    "packageCode": "PK7-EDU-C1",
+    "tools": [
+      "MAIN-01"
+    ]
+  },
+  {
+    "setting": "setting_school",
+    "role": "role_health_agent",
+    "targetYouth": "youth_early",
+    "goalC": "goal_c2",
+    "status": "matched",
+    "scenarioCode": "REAL4-0024",
+    "packageCode": "PK7-EDU-C2",
+    "tools": [
+      "MAIN-08",
+      "MAIN-04",
+      "MAIN-09"
+    ]
+  },
+  {
+    "setting": "setting_school",
+    "role": "role_health_agent",
+    "targetYouth": "youth_early",
+    "goalC": "goal_c3",
+    "status": "matched",
+    "scenarioCode": "REAL4-0025",
+    "packageCode": "PK7-EDU-C3",
+    "tools": [
+      "MAIN-01",
+      "MAIN-11",
+      "MAIN-12"
+    ]
+  },
+  {
+    "setting": "setting_school",
+    "role": "role_health_agent",
+    "targetYouth": "youth_early",
+    "goalC": "goal_c4",
+    "status": "no_match",
+    "reason": "ยังไม่มีชุดกิจกรรมแกนนำเยาวชนที่ระบุว่าเหมาะกับเด็กปฐมวัยในคลังปัจจุบัน"
+  },
+  {
+    "setting": "setting_school",
+    "role": "role_health_agent",
+    "targetYouth": "youth_early",
+    "goalC": "goal_c5",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_school",
+    "role": "role_health_agent",
+    "targetYouth": "youth_primary",
+    "goalC": "goal_c1",
+    "status": "matched",
+    "scenarioCode": "REAL4-0026",
+    "packageCode": "PK7-EDU-C1",
+    "tools": [
+      "MAIN-01"
+    ]
+  },
+  {
+    "setting": "setting_school",
+    "role": "role_health_agent",
+    "targetYouth": "youth_primary",
+    "goalC": "goal_c2",
+    "status": "matched",
+    "scenarioCode": "REAL4-0027",
+    "packageCode": "PK7-EDU-C2",
+    "tools": [
+      "MAIN-03",
+      "MAIN-02",
+      "MAIN-05"
+    ]
+  },
+  {
+    "setting": "setting_school",
+    "role": "role_health_agent",
+    "targetYouth": "youth_primary",
+    "goalC": "goal_c3",
+    "status": "matched",
+    "scenarioCode": "REAL4-0028",
+    "packageCode": "PK7-EDU-C3",
+    "tools": [
+      "MAIN-01",
+      "MAIN-11",
+      "MAIN-12"
+    ]
+  },
+  {
+    "setting": "setting_school",
+    "role": "role_health_agent",
+    "targetYouth": "youth_primary",
+    "goalC": "goal_c4",
+    "status": "matched",
+    "scenarioCode": "REAL4-0029",
+    "packageCode": "PK7-EDU-C4",
+    "tools": [
+      "MAIN-01",
+      "MAIN-02",
+      "MAIN-05"
+    ]
+  },
+  {
+    "setting": "setting_school",
+    "role": "role_health_agent",
+    "targetYouth": "youth_primary",
+    "goalC": "goal_c5",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_school",
+    "role": "role_health_agent",
+    "targetYouth": "youth_secondary",
+    "goalC": "goal_c1",
+    "status": "matched",
+    "scenarioCode": "REAL4-0030",
+    "packageCode": "PK7-EDU-C1",
+    "tools": [
+      "MAIN-01"
+    ]
+  },
+  {
+    "setting": "setting_school",
+    "role": "role_health_agent",
+    "targetYouth": "youth_secondary",
+    "goalC": "goal_c2",
+    "status": "matched",
+    "scenarioCode": "REAL4-0031",
+    "packageCode": "PK7-EDU-C2",
+    "tools": [
+      "MAIN-06",
+      "MAIN-02",
+      "MAIN-05"
+    ]
+  },
+  {
+    "setting": "setting_school",
+    "role": "role_health_agent",
+    "targetYouth": "youth_secondary",
+    "goalC": "goal_c3",
+    "status": "matched",
+    "scenarioCode": "REAL4-0032",
+    "packageCode": "PK7-EDU-C3",
+    "tools": [
+      "MAIN-01",
+      "MAIN-11",
+      "MAIN-12"
+    ]
+  },
+  {
+    "setting": "setting_school",
+    "role": "role_health_agent",
+    "targetYouth": "youth_secondary",
+    "goalC": "goal_c4",
+    "status": "matched",
+    "scenarioCode": "REAL4-0033",
+    "packageCode": "PK7-EDU-C4",
+    "tools": [
+      "MAIN-01",
+      "MAIN-02",
+      "MAIN-05"
+    ]
+  },
+  {
+    "setting": "setting_school",
+    "role": "role_health_agent",
+    "targetYouth": "youth_secondary",
+    "goalC": "goal_c5",
+    "status": "matched",
+    "scenarioCode": "REAL4-0034",
+    "packageCode": "PK7-EDU-C5",
+    "tools": [
+      "MAIN-01",
+      "MAIN-12"
+    ]
+  },
+  {
+    "setting": "setting_school",
+    "role": "role_health_agent",
+    "targetYouth": "youth_university",
+    "goalC": "goal_c1",
+    "status": "matched",
+    "scenarioCode": "REAL4-0035",
+    "packageCode": "PK7-EDU-C1",
+    "tools": [
+      "MAIN-01"
+    ]
+  },
+  {
+    "setting": "setting_school",
+    "role": "role_health_agent",
+    "targetYouth": "youth_university",
+    "goalC": "goal_c2",
+    "status": "matched",
+    "scenarioCode": "REAL4-0036",
+    "packageCode": "PK7-EDU-C2",
+    "tools": [
+      "MAIN-02",
+      "MAIN-05"
+    ]
+  },
+  {
+    "setting": "setting_school",
+    "role": "role_health_agent",
+    "targetYouth": "youth_university",
+    "goalC": "goal_c3",
+    "status": "matched",
+    "scenarioCode": "REAL4-0037",
+    "packageCode": "PK7-EDU-C3",
+    "tools": [
+      "MAIN-01",
+      "MAIN-11",
+      "MAIN-12"
+    ]
+  },
+  {
+    "setting": "setting_school",
+    "role": "role_health_agent",
+    "targetYouth": "youth_university",
+    "goalC": "goal_c4",
+    "status": "matched",
+    "scenarioCode": "REAL4-0038",
+    "packageCode": "PK7-EDU-C4",
+    "tools": [
+      "MAIN-01",
+      "MAIN-02",
+      "MAIN-05"
+    ]
+  },
+  {
+    "setting": "setting_school",
+    "role": "role_health_agent",
+    "targetYouth": "youth_university",
+    "goalC": "goal_c5",
+    "status": "matched",
+    "scenarioCode": "REAL4-0039",
+    "packageCode": "PK7-EDU-C5",
+    "tools": [
+      "MAIN-01",
+      "MAIN-12"
+    ]
+  },
+  {
+    "setting": "setting_school",
+    "role": "role_health_agent",
+    "targetYouth": "youth_vulnerable",
+    "goalC": "goal_c1",
+    "status": "matched",
+    "scenarioCode": "REAL4-0040",
+    "packageCode": "PK7-EDU-C1",
+    "tools": [
+      "MAIN-01"
+    ]
+  },
+  {
+    "setting": "setting_school",
+    "role": "role_health_agent",
+    "targetYouth": "youth_vulnerable",
+    "goalC": "goal_c2",
+    "status": "matched",
+    "scenarioCode": "REAL4-0041",
+    "packageCode": "PK7-EDU-C2",
+    "tools": [
+      "MAIN-02",
+      "MAIN-05",
+      "MAIN-07"
+    ]
+  },
+  {
+    "setting": "setting_school",
+    "role": "role_health_agent",
+    "targetYouth": "youth_vulnerable",
+    "goalC": "goal_c3",
+    "status": "matched",
+    "scenarioCode": "REAL4-0042",
+    "packageCode": "PK7-EDU-C3",
+    "tools": [
+      "MAIN-01",
+      "MAIN-11",
+      "MAIN-12"
+    ]
+  },
+  {
+    "setting": "setting_school",
+    "role": "role_health_agent",
+    "targetYouth": "youth_vulnerable",
+    "goalC": "goal_c4",
+    "status": "matched",
+    "scenarioCode": "REAL4-0043",
+    "packageCode": "PK7-EDU-C4",
+    "tools": [
+      "MAIN-01",
+      "MAIN-02",
+      "MAIN-05"
+    ]
+  },
+  {
+    "setting": "setting_school",
+    "role": "role_health_agent",
+    "targetYouth": "youth_vulnerable",
+    "goalC": "goal_c5",
+    "status": "matched",
+    "scenarioCode": "REAL4-0044",
+    "packageCode": "PK7-EDU-C5",
+    "tools": [
+      "MAIN-01",
+      "MAIN-12"
+    ]
+  },
+  {
+    "setting": "setting_school",
+    "role": "role_community_leader",
+    "targetYouth": "youth_early",
+    "goalC": "goal_c1",
+    "status": "matched",
+    "scenarioCode": "REAL4-0045",
+    "packageCode": "PK7-EDU-C1",
+    "tools": [
+      "MAIN-01"
+    ]
+  },
+  {
+    "setting": "setting_school",
+    "role": "role_community_leader",
+    "targetYouth": "youth_early",
+    "goalC": "goal_c2",
+    "status": "matched",
+    "scenarioCode": "REAL4-0046",
+    "packageCode": "PK7-EDU-C2",
+    "tools": [
+      "MAIN-08",
+      "MAIN-04",
+      "MAIN-09"
+    ]
+  },
+  {
+    "setting": "setting_school",
+    "role": "role_community_leader",
+    "targetYouth": "youth_early",
+    "goalC": "goal_c3",
+    "status": "matched",
+    "scenarioCode": "REAL4-0047",
+    "packageCode": "PK7-EDU-C3",
+    "tools": [
+      "MAIN-01",
+      "MAIN-11",
+      "MAIN-12"
+    ]
+  },
+  {
+    "setting": "setting_school",
+    "role": "role_community_leader",
+    "targetYouth": "youth_early",
+    "goalC": "goal_c4",
+    "status": "no_match",
+    "reason": "ยังไม่มีชุดกิจกรรมแกนนำเยาวชนที่ระบุว่าเหมาะกับเด็กปฐมวัยในคลังปัจจุบัน"
+  },
+  {
+    "setting": "setting_school",
+    "role": "role_community_leader",
+    "targetYouth": "youth_early",
+    "goalC": "goal_c5",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_school",
+    "role": "role_community_leader",
+    "targetYouth": "youth_primary",
+    "goalC": "goal_c1",
+    "status": "matched",
+    "scenarioCode": "REAL4-0048",
+    "packageCode": "PK7-EDU-C1",
+    "tools": [
+      "MAIN-01"
+    ]
+  },
+  {
+    "setting": "setting_school",
+    "role": "role_community_leader",
+    "targetYouth": "youth_primary",
+    "goalC": "goal_c2",
+    "status": "matched",
+    "scenarioCode": "REAL4-0049",
+    "packageCode": "PK7-EDU-C2",
+    "tools": [
+      "MAIN-03",
+      "MAIN-02",
+      "MAIN-05"
+    ]
+  },
+  {
+    "setting": "setting_school",
+    "role": "role_community_leader",
+    "targetYouth": "youth_primary",
+    "goalC": "goal_c3",
+    "status": "matched",
+    "scenarioCode": "REAL4-0050",
+    "packageCode": "PK7-EDU-C3",
+    "tools": [
+      "MAIN-01",
+      "MAIN-11",
+      "MAIN-12"
+    ]
+  },
+  {
+    "setting": "setting_school",
+    "role": "role_community_leader",
+    "targetYouth": "youth_primary",
+    "goalC": "goal_c4",
+    "status": "matched",
+    "scenarioCode": "REAL4-0051",
+    "packageCode": "PK7-EDU-C4",
+    "tools": [
+      "MAIN-01",
+      "MAIN-02",
+      "MAIN-05"
+    ]
+  },
+  {
+    "setting": "setting_school",
+    "role": "role_community_leader",
+    "targetYouth": "youth_primary",
+    "goalC": "goal_c5",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_school",
+    "role": "role_community_leader",
+    "targetYouth": "youth_secondary",
+    "goalC": "goal_c1",
+    "status": "matched",
+    "scenarioCode": "REAL4-0052",
+    "packageCode": "PK7-EDU-C1",
+    "tools": [
+      "MAIN-01"
+    ]
+  },
+  {
+    "setting": "setting_school",
+    "role": "role_community_leader",
+    "targetYouth": "youth_secondary",
+    "goalC": "goal_c2",
+    "status": "matched",
+    "scenarioCode": "REAL4-0053",
+    "packageCode": "PK7-EDU-C2",
+    "tools": [
+      "MAIN-06",
+      "MAIN-02",
+      "MAIN-05"
+    ]
+  },
+  {
+    "setting": "setting_school",
+    "role": "role_community_leader",
+    "targetYouth": "youth_secondary",
+    "goalC": "goal_c3",
+    "status": "matched",
+    "scenarioCode": "REAL4-0054",
+    "packageCode": "PK7-EDU-C3",
+    "tools": [
+      "MAIN-01",
+      "MAIN-11",
+      "MAIN-12"
+    ]
+  },
+  {
+    "setting": "setting_school",
+    "role": "role_community_leader",
+    "targetYouth": "youth_secondary",
+    "goalC": "goal_c4",
+    "status": "matched",
+    "scenarioCode": "REAL4-0055",
+    "packageCode": "PK7-EDU-C4",
+    "tools": [
+      "MAIN-01",
+      "MAIN-02",
+      "MAIN-05"
+    ]
+  },
+  {
+    "setting": "setting_school",
+    "role": "role_community_leader",
+    "targetYouth": "youth_secondary",
+    "goalC": "goal_c5",
+    "status": "matched",
+    "scenarioCode": "REAL4-0056",
+    "packageCode": "PK7-EDU-C5",
+    "tools": [
+      "MAIN-01",
+      "MAIN-12"
+    ]
+  },
+  {
+    "setting": "setting_school",
+    "role": "role_community_leader",
+    "targetYouth": "youth_university",
+    "goalC": "goal_c1",
+    "status": "matched",
+    "scenarioCode": "REAL4-0057",
+    "packageCode": "PK7-EDU-C1",
+    "tools": [
+      "MAIN-01"
+    ]
+  },
+  {
+    "setting": "setting_school",
+    "role": "role_community_leader",
+    "targetYouth": "youth_university",
+    "goalC": "goal_c2",
+    "status": "matched",
+    "scenarioCode": "REAL4-0058",
+    "packageCode": "PK7-EDU-C2",
+    "tools": [
+      "MAIN-02",
+      "MAIN-05"
+    ]
+  },
+  {
+    "setting": "setting_school",
+    "role": "role_community_leader",
+    "targetYouth": "youth_university",
+    "goalC": "goal_c3",
+    "status": "matched",
+    "scenarioCode": "REAL4-0059",
+    "packageCode": "PK7-EDU-C3",
+    "tools": [
+      "MAIN-01",
+      "MAIN-11",
+      "MAIN-12"
+    ]
+  },
+  {
+    "setting": "setting_school",
+    "role": "role_community_leader",
+    "targetYouth": "youth_university",
+    "goalC": "goal_c4",
+    "status": "matched",
+    "scenarioCode": "REAL4-0060",
+    "packageCode": "PK7-EDU-C4",
+    "tools": [
+      "MAIN-01",
+      "MAIN-02",
+      "MAIN-05"
+    ]
+  },
+  {
+    "setting": "setting_school",
+    "role": "role_community_leader",
+    "targetYouth": "youth_university",
+    "goalC": "goal_c5",
+    "status": "matched",
+    "scenarioCode": "REAL4-0061",
+    "packageCode": "PK7-EDU-C5",
+    "tools": [
+      "MAIN-01",
+      "MAIN-12"
+    ]
+  },
+  {
+    "setting": "setting_school",
+    "role": "role_community_leader",
+    "targetYouth": "youth_vulnerable",
+    "goalC": "goal_c1",
+    "status": "matched",
+    "scenarioCode": "REAL4-0062",
+    "packageCode": "PK7-EDU-C1",
+    "tools": [
+      "MAIN-01"
+    ]
+  },
+  {
+    "setting": "setting_school",
+    "role": "role_community_leader",
+    "targetYouth": "youth_vulnerable",
+    "goalC": "goal_c2",
+    "status": "matched",
+    "scenarioCode": "REAL4-0063",
+    "packageCode": "PK7-EDU-C2",
+    "tools": [
+      "MAIN-02",
+      "MAIN-05",
+      "MAIN-07"
+    ]
+  },
+  {
+    "setting": "setting_school",
+    "role": "role_community_leader",
+    "targetYouth": "youth_vulnerable",
+    "goalC": "goal_c3",
+    "status": "matched",
+    "scenarioCode": "REAL4-0064",
+    "packageCode": "PK7-EDU-C3",
+    "tools": [
+      "MAIN-01",
+      "MAIN-11",
+      "MAIN-12"
+    ]
+  },
+  {
+    "setting": "setting_school",
+    "role": "role_community_leader",
+    "targetYouth": "youth_vulnerable",
+    "goalC": "goal_c4",
+    "status": "matched",
+    "scenarioCode": "REAL4-0065",
+    "packageCode": "PK7-EDU-C4",
+    "tools": [
+      "MAIN-01",
+      "MAIN-02",
+      "MAIN-05"
+    ]
+  },
+  {
+    "setting": "setting_school",
+    "role": "role_community_leader",
+    "targetYouth": "youth_vulnerable",
+    "goalC": "goal_c5",
+    "status": "matched",
+    "scenarioCode": "REAL4-0066",
+    "packageCode": "PK7-EDU-C5",
+    "tools": [
+      "MAIN-01",
+      "MAIN-12"
+    ]
+  },
+  {
+    "setting": "setting_school",
+    "role": "role_parent",
+    "targetYouth": "youth_early",
+    "goalC": "goal_c1",
+    "status": "matched",
+    "scenarioCode": "REAL4-0067",
+    "packageCode": "PK7-EDU-C1",
+    "tools": [
+      "MAIN-01"
+    ]
+  },
+  {
+    "setting": "setting_school",
+    "role": "role_parent",
+    "targetYouth": "youth_early",
+    "goalC": "goal_c2",
+    "status": "matched",
+    "scenarioCode": "REAL4-0068",
+    "packageCode": "PK7-EDU-C2",
+    "tools": [
+      "MAIN-08",
+      "MAIN-04",
+      "MAIN-09"
+    ]
+  },
+  {
+    "setting": "setting_school",
+    "role": "role_parent",
+    "targetYouth": "youth_early",
+    "goalC": "goal_c3",
+    "status": "matched",
+    "scenarioCode": "REAL4-0069",
+    "packageCode": "PK7-EDU-C3",
+    "tools": [
+      "MAIN-01",
+      "MAIN-11",
+      "MAIN-12"
+    ]
+  },
+  {
+    "setting": "setting_school",
+    "role": "role_parent",
+    "targetYouth": "youth_early",
+    "goalC": "goal_c4",
+    "status": "no_match",
+    "reason": "ยังไม่มีชุดกิจกรรมแกนนำเยาวชนที่ระบุว่าเหมาะกับเด็กปฐมวัยในคลังปัจจุบัน"
+  },
+  {
+    "setting": "setting_school",
+    "role": "role_parent",
+    "targetYouth": "youth_early",
+    "goalC": "goal_c5",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_school",
+    "role": "role_parent",
+    "targetYouth": "youth_primary",
+    "goalC": "goal_c1",
+    "status": "matched",
+    "scenarioCode": "REAL4-0070",
+    "packageCode": "PK7-EDU-C1",
+    "tools": [
+      "MAIN-01"
+    ]
+  },
+  {
+    "setting": "setting_school",
+    "role": "role_parent",
+    "targetYouth": "youth_primary",
+    "goalC": "goal_c2",
+    "status": "matched",
+    "scenarioCode": "REAL4-0071",
+    "packageCode": "PK7-EDU-C2",
+    "tools": [
+      "MAIN-03",
+      "MAIN-02",
+      "MAIN-05"
+    ]
+  },
+  {
+    "setting": "setting_school",
+    "role": "role_parent",
+    "targetYouth": "youth_primary",
+    "goalC": "goal_c3",
+    "status": "matched",
+    "scenarioCode": "REAL4-0072",
+    "packageCode": "PK7-EDU-C3",
+    "tools": [
+      "MAIN-01",
+      "MAIN-11",
+      "MAIN-12"
+    ]
+  },
+  {
+    "setting": "setting_school",
+    "role": "role_parent",
+    "targetYouth": "youth_primary",
+    "goalC": "goal_c4",
+    "status": "matched",
+    "scenarioCode": "REAL4-0073",
+    "packageCode": "PK7-EDU-C4",
+    "tools": [
+      "MAIN-01",
+      "MAIN-02",
+      "MAIN-05"
+    ]
+  },
+  {
+    "setting": "setting_school",
+    "role": "role_parent",
+    "targetYouth": "youth_primary",
+    "goalC": "goal_c5",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_school",
+    "role": "role_parent",
+    "targetYouth": "youth_secondary",
+    "goalC": "goal_c1",
+    "status": "matched",
+    "scenarioCode": "REAL4-0074",
+    "packageCode": "PK7-EDU-C1",
+    "tools": [
+      "MAIN-01"
+    ]
+  },
+  {
+    "setting": "setting_school",
+    "role": "role_parent",
+    "targetYouth": "youth_secondary",
+    "goalC": "goal_c2",
+    "status": "matched",
+    "scenarioCode": "REAL4-0075",
+    "packageCode": "PK7-EDU-C2",
+    "tools": [
+      "MAIN-06",
+      "MAIN-02",
+      "MAIN-05"
+    ]
+  },
+  {
+    "setting": "setting_school",
+    "role": "role_parent",
+    "targetYouth": "youth_secondary",
+    "goalC": "goal_c3",
+    "status": "matched",
+    "scenarioCode": "REAL4-0076",
+    "packageCode": "PK7-EDU-C3",
+    "tools": [
+      "MAIN-01",
+      "MAIN-11",
+      "MAIN-12"
+    ]
+  },
+  {
+    "setting": "setting_school",
+    "role": "role_parent",
+    "targetYouth": "youth_secondary",
+    "goalC": "goal_c4",
+    "status": "matched",
+    "scenarioCode": "REAL4-0077",
+    "packageCode": "PK7-EDU-C4",
+    "tools": [
+      "MAIN-01",
+      "MAIN-02",
+      "MAIN-05"
+    ]
+  },
+  {
+    "setting": "setting_school",
+    "role": "role_parent",
+    "targetYouth": "youth_secondary",
+    "goalC": "goal_c5",
+    "status": "matched",
+    "scenarioCode": "REAL4-0078",
+    "packageCode": "PK7-EDU-C5",
+    "tools": [
+      "MAIN-01",
+      "MAIN-12"
+    ]
+  },
+  {
+    "setting": "setting_school",
+    "role": "role_parent",
+    "targetYouth": "youth_university",
+    "goalC": "goal_c1",
+    "status": "matched",
+    "scenarioCode": "REAL4-0079",
+    "packageCode": "PK7-EDU-C1",
+    "tools": [
+      "MAIN-01"
+    ]
+  },
+  {
+    "setting": "setting_school",
+    "role": "role_parent",
+    "targetYouth": "youth_university",
+    "goalC": "goal_c2",
+    "status": "matched",
+    "scenarioCode": "REAL4-0080",
+    "packageCode": "PK7-EDU-C2",
+    "tools": [
+      "MAIN-02",
+      "MAIN-05"
+    ]
+  },
+  {
+    "setting": "setting_school",
+    "role": "role_parent",
+    "targetYouth": "youth_university",
+    "goalC": "goal_c3",
+    "status": "matched",
+    "scenarioCode": "REAL4-0081",
+    "packageCode": "PK7-EDU-C3",
+    "tools": [
+      "MAIN-01",
+      "MAIN-11",
+      "MAIN-12"
+    ]
+  },
+  {
+    "setting": "setting_school",
+    "role": "role_parent",
+    "targetYouth": "youth_university",
+    "goalC": "goal_c4",
+    "status": "matched",
+    "scenarioCode": "REAL4-0082",
+    "packageCode": "PK7-EDU-C4",
+    "tools": [
+      "MAIN-01",
+      "MAIN-02",
+      "MAIN-05"
+    ]
+  },
+  {
+    "setting": "setting_school",
+    "role": "role_parent",
+    "targetYouth": "youth_university",
+    "goalC": "goal_c5",
+    "status": "matched",
+    "scenarioCode": "REAL4-0083",
+    "packageCode": "PK7-EDU-C5",
+    "tools": [
+      "MAIN-01",
+      "MAIN-12"
+    ]
+  },
+  {
+    "setting": "setting_school",
+    "role": "role_parent",
+    "targetYouth": "youth_vulnerable",
+    "goalC": "goal_c1",
+    "status": "matched",
+    "scenarioCode": "REAL4-0084",
+    "packageCode": "PK7-EDU-C1",
+    "tools": [
+      "MAIN-01"
+    ]
+  },
+  {
+    "setting": "setting_school",
+    "role": "role_parent",
+    "targetYouth": "youth_vulnerable",
+    "goalC": "goal_c2",
+    "status": "matched",
+    "scenarioCode": "REAL4-0085",
+    "packageCode": "PK7-EDU-C2",
+    "tools": [
+      "MAIN-02",
+      "MAIN-05",
+      "MAIN-07"
+    ]
+  },
+  {
+    "setting": "setting_school",
+    "role": "role_parent",
+    "targetYouth": "youth_vulnerable",
+    "goalC": "goal_c3",
+    "status": "matched",
+    "scenarioCode": "REAL4-0086",
+    "packageCode": "PK7-EDU-C3",
+    "tools": [
+      "MAIN-01",
+      "MAIN-11",
+      "MAIN-12"
+    ]
+  },
+  {
+    "setting": "setting_school",
+    "role": "role_parent",
+    "targetYouth": "youth_vulnerable",
+    "goalC": "goal_c4",
+    "status": "matched",
+    "scenarioCode": "REAL4-0087",
+    "packageCode": "PK7-EDU-C4",
+    "tools": [
+      "MAIN-01",
+      "MAIN-02",
+      "MAIN-05"
+    ]
+  },
+  {
+    "setting": "setting_school",
+    "role": "role_parent",
+    "targetYouth": "youth_vulnerable",
+    "goalC": "goal_c5",
+    "status": "matched",
+    "scenarioCode": "REAL4-0088",
+    "packageCode": "PK7-EDU-C5",
+    "tools": [
+      "MAIN-01",
+      "MAIN-12"
+    ]
+  },
+  {
+    "setting": "setting_school",
+    "role": "role_youth_leader",
+    "targetYouth": "youth_early",
+    "goalC": "goal_c1",
+    "status": "matched",
+    "scenarioCode": "REAL4-0089",
+    "packageCode": "PK7-EDU-C1",
+    "tools": [
+      "MAIN-01"
+    ]
+  },
+  {
+    "setting": "setting_school",
+    "role": "role_youth_leader",
+    "targetYouth": "youth_early",
+    "goalC": "goal_c2",
+    "status": "matched",
+    "scenarioCode": "REAL4-0090",
+    "packageCode": "PK7-EDU-C2",
+    "tools": [
+      "MAIN-08",
+      "MAIN-04",
+      "MAIN-09"
+    ]
+  },
+  {
+    "setting": "setting_school",
+    "role": "role_youth_leader",
+    "targetYouth": "youth_early",
+    "goalC": "goal_c3",
+    "status": "matched",
+    "scenarioCode": "REAL4-0091",
+    "packageCode": "PK7-EDU-C3",
+    "tools": [
+      "MAIN-01",
+      "MAIN-11",
+      "MAIN-12"
+    ]
+  },
+  {
+    "setting": "setting_school",
+    "role": "role_youth_leader",
+    "targetYouth": "youth_early",
+    "goalC": "goal_c4",
+    "status": "no_match",
+    "reason": "ยังไม่มีชุดกิจกรรมแกนนำเยาวชนที่ระบุว่าเหมาะกับเด็กปฐมวัยในคลังปัจจุบัน"
+  },
+  {
+    "setting": "setting_school",
+    "role": "role_youth_leader",
+    "targetYouth": "youth_early",
+    "goalC": "goal_c5",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_school",
+    "role": "role_youth_leader",
+    "targetYouth": "youth_primary",
+    "goalC": "goal_c1",
+    "status": "matched",
+    "scenarioCode": "REAL4-0092",
+    "packageCode": "PK7-EDU-C1",
+    "tools": [
+      "MAIN-01"
+    ]
+  },
+  {
+    "setting": "setting_school",
+    "role": "role_youth_leader",
+    "targetYouth": "youth_primary",
+    "goalC": "goal_c2",
+    "status": "matched",
+    "scenarioCode": "REAL4-0093",
+    "packageCode": "PK7-EDU-C2",
+    "tools": [
+      "MAIN-03",
+      "MAIN-02",
+      "MAIN-05"
+    ]
+  },
+  {
+    "setting": "setting_school",
+    "role": "role_youth_leader",
+    "targetYouth": "youth_primary",
+    "goalC": "goal_c3",
+    "status": "matched",
+    "scenarioCode": "REAL4-0094",
+    "packageCode": "PK7-EDU-C3",
+    "tools": [
+      "MAIN-01",
+      "MAIN-11",
+      "MAIN-12"
+    ]
+  },
+  {
+    "setting": "setting_school",
+    "role": "role_youth_leader",
+    "targetYouth": "youth_primary",
+    "goalC": "goal_c4",
+    "status": "matched",
+    "scenarioCode": "REAL4-0095",
+    "packageCode": "PK7-EDU-C4",
+    "tools": [
+      "MAIN-01",
+      "MAIN-02",
+      "MAIN-05"
+    ]
+  },
+  {
+    "setting": "setting_school",
+    "role": "role_youth_leader",
+    "targetYouth": "youth_primary",
+    "goalC": "goal_c5",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_school",
+    "role": "role_youth_leader",
+    "targetYouth": "youth_secondary",
+    "goalC": "goal_c1",
+    "status": "matched",
+    "scenarioCode": "REAL4-0096",
+    "packageCode": "PK7-EDU-C1",
+    "tools": [
+      "MAIN-01"
+    ]
+  },
+  {
+    "setting": "setting_school",
+    "role": "role_youth_leader",
+    "targetYouth": "youth_secondary",
+    "goalC": "goal_c2",
+    "status": "matched",
+    "scenarioCode": "REAL4-0097",
+    "packageCode": "PK7-EDU-C2",
+    "tools": [
+      "MAIN-06",
+      "MAIN-02",
+      "MAIN-05"
+    ]
+  },
+  {
+    "setting": "setting_school",
+    "role": "role_youth_leader",
+    "targetYouth": "youth_secondary",
+    "goalC": "goal_c3",
+    "status": "matched",
+    "scenarioCode": "REAL4-0098",
+    "packageCode": "PK7-EDU-C3",
+    "tools": [
+      "MAIN-01",
+      "MAIN-11",
+      "MAIN-12"
+    ]
+  },
+  {
+    "setting": "setting_school",
+    "role": "role_youth_leader",
+    "targetYouth": "youth_secondary",
+    "goalC": "goal_c4",
+    "status": "matched",
+    "scenarioCode": "REAL4-0099",
+    "packageCode": "PK7-EDU-C4",
+    "tools": [
+      "MAIN-01",
+      "MAIN-02",
+      "MAIN-05"
+    ]
+  },
+  {
+    "setting": "setting_school",
+    "role": "role_youth_leader",
+    "targetYouth": "youth_secondary",
+    "goalC": "goal_c5",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_school",
+    "role": "role_youth_leader",
+    "targetYouth": "youth_university",
+    "goalC": "goal_c1",
+    "status": "matched",
+    "scenarioCode": "REAL4-0100",
+    "packageCode": "PK7-EDU-C1",
+    "tools": [
+      "MAIN-01"
+    ]
+  },
+  {
+    "setting": "setting_school",
+    "role": "role_youth_leader",
+    "targetYouth": "youth_university",
+    "goalC": "goal_c2",
+    "status": "matched",
+    "scenarioCode": "REAL4-0101",
+    "packageCode": "PK7-EDU-C2",
+    "tools": [
+      "MAIN-02",
+      "MAIN-05"
+    ]
+  },
+  {
+    "setting": "setting_school",
+    "role": "role_youth_leader",
+    "targetYouth": "youth_university",
+    "goalC": "goal_c3",
+    "status": "matched",
+    "scenarioCode": "REAL4-0102",
+    "packageCode": "PK7-EDU-C3",
+    "tools": [
+      "MAIN-01",
+      "MAIN-11",
+      "MAIN-12"
+    ]
+  },
+  {
+    "setting": "setting_school",
+    "role": "role_youth_leader",
+    "targetYouth": "youth_university",
+    "goalC": "goal_c4",
+    "status": "matched",
+    "scenarioCode": "REAL4-0103",
+    "packageCode": "PK7-EDU-C4",
+    "tools": [
+      "MAIN-01",
+      "MAIN-02",
+      "MAIN-05"
+    ]
+  },
+  {
+    "setting": "setting_school",
+    "role": "role_youth_leader",
+    "targetYouth": "youth_university",
+    "goalC": "goal_c5",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_school",
+    "role": "role_youth_leader",
+    "targetYouth": "youth_vulnerable",
+    "goalC": "goal_c1",
+    "status": "matched",
+    "scenarioCode": "REAL4-0104",
+    "packageCode": "PK7-EDU-C1",
+    "tools": [
+      "MAIN-01"
+    ]
+  },
+  {
+    "setting": "setting_school",
+    "role": "role_youth_leader",
+    "targetYouth": "youth_vulnerable",
+    "goalC": "goal_c2",
+    "status": "matched",
+    "scenarioCode": "REAL4-0105",
+    "packageCode": "PK7-EDU-C2",
+    "tools": [
+      "MAIN-02",
+      "MAIN-05",
+      "MAIN-07"
+    ]
+  },
+  {
+    "setting": "setting_school",
+    "role": "role_youth_leader",
+    "targetYouth": "youth_vulnerable",
+    "goalC": "goal_c3",
+    "status": "matched",
+    "scenarioCode": "REAL4-0106",
+    "packageCode": "PK7-EDU-C3",
+    "tools": [
+      "MAIN-01",
+      "MAIN-11",
+      "MAIN-12"
+    ]
+  },
+  {
+    "setting": "setting_school",
+    "role": "role_youth_leader",
+    "targetYouth": "youth_vulnerable",
+    "goalC": "goal_c4",
+    "status": "matched",
+    "scenarioCode": "REAL4-0107",
+    "packageCode": "PK7-EDU-C4",
+    "tools": [
+      "MAIN-01",
+      "MAIN-02",
+      "MAIN-05"
+    ]
+  },
+  {
+    "setting": "setting_school",
+    "role": "role_youth_leader",
+    "targetYouth": "youth_vulnerable",
+    "goalC": "goal_c5",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_community",
+    "role": "role_teacher",
+    "targetYouth": "youth_early",
+    "goalC": "goal_c1",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_community",
+    "role": "role_teacher",
+    "targetYouth": "youth_early",
+    "goalC": "goal_c2",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_community",
+    "role": "role_teacher",
+    "targetYouth": "youth_early",
+    "goalC": "goal_c3",
+    "status": "matched",
+    "scenarioCode": "REAL4-0108",
+    "packageCode": "PK7-COM-C3",
+    "tools": [
+      "MAIN-10",
+      "MAIN-01",
+      "MAIN-11",
+      "MAIN-12"
+    ]
+  },
+  {
+    "setting": "setting_community",
+    "role": "role_teacher",
+    "targetYouth": "youth_early",
+    "goalC": "goal_c4",
+    "status": "no_match",
+    "reason": "ยังไม่มีชุดกิจกรรมแกนนำเยาวชนที่ระบุว่าเหมาะกับเด็กปฐมวัยในคลังปัจจุบัน"
+  },
+  {
+    "setting": "setting_community",
+    "role": "role_teacher",
+    "targetYouth": "youth_early",
+    "goalC": "goal_c5",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_community",
+    "role": "role_teacher",
+    "targetYouth": "youth_primary",
+    "goalC": "goal_c1",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_community",
+    "role": "role_teacher",
+    "targetYouth": "youth_primary",
+    "goalC": "goal_c2",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_community",
+    "role": "role_teacher",
+    "targetYouth": "youth_primary",
+    "goalC": "goal_c3",
+    "status": "matched",
+    "scenarioCode": "REAL4-0109",
+    "packageCode": "PK7-COM-C3",
+    "tools": [
+      "MAIN-10",
+      "MAIN-01",
+      "MAIN-11",
+      "MAIN-12"
+    ]
+  },
+  {
+    "setting": "setting_community",
+    "role": "role_teacher",
+    "targetYouth": "youth_primary",
+    "goalC": "goal_c4",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_community",
+    "role": "role_teacher",
+    "targetYouth": "youth_primary",
+    "goalC": "goal_c5",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_community",
+    "role": "role_teacher",
+    "targetYouth": "youth_secondary",
+    "goalC": "goal_c1",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_community",
+    "role": "role_teacher",
+    "targetYouth": "youth_secondary",
+    "goalC": "goal_c2",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_community",
+    "role": "role_teacher",
+    "targetYouth": "youth_secondary",
+    "goalC": "goal_c3",
+    "status": "matched",
+    "scenarioCode": "REAL4-0110",
+    "packageCode": "PK7-COM-C3",
+    "tools": [
+      "MAIN-10",
+      "MAIN-01",
+      "MAIN-11",
+      "MAIN-12"
+    ]
+  },
+  {
+    "setting": "setting_community",
+    "role": "role_teacher",
+    "targetYouth": "youth_secondary",
+    "goalC": "goal_c4",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_community",
+    "role": "role_teacher",
+    "targetYouth": "youth_secondary",
+    "goalC": "goal_c5",
+    "status": "matched",
+    "scenarioCode": "REAL4-0111",
+    "packageCode": "PK7-COM-C5",
+    "tools": [
+      "MAIN-10"
+    ]
+  },
+  {
+    "setting": "setting_community",
+    "role": "role_teacher",
+    "targetYouth": "youth_university",
+    "goalC": "goal_c1",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_community",
+    "role": "role_teacher",
+    "targetYouth": "youth_university",
+    "goalC": "goal_c2",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_community",
+    "role": "role_teacher",
+    "targetYouth": "youth_university",
+    "goalC": "goal_c3",
+    "status": "matched",
+    "scenarioCode": "REAL4-0112",
+    "packageCode": "PK7-COM-C3",
+    "tools": [
+      "MAIN-10",
+      "MAIN-01",
+      "MAIN-11",
+      "MAIN-12"
+    ]
+  },
+  {
+    "setting": "setting_community",
+    "role": "role_teacher",
+    "targetYouth": "youth_university",
+    "goalC": "goal_c4",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_community",
+    "role": "role_teacher",
+    "targetYouth": "youth_university",
+    "goalC": "goal_c5",
+    "status": "matched",
+    "scenarioCode": "REAL4-0113",
+    "packageCode": "PK7-COM-C5",
+    "tools": [
+      "MAIN-10"
+    ]
+  },
+  {
+    "setting": "setting_community",
+    "role": "role_teacher",
+    "targetYouth": "youth_vulnerable",
+    "goalC": "goal_c1",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_community",
+    "role": "role_teacher",
+    "targetYouth": "youth_vulnerable",
+    "goalC": "goal_c2",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_community",
+    "role": "role_teacher",
+    "targetYouth": "youth_vulnerable",
+    "goalC": "goal_c3",
+    "status": "matched",
+    "scenarioCode": "REAL4-0114",
+    "packageCode": "PK7-COM-C3",
+    "tools": [
+      "MAIN-10",
+      "MAIN-01",
+      "MAIN-11",
+      "MAIN-12"
+    ]
+  },
+  {
+    "setting": "setting_community",
+    "role": "role_teacher",
+    "targetYouth": "youth_vulnerable",
+    "goalC": "goal_c4",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_community",
+    "role": "role_teacher",
+    "targetYouth": "youth_vulnerable",
+    "goalC": "goal_c5",
+    "status": "matched",
+    "scenarioCode": "REAL4-0115",
+    "packageCode": "PK7-COM-C5",
+    "tools": [
+      "MAIN-10"
+    ]
+  },
+  {
+    "setting": "setting_community",
+    "role": "role_health_agent",
+    "targetYouth": "youth_early",
+    "goalC": "goal_c1",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_community",
+    "role": "role_health_agent",
+    "targetYouth": "youth_early",
+    "goalC": "goal_c2",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_community",
+    "role": "role_health_agent",
+    "targetYouth": "youth_early",
+    "goalC": "goal_c3",
+    "status": "matched",
+    "scenarioCode": "REAL4-0116",
+    "packageCode": "PK7-COM-C3",
+    "tools": [
+      "MAIN-10",
+      "MAIN-01",
+      "MAIN-11",
+      "MAIN-12"
+    ]
+  },
+  {
+    "setting": "setting_community",
+    "role": "role_health_agent",
+    "targetYouth": "youth_early",
+    "goalC": "goal_c4",
+    "status": "no_match",
+    "reason": "ยังไม่มีชุดกิจกรรมแกนนำเยาวชนที่ระบุว่าเหมาะกับเด็กปฐมวัยในคลังปัจจุบัน"
+  },
+  {
+    "setting": "setting_community",
+    "role": "role_health_agent",
+    "targetYouth": "youth_early",
+    "goalC": "goal_c5",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_community",
+    "role": "role_health_agent",
+    "targetYouth": "youth_primary",
+    "goalC": "goal_c1",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_community",
+    "role": "role_health_agent",
+    "targetYouth": "youth_primary",
+    "goalC": "goal_c2",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_community",
+    "role": "role_health_agent",
+    "targetYouth": "youth_primary",
+    "goalC": "goal_c3",
+    "status": "matched",
+    "scenarioCode": "REAL4-0117",
+    "packageCode": "PK7-COM-C3",
+    "tools": [
+      "MAIN-10",
+      "MAIN-01",
+      "MAIN-11",
+      "MAIN-12"
+    ]
+  },
+  {
+    "setting": "setting_community",
+    "role": "role_health_agent",
+    "targetYouth": "youth_primary",
+    "goalC": "goal_c4",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_community",
+    "role": "role_health_agent",
+    "targetYouth": "youth_primary",
+    "goalC": "goal_c5",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_community",
+    "role": "role_health_agent",
+    "targetYouth": "youth_secondary",
+    "goalC": "goal_c1",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_community",
+    "role": "role_health_agent",
+    "targetYouth": "youth_secondary",
+    "goalC": "goal_c2",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_community",
+    "role": "role_health_agent",
+    "targetYouth": "youth_secondary",
+    "goalC": "goal_c3",
+    "status": "matched",
+    "scenarioCode": "REAL4-0118",
+    "packageCode": "PK7-COM-C3",
+    "tools": [
+      "MAIN-10",
+      "MAIN-01",
+      "MAIN-11",
+      "MAIN-12"
+    ]
+  },
+  {
+    "setting": "setting_community",
+    "role": "role_health_agent",
+    "targetYouth": "youth_secondary",
+    "goalC": "goal_c4",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_community",
+    "role": "role_health_agent",
+    "targetYouth": "youth_secondary",
+    "goalC": "goal_c5",
+    "status": "matched",
+    "scenarioCode": "REAL4-0119",
+    "packageCode": "PK7-COM-C5",
+    "tools": [
+      "MAIN-10"
+    ]
+  },
+  {
+    "setting": "setting_community",
+    "role": "role_health_agent",
+    "targetYouth": "youth_university",
+    "goalC": "goal_c1",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_community",
+    "role": "role_health_agent",
+    "targetYouth": "youth_university",
+    "goalC": "goal_c2",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_community",
+    "role": "role_health_agent",
+    "targetYouth": "youth_university",
+    "goalC": "goal_c3",
+    "status": "matched",
+    "scenarioCode": "REAL4-0120",
+    "packageCode": "PK7-COM-C3",
+    "tools": [
+      "MAIN-10",
+      "MAIN-01",
+      "MAIN-11",
+      "MAIN-12"
+    ]
+  },
+  {
+    "setting": "setting_community",
+    "role": "role_health_agent",
+    "targetYouth": "youth_university",
+    "goalC": "goal_c4",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_community",
+    "role": "role_health_agent",
+    "targetYouth": "youth_university",
+    "goalC": "goal_c5",
+    "status": "matched",
+    "scenarioCode": "REAL4-0121",
+    "packageCode": "PK7-COM-C5",
+    "tools": [
+      "MAIN-10"
+    ]
+  },
+  {
+    "setting": "setting_community",
+    "role": "role_health_agent",
+    "targetYouth": "youth_vulnerable",
+    "goalC": "goal_c1",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_community",
+    "role": "role_health_agent",
+    "targetYouth": "youth_vulnerable",
+    "goalC": "goal_c2",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_community",
+    "role": "role_health_agent",
+    "targetYouth": "youth_vulnerable",
+    "goalC": "goal_c3",
+    "status": "matched",
+    "scenarioCode": "REAL4-0122",
+    "packageCode": "PK7-COM-C3",
+    "tools": [
+      "MAIN-10",
+      "MAIN-01",
+      "MAIN-11",
+      "MAIN-12"
+    ]
+  },
+  {
+    "setting": "setting_community",
+    "role": "role_health_agent",
+    "targetYouth": "youth_vulnerable",
+    "goalC": "goal_c4",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_community",
+    "role": "role_health_agent",
+    "targetYouth": "youth_vulnerable",
+    "goalC": "goal_c5",
+    "status": "matched",
+    "scenarioCode": "REAL4-0123",
+    "packageCode": "PK7-COM-C5",
+    "tools": [
+      "MAIN-10"
+    ]
+  },
+  {
+    "setting": "setting_community",
+    "role": "role_community_leader",
+    "targetYouth": "youth_early",
+    "goalC": "goal_c1",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_community",
+    "role": "role_community_leader",
+    "targetYouth": "youth_early",
+    "goalC": "goal_c2",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_community",
+    "role": "role_community_leader",
+    "targetYouth": "youth_early",
+    "goalC": "goal_c3",
+    "status": "matched",
+    "scenarioCode": "REAL4-0124",
+    "packageCode": "PK7-COM-C3",
+    "tools": [
+      "MAIN-10",
+      "MAIN-01",
+      "MAIN-11",
+      "MAIN-12"
+    ]
+  },
+  {
+    "setting": "setting_community",
+    "role": "role_community_leader",
+    "targetYouth": "youth_early",
+    "goalC": "goal_c4",
+    "status": "no_match",
+    "reason": "ยังไม่มีชุดกิจกรรมแกนนำเยาวชนที่ระบุว่าเหมาะกับเด็กปฐมวัยในคลังปัจจุบัน"
+  },
+  {
+    "setting": "setting_community",
+    "role": "role_community_leader",
+    "targetYouth": "youth_early",
+    "goalC": "goal_c5",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_community",
+    "role": "role_community_leader",
+    "targetYouth": "youth_primary",
+    "goalC": "goal_c1",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_community",
+    "role": "role_community_leader",
+    "targetYouth": "youth_primary",
+    "goalC": "goal_c2",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_community",
+    "role": "role_community_leader",
+    "targetYouth": "youth_primary",
+    "goalC": "goal_c3",
+    "status": "matched",
+    "scenarioCode": "REAL4-0125",
+    "packageCode": "PK7-COM-C3",
+    "tools": [
+      "MAIN-10",
+      "MAIN-01",
+      "MAIN-11",
+      "MAIN-12"
+    ]
+  },
+  {
+    "setting": "setting_community",
+    "role": "role_community_leader",
+    "targetYouth": "youth_primary",
+    "goalC": "goal_c4",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_community",
+    "role": "role_community_leader",
+    "targetYouth": "youth_primary",
+    "goalC": "goal_c5",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_community",
+    "role": "role_community_leader",
+    "targetYouth": "youth_secondary",
+    "goalC": "goal_c1",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_community",
+    "role": "role_community_leader",
+    "targetYouth": "youth_secondary",
+    "goalC": "goal_c2",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_community",
+    "role": "role_community_leader",
+    "targetYouth": "youth_secondary",
+    "goalC": "goal_c3",
+    "status": "matched",
+    "scenarioCode": "REAL4-0126",
+    "packageCode": "PK7-COM-C3",
+    "tools": [
+      "MAIN-10",
+      "MAIN-01",
+      "MAIN-11",
+      "MAIN-12"
+    ]
+  },
+  {
+    "setting": "setting_community",
+    "role": "role_community_leader",
+    "targetYouth": "youth_secondary",
+    "goalC": "goal_c4",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_community",
+    "role": "role_community_leader",
+    "targetYouth": "youth_secondary",
+    "goalC": "goal_c5",
+    "status": "matched",
+    "scenarioCode": "REAL4-0127",
+    "packageCode": "PK7-COM-C5",
+    "tools": [
+      "MAIN-10"
+    ]
+  },
+  {
+    "setting": "setting_community",
+    "role": "role_community_leader",
+    "targetYouth": "youth_university",
+    "goalC": "goal_c1",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_community",
+    "role": "role_community_leader",
+    "targetYouth": "youth_university",
+    "goalC": "goal_c2",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_community",
+    "role": "role_community_leader",
+    "targetYouth": "youth_university",
+    "goalC": "goal_c3",
+    "status": "matched",
+    "scenarioCode": "REAL4-0128",
+    "packageCode": "PK7-COM-C3",
+    "tools": [
+      "MAIN-10",
+      "MAIN-01",
+      "MAIN-11",
+      "MAIN-12"
+    ]
+  },
+  {
+    "setting": "setting_community",
+    "role": "role_community_leader",
+    "targetYouth": "youth_university",
+    "goalC": "goal_c4",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_community",
+    "role": "role_community_leader",
+    "targetYouth": "youth_university",
+    "goalC": "goal_c5",
+    "status": "matched",
+    "scenarioCode": "REAL4-0129",
+    "packageCode": "PK7-COM-C5",
+    "tools": [
+      "MAIN-10"
+    ]
+  },
+  {
+    "setting": "setting_community",
+    "role": "role_community_leader",
+    "targetYouth": "youth_vulnerable",
+    "goalC": "goal_c1",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_community",
+    "role": "role_community_leader",
+    "targetYouth": "youth_vulnerable",
+    "goalC": "goal_c2",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_community",
+    "role": "role_community_leader",
+    "targetYouth": "youth_vulnerable",
+    "goalC": "goal_c3",
+    "status": "matched",
+    "scenarioCode": "REAL4-0130",
+    "packageCode": "PK7-COM-C3",
+    "tools": [
+      "MAIN-10",
+      "MAIN-01",
+      "MAIN-11",
+      "MAIN-12"
+    ]
+  },
+  {
+    "setting": "setting_community",
+    "role": "role_community_leader",
+    "targetYouth": "youth_vulnerable",
+    "goalC": "goal_c4",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_community",
+    "role": "role_community_leader",
+    "targetYouth": "youth_vulnerable",
+    "goalC": "goal_c5",
+    "status": "matched",
+    "scenarioCode": "REAL4-0131",
+    "packageCode": "PK7-COM-C5",
+    "tools": [
+      "MAIN-10"
+    ]
+  },
+  {
+    "setting": "setting_community",
+    "role": "role_parent",
+    "targetYouth": "youth_early",
+    "goalC": "goal_c1",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_community",
+    "role": "role_parent",
+    "targetYouth": "youth_early",
+    "goalC": "goal_c2",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_community",
+    "role": "role_parent",
+    "targetYouth": "youth_early",
+    "goalC": "goal_c3",
+    "status": "matched",
+    "scenarioCode": "REAL4-0132",
+    "packageCode": "PK7-COM-C3",
+    "tools": [
+      "MAIN-10",
+      "MAIN-01",
+      "MAIN-11",
+      "MAIN-12"
+    ]
+  },
+  {
+    "setting": "setting_community",
+    "role": "role_parent",
+    "targetYouth": "youth_early",
+    "goalC": "goal_c4",
+    "status": "no_match",
+    "reason": "ยังไม่มีชุดกิจกรรมแกนนำเยาวชนที่ระบุว่าเหมาะกับเด็กปฐมวัยในคลังปัจจุบัน"
+  },
+  {
+    "setting": "setting_community",
+    "role": "role_parent",
+    "targetYouth": "youth_early",
+    "goalC": "goal_c5",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_community",
+    "role": "role_parent",
+    "targetYouth": "youth_primary",
+    "goalC": "goal_c1",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_community",
+    "role": "role_parent",
+    "targetYouth": "youth_primary",
+    "goalC": "goal_c2",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_community",
+    "role": "role_parent",
+    "targetYouth": "youth_primary",
+    "goalC": "goal_c3",
+    "status": "matched",
+    "scenarioCode": "REAL4-0133",
+    "packageCode": "PK7-COM-C3",
+    "tools": [
+      "MAIN-10",
+      "MAIN-01",
+      "MAIN-11",
+      "MAIN-12"
+    ]
+  },
+  {
+    "setting": "setting_community",
+    "role": "role_parent",
+    "targetYouth": "youth_primary",
+    "goalC": "goal_c4",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_community",
+    "role": "role_parent",
+    "targetYouth": "youth_primary",
+    "goalC": "goal_c5",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_community",
+    "role": "role_parent",
+    "targetYouth": "youth_secondary",
+    "goalC": "goal_c1",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_community",
+    "role": "role_parent",
+    "targetYouth": "youth_secondary",
+    "goalC": "goal_c2",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_community",
+    "role": "role_parent",
+    "targetYouth": "youth_secondary",
+    "goalC": "goal_c3",
+    "status": "matched",
+    "scenarioCode": "REAL4-0134",
+    "packageCode": "PK7-COM-C3",
+    "tools": [
+      "MAIN-10",
+      "MAIN-01",
+      "MAIN-11",
+      "MAIN-12"
+    ]
+  },
+  {
+    "setting": "setting_community",
+    "role": "role_parent",
+    "targetYouth": "youth_secondary",
+    "goalC": "goal_c4",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_community",
+    "role": "role_parent",
+    "targetYouth": "youth_secondary",
+    "goalC": "goal_c5",
+    "status": "matched",
+    "scenarioCode": "REAL4-0135",
+    "packageCode": "PK7-COM-C5",
+    "tools": [
+      "MAIN-10"
+    ]
+  },
+  {
+    "setting": "setting_community",
+    "role": "role_parent",
+    "targetYouth": "youth_university",
+    "goalC": "goal_c1",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_community",
+    "role": "role_parent",
+    "targetYouth": "youth_university",
+    "goalC": "goal_c2",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_community",
+    "role": "role_parent",
+    "targetYouth": "youth_university",
+    "goalC": "goal_c3",
+    "status": "matched",
+    "scenarioCode": "REAL4-0136",
+    "packageCode": "PK7-COM-C3",
+    "tools": [
+      "MAIN-10",
+      "MAIN-01",
+      "MAIN-11",
+      "MAIN-12"
+    ]
+  },
+  {
+    "setting": "setting_community",
+    "role": "role_parent",
+    "targetYouth": "youth_university",
+    "goalC": "goal_c4",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_community",
+    "role": "role_parent",
+    "targetYouth": "youth_university",
+    "goalC": "goal_c5",
+    "status": "matched",
+    "scenarioCode": "REAL4-0137",
+    "packageCode": "PK7-COM-C5",
+    "tools": [
+      "MAIN-10"
+    ]
+  },
+  {
+    "setting": "setting_community",
+    "role": "role_parent",
+    "targetYouth": "youth_vulnerable",
+    "goalC": "goal_c1",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_community",
+    "role": "role_parent",
+    "targetYouth": "youth_vulnerable",
+    "goalC": "goal_c2",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_community",
+    "role": "role_parent",
+    "targetYouth": "youth_vulnerable",
+    "goalC": "goal_c3",
+    "status": "matched",
+    "scenarioCode": "REAL4-0138",
+    "packageCode": "PK7-COM-C3",
+    "tools": [
+      "MAIN-10",
+      "MAIN-01",
+      "MAIN-11",
+      "MAIN-12"
+    ]
+  },
+  {
+    "setting": "setting_community",
+    "role": "role_parent",
+    "targetYouth": "youth_vulnerable",
+    "goalC": "goal_c4",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_community",
+    "role": "role_parent",
+    "targetYouth": "youth_vulnerable",
+    "goalC": "goal_c5",
+    "status": "matched",
+    "scenarioCode": "REAL4-0139",
+    "packageCode": "PK7-COM-C5",
+    "tools": [
+      "MAIN-10"
+    ]
+  },
+  {
+    "setting": "setting_community",
+    "role": "role_youth_leader",
+    "targetYouth": "youth_early",
+    "goalC": "goal_c1",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_community",
+    "role": "role_youth_leader",
+    "targetYouth": "youth_early",
+    "goalC": "goal_c2",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_community",
+    "role": "role_youth_leader",
+    "targetYouth": "youth_early",
+    "goalC": "goal_c3",
+    "status": "matched",
+    "scenarioCode": "REAL4-0140",
+    "packageCode": "PK7-COM-C3",
+    "tools": [
+      "MAIN-10",
+      "MAIN-01",
+      "MAIN-11",
+      "MAIN-12"
+    ]
+  },
+  {
+    "setting": "setting_community",
+    "role": "role_youth_leader",
+    "targetYouth": "youth_early",
+    "goalC": "goal_c4",
+    "status": "no_match",
+    "reason": "ยังไม่มีชุดกิจกรรมแกนนำเยาวชนที่ระบุว่าเหมาะกับเด็กปฐมวัยในคลังปัจจุบัน"
+  },
+  {
+    "setting": "setting_community",
+    "role": "role_youth_leader",
+    "targetYouth": "youth_early",
+    "goalC": "goal_c5",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_community",
+    "role": "role_youth_leader",
+    "targetYouth": "youth_primary",
+    "goalC": "goal_c1",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_community",
+    "role": "role_youth_leader",
+    "targetYouth": "youth_primary",
+    "goalC": "goal_c2",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_community",
+    "role": "role_youth_leader",
+    "targetYouth": "youth_primary",
+    "goalC": "goal_c3",
+    "status": "matched",
+    "scenarioCode": "REAL4-0141",
+    "packageCode": "PK7-COM-C3",
+    "tools": [
+      "MAIN-10",
+      "MAIN-01",
+      "MAIN-11",
+      "MAIN-12"
+    ]
+  },
+  {
+    "setting": "setting_community",
+    "role": "role_youth_leader",
+    "targetYouth": "youth_primary",
+    "goalC": "goal_c4",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_community",
+    "role": "role_youth_leader",
+    "targetYouth": "youth_primary",
+    "goalC": "goal_c5",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_community",
+    "role": "role_youth_leader",
+    "targetYouth": "youth_secondary",
+    "goalC": "goal_c1",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_community",
+    "role": "role_youth_leader",
+    "targetYouth": "youth_secondary",
+    "goalC": "goal_c2",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_community",
+    "role": "role_youth_leader",
+    "targetYouth": "youth_secondary",
+    "goalC": "goal_c3",
+    "status": "matched",
+    "scenarioCode": "REAL4-0142",
+    "packageCode": "PK7-COM-C3",
+    "tools": [
+      "MAIN-10",
+      "MAIN-01",
+      "MAIN-11",
+      "MAIN-12"
+    ]
+  },
+  {
+    "setting": "setting_community",
+    "role": "role_youth_leader",
+    "targetYouth": "youth_secondary",
+    "goalC": "goal_c4",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_community",
+    "role": "role_youth_leader",
+    "targetYouth": "youth_secondary",
+    "goalC": "goal_c5",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_community",
+    "role": "role_youth_leader",
+    "targetYouth": "youth_university",
+    "goalC": "goal_c1",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_community",
+    "role": "role_youth_leader",
+    "targetYouth": "youth_university",
+    "goalC": "goal_c2",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_community",
+    "role": "role_youth_leader",
+    "targetYouth": "youth_university",
+    "goalC": "goal_c3",
+    "status": "matched",
+    "scenarioCode": "REAL4-0143",
+    "packageCode": "PK7-COM-C3",
+    "tools": [
+      "MAIN-10",
+      "MAIN-01",
+      "MAIN-11",
+      "MAIN-12"
+    ]
+  },
+  {
+    "setting": "setting_community",
+    "role": "role_youth_leader",
+    "targetYouth": "youth_university",
+    "goalC": "goal_c4",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_community",
+    "role": "role_youth_leader",
+    "targetYouth": "youth_university",
+    "goalC": "goal_c5",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_community",
+    "role": "role_youth_leader",
+    "targetYouth": "youth_vulnerable",
+    "goalC": "goal_c1",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_community",
+    "role": "role_youth_leader",
+    "targetYouth": "youth_vulnerable",
+    "goalC": "goal_c2",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_community",
+    "role": "role_youth_leader",
+    "targetYouth": "youth_vulnerable",
+    "goalC": "goal_c3",
+    "status": "matched",
+    "scenarioCode": "REAL4-0144",
+    "packageCode": "PK7-COM-C3",
+    "tools": [
+      "MAIN-10",
+      "MAIN-01",
+      "MAIN-11",
+      "MAIN-12"
+    ]
+  },
+  {
+    "setting": "setting_community",
+    "role": "role_youth_leader",
+    "targetYouth": "youth_vulnerable",
+    "goalC": "goal_c4",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_community",
+    "role": "role_youth_leader",
+    "targetYouth": "youth_vulnerable",
+    "goalC": "goal_c5",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_family",
+    "role": "role_teacher",
+    "targetYouth": "youth_early",
+    "goalC": "goal_c1",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_family",
+    "role": "role_teacher",
+    "targetYouth": "youth_early",
+    "goalC": "goal_c2",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_family",
+    "role": "role_teacher",
+    "targetYouth": "youth_early",
+    "goalC": "goal_c3",
+    "status": "matched",
+    "scenarioCode": "REAL4-0145",
+    "packageCode": "PK7-FAM-C3",
+    "tools": [
+      "MAIN-12",
+      "MAIN-11",
+      "MAIN-04",
+      "MAIN-09"
+    ]
+  },
+  {
+    "setting": "setting_family",
+    "role": "role_teacher",
+    "targetYouth": "youth_early",
+    "goalC": "goal_c4",
+    "status": "no_match",
+    "reason": "ยังไม่มีชุดกิจกรรมแกนนำเยาวชนที่ระบุว่าเหมาะกับเด็กปฐมวัยในคลังปัจจุบัน"
+  },
+  {
+    "setting": "setting_family",
+    "role": "role_teacher",
+    "targetYouth": "youth_early",
+    "goalC": "goal_c5",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_family",
+    "role": "role_teacher",
+    "targetYouth": "youth_primary",
+    "goalC": "goal_c1",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_family",
+    "role": "role_teacher",
+    "targetYouth": "youth_primary",
+    "goalC": "goal_c2",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_family",
+    "role": "role_teacher",
+    "targetYouth": "youth_primary",
+    "goalC": "goal_c3",
+    "status": "matched",
+    "scenarioCode": "REAL4-0146",
+    "packageCode": "PK7-FAM-C3",
+    "tools": [
+      "MAIN-12",
+      "MAIN-11",
+      "MAIN-13"
+    ]
+  },
+  {
+    "setting": "setting_family",
+    "role": "role_teacher",
+    "targetYouth": "youth_primary",
+    "goalC": "goal_c4",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_family",
+    "role": "role_teacher",
+    "targetYouth": "youth_primary",
+    "goalC": "goal_c5",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_family",
+    "role": "role_teacher",
+    "targetYouth": "youth_secondary",
+    "goalC": "goal_c1",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_family",
+    "role": "role_teacher",
+    "targetYouth": "youth_secondary",
+    "goalC": "goal_c2",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_family",
+    "role": "role_teacher",
+    "targetYouth": "youth_secondary",
+    "goalC": "goal_c3",
+    "status": "matched",
+    "scenarioCode": "REAL4-0147",
+    "packageCode": "PK7-FAM-C3",
+    "tools": [
+      "MAIN-12",
+      "MAIN-11",
+      "MAIN-13"
+    ]
+  },
+  {
+    "setting": "setting_family",
+    "role": "role_teacher",
+    "targetYouth": "youth_secondary",
+    "goalC": "goal_c4",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_family",
+    "role": "role_teacher",
+    "targetYouth": "youth_secondary",
+    "goalC": "goal_c5",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_family",
+    "role": "role_teacher",
+    "targetYouth": "youth_university",
+    "goalC": "goal_c1",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_family",
+    "role": "role_teacher",
+    "targetYouth": "youth_university",
+    "goalC": "goal_c2",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_family",
+    "role": "role_teacher",
+    "targetYouth": "youth_university",
+    "goalC": "goal_c3",
+    "status": "matched",
+    "scenarioCode": "REAL4-0148",
+    "packageCode": "PK7-FAM-C3",
+    "tools": [
+      "MAIN-12",
+      "MAIN-11",
+      "MAIN-13"
+    ]
+  },
+  {
+    "setting": "setting_family",
+    "role": "role_teacher",
+    "targetYouth": "youth_university",
+    "goalC": "goal_c4",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_family",
+    "role": "role_teacher",
+    "targetYouth": "youth_university",
+    "goalC": "goal_c5",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_family",
+    "role": "role_teacher",
+    "targetYouth": "youth_vulnerable",
+    "goalC": "goal_c1",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_family",
+    "role": "role_teacher",
+    "targetYouth": "youth_vulnerable",
+    "goalC": "goal_c2",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_family",
+    "role": "role_teacher",
+    "targetYouth": "youth_vulnerable",
+    "goalC": "goal_c3",
+    "status": "matched",
+    "scenarioCode": "REAL4-0149",
+    "packageCode": "PK7-FAM-C3",
+    "tools": [
+      "MAIN-12",
+      "MAIN-11",
+      "MAIN-13"
+    ]
+  },
+  {
+    "setting": "setting_family",
+    "role": "role_teacher",
+    "targetYouth": "youth_vulnerable",
+    "goalC": "goal_c4",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_family",
+    "role": "role_teacher",
+    "targetYouth": "youth_vulnerable",
+    "goalC": "goal_c5",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_family",
+    "role": "role_health_agent",
+    "targetYouth": "youth_early",
+    "goalC": "goal_c1",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_family",
+    "role": "role_health_agent",
+    "targetYouth": "youth_early",
+    "goalC": "goal_c2",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_family",
+    "role": "role_health_agent",
+    "targetYouth": "youth_early",
+    "goalC": "goal_c3",
+    "status": "matched",
+    "scenarioCode": "REAL4-0150",
+    "packageCode": "PK7-FAM-C3",
+    "tools": [
+      "MAIN-12",
+      "MAIN-11",
+      "MAIN-04",
+      "MAIN-09"
+    ]
+  },
+  {
+    "setting": "setting_family",
+    "role": "role_health_agent",
+    "targetYouth": "youth_early",
+    "goalC": "goal_c4",
+    "status": "no_match",
+    "reason": "ยังไม่มีชุดกิจกรรมแกนนำเยาวชนที่ระบุว่าเหมาะกับเด็กปฐมวัยในคลังปัจจุบัน"
+  },
+  {
+    "setting": "setting_family",
+    "role": "role_health_agent",
+    "targetYouth": "youth_early",
+    "goalC": "goal_c5",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_family",
+    "role": "role_health_agent",
+    "targetYouth": "youth_primary",
+    "goalC": "goal_c1",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_family",
+    "role": "role_health_agent",
+    "targetYouth": "youth_primary",
+    "goalC": "goal_c2",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_family",
+    "role": "role_health_agent",
+    "targetYouth": "youth_primary",
+    "goalC": "goal_c3",
+    "status": "matched",
+    "scenarioCode": "REAL4-0151",
+    "packageCode": "PK7-FAM-C3",
+    "tools": [
+      "MAIN-12",
+      "MAIN-11",
+      "MAIN-13"
+    ]
+  },
+  {
+    "setting": "setting_family",
+    "role": "role_health_agent",
+    "targetYouth": "youth_primary",
+    "goalC": "goal_c4",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_family",
+    "role": "role_health_agent",
+    "targetYouth": "youth_primary",
+    "goalC": "goal_c5",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_family",
+    "role": "role_health_agent",
+    "targetYouth": "youth_secondary",
+    "goalC": "goal_c1",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_family",
+    "role": "role_health_agent",
+    "targetYouth": "youth_secondary",
+    "goalC": "goal_c2",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_family",
+    "role": "role_health_agent",
+    "targetYouth": "youth_secondary",
+    "goalC": "goal_c3",
+    "status": "matched",
+    "scenarioCode": "REAL4-0152",
+    "packageCode": "PK7-FAM-C3",
+    "tools": [
+      "MAIN-12",
+      "MAIN-11",
+      "MAIN-13"
+    ]
+  },
+  {
+    "setting": "setting_family",
+    "role": "role_health_agent",
+    "targetYouth": "youth_secondary",
+    "goalC": "goal_c4",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_family",
+    "role": "role_health_agent",
+    "targetYouth": "youth_secondary",
+    "goalC": "goal_c5",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_family",
+    "role": "role_health_agent",
+    "targetYouth": "youth_university",
+    "goalC": "goal_c1",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_family",
+    "role": "role_health_agent",
+    "targetYouth": "youth_university",
+    "goalC": "goal_c2",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_family",
+    "role": "role_health_agent",
+    "targetYouth": "youth_university",
+    "goalC": "goal_c3",
+    "status": "matched",
+    "scenarioCode": "REAL4-0153",
+    "packageCode": "PK7-FAM-C3",
+    "tools": [
+      "MAIN-12",
+      "MAIN-11",
+      "MAIN-13"
+    ]
+  },
+  {
+    "setting": "setting_family",
+    "role": "role_health_agent",
+    "targetYouth": "youth_university",
+    "goalC": "goal_c4",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_family",
+    "role": "role_health_agent",
+    "targetYouth": "youth_university",
+    "goalC": "goal_c5",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_family",
+    "role": "role_health_agent",
+    "targetYouth": "youth_vulnerable",
+    "goalC": "goal_c1",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_family",
+    "role": "role_health_agent",
+    "targetYouth": "youth_vulnerable",
+    "goalC": "goal_c2",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_family",
+    "role": "role_health_agent",
+    "targetYouth": "youth_vulnerable",
+    "goalC": "goal_c3",
+    "status": "matched",
+    "scenarioCode": "REAL4-0154",
+    "packageCode": "PK7-FAM-C3",
+    "tools": [
+      "MAIN-12",
+      "MAIN-11",
+      "MAIN-13"
+    ]
+  },
+  {
+    "setting": "setting_family",
+    "role": "role_health_agent",
+    "targetYouth": "youth_vulnerable",
+    "goalC": "goal_c4",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_family",
+    "role": "role_health_agent",
+    "targetYouth": "youth_vulnerable",
+    "goalC": "goal_c5",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_family",
+    "role": "role_community_leader",
+    "targetYouth": "youth_early",
+    "goalC": "goal_c1",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_family",
+    "role": "role_community_leader",
+    "targetYouth": "youth_early",
+    "goalC": "goal_c2",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_family",
+    "role": "role_community_leader",
+    "targetYouth": "youth_early",
+    "goalC": "goal_c3",
+    "status": "matched",
+    "scenarioCode": "REAL4-0155",
+    "packageCode": "PK7-FAM-C3",
+    "tools": [
+      "MAIN-12",
+      "MAIN-11",
+      "MAIN-04",
+      "MAIN-09"
+    ]
+  },
+  {
+    "setting": "setting_family",
+    "role": "role_community_leader",
+    "targetYouth": "youth_early",
+    "goalC": "goal_c4",
+    "status": "no_match",
+    "reason": "ยังไม่มีชุดกิจกรรมแกนนำเยาวชนที่ระบุว่าเหมาะกับเด็กปฐมวัยในคลังปัจจุบัน"
+  },
+  {
+    "setting": "setting_family",
+    "role": "role_community_leader",
+    "targetYouth": "youth_early",
+    "goalC": "goal_c5",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_family",
+    "role": "role_community_leader",
+    "targetYouth": "youth_primary",
+    "goalC": "goal_c1",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_family",
+    "role": "role_community_leader",
+    "targetYouth": "youth_primary",
+    "goalC": "goal_c2",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_family",
+    "role": "role_community_leader",
+    "targetYouth": "youth_primary",
+    "goalC": "goal_c3",
+    "status": "matched",
+    "scenarioCode": "REAL4-0156",
+    "packageCode": "PK7-FAM-C3",
+    "tools": [
+      "MAIN-12",
+      "MAIN-11",
+      "MAIN-13"
+    ]
+  },
+  {
+    "setting": "setting_family",
+    "role": "role_community_leader",
+    "targetYouth": "youth_primary",
+    "goalC": "goal_c4",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_family",
+    "role": "role_community_leader",
+    "targetYouth": "youth_primary",
+    "goalC": "goal_c5",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_family",
+    "role": "role_community_leader",
+    "targetYouth": "youth_secondary",
+    "goalC": "goal_c1",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_family",
+    "role": "role_community_leader",
+    "targetYouth": "youth_secondary",
+    "goalC": "goal_c2",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_family",
+    "role": "role_community_leader",
+    "targetYouth": "youth_secondary",
+    "goalC": "goal_c3",
+    "status": "matched",
+    "scenarioCode": "REAL4-0157",
+    "packageCode": "PK7-FAM-C3",
+    "tools": [
+      "MAIN-12",
+      "MAIN-11",
+      "MAIN-13"
+    ]
+  },
+  {
+    "setting": "setting_family",
+    "role": "role_community_leader",
+    "targetYouth": "youth_secondary",
+    "goalC": "goal_c4",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_family",
+    "role": "role_community_leader",
+    "targetYouth": "youth_secondary",
+    "goalC": "goal_c5",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_family",
+    "role": "role_community_leader",
+    "targetYouth": "youth_university",
+    "goalC": "goal_c1",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_family",
+    "role": "role_community_leader",
+    "targetYouth": "youth_university",
+    "goalC": "goal_c2",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_family",
+    "role": "role_community_leader",
+    "targetYouth": "youth_university",
+    "goalC": "goal_c3",
+    "status": "matched",
+    "scenarioCode": "REAL4-0158",
+    "packageCode": "PK7-FAM-C3",
+    "tools": [
+      "MAIN-12",
+      "MAIN-11",
+      "MAIN-13"
+    ]
+  },
+  {
+    "setting": "setting_family",
+    "role": "role_community_leader",
+    "targetYouth": "youth_university",
+    "goalC": "goal_c4",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_family",
+    "role": "role_community_leader",
+    "targetYouth": "youth_university",
+    "goalC": "goal_c5",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_family",
+    "role": "role_community_leader",
+    "targetYouth": "youth_vulnerable",
+    "goalC": "goal_c1",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_family",
+    "role": "role_community_leader",
+    "targetYouth": "youth_vulnerable",
+    "goalC": "goal_c2",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_family",
+    "role": "role_community_leader",
+    "targetYouth": "youth_vulnerable",
+    "goalC": "goal_c3",
+    "status": "matched",
+    "scenarioCode": "REAL4-0159",
+    "packageCode": "PK7-FAM-C3",
+    "tools": [
+      "MAIN-12",
+      "MAIN-11",
+      "MAIN-13"
+    ]
+  },
+  {
+    "setting": "setting_family",
+    "role": "role_community_leader",
+    "targetYouth": "youth_vulnerable",
+    "goalC": "goal_c4",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_family",
+    "role": "role_community_leader",
+    "targetYouth": "youth_vulnerable",
+    "goalC": "goal_c5",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_family",
+    "role": "role_parent",
+    "targetYouth": "youth_early",
+    "goalC": "goal_c1",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_family",
+    "role": "role_parent",
+    "targetYouth": "youth_early",
+    "goalC": "goal_c2",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_family",
+    "role": "role_parent",
+    "targetYouth": "youth_early",
+    "goalC": "goal_c3",
+    "status": "matched",
+    "scenarioCode": "REAL4-0160",
+    "packageCode": "PK7-FAM-C3",
+    "tools": [
+      "MAIN-12",
+      "MAIN-11",
+      "MAIN-04",
+      "MAIN-09"
+    ]
+  },
+  {
+    "setting": "setting_family",
+    "role": "role_parent",
+    "targetYouth": "youth_early",
+    "goalC": "goal_c4",
+    "status": "no_match",
+    "reason": "ยังไม่มีชุดกิจกรรมแกนนำเยาวชนที่ระบุว่าเหมาะกับเด็กปฐมวัยในคลังปัจจุบัน"
+  },
+  {
+    "setting": "setting_family",
+    "role": "role_parent",
+    "targetYouth": "youth_early",
+    "goalC": "goal_c5",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_family",
+    "role": "role_parent",
+    "targetYouth": "youth_primary",
+    "goalC": "goal_c1",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_family",
+    "role": "role_parent",
+    "targetYouth": "youth_primary",
+    "goalC": "goal_c2",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_family",
+    "role": "role_parent",
+    "targetYouth": "youth_primary",
+    "goalC": "goal_c3",
+    "status": "matched",
+    "scenarioCode": "REAL4-0161",
+    "packageCode": "PK7-FAM-C3",
+    "tools": [
+      "MAIN-12",
+      "MAIN-11",
+      "MAIN-13"
+    ]
+  },
+  {
+    "setting": "setting_family",
+    "role": "role_parent",
+    "targetYouth": "youth_primary",
+    "goalC": "goal_c4",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_family",
+    "role": "role_parent",
+    "targetYouth": "youth_primary",
+    "goalC": "goal_c5",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_family",
+    "role": "role_parent",
+    "targetYouth": "youth_secondary",
+    "goalC": "goal_c1",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_family",
+    "role": "role_parent",
+    "targetYouth": "youth_secondary",
+    "goalC": "goal_c2",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_family",
+    "role": "role_parent",
+    "targetYouth": "youth_secondary",
+    "goalC": "goal_c3",
+    "status": "matched",
+    "scenarioCode": "REAL4-0162",
+    "packageCode": "PK7-FAM-C3",
+    "tools": [
+      "MAIN-12",
+      "MAIN-11",
+      "MAIN-13"
+    ]
+  },
+  {
+    "setting": "setting_family",
+    "role": "role_parent",
+    "targetYouth": "youth_secondary",
+    "goalC": "goal_c4",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_family",
+    "role": "role_parent",
+    "targetYouth": "youth_secondary",
+    "goalC": "goal_c5",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_family",
+    "role": "role_parent",
+    "targetYouth": "youth_university",
+    "goalC": "goal_c1",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_family",
+    "role": "role_parent",
+    "targetYouth": "youth_university",
+    "goalC": "goal_c2",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_family",
+    "role": "role_parent",
+    "targetYouth": "youth_university",
+    "goalC": "goal_c3",
+    "status": "matched",
+    "scenarioCode": "REAL4-0163",
+    "packageCode": "PK7-FAM-C3",
+    "tools": [
+      "MAIN-12",
+      "MAIN-11",
+      "MAIN-13"
+    ]
+  },
+  {
+    "setting": "setting_family",
+    "role": "role_parent",
+    "targetYouth": "youth_university",
+    "goalC": "goal_c4",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_family",
+    "role": "role_parent",
+    "targetYouth": "youth_university",
+    "goalC": "goal_c5",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_family",
+    "role": "role_parent",
+    "targetYouth": "youth_vulnerable",
+    "goalC": "goal_c1",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_family",
+    "role": "role_parent",
+    "targetYouth": "youth_vulnerable",
+    "goalC": "goal_c2",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_family",
+    "role": "role_parent",
+    "targetYouth": "youth_vulnerable",
+    "goalC": "goal_c3",
+    "status": "matched",
+    "scenarioCode": "REAL4-0164",
+    "packageCode": "PK7-FAM-C3",
+    "tools": [
+      "MAIN-12",
+      "MAIN-11",
+      "MAIN-13"
+    ]
+  },
+  {
+    "setting": "setting_family",
+    "role": "role_parent",
+    "targetYouth": "youth_vulnerable",
+    "goalC": "goal_c4",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_family",
+    "role": "role_parent",
+    "targetYouth": "youth_vulnerable",
+    "goalC": "goal_c5",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_family",
+    "role": "role_youth_leader",
+    "targetYouth": "youth_early",
+    "goalC": "goal_c1",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_family",
+    "role": "role_youth_leader",
+    "targetYouth": "youth_early",
+    "goalC": "goal_c2",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_family",
+    "role": "role_youth_leader",
+    "targetYouth": "youth_early",
+    "goalC": "goal_c3",
+    "status": "matched",
+    "scenarioCode": "REAL4-0165",
+    "packageCode": "PK7-FAM-C3",
+    "tools": [
+      "MAIN-12",
+      "MAIN-11",
+      "MAIN-04",
+      "MAIN-09"
+    ]
+  },
+  {
+    "setting": "setting_family",
+    "role": "role_youth_leader",
+    "targetYouth": "youth_early",
+    "goalC": "goal_c4",
+    "status": "no_match",
+    "reason": "ยังไม่มีชุดกิจกรรมแกนนำเยาวชนที่ระบุว่าเหมาะกับเด็กปฐมวัยในคลังปัจจุบัน"
+  },
+  {
+    "setting": "setting_family",
+    "role": "role_youth_leader",
+    "targetYouth": "youth_early",
+    "goalC": "goal_c5",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_family",
+    "role": "role_youth_leader",
+    "targetYouth": "youth_primary",
+    "goalC": "goal_c1",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_family",
+    "role": "role_youth_leader",
+    "targetYouth": "youth_primary",
+    "goalC": "goal_c2",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_family",
+    "role": "role_youth_leader",
+    "targetYouth": "youth_primary",
+    "goalC": "goal_c3",
+    "status": "matched",
+    "scenarioCode": "REAL4-0166",
+    "packageCode": "PK7-FAM-C3",
+    "tools": [
+      "MAIN-12",
+      "MAIN-11",
+      "MAIN-13"
+    ]
+  },
+  {
+    "setting": "setting_family",
+    "role": "role_youth_leader",
+    "targetYouth": "youth_primary",
+    "goalC": "goal_c4",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_family",
+    "role": "role_youth_leader",
+    "targetYouth": "youth_primary",
+    "goalC": "goal_c5",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_family",
+    "role": "role_youth_leader",
+    "targetYouth": "youth_secondary",
+    "goalC": "goal_c1",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_family",
+    "role": "role_youth_leader",
+    "targetYouth": "youth_secondary",
+    "goalC": "goal_c2",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_family",
+    "role": "role_youth_leader",
+    "targetYouth": "youth_secondary",
+    "goalC": "goal_c3",
+    "status": "matched",
+    "scenarioCode": "REAL4-0167",
+    "packageCode": "PK7-FAM-C3",
+    "tools": [
+      "MAIN-12",
+      "MAIN-11",
+      "MAIN-13"
+    ]
+  },
+  {
+    "setting": "setting_family",
+    "role": "role_youth_leader",
+    "targetYouth": "youth_secondary",
+    "goalC": "goal_c4",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_family",
+    "role": "role_youth_leader",
+    "targetYouth": "youth_secondary",
+    "goalC": "goal_c5",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_family",
+    "role": "role_youth_leader",
+    "targetYouth": "youth_university",
+    "goalC": "goal_c1",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_family",
+    "role": "role_youth_leader",
+    "targetYouth": "youth_university",
+    "goalC": "goal_c2",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_family",
+    "role": "role_youth_leader",
+    "targetYouth": "youth_university",
+    "goalC": "goal_c3",
+    "status": "matched",
+    "scenarioCode": "REAL4-0168",
+    "packageCode": "PK7-FAM-C3",
+    "tools": [
+      "MAIN-12",
+      "MAIN-11",
+      "MAIN-13"
+    ]
+  },
+  {
+    "setting": "setting_family",
+    "role": "role_youth_leader",
+    "targetYouth": "youth_university",
+    "goalC": "goal_c4",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_family",
+    "role": "role_youth_leader",
+    "targetYouth": "youth_university",
+    "goalC": "goal_c5",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_family",
+    "role": "role_youth_leader",
+    "targetYouth": "youth_vulnerable",
+    "goalC": "goal_c1",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_family",
+    "role": "role_youth_leader",
+    "targetYouth": "youth_vulnerable",
+    "goalC": "goal_c2",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_family",
+    "role": "role_youth_leader",
+    "targetYouth": "youth_vulnerable",
+    "goalC": "goal_c3",
+    "status": "matched",
+    "scenarioCode": "REAL4-0169",
+    "packageCode": "PK7-FAM-C3",
+    "tools": [
+      "MAIN-12",
+      "MAIN-11",
+      "MAIN-13"
+    ]
+  },
+  {
+    "setting": "setting_family",
+    "role": "role_youth_leader",
+    "targetYouth": "youth_vulnerable",
+    "goalC": "goal_c4",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_family",
+    "role": "role_youth_leader",
+    "targetYouth": "youth_vulnerable",
+    "goalC": "goal_c5",
+    "status": "no_match",
+    "reason": "ยังไม่มีไฟล์เครื่องมือครบตามพื้นที่ กลุ่มเยาวชน บทบาท และเป้าหมายที่คุณเลือก ลองดูเป้าหมายอื่นที่คลังรองรับด้านล่าง"
+  },
+  {
+    "setting": "setting_workplace",
+    "role": "role_teacher",
+    "targetYouth": "youth_early",
+    "goalC": "goal_c1",
+    "status": "no_match",
+    "reason": "คู่มือสถานประกอบการที่มีเป็นแนวทางสำหรับคนวัยทำงาน ยังไม่มีไฟล์ที่ตรงกับกลุ่มเยาวชนและเป้าหมายที่คุณเลือก"
+  },
+  {
+    "setting": "setting_workplace",
+    "role": "role_teacher",
+    "targetYouth": "youth_early",
+    "goalC": "goal_c2",
+    "status": "no_match",
+    "reason": "คู่มือสถานประกอบการที่มีเป็นแนวทางสำหรับคนวัยทำงาน ยังไม่มีไฟล์ที่ตรงกับกลุ่มเยาวชนและเป้าหมายที่คุณเลือก"
+  },
+  {
+    "setting": "setting_workplace",
+    "role": "role_teacher",
+    "targetYouth": "youth_early",
+    "goalC": "goal_c3",
+    "status": "no_match",
+    "reason": "คู่มือสถานประกอบการที่มีเป็นแนวทางสำหรับคนวัยทำงาน ยังไม่มีไฟล์ที่ตรงกับกลุ่มเยาวชนและเป้าหมายที่คุณเลือก"
+  },
+  {
+    "setting": "setting_workplace",
+    "role": "role_teacher",
+    "targetYouth": "youth_early",
+    "goalC": "goal_c4",
+    "status": "no_match",
+    "reason": "คู่มือสถานประกอบการที่มีเป็นแนวทางสำหรับคนวัยทำงาน ยังไม่มีไฟล์ที่ตรงกับกลุ่มเยาวชนและเป้าหมายที่คุณเลือก"
+  },
+  {
+    "setting": "setting_workplace",
+    "role": "role_teacher",
+    "targetYouth": "youth_early",
+    "goalC": "goal_c5",
+    "status": "no_match",
+    "reason": "คู่มือสถานประกอบการที่มีเป็นแนวทางสำหรับคนวัยทำงาน ยังไม่มีไฟล์ที่ตรงกับกลุ่มเยาวชนและเป้าหมายที่คุณเลือก"
+  },
+  {
+    "setting": "setting_workplace",
+    "role": "role_teacher",
+    "targetYouth": "youth_primary",
+    "goalC": "goal_c1",
+    "status": "no_match",
+    "reason": "คู่มือสถานประกอบการที่มีเป็นแนวทางสำหรับคนวัยทำงาน ยังไม่มีไฟล์ที่ตรงกับกลุ่มเยาวชนและเป้าหมายที่คุณเลือก"
+  },
+  {
+    "setting": "setting_workplace",
+    "role": "role_teacher",
+    "targetYouth": "youth_primary",
+    "goalC": "goal_c2",
+    "status": "no_match",
+    "reason": "คู่มือสถานประกอบการที่มีเป็นแนวทางสำหรับคนวัยทำงาน ยังไม่มีไฟล์ที่ตรงกับกลุ่มเยาวชนและเป้าหมายที่คุณเลือก"
+  },
+  {
+    "setting": "setting_workplace",
+    "role": "role_teacher",
+    "targetYouth": "youth_primary",
+    "goalC": "goal_c3",
+    "status": "no_match",
+    "reason": "คู่มือสถานประกอบการที่มีเป็นแนวทางสำหรับคนวัยทำงาน ยังไม่มีไฟล์ที่ตรงกับกลุ่มเยาวชนและเป้าหมายที่คุณเลือก"
+  },
+  {
+    "setting": "setting_workplace",
+    "role": "role_teacher",
+    "targetYouth": "youth_primary",
+    "goalC": "goal_c4",
+    "status": "no_match",
+    "reason": "คู่มือสถานประกอบการที่มีเป็นแนวทางสำหรับคนวัยทำงาน ยังไม่มีไฟล์ที่ตรงกับกลุ่มเยาวชนและเป้าหมายที่คุณเลือก"
+  },
+  {
+    "setting": "setting_workplace",
+    "role": "role_teacher",
+    "targetYouth": "youth_primary",
+    "goalC": "goal_c5",
+    "status": "no_match",
+    "reason": "คู่มือสถานประกอบการที่มีเป็นแนวทางสำหรับคนวัยทำงาน ยังไม่มีไฟล์ที่ตรงกับกลุ่มเยาวชนและเป้าหมายที่คุณเลือก"
+  },
+  {
+    "setting": "setting_workplace",
+    "role": "role_teacher",
+    "targetYouth": "youth_secondary",
+    "goalC": "goal_c1",
+    "status": "no_match",
+    "reason": "คู่มือสถานประกอบการที่มีเป็นแนวทางสำหรับคนวัยทำงาน ยังไม่มีไฟล์ที่ตรงกับกลุ่มเยาวชนและเป้าหมายที่คุณเลือก"
+  },
+  {
+    "setting": "setting_workplace",
+    "role": "role_teacher",
+    "targetYouth": "youth_secondary",
+    "goalC": "goal_c2",
+    "status": "no_match",
+    "reason": "คู่มือสถานประกอบการที่มีเป็นแนวทางสำหรับคนวัยทำงาน ยังไม่มีไฟล์ที่ตรงกับกลุ่มเยาวชนและเป้าหมายที่คุณเลือก"
+  },
+  {
+    "setting": "setting_workplace",
+    "role": "role_teacher",
+    "targetYouth": "youth_secondary",
+    "goalC": "goal_c3",
+    "status": "no_match",
+    "reason": "คู่มือสถานประกอบการที่มีเป็นแนวทางสำหรับคนวัยทำงาน ยังไม่มีไฟล์ที่ตรงกับกลุ่มเยาวชนและเป้าหมายที่คุณเลือก"
+  },
+  {
+    "setting": "setting_workplace",
+    "role": "role_teacher",
+    "targetYouth": "youth_secondary",
+    "goalC": "goal_c4",
+    "status": "no_match",
+    "reason": "คู่มือสถานประกอบการที่มีเป็นแนวทางสำหรับคนวัยทำงาน ยังไม่มีไฟล์ที่ตรงกับกลุ่มเยาวชนและเป้าหมายที่คุณเลือก"
+  },
+  {
+    "setting": "setting_workplace",
+    "role": "role_teacher",
+    "targetYouth": "youth_secondary",
+    "goalC": "goal_c5",
+    "status": "no_match",
+    "reason": "คู่มือสถานประกอบการที่มีเป็นแนวทางสำหรับคนวัยทำงาน ยังไม่มีไฟล์ที่ตรงกับกลุ่มเยาวชนและเป้าหมายที่คุณเลือก"
+  },
+  {
+    "setting": "setting_workplace",
+    "role": "role_teacher",
+    "targetYouth": "youth_university",
+    "goalC": "goal_c1",
+    "status": "no_match",
+    "reason": "คู่มือสถานประกอบการที่มีเป็นแนวทางสำหรับคนวัยทำงาน ยังไม่มีไฟล์ที่ตรงกับกลุ่มเยาวชนและเป้าหมายที่คุณเลือก"
+  },
+  {
+    "setting": "setting_workplace",
+    "role": "role_teacher",
+    "targetYouth": "youth_university",
+    "goalC": "goal_c2",
+    "status": "no_match",
+    "reason": "คู่มือสถานประกอบการที่มีเป็นแนวทางสำหรับคนวัยทำงาน ยังไม่มีไฟล์ที่ตรงกับกลุ่มเยาวชนและเป้าหมายที่คุณเลือก"
+  },
+  {
+    "setting": "setting_workplace",
+    "role": "role_teacher",
+    "targetYouth": "youth_university",
+    "goalC": "goal_c3",
+    "status": "matched",
+    "scenarioCode": "REAL4-0170",
+    "packageCode": "PK7-WRK-C3",
+    "tools": [
+      "MAIN-16",
+      "MAIN-15",
+      "MAIN-14"
+    ]
+  },
+  {
+    "setting": "setting_workplace",
+    "role": "role_teacher",
+    "targetYouth": "youth_university",
+    "goalC": "goal_c4",
+    "status": "no_match",
+    "reason": "คู่มือสถานประกอบการที่มีเป็นแนวทางสำหรับคนวัยทำงาน ยังไม่มีไฟล์ที่ตรงกับกลุ่มเยาวชนและเป้าหมายที่คุณเลือก"
+  },
+  {
+    "setting": "setting_workplace",
+    "role": "role_teacher",
+    "targetYouth": "youth_university",
+    "goalC": "goal_c5",
+    "status": "no_match",
+    "reason": "คู่มือสถานประกอบการที่มีเป็นแนวทางสำหรับคนวัยทำงาน ยังไม่มีไฟล์ที่ตรงกับกลุ่มเยาวชนและเป้าหมายที่คุณเลือก"
+  },
+  {
+    "setting": "setting_workplace",
+    "role": "role_teacher",
+    "targetYouth": "youth_vulnerable",
+    "goalC": "goal_c1",
+    "status": "no_match",
+    "reason": "คู่มือสถานประกอบการที่มีเป็นแนวทางสำหรับคนวัยทำงาน ยังไม่มีไฟล์ที่ตรงกับกลุ่มเยาวชนและเป้าหมายที่คุณเลือก"
+  },
+  {
+    "setting": "setting_workplace",
+    "role": "role_teacher",
+    "targetYouth": "youth_vulnerable",
+    "goalC": "goal_c2",
+    "status": "no_match",
+    "reason": "คู่มือสถานประกอบการที่มีเป็นแนวทางสำหรับคนวัยทำงาน ยังไม่มีไฟล์ที่ตรงกับกลุ่มเยาวชนและเป้าหมายที่คุณเลือก"
+  },
+  {
+    "setting": "setting_workplace",
+    "role": "role_teacher",
+    "targetYouth": "youth_vulnerable",
+    "goalC": "goal_c3",
+    "status": "no_match",
+    "reason": "คู่มือสถานประกอบการที่มีเป็นแนวทางสำหรับคนวัยทำงาน ยังไม่มีไฟล์ที่ตรงกับกลุ่มเยาวชนและเป้าหมายที่คุณเลือก"
+  },
+  {
+    "setting": "setting_workplace",
+    "role": "role_teacher",
+    "targetYouth": "youth_vulnerable",
+    "goalC": "goal_c4",
+    "status": "no_match",
+    "reason": "คู่มือสถานประกอบการที่มีเป็นแนวทางสำหรับคนวัยทำงาน ยังไม่มีไฟล์ที่ตรงกับกลุ่มเยาวชนและเป้าหมายที่คุณเลือก"
+  },
+  {
+    "setting": "setting_workplace",
+    "role": "role_teacher",
+    "targetYouth": "youth_vulnerable",
+    "goalC": "goal_c5",
+    "status": "no_match",
+    "reason": "คู่มือสถานประกอบการที่มีเป็นแนวทางสำหรับคนวัยทำงาน ยังไม่มีไฟล์ที่ตรงกับกลุ่มเยาวชนและเป้าหมายที่คุณเลือก"
+  },
+  {
+    "setting": "setting_workplace",
+    "role": "role_health_agent",
+    "targetYouth": "youth_early",
+    "goalC": "goal_c1",
+    "status": "no_match",
+    "reason": "คู่มือสถานประกอบการที่มีเป็นแนวทางสำหรับคนวัยทำงาน ยังไม่มีไฟล์ที่ตรงกับกลุ่มเยาวชนและเป้าหมายที่คุณเลือก"
+  },
+  {
+    "setting": "setting_workplace",
+    "role": "role_health_agent",
+    "targetYouth": "youth_early",
+    "goalC": "goal_c2",
+    "status": "no_match",
+    "reason": "คู่มือสถานประกอบการที่มีเป็นแนวทางสำหรับคนวัยทำงาน ยังไม่มีไฟล์ที่ตรงกับกลุ่มเยาวชนและเป้าหมายที่คุณเลือก"
+  },
+  {
+    "setting": "setting_workplace",
+    "role": "role_health_agent",
+    "targetYouth": "youth_early",
+    "goalC": "goal_c3",
+    "status": "no_match",
+    "reason": "คู่มือสถานประกอบการที่มีเป็นแนวทางสำหรับคนวัยทำงาน ยังไม่มีไฟล์ที่ตรงกับกลุ่มเยาวชนและเป้าหมายที่คุณเลือก"
+  },
+  {
+    "setting": "setting_workplace",
+    "role": "role_health_agent",
+    "targetYouth": "youth_early",
+    "goalC": "goal_c4",
+    "status": "no_match",
+    "reason": "คู่มือสถานประกอบการที่มีเป็นแนวทางสำหรับคนวัยทำงาน ยังไม่มีไฟล์ที่ตรงกับกลุ่มเยาวชนและเป้าหมายที่คุณเลือก"
+  },
+  {
+    "setting": "setting_workplace",
+    "role": "role_health_agent",
+    "targetYouth": "youth_early",
+    "goalC": "goal_c5",
+    "status": "no_match",
+    "reason": "คู่มือสถานประกอบการที่มีเป็นแนวทางสำหรับคนวัยทำงาน ยังไม่มีไฟล์ที่ตรงกับกลุ่มเยาวชนและเป้าหมายที่คุณเลือก"
+  },
+  {
+    "setting": "setting_workplace",
+    "role": "role_health_agent",
+    "targetYouth": "youth_primary",
+    "goalC": "goal_c1",
+    "status": "no_match",
+    "reason": "คู่มือสถานประกอบการที่มีเป็นแนวทางสำหรับคนวัยทำงาน ยังไม่มีไฟล์ที่ตรงกับกลุ่มเยาวชนและเป้าหมายที่คุณเลือก"
+  },
+  {
+    "setting": "setting_workplace",
+    "role": "role_health_agent",
+    "targetYouth": "youth_primary",
+    "goalC": "goal_c2",
+    "status": "no_match",
+    "reason": "คู่มือสถานประกอบการที่มีเป็นแนวทางสำหรับคนวัยทำงาน ยังไม่มีไฟล์ที่ตรงกับกลุ่มเยาวชนและเป้าหมายที่คุณเลือก"
+  },
+  {
+    "setting": "setting_workplace",
+    "role": "role_health_agent",
+    "targetYouth": "youth_primary",
+    "goalC": "goal_c3",
+    "status": "no_match",
+    "reason": "คู่มือสถานประกอบการที่มีเป็นแนวทางสำหรับคนวัยทำงาน ยังไม่มีไฟล์ที่ตรงกับกลุ่มเยาวชนและเป้าหมายที่คุณเลือก"
+  },
+  {
+    "setting": "setting_workplace",
+    "role": "role_health_agent",
+    "targetYouth": "youth_primary",
+    "goalC": "goal_c4",
+    "status": "no_match",
+    "reason": "คู่มือสถานประกอบการที่มีเป็นแนวทางสำหรับคนวัยทำงาน ยังไม่มีไฟล์ที่ตรงกับกลุ่มเยาวชนและเป้าหมายที่คุณเลือก"
+  },
+  {
+    "setting": "setting_workplace",
+    "role": "role_health_agent",
+    "targetYouth": "youth_primary",
+    "goalC": "goal_c5",
+    "status": "no_match",
+    "reason": "คู่มือสถานประกอบการที่มีเป็นแนวทางสำหรับคนวัยทำงาน ยังไม่มีไฟล์ที่ตรงกับกลุ่มเยาวชนและเป้าหมายที่คุณเลือก"
+  },
+  {
+    "setting": "setting_workplace",
+    "role": "role_health_agent",
+    "targetYouth": "youth_secondary",
+    "goalC": "goal_c1",
+    "status": "no_match",
+    "reason": "คู่มือสถานประกอบการที่มีเป็นแนวทางสำหรับคนวัยทำงาน ยังไม่มีไฟล์ที่ตรงกับกลุ่มเยาวชนและเป้าหมายที่คุณเลือก"
+  },
+  {
+    "setting": "setting_workplace",
+    "role": "role_health_agent",
+    "targetYouth": "youth_secondary",
+    "goalC": "goal_c2",
+    "status": "no_match",
+    "reason": "คู่มือสถานประกอบการที่มีเป็นแนวทางสำหรับคนวัยทำงาน ยังไม่มีไฟล์ที่ตรงกับกลุ่มเยาวชนและเป้าหมายที่คุณเลือก"
+  },
+  {
+    "setting": "setting_workplace",
+    "role": "role_health_agent",
+    "targetYouth": "youth_secondary",
+    "goalC": "goal_c3",
+    "status": "no_match",
+    "reason": "คู่มือสถานประกอบการที่มีเป็นแนวทางสำหรับคนวัยทำงาน ยังไม่มีไฟล์ที่ตรงกับกลุ่มเยาวชนและเป้าหมายที่คุณเลือก"
+  },
+  {
+    "setting": "setting_workplace",
+    "role": "role_health_agent",
+    "targetYouth": "youth_secondary",
+    "goalC": "goal_c4",
+    "status": "no_match",
+    "reason": "คู่มือสถานประกอบการที่มีเป็นแนวทางสำหรับคนวัยทำงาน ยังไม่มีไฟล์ที่ตรงกับกลุ่มเยาวชนและเป้าหมายที่คุณเลือก"
+  },
+  {
+    "setting": "setting_workplace",
+    "role": "role_health_agent",
+    "targetYouth": "youth_secondary",
+    "goalC": "goal_c5",
+    "status": "no_match",
+    "reason": "คู่มือสถานประกอบการที่มีเป็นแนวทางสำหรับคนวัยทำงาน ยังไม่มีไฟล์ที่ตรงกับกลุ่มเยาวชนและเป้าหมายที่คุณเลือก"
+  },
+  {
+    "setting": "setting_workplace",
+    "role": "role_health_agent",
+    "targetYouth": "youth_university",
+    "goalC": "goal_c1",
+    "status": "no_match",
+    "reason": "คู่มือสถานประกอบการที่มีเป็นแนวทางสำหรับคนวัยทำงาน ยังไม่มีไฟล์ที่ตรงกับกลุ่มเยาวชนและเป้าหมายที่คุณเลือก"
+  },
+  {
+    "setting": "setting_workplace",
+    "role": "role_health_agent",
+    "targetYouth": "youth_university",
+    "goalC": "goal_c2",
+    "status": "no_match",
+    "reason": "คู่มือสถานประกอบการที่มีเป็นแนวทางสำหรับคนวัยทำงาน ยังไม่มีไฟล์ที่ตรงกับกลุ่มเยาวชนและเป้าหมายที่คุณเลือก"
+  },
+  {
+    "setting": "setting_workplace",
+    "role": "role_health_agent",
+    "targetYouth": "youth_university",
+    "goalC": "goal_c3",
+    "status": "matched",
+    "scenarioCode": "REAL4-0171",
+    "packageCode": "PK7-WRK-C3",
+    "tools": [
+      "MAIN-16",
+      "MAIN-15",
+      "MAIN-14"
+    ]
+  },
+  {
+    "setting": "setting_workplace",
+    "role": "role_health_agent",
+    "targetYouth": "youth_university",
+    "goalC": "goal_c4",
+    "status": "no_match",
+    "reason": "คู่มือสถานประกอบการที่มีเป็นแนวทางสำหรับคนวัยทำงาน ยังไม่มีไฟล์ที่ตรงกับกลุ่มเยาวชนและเป้าหมายที่คุณเลือก"
+  },
+  {
+    "setting": "setting_workplace",
+    "role": "role_health_agent",
+    "targetYouth": "youth_university",
+    "goalC": "goal_c5",
+    "status": "no_match",
+    "reason": "คู่มือสถานประกอบการที่มีเป็นแนวทางสำหรับคนวัยทำงาน ยังไม่มีไฟล์ที่ตรงกับกลุ่มเยาวชนและเป้าหมายที่คุณเลือก"
+  },
+  {
+    "setting": "setting_workplace",
+    "role": "role_health_agent",
+    "targetYouth": "youth_vulnerable",
+    "goalC": "goal_c1",
+    "status": "no_match",
+    "reason": "คู่มือสถานประกอบการที่มีเป็นแนวทางสำหรับคนวัยทำงาน ยังไม่มีไฟล์ที่ตรงกับกลุ่มเยาวชนและเป้าหมายที่คุณเลือก"
+  },
+  {
+    "setting": "setting_workplace",
+    "role": "role_health_agent",
+    "targetYouth": "youth_vulnerable",
+    "goalC": "goal_c2",
+    "status": "no_match",
+    "reason": "คู่มือสถานประกอบการที่มีเป็นแนวทางสำหรับคนวัยทำงาน ยังไม่มีไฟล์ที่ตรงกับกลุ่มเยาวชนและเป้าหมายที่คุณเลือก"
+  },
+  {
+    "setting": "setting_workplace",
+    "role": "role_health_agent",
+    "targetYouth": "youth_vulnerable",
+    "goalC": "goal_c3",
+    "status": "no_match",
+    "reason": "คู่มือสถานประกอบการที่มีเป็นแนวทางสำหรับคนวัยทำงาน ยังไม่มีไฟล์ที่ตรงกับกลุ่มเยาวชนและเป้าหมายที่คุณเลือก"
+  },
+  {
+    "setting": "setting_workplace",
+    "role": "role_health_agent",
+    "targetYouth": "youth_vulnerable",
+    "goalC": "goal_c4",
+    "status": "no_match",
+    "reason": "คู่มือสถานประกอบการที่มีเป็นแนวทางสำหรับคนวัยทำงาน ยังไม่มีไฟล์ที่ตรงกับกลุ่มเยาวชนและเป้าหมายที่คุณเลือก"
+  },
+  {
+    "setting": "setting_workplace",
+    "role": "role_health_agent",
+    "targetYouth": "youth_vulnerable",
+    "goalC": "goal_c5",
+    "status": "no_match",
+    "reason": "คู่มือสถานประกอบการที่มีเป็นแนวทางสำหรับคนวัยทำงาน ยังไม่มีไฟล์ที่ตรงกับกลุ่มเยาวชนและเป้าหมายที่คุณเลือก"
+  },
+  {
+    "setting": "setting_workplace",
+    "role": "role_community_leader",
+    "targetYouth": "youth_early",
+    "goalC": "goal_c1",
+    "status": "no_match",
+    "reason": "คู่มือสถานประกอบการที่มีเป็นแนวทางสำหรับคนวัยทำงาน ยังไม่มีไฟล์ที่ตรงกับกลุ่มเยาวชนและเป้าหมายที่คุณเลือก"
+  },
+  {
+    "setting": "setting_workplace",
+    "role": "role_community_leader",
+    "targetYouth": "youth_early",
+    "goalC": "goal_c2",
+    "status": "no_match",
+    "reason": "คู่มือสถานประกอบการที่มีเป็นแนวทางสำหรับคนวัยทำงาน ยังไม่มีไฟล์ที่ตรงกับกลุ่มเยาวชนและเป้าหมายที่คุณเลือก"
+  },
+  {
+    "setting": "setting_workplace",
+    "role": "role_community_leader",
+    "targetYouth": "youth_early",
+    "goalC": "goal_c3",
+    "status": "no_match",
+    "reason": "คู่มือสถานประกอบการที่มีเป็นแนวทางสำหรับคนวัยทำงาน ยังไม่มีไฟล์ที่ตรงกับกลุ่มเยาวชนและเป้าหมายที่คุณเลือก"
+  },
+  {
+    "setting": "setting_workplace",
+    "role": "role_community_leader",
+    "targetYouth": "youth_early",
+    "goalC": "goal_c4",
+    "status": "no_match",
+    "reason": "คู่มือสถานประกอบการที่มีเป็นแนวทางสำหรับคนวัยทำงาน ยังไม่มีไฟล์ที่ตรงกับกลุ่มเยาวชนและเป้าหมายที่คุณเลือก"
+  },
+  {
+    "setting": "setting_workplace",
+    "role": "role_community_leader",
+    "targetYouth": "youth_early",
+    "goalC": "goal_c5",
+    "status": "no_match",
+    "reason": "คู่มือสถานประกอบการที่มีเป็นแนวทางสำหรับคนวัยทำงาน ยังไม่มีไฟล์ที่ตรงกับกลุ่มเยาวชนและเป้าหมายที่คุณเลือก"
+  },
+  {
+    "setting": "setting_workplace",
+    "role": "role_community_leader",
+    "targetYouth": "youth_primary",
+    "goalC": "goal_c1",
+    "status": "no_match",
+    "reason": "คู่มือสถานประกอบการที่มีเป็นแนวทางสำหรับคนวัยทำงาน ยังไม่มีไฟล์ที่ตรงกับกลุ่มเยาวชนและเป้าหมายที่คุณเลือก"
+  },
+  {
+    "setting": "setting_workplace",
+    "role": "role_community_leader",
+    "targetYouth": "youth_primary",
+    "goalC": "goal_c2",
+    "status": "no_match",
+    "reason": "คู่มือสถานประกอบการที่มีเป็นแนวทางสำหรับคนวัยทำงาน ยังไม่มีไฟล์ที่ตรงกับกลุ่มเยาวชนและเป้าหมายที่คุณเลือก"
+  },
+  {
+    "setting": "setting_workplace",
+    "role": "role_community_leader",
+    "targetYouth": "youth_primary",
+    "goalC": "goal_c3",
+    "status": "no_match",
+    "reason": "คู่มือสถานประกอบการที่มีเป็นแนวทางสำหรับคนวัยทำงาน ยังไม่มีไฟล์ที่ตรงกับกลุ่มเยาวชนและเป้าหมายที่คุณเลือก"
+  },
+  {
+    "setting": "setting_workplace",
+    "role": "role_community_leader",
+    "targetYouth": "youth_primary",
+    "goalC": "goal_c4",
+    "status": "no_match",
+    "reason": "คู่มือสถานประกอบการที่มีเป็นแนวทางสำหรับคนวัยทำงาน ยังไม่มีไฟล์ที่ตรงกับกลุ่มเยาวชนและเป้าหมายที่คุณเลือก"
+  },
+  {
+    "setting": "setting_workplace",
+    "role": "role_community_leader",
+    "targetYouth": "youth_primary",
+    "goalC": "goal_c5",
+    "status": "no_match",
+    "reason": "คู่มือสถานประกอบการที่มีเป็นแนวทางสำหรับคนวัยทำงาน ยังไม่มีไฟล์ที่ตรงกับกลุ่มเยาวชนและเป้าหมายที่คุณเลือก"
+  },
+  {
+    "setting": "setting_workplace",
+    "role": "role_community_leader",
+    "targetYouth": "youth_secondary",
+    "goalC": "goal_c1",
+    "status": "no_match",
+    "reason": "คู่มือสถานประกอบการที่มีเป็นแนวทางสำหรับคนวัยทำงาน ยังไม่มีไฟล์ที่ตรงกับกลุ่มเยาวชนและเป้าหมายที่คุณเลือก"
+  },
+  {
+    "setting": "setting_workplace",
+    "role": "role_community_leader",
+    "targetYouth": "youth_secondary",
+    "goalC": "goal_c2",
+    "status": "no_match",
+    "reason": "คู่มือสถานประกอบการที่มีเป็นแนวทางสำหรับคนวัยทำงาน ยังไม่มีไฟล์ที่ตรงกับกลุ่มเยาวชนและเป้าหมายที่คุณเลือก"
+  },
+  {
+    "setting": "setting_workplace",
+    "role": "role_community_leader",
+    "targetYouth": "youth_secondary",
+    "goalC": "goal_c3",
+    "status": "no_match",
+    "reason": "คู่มือสถานประกอบการที่มีเป็นแนวทางสำหรับคนวัยทำงาน ยังไม่มีไฟล์ที่ตรงกับกลุ่มเยาวชนและเป้าหมายที่คุณเลือก"
+  },
+  {
+    "setting": "setting_workplace",
+    "role": "role_community_leader",
+    "targetYouth": "youth_secondary",
+    "goalC": "goal_c4",
+    "status": "no_match",
+    "reason": "คู่มือสถานประกอบการที่มีเป็นแนวทางสำหรับคนวัยทำงาน ยังไม่มีไฟล์ที่ตรงกับกลุ่มเยาวชนและเป้าหมายที่คุณเลือก"
+  },
+  {
+    "setting": "setting_workplace",
+    "role": "role_community_leader",
+    "targetYouth": "youth_secondary",
+    "goalC": "goal_c5",
+    "status": "no_match",
+    "reason": "คู่มือสถานประกอบการที่มีเป็นแนวทางสำหรับคนวัยทำงาน ยังไม่มีไฟล์ที่ตรงกับกลุ่มเยาวชนและเป้าหมายที่คุณเลือก"
+  },
+  {
+    "setting": "setting_workplace",
+    "role": "role_community_leader",
+    "targetYouth": "youth_university",
+    "goalC": "goal_c1",
+    "status": "no_match",
+    "reason": "คู่มือสถานประกอบการที่มีเป็นแนวทางสำหรับคนวัยทำงาน ยังไม่มีไฟล์ที่ตรงกับกลุ่มเยาวชนและเป้าหมายที่คุณเลือก"
+  },
+  {
+    "setting": "setting_workplace",
+    "role": "role_community_leader",
+    "targetYouth": "youth_university",
+    "goalC": "goal_c2",
+    "status": "no_match",
+    "reason": "คู่มือสถานประกอบการที่มีเป็นแนวทางสำหรับคนวัยทำงาน ยังไม่มีไฟล์ที่ตรงกับกลุ่มเยาวชนและเป้าหมายที่คุณเลือก"
+  },
+  {
+    "setting": "setting_workplace",
+    "role": "role_community_leader",
+    "targetYouth": "youth_university",
+    "goalC": "goal_c3",
+    "status": "matched",
+    "scenarioCode": "REAL4-0172",
+    "packageCode": "PK7-WRK-C3",
+    "tools": [
+      "MAIN-16",
+      "MAIN-15",
+      "MAIN-14"
+    ]
+  },
+  {
+    "setting": "setting_workplace",
+    "role": "role_community_leader",
+    "targetYouth": "youth_university",
+    "goalC": "goal_c4",
+    "status": "no_match",
+    "reason": "คู่มือสถานประกอบการที่มีเป็นแนวทางสำหรับคนวัยทำงาน ยังไม่มีไฟล์ที่ตรงกับกลุ่มเยาวชนและเป้าหมายที่คุณเลือก"
+  },
+  {
+    "setting": "setting_workplace",
+    "role": "role_community_leader",
+    "targetYouth": "youth_university",
+    "goalC": "goal_c5",
+    "status": "no_match",
+    "reason": "คู่มือสถานประกอบการที่มีเป็นแนวทางสำหรับคนวัยทำงาน ยังไม่มีไฟล์ที่ตรงกับกลุ่มเยาวชนและเป้าหมายที่คุณเลือก"
+  },
+  {
+    "setting": "setting_workplace",
+    "role": "role_community_leader",
+    "targetYouth": "youth_vulnerable",
+    "goalC": "goal_c1",
+    "status": "no_match",
+    "reason": "คู่มือสถานประกอบการที่มีเป็นแนวทางสำหรับคนวัยทำงาน ยังไม่มีไฟล์ที่ตรงกับกลุ่มเยาวชนและเป้าหมายที่คุณเลือก"
+  },
+  {
+    "setting": "setting_workplace",
+    "role": "role_community_leader",
+    "targetYouth": "youth_vulnerable",
+    "goalC": "goal_c2",
+    "status": "no_match",
+    "reason": "คู่มือสถานประกอบการที่มีเป็นแนวทางสำหรับคนวัยทำงาน ยังไม่มีไฟล์ที่ตรงกับกลุ่มเยาวชนและเป้าหมายที่คุณเลือก"
+  },
+  {
+    "setting": "setting_workplace",
+    "role": "role_community_leader",
+    "targetYouth": "youth_vulnerable",
+    "goalC": "goal_c3",
+    "status": "no_match",
+    "reason": "คู่มือสถานประกอบการที่มีเป็นแนวทางสำหรับคนวัยทำงาน ยังไม่มีไฟล์ที่ตรงกับกลุ่มเยาวชนและเป้าหมายที่คุณเลือก"
+  },
+  {
+    "setting": "setting_workplace",
+    "role": "role_community_leader",
+    "targetYouth": "youth_vulnerable",
+    "goalC": "goal_c4",
+    "status": "no_match",
+    "reason": "คู่มือสถานประกอบการที่มีเป็นแนวทางสำหรับคนวัยทำงาน ยังไม่มีไฟล์ที่ตรงกับกลุ่มเยาวชนและเป้าหมายที่คุณเลือก"
+  },
+  {
+    "setting": "setting_workplace",
+    "role": "role_community_leader",
+    "targetYouth": "youth_vulnerable",
+    "goalC": "goal_c5",
+    "status": "no_match",
+    "reason": "คู่มือสถานประกอบการที่มีเป็นแนวทางสำหรับคนวัยทำงาน ยังไม่มีไฟล์ที่ตรงกับกลุ่มเยาวชนและเป้าหมายที่คุณเลือก"
+  },
+  {
+    "setting": "setting_workplace",
+    "role": "role_parent",
+    "targetYouth": "youth_early",
+    "goalC": "goal_c1",
+    "status": "no_match",
+    "reason": "คู่มือสถานประกอบการที่มีเป็นแนวทางสำหรับคนวัยทำงาน ยังไม่มีไฟล์ที่ตรงกับกลุ่มเยาวชนและเป้าหมายที่คุณเลือก"
+  },
+  {
+    "setting": "setting_workplace",
+    "role": "role_parent",
+    "targetYouth": "youth_early",
+    "goalC": "goal_c2",
+    "status": "no_match",
+    "reason": "คู่มือสถานประกอบการที่มีเป็นแนวทางสำหรับคนวัยทำงาน ยังไม่มีไฟล์ที่ตรงกับกลุ่มเยาวชนและเป้าหมายที่คุณเลือก"
+  },
+  {
+    "setting": "setting_workplace",
+    "role": "role_parent",
+    "targetYouth": "youth_early",
+    "goalC": "goal_c3",
+    "status": "no_match",
+    "reason": "คู่มือสถานประกอบการที่มีเป็นแนวทางสำหรับคนวัยทำงาน ยังไม่มีไฟล์ที่ตรงกับกลุ่มเยาวชนและเป้าหมายที่คุณเลือก"
+  },
+  {
+    "setting": "setting_workplace",
+    "role": "role_parent",
+    "targetYouth": "youth_early",
+    "goalC": "goal_c4",
+    "status": "no_match",
+    "reason": "คู่มือสถานประกอบการที่มีเป็นแนวทางสำหรับคนวัยทำงาน ยังไม่มีไฟล์ที่ตรงกับกลุ่มเยาวชนและเป้าหมายที่คุณเลือก"
+  },
+  {
+    "setting": "setting_workplace",
+    "role": "role_parent",
+    "targetYouth": "youth_early",
+    "goalC": "goal_c5",
+    "status": "no_match",
+    "reason": "คู่มือสถานประกอบการที่มีเป็นแนวทางสำหรับคนวัยทำงาน ยังไม่มีไฟล์ที่ตรงกับกลุ่มเยาวชนและเป้าหมายที่คุณเลือก"
+  },
+  {
+    "setting": "setting_workplace",
+    "role": "role_parent",
+    "targetYouth": "youth_primary",
+    "goalC": "goal_c1",
+    "status": "no_match",
+    "reason": "คู่มือสถานประกอบการที่มีเป็นแนวทางสำหรับคนวัยทำงาน ยังไม่มีไฟล์ที่ตรงกับกลุ่มเยาวชนและเป้าหมายที่คุณเลือก"
+  },
+  {
+    "setting": "setting_workplace",
+    "role": "role_parent",
+    "targetYouth": "youth_primary",
+    "goalC": "goal_c2",
+    "status": "no_match",
+    "reason": "คู่มือสถานประกอบการที่มีเป็นแนวทางสำหรับคนวัยทำงาน ยังไม่มีไฟล์ที่ตรงกับกลุ่มเยาวชนและเป้าหมายที่คุณเลือก"
+  },
+  {
+    "setting": "setting_workplace",
+    "role": "role_parent",
+    "targetYouth": "youth_primary",
+    "goalC": "goal_c3",
+    "status": "no_match",
+    "reason": "คู่มือสถานประกอบการที่มีเป็นแนวทางสำหรับคนวัยทำงาน ยังไม่มีไฟล์ที่ตรงกับกลุ่มเยาวชนและเป้าหมายที่คุณเลือก"
+  },
+  {
+    "setting": "setting_workplace",
+    "role": "role_parent",
+    "targetYouth": "youth_primary",
+    "goalC": "goal_c4",
+    "status": "no_match",
+    "reason": "คู่มือสถานประกอบการที่มีเป็นแนวทางสำหรับคนวัยทำงาน ยังไม่มีไฟล์ที่ตรงกับกลุ่มเยาวชนและเป้าหมายที่คุณเลือก"
+  },
+  {
+    "setting": "setting_workplace",
+    "role": "role_parent",
+    "targetYouth": "youth_primary",
+    "goalC": "goal_c5",
+    "status": "no_match",
+    "reason": "คู่มือสถานประกอบการที่มีเป็นแนวทางสำหรับคนวัยทำงาน ยังไม่มีไฟล์ที่ตรงกับกลุ่มเยาวชนและเป้าหมายที่คุณเลือก"
+  },
+  {
+    "setting": "setting_workplace",
+    "role": "role_parent",
+    "targetYouth": "youth_secondary",
+    "goalC": "goal_c1",
+    "status": "no_match",
+    "reason": "คู่มือสถานประกอบการที่มีเป็นแนวทางสำหรับคนวัยทำงาน ยังไม่มีไฟล์ที่ตรงกับกลุ่มเยาวชนและเป้าหมายที่คุณเลือก"
+  },
+  {
+    "setting": "setting_workplace",
+    "role": "role_parent",
+    "targetYouth": "youth_secondary",
+    "goalC": "goal_c2",
+    "status": "no_match",
+    "reason": "คู่มือสถานประกอบการที่มีเป็นแนวทางสำหรับคนวัยทำงาน ยังไม่มีไฟล์ที่ตรงกับกลุ่มเยาวชนและเป้าหมายที่คุณเลือก"
+  },
+  {
+    "setting": "setting_workplace",
+    "role": "role_parent",
+    "targetYouth": "youth_secondary",
+    "goalC": "goal_c3",
+    "status": "no_match",
+    "reason": "คู่มือสถานประกอบการที่มีเป็นแนวทางสำหรับคนวัยทำงาน ยังไม่มีไฟล์ที่ตรงกับกลุ่มเยาวชนและเป้าหมายที่คุณเลือก"
+  },
+  {
+    "setting": "setting_workplace",
+    "role": "role_parent",
+    "targetYouth": "youth_secondary",
+    "goalC": "goal_c4",
+    "status": "no_match",
+    "reason": "คู่มือสถานประกอบการที่มีเป็นแนวทางสำหรับคนวัยทำงาน ยังไม่มีไฟล์ที่ตรงกับกลุ่มเยาวชนและเป้าหมายที่คุณเลือก"
+  },
+  {
+    "setting": "setting_workplace",
+    "role": "role_parent",
+    "targetYouth": "youth_secondary",
+    "goalC": "goal_c5",
+    "status": "no_match",
+    "reason": "คู่มือสถานประกอบการที่มีเป็นแนวทางสำหรับคนวัยทำงาน ยังไม่มีไฟล์ที่ตรงกับกลุ่มเยาวชนและเป้าหมายที่คุณเลือก"
+  },
+  {
+    "setting": "setting_workplace",
+    "role": "role_parent",
+    "targetYouth": "youth_university",
+    "goalC": "goal_c1",
+    "status": "no_match",
+    "reason": "คู่มือสถานประกอบการที่มีเป็นแนวทางสำหรับคนวัยทำงาน ยังไม่มีไฟล์ที่ตรงกับกลุ่มเยาวชนและเป้าหมายที่คุณเลือก"
+  },
+  {
+    "setting": "setting_workplace",
+    "role": "role_parent",
+    "targetYouth": "youth_university",
+    "goalC": "goal_c2",
+    "status": "no_match",
+    "reason": "คู่มือสถานประกอบการที่มีเป็นแนวทางสำหรับคนวัยทำงาน ยังไม่มีไฟล์ที่ตรงกับกลุ่มเยาวชนและเป้าหมายที่คุณเลือก"
+  },
+  {
+    "setting": "setting_workplace",
+    "role": "role_parent",
+    "targetYouth": "youth_university",
+    "goalC": "goal_c3",
+    "status": "matched",
+    "scenarioCode": "REAL4-0173",
+    "packageCode": "PK7-WRK-C3",
+    "tools": [
+      "MAIN-16",
+      "MAIN-15",
+      "MAIN-14"
+    ]
+  },
+  {
+    "setting": "setting_workplace",
+    "role": "role_parent",
+    "targetYouth": "youth_university",
+    "goalC": "goal_c4",
+    "status": "no_match",
+    "reason": "คู่มือสถานประกอบการที่มีเป็นแนวทางสำหรับคนวัยทำงาน ยังไม่มีไฟล์ที่ตรงกับกลุ่มเยาวชนและเป้าหมายที่คุณเลือก"
+  },
+  {
+    "setting": "setting_workplace",
+    "role": "role_parent",
+    "targetYouth": "youth_university",
+    "goalC": "goal_c5",
+    "status": "no_match",
+    "reason": "คู่มือสถานประกอบการที่มีเป็นแนวทางสำหรับคนวัยทำงาน ยังไม่มีไฟล์ที่ตรงกับกลุ่มเยาวชนและเป้าหมายที่คุณเลือก"
+  },
+  {
+    "setting": "setting_workplace",
+    "role": "role_parent",
+    "targetYouth": "youth_vulnerable",
+    "goalC": "goal_c1",
+    "status": "no_match",
+    "reason": "คู่มือสถานประกอบการที่มีเป็นแนวทางสำหรับคนวัยทำงาน ยังไม่มีไฟล์ที่ตรงกับกลุ่มเยาวชนและเป้าหมายที่คุณเลือก"
+  },
+  {
+    "setting": "setting_workplace",
+    "role": "role_parent",
+    "targetYouth": "youth_vulnerable",
+    "goalC": "goal_c2",
+    "status": "no_match",
+    "reason": "คู่มือสถานประกอบการที่มีเป็นแนวทางสำหรับคนวัยทำงาน ยังไม่มีไฟล์ที่ตรงกับกลุ่มเยาวชนและเป้าหมายที่คุณเลือก"
+  },
+  {
+    "setting": "setting_workplace",
+    "role": "role_parent",
+    "targetYouth": "youth_vulnerable",
+    "goalC": "goal_c3",
+    "status": "no_match",
+    "reason": "คู่มือสถานประกอบการที่มีเป็นแนวทางสำหรับคนวัยทำงาน ยังไม่มีไฟล์ที่ตรงกับกลุ่มเยาวชนและเป้าหมายที่คุณเลือก"
+  },
+  {
+    "setting": "setting_workplace",
+    "role": "role_parent",
+    "targetYouth": "youth_vulnerable",
+    "goalC": "goal_c4",
+    "status": "no_match",
+    "reason": "คู่มือสถานประกอบการที่มีเป็นแนวทางสำหรับคนวัยทำงาน ยังไม่มีไฟล์ที่ตรงกับกลุ่มเยาวชนและเป้าหมายที่คุณเลือก"
+  },
+  {
+    "setting": "setting_workplace",
+    "role": "role_parent",
+    "targetYouth": "youth_vulnerable",
+    "goalC": "goal_c5",
+    "status": "no_match",
+    "reason": "คู่มือสถานประกอบการที่มีเป็นแนวทางสำหรับคนวัยทำงาน ยังไม่มีไฟล์ที่ตรงกับกลุ่มเยาวชนและเป้าหมายที่คุณเลือก"
+  },
+  {
+    "setting": "setting_workplace",
+    "role": "role_youth_leader",
+    "targetYouth": "youth_early",
+    "goalC": "goal_c1",
+    "status": "no_match",
+    "reason": "คู่มือสถานประกอบการที่มีเป็นแนวทางสำหรับคนวัยทำงาน ยังไม่มีไฟล์ที่ตรงกับกลุ่มเยาวชนและเป้าหมายที่คุณเลือก"
+  },
+  {
+    "setting": "setting_workplace",
+    "role": "role_youth_leader",
+    "targetYouth": "youth_early",
+    "goalC": "goal_c2",
+    "status": "no_match",
+    "reason": "คู่มือสถานประกอบการที่มีเป็นแนวทางสำหรับคนวัยทำงาน ยังไม่มีไฟล์ที่ตรงกับกลุ่มเยาวชนและเป้าหมายที่คุณเลือก"
+  },
+  {
+    "setting": "setting_workplace",
+    "role": "role_youth_leader",
+    "targetYouth": "youth_early",
+    "goalC": "goal_c3",
+    "status": "no_match",
+    "reason": "คู่มือสถานประกอบการที่มีเป็นแนวทางสำหรับคนวัยทำงาน ยังไม่มีไฟล์ที่ตรงกับกลุ่มเยาวชนและเป้าหมายที่คุณเลือก"
+  },
+  {
+    "setting": "setting_workplace",
+    "role": "role_youth_leader",
+    "targetYouth": "youth_early",
+    "goalC": "goal_c4",
+    "status": "no_match",
+    "reason": "คู่มือสถานประกอบการที่มีเป็นแนวทางสำหรับคนวัยทำงาน ยังไม่มีไฟล์ที่ตรงกับกลุ่มเยาวชนและเป้าหมายที่คุณเลือก"
+  },
+  {
+    "setting": "setting_workplace",
+    "role": "role_youth_leader",
+    "targetYouth": "youth_early",
+    "goalC": "goal_c5",
+    "status": "no_match",
+    "reason": "คู่มือสถานประกอบการที่มีเป็นแนวทางสำหรับคนวัยทำงาน ยังไม่มีไฟล์ที่ตรงกับกลุ่มเยาวชนและเป้าหมายที่คุณเลือก"
+  },
+  {
+    "setting": "setting_workplace",
+    "role": "role_youth_leader",
+    "targetYouth": "youth_primary",
+    "goalC": "goal_c1",
+    "status": "no_match",
+    "reason": "คู่มือสถานประกอบการที่มีเป็นแนวทางสำหรับคนวัยทำงาน ยังไม่มีไฟล์ที่ตรงกับกลุ่มเยาวชนและเป้าหมายที่คุณเลือก"
+  },
+  {
+    "setting": "setting_workplace",
+    "role": "role_youth_leader",
+    "targetYouth": "youth_primary",
+    "goalC": "goal_c2",
+    "status": "no_match",
+    "reason": "คู่มือสถานประกอบการที่มีเป็นแนวทางสำหรับคนวัยทำงาน ยังไม่มีไฟล์ที่ตรงกับกลุ่มเยาวชนและเป้าหมายที่คุณเลือก"
+  },
+  {
+    "setting": "setting_workplace",
+    "role": "role_youth_leader",
+    "targetYouth": "youth_primary",
+    "goalC": "goal_c3",
+    "status": "no_match",
+    "reason": "คู่มือสถานประกอบการที่มีเป็นแนวทางสำหรับคนวัยทำงาน ยังไม่มีไฟล์ที่ตรงกับกลุ่มเยาวชนและเป้าหมายที่คุณเลือก"
+  },
+  {
+    "setting": "setting_workplace",
+    "role": "role_youth_leader",
+    "targetYouth": "youth_primary",
+    "goalC": "goal_c4",
+    "status": "no_match",
+    "reason": "คู่มือสถานประกอบการที่มีเป็นแนวทางสำหรับคนวัยทำงาน ยังไม่มีไฟล์ที่ตรงกับกลุ่มเยาวชนและเป้าหมายที่คุณเลือก"
+  },
+  {
+    "setting": "setting_workplace",
+    "role": "role_youth_leader",
+    "targetYouth": "youth_primary",
+    "goalC": "goal_c5",
+    "status": "no_match",
+    "reason": "คู่มือสถานประกอบการที่มีเป็นแนวทางสำหรับคนวัยทำงาน ยังไม่มีไฟล์ที่ตรงกับกลุ่มเยาวชนและเป้าหมายที่คุณเลือก"
+  },
+  {
+    "setting": "setting_workplace",
+    "role": "role_youth_leader",
+    "targetYouth": "youth_secondary",
+    "goalC": "goal_c1",
+    "status": "no_match",
+    "reason": "คู่มือสถานประกอบการที่มีเป็นแนวทางสำหรับคนวัยทำงาน ยังไม่มีไฟล์ที่ตรงกับกลุ่มเยาวชนและเป้าหมายที่คุณเลือก"
+  },
+  {
+    "setting": "setting_workplace",
+    "role": "role_youth_leader",
+    "targetYouth": "youth_secondary",
+    "goalC": "goal_c2",
+    "status": "no_match",
+    "reason": "คู่มือสถานประกอบการที่มีเป็นแนวทางสำหรับคนวัยทำงาน ยังไม่มีไฟล์ที่ตรงกับกลุ่มเยาวชนและเป้าหมายที่คุณเลือก"
+  },
+  {
+    "setting": "setting_workplace",
+    "role": "role_youth_leader",
+    "targetYouth": "youth_secondary",
+    "goalC": "goal_c3",
+    "status": "no_match",
+    "reason": "คู่มือสถานประกอบการที่มีเป็นแนวทางสำหรับคนวัยทำงาน ยังไม่มีไฟล์ที่ตรงกับกลุ่มเยาวชนและเป้าหมายที่คุณเลือก"
+  },
+  {
+    "setting": "setting_workplace",
+    "role": "role_youth_leader",
+    "targetYouth": "youth_secondary",
+    "goalC": "goal_c4",
+    "status": "no_match",
+    "reason": "คู่มือสถานประกอบการที่มีเป็นแนวทางสำหรับคนวัยทำงาน ยังไม่มีไฟล์ที่ตรงกับกลุ่มเยาวชนและเป้าหมายที่คุณเลือก"
+  },
+  {
+    "setting": "setting_workplace",
+    "role": "role_youth_leader",
+    "targetYouth": "youth_secondary",
+    "goalC": "goal_c5",
+    "status": "no_match",
+    "reason": "คู่มือสถานประกอบการที่มีเป็นแนวทางสำหรับคนวัยทำงาน ยังไม่มีไฟล์ที่ตรงกับกลุ่มเยาวชนและเป้าหมายที่คุณเลือก"
+  },
+  {
+    "setting": "setting_workplace",
+    "role": "role_youth_leader",
+    "targetYouth": "youth_university",
+    "goalC": "goal_c1",
+    "status": "no_match",
+    "reason": "คู่มือสถานประกอบการที่มีเป็นแนวทางสำหรับคนวัยทำงาน ยังไม่มีไฟล์ที่ตรงกับกลุ่มเยาวชนและเป้าหมายที่คุณเลือก"
+  },
+  {
+    "setting": "setting_workplace",
+    "role": "role_youth_leader",
+    "targetYouth": "youth_university",
+    "goalC": "goal_c2",
+    "status": "no_match",
+    "reason": "คู่มือสถานประกอบการที่มีเป็นแนวทางสำหรับคนวัยทำงาน ยังไม่มีไฟล์ที่ตรงกับกลุ่มเยาวชนและเป้าหมายที่คุณเลือก"
+  },
+  {
+    "setting": "setting_workplace",
+    "role": "role_youth_leader",
+    "targetYouth": "youth_university",
+    "goalC": "goal_c3",
+    "status": "matched",
+    "scenarioCode": "REAL4-0174",
+    "packageCode": "PK7-WRK-C3",
+    "tools": [
+      "MAIN-16",
+      "MAIN-15",
+      "MAIN-14"
+    ]
+  },
+  {
+    "setting": "setting_workplace",
+    "role": "role_youth_leader",
+    "targetYouth": "youth_university",
+    "goalC": "goal_c4",
+    "status": "no_match",
+    "reason": "คู่มือสถานประกอบการที่มีเป็นแนวทางสำหรับคนวัยทำงาน ยังไม่มีไฟล์ที่ตรงกับกลุ่มเยาวชนและเป้าหมายที่คุณเลือก"
+  },
+  {
+    "setting": "setting_workplace",
+    "role": "role_youth_leader",
+    "targetYouth": "youth_university",
+    "goalC": "goal_c5",
+    "status": "no_match",
+    "reason": "คู่มือสถานประกอบการที่มีเป็นแนวทางสำหรับคนวัยทำงาน ยังไม่มีไฟล์ที่ตรงกับกลุ่มเยาวชนและเป้าหมายที่คุณเลือก"
+  },
+  {
+    "setting": "setting_workplace",
+    "role": "role_youth_leader",
+    "targetYouth": "youth_vulnerable",
+    "goalC": "goal_c1",
+    "status": "no_match",
+    "reason": "คู่มือสถานประกอบการที่มีเป็นแนวทางสำหรับคนวัยทำงาน ยังไม่มีไฟล์ที่ตรงกับกลุ่มเยาวชนและเป้าหมายที่คุณเลือก"
+  },
+  {
+    "setting": "setting_workplace",
+    "role": "role_youth_leader",
+    "targetYouth": "youth_vulnerable",
+    "goalC": "goal_c2",
+    "status": "no_match",
+    "reason": "คู่มือสถานประกอบการที่มีเป็นแนวทางสำหรับคนวัยทำงาน ยังไม่มีไฟล์ที่ตรงกับกลุ่มเยาวชนและเป้าหมายที่คุณเลือก"
+  },
+  {
+    "setting": "setting_workplace",
+    "role": "role_youth_leader",
+    "targetYouth": "youth_vulnerable",
+    "goalC": "goal_c3",
+    "status": "no_match",
+    "reason": "คู่มือสถานประกอบการที่มีเป็นแนวทางสำหรับคนวัยทำงาน ยังไม่มีไฟล์ที่ตรงกับกลุ่มเยาวชนและเป้าหมายที่คุณเลือก"
+  },
+  {
+    "setting": "setting_workplace",
+    "role": "role_youth_leader",
+    "targetYouth": "youth_vulnerable",
+    "goalC": "goal_c4",
+    "status": "no_match",
+    "reason": "คู่มือสถานประกอบการที่มีเป็นแนวทางสำหรับคนวัยทำงาน ยังไม่มีไฟล์ที่ตรงกับกลุ่มเยาวชนและเป้าหมายที่คุณเลือก"
+  },
+  {
+    "setting": "setting_workplace",
+    "role": "role_youth_leader",
+    "targetYouth": "youth_vulnerable",
+    "goalC": "goal_c5",
+    "status": "no_match",
+    "reason": "คู่มือสถานประกอบการที่มีเป็นแนวทางสำหรับคนวัยทำงาน ยังไม่มีไฟล์ที่ตรงกับกลุ่มเยาวชนและเป้าหมายที่คุณเลือก"
+  },
+  {
+    "setting": "setting_health",
+    "role": "role_teacher",
+    "targetYouth": "youth_early",
+    "goalC": "goal_c1",
+    "status": "no_match",
+    "reason": "คลังปัจจุบันมีคู่มือบริการสำหรับทีมวิชาชีพ แต่ยังไม่มีชุดเครื่องมือที่ยืนยันได้สำหรับบทบาท กลุ่มเยาวชน และเป้าหมายนี้"
+  },
+  {
+    "setting": "setting_health",
+    "role": "role_teacher",
+    "targetYouth": "youth_early",
+    "goalC": "goal_c2",
+    "status": "no_match",
+    "reason": "คลังปัจจุบันมีคู่มือบริการสำหรับทีมวิชาชีพ แต่ยังไม่มีชุดเครื่องมือที่ยืนยันได้สำหรับบทบาท กลุ่มเยาวชน และเป้าหมายนี้"
+  },
+  {
+    "setting": "setting_health",
+    "role": "role_teacher",
+    "targetYouth": "youth_early",
+    "goalC": "goal_c3",
+    "status": "no_match",
+    "reason": "คลังปัจจุบันมีคู่มือบริการสำหรับทีมวิชาชีพ แต่ยังไม่มีชุดเครื่องมือที่ยืนยันได้สำหรับบทบาท กลุ่มเยาวชน และเป้าหมายนี้"
+  },
+  {
+    "setting": "setting_health",
+    "role": "role_teacher",
+    "targetYouth": "youth_early",
+    "goalC": "goal_c4",
+    "status": "no_match",
+    "reason": "คลังปัจจุบันมีคู่มือบริการสำหรับทีมวิชาชีพ แต่ยังไม่มีชุดเครื่องมือที่ยืนยันได้สำหรับบทบาท กลุ่มเยาวชน และเป้าหมายนี้"
+  },
+  {
+    "setting": "setting_health",
+    "role": "role_teacher",
+    "targetYouth": "youth_early",
+    "goalC": "goal_c5",
+    "status": "no_match",
+    "reason": "คลังปัจจุบันมีคู่มือบริการสำหรับทีมวิชาชีพ แต่ยังไม่มีชุดเครื่องมือที่ยืนยันได้สำหรับบทบาท กลุ่มเยาวชน และเป้าหมายนี้"
+  },
+  {
+    "setting": "setting_health",
+    "role": "role_teacher",
+    "targetYouth": "youth_primary",
+    "goalC": "goal_c1",
+    "status": "no_match",
+    "reason": "คลังปัจจุบันมีคู่มือบริการสำหรับทีมวิชาชีพ แต่ยังไม่มีชุดเครื่องมือที่ยืนยันได้สำหรับบทบาท กลุ่มเยาวชน และเป้าหมายนี้"
+  },
+  {
+    "setting": "setting_health",
+    "role": "role_teacher",
+    "targetYouth": "youth_primary",
+    "goalC": "goal_c2",
+    "status": "no_match",
+    "reason": "คลังปัจจุบันมีคู่มือบริการสำหรับทีมวิชาชีพ แต่ยังไม่มีชุดเครื่องมือที่ยืนยันได้สำหรับบทบาท กลุ่มเยาวชน และเป้าหมายนี้"
+  },
+  {
+    "setting": "setting_health",
+    "role": "role_teacher",
+    "targetYouth": "youth_primary",
+    "goalC": "goal_c3",
+    "status": "no_match",
+    "reason": "คลังปัจจุบันมีคู่มือบริการสำหรับทีมวิชาชีพ แต่ยังไม่มีชุดเครื่องมือที่ยืนยันได้สำหรับบทบาท กลุ่มเยาวชน และเป้าหมายนี้"
+  },
+  {
+    "setting": "setting_health",
+    "role": "role_teacher",
+    "targetYouth": "youth_primary",
+    "goalC": "goal_c4",
+    "status": "no_match",
+    "reason": "คลังปัจจุบันมีคู่มือบริการสำหรับทีมวิชาชีพ แต่ยังไม่มีชุดเครื่องมือที่ยืนยันได้สำหรับบทบาท กลุ่มเยาวชน และเป้าหมายนี้"
+  },
+  {
+    "setting": "setting_health",
+    "role": "role_teacher",
+    "targetYouth": "youth_primary",
+    "goalC": "goal_c5",
+    "status": "no_match",
+    "reason": "คลังปัจจุบันมีคู่มือบริการสำหรับทีมวิชาชีพ แต่ยังไม่มีชุดเครื่องมือที่ยืนยันได้สำหรับบทบาท กลุ่มเยาวชน และเป้าหมายนี้"
+  },
+  {
+    "setting": "setting_health",
+    "role": "role_teacher",
+    "targetYouth": "youth_secondary",
+    "goalC": "goal_c1",
+    "status": "no_match",
+    "reason": "คลังปัจจุบันมีคู่มือบริการสำหรับทีมวิชาชีพ แต่ยังไม่มีชุดเครื่องมือที่ยืนยันได้สำหรับบทบาท กลุ่มเยาวชน และเป้าหมายนี้"
+  },
+  {
+    "setting": "setting_health",
+    "role": "role_teacher",
+    "targetYouth": "youth_secondary",
+    "goalC": "goal_c2",
+    "status": "no_match",
+    "reason": "คลังปัจจุบันมีคู่มือบริการสำหรับทีมวิชาชีพ แต่ยังไม่มีชุดเครื่องมือที่ยืนยันได้สำหรับบทบาท กลุ่มเยาวชน และเป้าหมายนี้"
+  },
+  {
+    "setting": "setting_health",
+    "role": "role_teacher",
+    "targetYouth": "youth_secondary",
+    "goalC": "goal_c3",
+    "status": "no_match",
+    "reason": "คลังปัจจุบันมีคู่มือบริการสำหรับทีมวิชาชีพ แต่ยังไม่มีชุดเครื่องมือที่ยืนยันได้สำหรับบทบาท กลุ่มเยาวชน และเป้าหมายนี้"
+  },
+  {
+    "setting": "setting_health",
+    "role": "role_teacher",
+    "targetYouth": "youth_secondary",
+    "goalC": "goal_c4",
+    "status": "no_match",
+    "reason": "คลังปัจจุบันมีคู่มือบริการสำหรับทีมวิชาชีพ แต่ยังไม่มีชุดเครื่องมือที่ยืนยันได้สำหรับบทบาท กลุ่มเยาวชน และเป้าหมายนี้"
+  },
+  {
+    "setting": "setting_health",
+    "role": "role_teacher",
+    "targetYouth": "youth_secondary",
+    "goalC": "goal_c5",
+    "status": "no_match",
+    "reason": "คลังปัจจุบันมีคู่มือบริการสำหรับทีมวิชาชีพ แต่ยังไม่มีชุดเครื่องมือที่ยืนยันได้สำหรับบทบาท กลุ่มเยาวชน และเป้าหมายนี้"
+  },
+  {
+    "setting": "setting_health",
+    "role": "role_teacher",
+    "targetYouth": "youth_university",
+    "goalC": "goal_c1",
+    "status": "no_match",
+    "reason": "คลังปัจจุบันมีคู่มือบริการสำหรับทีมวิชาชีพ แต่ยังไม่มีชุดเครื่องมือที่ยืนยันได้สำหรับบทบาท กลุ่มเยาวชน และเป้าหมายนี้"
+  },
+  {
+    "setting": "setting_health",
+    "role": "role_teacher",
+    "targetYouth": "youth_university",
+    "goalC": "goal_c2",
+    "status": "no_match",
+    "reason": "คลังปัจจุบันมีคู่มือบริการสำหรับทีมวิชาชีพ แต่ยังไม่มีชุดเครื่องมือที่ยืนยันได้สำหรับบทบาท กลุ่มเยาวชน และเป้าหมายนี้"
+  },
+  {
+    "setting": "setting_health",
+    "role": "role_teacher",
+    "targetYouth": "youth_university",
+    "goalC": "goal_c3",
+    "status": "no_match",
+    "reason": "คลังปัจจุบันมีคู่มือบริการสำหรับทีมวิชาชีพ แต่ยังไม่มีชุดเครื่องมือที่ยืนยันได้สำหรับบทบาท กลุ่มเยาวชน และเป้าหมายนี้"
+  },
+  {
+    "setting": "setting_health",
+    "role": "role_teacher",
+    "targetYouth": "youth_university",
+    "goalC": "goal_c4",
+    "status": "no_match",
+    "reason": "คลังปัจจุบันมีคู่มือบริการสำหรับทีมวิชาชีพ แต่ยังไม่มีชุดเครื่องมือที่ยืนยันได้สำหรับบทบาท กลุ่มเยาวชน และเป้าหมายนี้"
+  },
+  {
+    "setting": "setting_health",
+    "role": "role_teacher",
+    "targetYouth": "youth_university",
+    "goalC": "goal_c5",
+    "status": "no_match",
+    "reason": "คลังปัจจุบันมีคู่มือบริการสำหรับทีมวิชาชีพ แต่ยังไม่มีชุดเครื่องมือที่ยืนยันได้สำหรับบทบาท กลุ่มเยาวชน และเป้าหมายนี้"
+  },
+  {
+    "setting": "setting_health",
+    "role": "role_teacher",
+    "targetYouth": "youth_vulnerable",
+    "goalC": "goal_c1",
+    "status": "no_match",
+    "reason": "คลังปัจจุบันมีคู่มือบริการสำหรับทีมวิชาชีพ แต่ยังไม่มีชุดเครื่องมือที่ยืนยันได้สำหรับบทบาท กลุ่มเยาวชน และเป้าหมายนี้"
+  },
+  {
+    "setting": "setting_health",
+    "role": "role_teacher",
+    "targetYouth": "youth_vulnerable",
+    "goalC": "goal_c2",
+    "status": "no_match",
+    "reason": "คลังปัจจุบันมีคู่มือบริการสำหรับทีมวิชาชีพ แต่ยังไม่มีชุดเครื่องมือที่ยืนยันได้สำหรับบทบาท กลุ่มเยาวชน และเป้าหมายนี้"
+  },
+  {
+    "setting": "setting_health",
+    "role": "role_teacher",
+    "targetYouth": "youth_vulnerable",
+    "goalC": "goal_c3",
+    "status": "no_match",
+    "reason": "คลังปัจจุบันมีคู่มือบริการสำหรับทีมวิชาชีพ แต่ยังไม่มีชุดเครื่องมือที่ยืนยันได้สำหรับบทบาท กลุ่มเยาวชน และเป้าหมายนี้"
+  },
+  {
+    "setting": "setting_health",
+    "role": "role_teacher",
+    "targetYouth": "youth_vulnerable",
+    "goalC": "goal_c4",
+    "status": "no_match",
+    "reason": "คลังปัจจุบันมีคู่มือบริการสำหรับทีมวิชาชีพ แต่ยังไม่มีชุดเครื่องมือที่ยืนยันได้สำหรับบทบาท กลุ่มเยาวชน และเป้าหมายนี้"
+  },
+  {
+    "setting": "setting_health",
+    "role": "role_teacher",
+    "targetYouth": "youth_vulnerable",
+    "goalC": "goal_c5",
+    "status": "no_match",
+    "reason": "คลังปัจจุบันมีคู่มือบริการสำหรับทีมวิชาชีพ แต่ยังไม่มีชุดเครื่องมือที่ยืนยันได้สำหรับบทบาท กลุ่มเยาวชน และเป้าหมายนี้"
+  },
+  {
+    "setting": "setting_health",
+    "role": "role_health_agent",
+    "targetYouth": "youth_early",
+    "goalC": "goal_c1",
+    "status": "no_match",
+    "reason": "คลังปัจจุบันมีคู่มือบริการสำหรับทีมวิชาชีพ แต่ยังไม่มีชุดเครื่องมือที่ยืนยันได้สำหรับบทบาท กลุ่มเยาวชน และเป้าหมายนี้"
+  },
+  {
+    "setting": "setting_health",
+    "role": "role_health_agent",
+    "targetYouth": "youth_early",
+    "goalC": "goal_c2",
+    "status": "no_match",
+    "reason": "คลังปัจจุบันมีคู่มือบริการสำหรับทีมวิชาชีพ แต่ยังไม่มีชุดเครื่องมือที่ยืนยันได้สำหรับบทบาท กลุ่มเยาวชน และเป้าหมายนี้"
+  },
+  {
+    "setting": "setting_health",
+    "role": "role_health_agent",
+    "targetYouth": "youth_early",
+    "goalC": "goal_c3",
+    "status": "no_match",
+    "reason": "คลังปัจจุบันมีคู่มือบริการสำหรับทีมวิชาชีพ แต่ยังไม่มีชุดเครื่องมือที่ยืนยันได้สำหรับบทบาท กลุ่มเยาวชน และเป้าหมายนี้"
+  },
+  {
+    "setting": "setting_health",
+    "role": "role_health_agent",
+    "targetYouth": "youth_early",
+    "goalC": "goal_c4",
+    "status": "no_match",
+    "reason": "คลังปัจจุบันมีคู่มือบริการสำหรับทีมวิชาชีพ แต่ยังไม่มีชุดเครื่องมือที่ยืนยันได้สำหรับบทบาท กลุ่มเยาวชน และเป้าหมายนี้"
+  },
+  {
+    "setting": "setting_health",
+    "role": "role_health_agent",
+    "targetYouth": "youth_early",
+    "goalC": "goal_c5",
+    "status": "no_match",
+    "reason": "คลังปัจจุบันมีคู่มือบริการสำหรับทีมวิชาชีพ แต่ยังไม่มีชุดเครื่องมือที่ยืนยันได้สำหรับบทบาท กลุ่มเยาวชน และเป้าหมายนี้"
+  },
+  {
+    "setting": "setting_health",
+    "role": "role_health_agent",
+    "targetYouth": "youth_primary",
+    "goalC": "goal_c1",
+    "status": "no_match",
+    "reason": "คลังปัจจุบันมีคู่มือบริการสำหรับทีมวิชาชีพ แต่ยังไม่มีชุดเครื่องมือที่ยืนยันได้สำหรับบทบาท กลุ่มเยาวชน และเป้าหมายนี้"
+  },
+  {
+    "setting": "setting_health",
+    "role": "role_health_agent",
+    "targetYouth": "youth_primary",
+    "goalC": "goal_c2",
+    "status": "no_match",
+    "reason": "คลังปัจจุบันมีคู่มือบริการสำหรับทีมวิชาชีพ แต่ยังไม่มีชุดเครื่องมือที่ยืนยันได้สำหรับบทบาท กลุ่มเยาวชน และเป้าหมายนี้"
+  },
+  {
+    "setting": "setting_health",
+    "role": "role_health_agent",
+    "targetYouth": "youth_primary",
+    "goalC": "goal_c3",
+    "status": "no_match",
+    "reason": "คลังปัจจุบันมีคู่มือบริการสำหรับทีมวิชาชีพ แต่ยังไม่มีชุดเครื่องมือที่ยืนยันได้สำหรับบทบาท กลุ่มเยาวชน และเป้าหมายนี้"
+  },
+  {
+    "setting": "setting_health",
+    "role": "role_health_agent",
+    "targetYouth": "youth_primary",
+    "goalC": "goal_c4",
+    "status": "no_match",
+    "reason": "คลังปัจจุบันมีคู่มือบริการสำหรับทีมวิชาชีพ แต่ยังไม่มีชุดเครื่องมือที่ยืนยันได้สำหรับบทบาท กลุ่มเยาวชน และเป้าหมายนี้"
+  },
+  {
+    "setting": "setting_health",
+    "role": "role_health_agent",
+    "targetYouth": "youth_primary",
+    "goalC": "goal_c5",
+    "status": "no_match",
+    "reason": "คลังปัจจุบันมีคู่มือบริการสำหรับทีมวิชาชีพ แต่ยังไม่มีชุดเครื่องมือที่ยืนยันได้สำหรับบทบาท กลุ่มเยาวชน และเป้าหมายนี้"
+  },
+  {
+    "setting": "setting_health",
+    "role": "role_health_agent",
+    "targetYouth": "youth_secondary",
+    "goalC": "goal_c1",
+    "status": "no_match",
+    "reason": "คลังปัจจุบันมีคู่มือบริการสำหรับทีมวิชาชีพ แต่ยังไม่มีชุดเครื่องมือที่ยืนยันได้สำหรับบทบาท กลุ่มเยาวชน และเป้าหมายนี้"
+  },
+  {
+    "setting": "setting_health",
+    "role": "role_health_agent",
+    "targetYouth": "youth_secondary",
+    "goalC": "goal_c2",
+    "status": "no_match",
+    "reason": "คลังปัจจุบันมีคู่มือบริการสำหรับทีมวิชาชีพ แต่ยังไม่มีชุดเครื่องมือที่ยืนยันได้สำหรับบทบาท กลุ่มเยาวชน และเป้าหมายนี้"
+  },
+  {
+    "setting": "setting_health",
+    "role": "role_health_agent",
+    "targetYouth": "youth_secondary",
+    "goalC": "goal_c3",
+    "status": "no_match",
+    "reason": "คลังปัจจุบันมีคู่มือบริการสำหรับทีมวิชาชีพ แต่ยังไม่มีชุดเครื่องมือที่ยืนยันได้สำหรับบทบาท กลุ่มเยาวชน และเป้าหมายนี้"
+  },
+  {
+    "setting": "setting_health",
+    "role": "role_health_agent",
+    "targetYouth": "youth_secondary",
+    "goalC": "goal_c4",
+    "status": "no_match",
+    "reason": "คลังปัจจุบันมีคู่มือบริการสำหรับทีมวิชาชีพ แต่ยังไม่มีชุดเครื่องมือที่ยืนยันได้สำหรับบทบาท กลุ่มเยาวชน และเป้าหมายนี้"
+  },
+  {
+    "setting": "setting_health",
+    "role": "role_health_agent",
+    "targetYouth": "youth_secondary",
+    "goalC": "goal_c5",
+    "status": "matched",
+    "scenarioCode": "REAL4-0175",
+    "packageCode": "PK7-HEA-C5",
+    "tools": [
+      "MAIN-17",
+      "MAIN-18"
+    ]
+  },
+  {
+    "setting": "setting_health",
+    "role": "role_health_agent",
+    "targetYouth": "youth_university",
+    "goalC": "goal_c1",
+    "status": "no_match",
+    "reason": "คลังปัจจุบันมีคู่มือบริการสำหรับทีมวิชาชีพ แต่ยังไม่มีชุดเครื่องมือที่ยืนยันได้สำหรับบทบาท กลุ่มเยาวชน และเป้าหมายนี้"
+  },
+  {
+    "setting": "setting_health",
+    "role": "role_health_agent",
+    "targetYouth": "youth_university",
+    "goalC": "goal_c2",
+    "status": "no_match",
+    "reason": "คลังปัจจุบันมีคู่มือบริการสำหรับทีมวิชาชีพ แต่ยังไม่มีชุดเครื่องมือที่ยืนยันได้สำหรับบทบาท กลุ่มเยาวชน และเป้าหมายนี้"
+  },
+  {
+    "setting": "setting_health",
+    "role": "role_health_agent",
+    "targetYouth": "youth_university",
+    "goalC": "goal_c3",
+    "status": "no_match",
+    "reason": "คลังปัจจุบันมีคู่มือบริการสำหรับทีมวิชาชีพ แต่ยังไม่มีชุดเครื่องมือที่ยืนยันได้สำหรับบทบาท กลุ่มเยาวชน และเป้าหมายนี้"
+  },
+  {
+    "setting": "setting_health",
+    "role": "role_health_agent",
+    "targetYouth": "youth_university",
+    "goalC": "goal_c4",
+    "status": "no_match",
+    "reason": "คลังปัจจุบันมีคู่มือบริการสำหรับทีมวิชาชีพ แต่ยังไม่มีชุดเครื่องมือที่ยืนยันได้สำหรับบทบาท กลุ่มเยาวชน และเป้าหมายนี้"
+  },
+  {
+    "setting": "setting_health",
+    "role": "role_health_agent",
+    "targetYouth": "youth_university",
+    "goalC": "goal_c5",
+    "status": "matched",
+    "scenarioCode": "REAL4-0176",
+    "packageCode": "PK7-HEA-C5",
+    "tools": [
+      "MAIN-17",
+      "MAIN-18"
+    ]
+  },
+  {
+    "setting": "setting_health",
+    "role": "role_health_agent",
+    "targetYouth": "youth_vulnerable",
+    "goalC": "goal_c1",
+    "status": "no_match",
+    "reason": "คลังปัจจุบันมีคู่มือบริการสำหรับทีมวิชาชีพ แต่ยังไม่มีชุดเครื่องมือที่ยืนยันได้สำหรับบทบาท กลุ่มเยาวชน และเป้าหมายนี้"
+  },
+  {
+    "setting": "setting_health",
+    "role": "role_health_agent",
+    "targetYouth": "youth_vulnerable",
+    "goalC": "goal_c2",
+    "status": "no_match",
+    "reason": "คลังปัจจุบันมีคู่มือบริการสำหรับทีมวิชาชีพ แต่ยังไม่มีชุดเครื่องมือที่ยืนยันได้สำหรับบทบาท กลุ่มเยาวชน และเป้าหมายนี้"
+  },
+  {
+    "setting": "setting_health",
+    "role": "role_health_agent",
+    "targetYouth": "youth_vulnerable",
+    "goalC": "goal_c3",
+    "status": "no_match",
+    "reason": "คลังปัจจุบันมีคู่มือบริการสำหรับทีมวิชาชีพ แต่ยังไม่มีชุดเครื่องมือที่ยืนยันได้สำหรับบทบาท กลุ่มเยาวชน และเป้าหมายนี้"
+  },
+  {
+    "setting": "setting_health",
+    "role": "role_health_agent",
+    "targetYouth": "youth_vulnerable",
+    "goalC": "goal_c4",
+    "status": "no_match",
+    "reason": "คลังปัจจุบันมีคู่มือบริการสำหรับทีมวิชาชีพ แต่ยังไม่มีชุดเครื่องมือที่ยืนยันได้สำหรับบทบาท กลุ่มเยาวชน และเป้าหมายนี้"
+  },
+  {
+    "setting": "setting_health",
+    "role": "role_health_agent",
+    "targetYouth": "youth_vulnerable",
+    "goalC": "goal_c5",
+    "status": "no_match",
+    "reason": "คลังปัจจุบันมีคู่มือบริการสำหรับทีมวิชาชีพ แต่ยังไม่มีชุดเครื่องมือที่ยืนยันได้สำหรับบทบาท กลุ่มเยาวชน และเป้าหมายนี้"
+  },
+  {
+    "setting": "setting_health",
+    "role": "role_community_leader",
+    "targetYouth": "youth_early",
+    "goalC": "goal_c1",
+    "status": "no_match",
+    "reason": "คลังปัจจุบันมีคู่มือบริการสำหรับทีมวิชาชีพ แต่ยังไม่มีชุดเครื่องมือที่ยืนยันได้สำหรับบทบาท กลุ่มเยาวชน และเป้าหมายนี้"
+  },
+  {
+    "setting": "setting_health",
+    "role": "role_community_leader",
+    "targetYouth": "youth_early",
+    "goalC": "goal_c2",
+    "status": "no_match",
+    "reason": "คลังปัจจุบันมีคู่มือบริการสำหรับทีมวิชาชีพ แต่ยังไม่มีชุดเครื่องมือที่ยืนยันได้สำหรับบทบาท กลุ่มเยาวชน และเป้าหมายนี้"
+  },
+  {
+    "setting": "setting_health",
+    "role": "role_community_leader",
+    "targetYouth": "youth_early",
+    "goalC": "goal_c3",
+    "status": "no_match",
+    "reason": "คลังปัจจุบันมีคู่มือบริการสำหรับทีมวิชาชีพ แต่ยังไม่มีชุดเครื่องมือที่ยืนยันได้สำหรับบทบาท กลุ่มเยาวชน และเป้าหมายนี้"
+  },
+  {
+    "setting": "setting_health",
+    "role": "role_community_leader",
+    "targetYouth": "youth_early",
+    "goalC": "goal_c4",
+    "status": "no_match",
+    "reason": "คลังปัจจุบันมีคู่มือบริการสำหรับทีมวิชาชีพ แต่ยังไม่มีชุดเครื่องมือที่ยืนยันได้สำหรับบทบาท กลุ่มเยาวชน และเป้าหมายนี้"
+  },
+  {
+    "setting": "setting_health",
+    "role": "role_community_leader",
+    "targetYouth": "youth_early",
+    "goalC": "goal_c5",
+    "status": "no_match",
+    "reason": "คลังปัจจุบันมีคู่มือบริการสำหรับทีมวิชาชีพ แต่ยังไม่มีชุดเครื่องมือที่ยืนยันได้สำหรับบทบาท กลุ่มเยาวชน และเป้าหมายนี้"
+  },
+  {
+    "setting": "setting_health",
+    "role": "role_community_leader",
+    "targetYouth": "youth_primary",
+    "goalC": "goal_c1",
+    "status": "no_match",
+    "reason": "คลังปัจจุบันมีคู่มือบริการสำหรับทีมวิชาชีพ แต่ยังไม่มีชุดเครื่องมือที่ยืนยันได้สำหรับบทบาท กลุ่มเยาวชน และเป้าหมายนี้"
+  },
+  {
+    "setting": "setting_health",
+    "role": "role_community_leader",
+    "targetYouth": "youth_primary",
+    "goalC": "goal_c2",
+    "status": "no_match",
+    "reason": "คลังปัจจุบันมีคู่มือบริการสำหรับทีมวิชาชีพ แต่ยังไม่มีชุดเครื่องมือที่ยืนยันได้สำหรับบทบาท กลุ่มเยาวชน และเป้าหมายนี้"
+  },
+  {
+    "setting": "setting_health",
+    "role": "role_community_leader",
+    "targetYouth": "youth_primary",
+    "goalC": "goal_c3",
+    "status": "no_match",
+    "reason": "คลังปัจจุบันมีคู่มือบริการสำหรับทีมวิชาชีพ แต่ยังไม่มีชุดเครื่องมือที่ยืนยันได้สำหรับบทบาท กลุ่มเยาวชน และเป้าหมายนี้"
+  },
+  {
+    "setting": "setting_health",
+    "role": "role_community_leader",
+    "targetYouth": "youth_primary",
+    "goalC": "goal_c4",
+    "status": "no_match",
+    "reason": "คลังปัจจุบันมีคู่มือบริการสำหรับทีมวิชาชีพ แต่ยังไม่มีชุดเครื่องมือที่ยืนยันได้สำหรับบทบาท กลุ่มเยาวชน และเป้าหมายนี้"
+  },
+  {
+    "setting": "setting_health",
+    "role": "role_community_leader",
+    "targetYouth": "youth_primary",
+    "goalC": "goal_c5",
+    "status": "no_match",
+    "reason": "คลังปัจจุบันมีคู่มือบริการสำหรับทีมวิชาชีพ แต่ยังไม่มีชุดเครื่องมือที่ยืนยันได้สำหรับบทบาท กลุ่มเยาวชน และเป้าหมายนี้"
+  },
+  {
+    "setting": "setting_health",
+    "role": "role_community_leader",
+    "targetYouth": "youth_secondary",
+    "goalC": "goal_c1",
+    "status": "no_match",
+    "reason": "คลังปัจจุบันมีคู่มือบริการสำหรับทีมวิชาชีพ แต่ยังไม่มีชุดเครื่องมือที่ยืนยันได้สำหรับบทบาท กลุ่มเยาวชน และเป้าหมายนี้"
+  },
+  {
+    "setting": "setting_health",
+    "role": "role_community_leader",
+    "targetYouth": "youth_secondary",
+    "goalC": "goal_c2",
+    "status": "no_match",
+    "reason": "คลังปัจจุบันมีคู่มือบริการสำหรับทีมวิชาชีพ แต่ยังไม่มีชุดเครื่องมือที่ยืนยันได้สำหรับบทบาท กลุ่มเยาวชน และเป้าหมายนี้"
+  },
+  {
+    "setting": "setting_health",
+    "role": "role_community_leader",
+    "targetYouth": "youth_secondary",
+    "goalC": "goal_c3",
+    "status": "no_match",
+    "reason": "คลังปัจจุบันมีคู่มือบริการสำหรับทีมวิชาชีพ แต่ยังไม่มีชุดเครื่องมือที่ยืนยันได้สำหรับบทบาท กลุ่มเยาวชน และเป้าหมายนี้"
+  },
+  {
+    "setting": "setting_health",
+    "role": "role_community_leader",
+    "targetYouth": "youth_secondary",
+    "goalC": "goal_c4",
+    "status": "no_match",
+    "reason": "คลังปัจจุบันมีคู่มือบริการสำหรับทีมวิชาชีพ แต่ยังไม่มีชุดเครื่องมือที่ยืนยันได้สำหรับบทบาท กลุ่มเยาวชน และเป้าหมายนี้"
+  },
+  {
+    "setting": "setting_health",
+    "role": "role_community_leader",
+    "targetYouth": "youth_secondary",
+    "goalC": "goal_c5",
+    "status": "no_match",
+    "reason": "คลังปัจจุบันมีคู่มือบริการสำหรับทีมวิชาชีพ แต่ยังไม่มีชุดเครื่องมือที่ยืนยันได้สำหรับบทบาท กลุ่มเยาวชน และเป้าหมายนี้"
+  },
+  {
+    "setting": "setting_health",
+    "role": "role_community_leader",
+    "targetYouth": "youth_university",
+    "goalC": "goal_c1",
+    "status": "no_match",
+    "reason": "คลังปัจจุบันมีคู่มือบริการสำหรับทีมวิชาชีพ แต่ยังไม่มีชุดเครื่องมือที่ยืนยันได้สำหรับบทบาท กลุ่มเยาวชน และเป้าหมายนี้"
+  },
+  {
+    "setting": "setting_health",
+    "role": "role_community_leader",
+    "targetYouth": "youth_university",
+    "goalC": "goal_c2",
+    "status": "no_match",
+    "reason": "คลังปัจจุบันมีคู่มือบริการสำหรับทีมวิชาชีพ แต่ยังไม่มีชุดเครื่องมือที่ยืนยันได้สำหรับบทบาท กลุ่มเยาวชน และเป้าหมายนี้"
+  },
+  {
+    "setting": "setting_health",
+    "role": "role_community_leader",
+    "targetYouth": "youth_university",
+    "goalC": "goal_c3",
+    "status": "no_match",
+    "reason": "คลังปัจจุบันมีคู่มือบริการสำหรับทีมวิชาชีพ แต่ยังไม่มีชุดเครื่องมือที่ยืนยันได้สำหรับบทบาท กลุ่มเยาวชน และเป้าหมายนี้"
+  },
+  {
+    "setting": "setting_health",
+    "role": "role_community_leader",
+    "targetYouth": "youth_university",
+    "goalC": "goal_c4",
+    "status": "no_match",
+    "reason": "คลังปัจจุบันมีคู่มือบริการสำหรับทีมวิชาชีพ แต่ยังไม่มีชุดเครื่องมือที่ยืนยันได้สำหรับบทบาท กลุ่มเยาวชน และเป้าหมายนี้"
+  },
+  {
+    "setting": "setting_health",
+    "role": "role_community_leader",
+    "targetYouth": "youth_university",
+    "goalC": "goal_c5",
+    "status": "no_match",
+    "reason": "คลังปัจจุบันมีคู่มือบริการสำหรับทีมวิชาชีพ แต่ยังไม่มีชุดเครื่องมือที่ยืนยันได้สำหรับบทบาท กลุ่มเยาวชน และเป้าหมายนี้"
+  },
+  {
+    "setting": "setting_health",
+    "role": "role_community_leader",
+    "targetYouth": "youth_vulnerable",
+    "goalC": "goal_c1",
+    "status": "no_match",
+    "reason": "คลังปัจจุบันมีคู่มือบริการสำหรับทีมวิชาชีพ แต่ยังไม่มีชุดเครื่องมือที่ยืนยันได้สำหรับบทบาท กลุ่มเยาวชน และเป้าหมายนี้"
+  },
+  {
+    "setting": "setting_health",
+    "role": "role_community_leader",
+    "targetYouth": "youth_vulnerable",
+    "goalC": "goal_c2",
+    "status": "no_match",
+    "reason": "คลังปัจจุบันมีคู่มือบริการสำหรับทีมวิชาชีพ แต่ยังไม่มีชุดเครื่องมือที่ยืนยันได้สำหรับบทบาท กลุ่มเยาวชน และเป้าหมายนี้"
+  },
+  {
+    "setting": "setting_health",
+    "role": "role_community_leader",
+    "targetYouth": "youth_vulnerable",
+    "goalC": "goal_c3",
+    "status": "no_match",
+    "reason": "คลังปัจจุบันมีคู่มือบริการสำหรับทีมวิชาชีพ แต่ยังไม่มีชุดเครื่องมือที่ยืนยันได้สำหรับบทบาท กลุ่มเยาวชน และเป้าหมายนี้"
+  },
+  {
+    "setting": "setting_health",
+    "role": "role_community_leader",
+    "targetYouth": "youth_vulnerable",
+    "goalC": "goal_c4",
+    "status": "no_match",
+    "reason": "คลังปัจจุบันมีคู่มือบริการสำหรับทีมวิชาชีพ แต่ยังไม่มีชุดเครื่องมือที่ยืนยันได้สำหรับบทบาท กลุ่มเยาวชน และเป้าหมายนี้"
+  },
+  {
+    "setting": "setting_health",
+    "role": "role_community_leader",
+    "targetYouth": "youth_vulnerable",
+    "goalC": "goal_c5",
+    "status": "no_match",
+    "reason": "คลังปัจจุบันมีคู่มือบริการสำหรับทีมวิชาชีพ แต่ยังไม่มีชุดเครื่องมือที่ยืนยันได้สำหรับบทบาท กลุ่มเยาวชน และเป้าหมายนี้"
+  },
+  {
+    "setting": "setting_health",
+    "role": "role_parent",
+    "targetYouth": "youth_early",
+    "goalC": "goal_c1",
+    "status": "no_match",
+    "reason": "คลังปัจจุบันมีคู่มือบริการสำหรับทีมวิชาชีพ แต่ยังไม่มีชุดเครื่องมือที่ยืนยันได้สำหรับบทบาท กลุ่มเยาวชน และเป้าหมายนี้"
+  },
+  {
+    "setting": "setting_health",
+    "role": "role_parent",
+    "targetYouth": "youth_early",
+    "goalC": "goal_c2",
+    "status": "no_match",
+    "reason": "คลังปัจจุบันมีคู่มือบริการสำหรับทีมวิชาชีพ แต่ยังไม่มีชุดเครื่องมือที่ยืนยันได้สำหรับบทบาท กลุ่มเยาวชน และเป้าหมายนี้"
+  },
+  {
+    "setting": "setting_health",
+    "role": "role_parent",
+    "targetYouth": "youth_early",
+    "goalC": "goal_c3",
+    "status": "no_match",
+    "reason": "คลังปัจจุบันมีคู่มือบริการสำหรับทีมวิชาชีพ แต่ยังไม่มีชุดเครื่องมือที่ยืนยันได้สำหรับบทบาท กลุ่มเยาวชน และเป้าหมายนี้"
+  },
+  {
+    "setting": "setting_health",
+    "role": "role_parent",
+    "targetYouth": "youth_early",
+    "goalC": "goal_c4",
+    "status": "no_match",
+    "reason": "คลังปัจจุบันมีคู่มือบริการสำหรับทีมวิชาชีพ แต่ยังไม่มีชุดเครื่องมือที่ยืนยันได้สำหรับบทบาท กลุ่มเยาวชน และเป้าหมายนี้"
+  },
+  {
+    "setting": "setting_health",
+    "role": "role_parent",
+    "targetYouth": "youth_early",
+    "goalC": "goal_c5",
+    "status": "no_match",
+    "reason": "คลังปัจจุบันมีคู่มือบริการสำหรับทีมวิชาชีพ แต่ยังไม่มีชุดเครื่องมือที่ยืนยันได้สำหรับบทบาท กลุ่มเยาวชน และเป้าหมายนี้"
+  },
+  {
+    "setting": "setting_health",
+    "role": "role_parent",
+    "targetYouth": "youth_primary",
+    "goalC": "goal_c1",
+    "status": "no_match",
+    "reason": "คลังปัจจุบันมีคู่มือบริการสำหรับทีมวิชาชีพ แต่ยังไม่มีชุดเครื่องมือที่ยืนยันได้สำหรับบทบาท กลุ่มเยาวชน และเป้าหมายนี้"
+  },
+  {
+    "setting": "setting_health",
+    "role": "role_parent",
+    "targetYouth": "youth_primary",
+    "goalC": "goal_c2",
+    "status": "no_match",
+    "reason": "คลังปัจจุบันมีคู่มือบริการสำหรับทีมวิชาชีพ แต่ยังไม่มีชุดเครื่องมือที่ยืนยันได้สำหรับบทบาท กลุ่มเยาวชน และเป้าหมายนี้"
+  },
+  {
+    "setting": "setting_health",
+    "role": "role_parent",
+    "targetYouth": "youth_primary",
+    "goalC": "goal_c3",
+    "status": "no_match",
+    "reason": "คลังปัจจุบันมีคู่มือบริการสำหรับทีมวิชาชีพ แต่ยังไม่มีชุดเครื่องมือที่ยืนยันได้สำหรับบทบาท กลุ่มเยาวชน และเป้าหมายนี้"
+  },
+  {
+    "setting": "setting_health",
+    "role": "role_parent",
+    "targetYouth": "youth_primary",
+    "goalC": "goal_c4",
+    "status": "no_match",
+    "reason": "คลังปัจจุบันมีคู่มือบริการสำหรับทีมวิชาชีพ แต่ยังไม่มีชุดเครื่องมือที่ยืนยันได้สำหรับบทบาท กลุ่มเยาวชน และเป้าหมายนี้"
+  },
+  {
+    "setting": "setting_health",
+    "role": "role_parent",
+    "targetYouth": "youth_primary",
+    "goalC": "goal_c5",
+    "status": "no_match",
+    "reason": "คลังปัจจุบันมีคู่มือบริการสำหรับทีมวิชาชีพ แต่ยังไม่มีชุดเครื่องมือที่ยืนยันได้สำหรับบทบาท กลุ่มเยาวชน และเป้าหมายนี้"
+  },
+  {
+    "setting": "setting_health",
+    "role": "role_parent",
+    "targetYouth": "youth_secondary",
+    "goalC": "goal_c1",
+    "status": "no_match",
+    "reason": "คลังปัจจุบันมีคู่มือบริการสำหรับทีมวิชาชีพ แต่ยังไม่มีชุดเครื่องมือที่ยืนยันได้สำหรับบทบาท กลุ่มเยาวชน และเป้าหมายนี้"
+  },
+  {
+    "setting": "setting_health",
+    "role": "role_parent",
+    "targetYouth": "youth_secondary",
+    "goalC": "goal_c2",
+    "status": "no_match",
+    "reason": "คลังปัจจุบันมีคู่มือบริการสำหรับทีมวิชาชีพ แต่ยังไม่มีชุดเครื่องมือที่ยืนยันได้สำหรับบทบาท กลุ่มเยาวชน และเป้าหมายนี้"
+  },
+  {
+    "setting": "setting_health",
+    "role": "role_parent",
+    "targetYouth": "youth_secondary",
+    "goalC": "goal_c3",
+    "status": "no_match",
+    "reason": "คลังปัจจุบันมีคู่มือบริการสำหรับทีมวิชาชีพ แต่ยังไม่มีชุดเครื่องมือที่ยืนยันได้สำหรับบทบาท กลุ่มเยาวชน และเป้าหมายนี้"
+  },
+  {
+    "setting": "setting_health",
+    "role": "role_parent",
+    "targetYouth": "youth_secondary",
+    "goalC": "goal_c4",
+    "status": "no_match",
+    "reason": "คลังปัจจุบันมีคู่มือบริการสำหรับทีมวิชาชีพ แต่ยังไม่มีชุดเครื่องมือที่ยืนยันได้สำหรับบทบาท กลุ่มเยาวชน และเป้าหมายนี้"
+  },
+  {
+    "setting": "setting_health",
+    "role": "role_parent",
+    "targetYouth": "youth_secondary",
+    "goalC": "goal_c5",
+    "status": "no_match",
+    "reason": "คลังปัจจุบันมีคู่มือบริการสำหรับทีมวิชาชีพ แต่ยังไม่มีชุดเครื่องมือที่ยืนยันได้สำหรับบทบาท กลุ่มเยาวชน และเป้าหมายนี้"
+  },
+  {
+    "setting": "setting_health",
+    "role": "role_parent",
+    "targetYouth": "youth_university",
+    "goalC": "goal_c1",
+    "status": "no_match",
+    "reason": "คลังปัจจุบันมีคู่มือบริการสำหรับทีมวิชาชีพ แต่ยังไม่มีชุดเครื่องมือที่ยืนยันได้สำหรับบทบาท กลุ่มเยาวชน และเป้าหมายนี้"
+  },
+  {
+    "setting": "setting_health",
+    "role": "role_parent",
+    "targetYouth": "youth_university",
+    "goalC": "goal_c2",
+    "status": "no_match",
+    "reason": "คลังปัจจุบันมีคู่มือบริการสำหรับทีมวิชาชีพ แต่ยังไม่มีชุดเครื่องมือที่ยืนยันได้สำหรับบทบาท กลุ่มเยาวชน และเป้าหมายนี้"
+  },
+  {
+    "setting": "setting_health",
+    "role": "role_parent",
+    "targetYouth": "youth_university",
+    "goalC": "goal_c3",
+    "status": "no_match",
+    "reason": "คลังปัจจุบันมีคู่มือบริการสำหรับทีมวิชาชีพ แต่ยังไม่มีชุดเครื่องมือที่ยืนยันได้สำหรับบทบาท กลุ่มเยาวชน และเป้าหมายนี้"
+  },
+  {
+    "setting": "setting_health",
+    "role": "role_parent",
+    "targetYouth": "youth_university",
+    "goalC": "goal_c4",
+    "status": "no_match",
+    "reason": "คลังปัจจุบันมีคู่มือบริการสำหรับทีมวิชาชีพ แต่ยังไม่มีชุดเครื่องมือที่ยืนยันได้สำหรับบทบาท กลุ่มเยาวชน และเป้าหมายนี้"
+  },
+  {
+    "setting": "setting_health",
+    "role": "role_parent",
+    "targetYouth": "youth_university",
+    "goalC": "goal_c5",
+    "status": "no_match",
+    "reason": "คลังปัจจุบันมีคู่มือบริการสำหรับทีมวิชาชีพ แต่ยังไม่มีชุดเครื่องมือที่ยืนยันได้สำหรับบทบาท กลุ่มเยาวชน และเป้าหมายนี้"
+  },
+  {
+    "setting": "setting_health",
+    "role": "role_parent",
+    "targetYouth": "youth_vulnerable",
+    "goalC": "goal_c1",
+    "status": "no_match",
+    "reason": "คลังปัจจุบันมีคู่มือบริการสำหรับทีมวิชาชีพ แต่ยังไม่มีชุดเครื่องมือที่ยืนยันได้สำหรับบทบาท กลุ่มเยาวชน และเป้าหมายนี้"
+  },
+  {
+    "setting": "setting_health",
+    "role": "role_parent",
+    "targetYouth": "youth_vulnerable",
+    "goalC": "goal_c2",
+    "status": "no_match",
+    "reason": "คลังปัจจุบันมีคู่มือบริการสำหรับทีมวิชาชีพ แต่ยังไม่มีชุดเครื่องมือที่ยืนยันได้สำหรับบทบาท กลุ่มเยาวชน และเป้าหมายนี้"
+  },
+  {
+    "setting": "setting_health",
+    "role": "role_parent",
+    "targetYouth": "youth_vulnerable",
+    "goalC": "goal_c3",
+    "status": "no_match",
+    "reason": "คลังปัจจุบันมีคู่มือบริการสำหรับทีมวิชาชีพ แต่ยังไม่มีชุดเครื่องมือที่ยืนยันได้สำหรับบทบาท กลุ่มเยาวชน และเป้าหมายนี้"
+  },
+  {
+    "setting": "setting_health",
+    "role": "role_parent",
+    "targetYouth": "youth_vulnerable",
+    "goalC": "goal_c4",
+    "status": "no_match",
+    "reason": "คลังปัจจุบันมีคู่มือบริการสำหรับทีมวิชาชีพ แต่ยังไม่มีชุดเครื่องมือที่ยืนยันได้สำหรับบทบาท กลุ่มเยาวชน และเป้าหมายนี้"
+  },
+  {
+    "setting": "setting_health",
+    "role": "role_parent",
+    "targetYouth": "youth_vulnerable",
+    "goalC": "goal_c5",
+    "status": "no_match",
+    "reason": "คลังปัจจุบันมีคู่มือบริการสำหรับทีมวิชาชีพ แต่ยังไม่มีชุดเครื่องมือที่ยืนยันได้สำหรับบทบาท กลุ่มเยาวชน และเป้าหมายนี้"
+  },
+  {
+    "setting": "setting_health",
+    "role": "role_youth_leader",
+    "targetYouth": "youth_early",
+    "goalC": "goal_c1",
+    "status": "no_match",
+    "reason": "คลังปัจจุบันมีคู่มือบริการสำหรับทีมวิชาชีพ แต่ยังไม่มีชุดเครื่องมือที่ยืนยันได้สำหรับบทบาท กลุ่มเยาวชน และเป้าหมายนี้"
+  },
+  {
+    "setting": "setting_health",
+    "role": "role_youth_leader",
+    "targetYouth": "youth_early",
+    "goalC": "goal_c2",
+    "status": "no_match",
+    "reason": "คลังปัจจุบันมีคู่มือบริการสำหรับทีมวิชาชีพ แต่ยังไม่มีชุดเครื่องมือที่ยืนยันได้สำหรับบทบาท กลุ่มเยาวชน และเป้าหมายนี้"
+  },
+  {
+    "setting": "setting_health",
+    "role": "role_youth_leader",
+    "targetYouth": "youth_early",
+    "goalC": "goal_c3",
+    "status": "no_match",
+    "reason": "คลังปัจจุบันมีคู่มือบริการสำหรับทีมวิชาชีพ แต่ยังไม่มีชุดเครื่องมือที่ยืนยันได้สำหรับบทบาท กลุ่มเยาวชน และเป้าหมายนี้"
+  },
+  {
+    "setting": "setting_health",
+    "role": "role_youth_leader",
+    "targetYouth": "youth_early",
+    "goalC": "goal_c4",
+    "status": "no_match",
+    "reason": "คลังปัจจุบันมีคู่มือบริการสำหรับทีมวิชาชีพ แต่ยังไม่มีชุดเครื่องมือที่ยืนยันได้สำหรับบทบาท กลุ่มเยาวชน และเป้าหมายนี้"
+  },
+  {
+    "setting": "setting_health",
+    "role": "role_youth_leader",
+    "targetYouth": "youth_early",
+    "goalC": "goal_c5",
+    "status": "no_match",
+    "reason": "คลังปัจจุบันมีคู่มือบริการสำหรับทีมวิชาชีพ แต่ยังไม่มีชุดเครื่องมือที่ยืนยันได้สำหรับบทบาท กลุ่มเยาวชน และเป้าหมายนี้"
+  },
+  {
+    "setting": "setting_health",
+    "role": "role_youth_leader",
+    "targetYouth": "youth_primary",
+    "goalC": "goal_c1",
+    "status": "no_match",
+    "reason": "คลังปัจจุบันมีคู่มือบริการสำหรับทีมวิชาชีพ แต่ยังไม่มีชุดเครื่องมือที่ยืนยันได้สำหรับบทบาท กลุ่มเยาวชน และเป้าหมายนี้"
+  },
+  {
+    "setting": "setting_health",
+    "role": "role_youth_leader",
+    "targetYouth": "youth_primary",
+    "goalC": "goal_c2",
+    "status": "no_match",
+    "reason": "คลังปัจจุบันมีคู่มือบริการสำหรับทีมวิชาชีพ แต่ยังไม่มีชุดเครื่องมือที่ยืนยันได้สำหรับบทบาท กลุ่มเยาวชน และเป้าหมายนี้"
+  },
+  {
+    "setting": "setting_health",
+    "role": "role_youth_leader",
+    "targetYouth": "youth_primary",
+    "goalC": "goal_c3",
+    "status": "no_match",
+    "reason": "คลังปัจจุบันมีคู่มือบริการสำหรับทีมวิชาชีพ แต่ยังไม่มีชุดเครื่องมือที่ยืนยันได้สำหรับบทบาท กลุ่มเยาวชน และเป้าหมายนี้"
+  },
+  {
+    "setting": "setting_health",
+    "role": "role_youth_leader",
+    "targetYouth": "youth_primary",
+    "goalC": "goal_c4",
+    "status": "no_match",
+    "reason": "คลังปัจจุบันมีคู่มือบริการสำหรับทีมวิชาชีพ แต่ยังไม่มีชุดเครื่องมือที่ยืนยันได้สำหรับบทบาท กลุ่มเยาวชน และเป้าหมายนี้"
+  },
+  {
+    "setting": "setting_health",
+    "role": "role_youth_leader",
+    "targetYouth": "youth_primary",
+    "goalC": "goal_c5",
+    "status": "no_match",
+    "reason": "คลังปัจจุบันมีคู่มือบริการสำหรับทีมวิชาชีพ แต่ยังไม่มีชุดเครื่องมือที่ยืนยันได้สำหรับบทบาท กลุ่มเยาวชน และเป้าหมายนี้"
+  },
+  {
+    "setting": "setting_health",
+    "role": "role_youth_leader",
+    "targetYouth": "youth_secondary",
+    "goalC": "goal_c1",
+    "status": "no_match",
+    "reason": "คลังปัจจุบันมีคู่มือบริการสำหรับทีมวิชาชีพ แต่ยังไม่มีชุดเครื่องมือที่ยืนยันได้สำหรับบทบาท กลุ่มเยาวชน และเป้าหมายนี้"
+  },
+  {
+    "setting": "setting_health",
+    "role": "role_youth_leader",
+    "targetYouth": "youth_secondary",
+    "goalC": "goal_c2",
+    "status": "no_match",
+    "reason": "คลังปัจจุบันมีคู่มือบริการสำหรับทีมวิชาชีพ แต่ยังไม่มีชุดเครื่องมือที่ยืนยันได้สำหรับบทบาท กลุ่มเยาวชน และเป้าหมายนี้"
+  },
+  {
+    "setting": "setting_health",
+    "role": "role_youth_leader",
+    "targetYouth": "youth_secondary",
+    "goalC": "goal_c3",
+    "status": "no_match",
+    "reason": "คลังปัจจุบันมีคู่มือบริการสำหรับทีมวิชาชีพ แต่ยังไม่มีชุดเครื่องมือที่ยืนยันได้สำหรับบทบาท กลุ่มเยาวชน และเป้าหมายนี้"
+  },
+  {
+    "setting": "setting_health",
+    "role": "role_youth_leader",
+    "targetYouth": "youth_secondary",
+    "goalC": "goal_c4",
+    "status": "no_match",
+    "reason": "คลังปัจจุบันมีคู่มือบริการสำหรับทีมวิชาชีพ แต่ยังไม่มีชุดเครื่องมือที่ยืนยันได้สำหรับบทบาท กลุ่มเยาวชน และเป้าหมายนี้"
+  },
+  {
+    "setting": "setting_health",
+    "role": "role_youth_leader",
+    "targetYouth": "youth_secondary",
+    "goalC": "goal_c5",
+    "status": "no_match",
+    "reason": "คลังปัจจุบันมีคู่มือบริการสำหรับทีมวิชาชีพ แต่ยังไม่มีชุดเครื่องมือที่ยืนยันได้สำหรับบทบาท กลุ่มเยาวชน และเป้าหมายนี้"
+  },
+  {
+    "setting": "setting_health",
+    "role": "role_youth_leader",
+    "targetYouth": "youth_university",
+    "goalC": "goal_c1",
+    "status": "no_match",
+    "reason": "คลังปัจจุบันมีคู่มือบริการสำหรับทีมวิชาชีพ แต่ยังไม่มีชุดเครื่องมือที่ยืนยันได้สำหรับบทบาท กลุ่มเยาวชน และเป้าหมายนี้"
+  },
+  {
+    "setting": "setting_health",
+    "role": "role_youth_leader",
+    "targetYouth": "youth_university",
+    "goalC": "goal_c2",
+    "status": "no_match",
+    "reason": "คลังปัจจุบันมีคู่มือบริการสำหรับทีมวิชาชีพ แต่ยังไม่มีชุดเครื่องมือที่ยืนยันได้สำหรับบทบาท กลุ่มเยาวชน และเป้าหมายนี้"
+  },
+  {
+    "setting": "setting_health",
+    "role": "role_youth_leader",
+    "targetYouth": "youth_university",
+    "goalC": "goal_c3",
+    "status": "no_match",
+    "reason": "คลังปัจจุบันมีคู่มือบริการสำหรับทีมวิชาชีพ แต่ยังไม่มีชุดเครื่องมือที่ยืนยันได้สำหรับบทบาท กลุ่มเยาวชน และเป้าหมายนี้"
+  },
+  {
+    "setting": "setting_health",
+    "role": "role_youth_leader",
+    "targetYouth": "youth_university",
+    "goalC": "goal_c4",
+    "status": "no_match",
+    "reason": "คลังปัจจุบันมีคู่มือบริการสำหรับทีมวิชาชีพ แต่ยังไม่มีชุดเครื่องมือที่ยืนยันได้สำหรับบทบาท กลุ่มเยาวชน และเป้าหมายนี้"
+  },
+  {
+    "setting": "setting_health",
+    "role": "role_youth_leader",
+    "targetYouth": "youth_university",
+    "goalC": "goal_c5",
+    "status": "no_match",
+    "reason": "คลังปัจจุบันมีคู่มือบริการสำหรับทีมวิชาชีพ แต่ยังไม่มีชุดเครื่องมือที่ยืนยันได้สำหรับบทบาท กลุ่มเยาวชน และเป้าหมายนี้"
+  },
+  {
+    "setting": "setting_health",
+    "role": "role_youth_leader",
+    "targetYouth": "youth_vulnerable",
+    "goalC": "goal_c1",
+    "status": "no_match",
+    "reason": "คลังปัจจุบันมีคู่มือบริการสำหรับทีมวิชาชีพ แต่ยังไม่มีชุดเครื่องมือที่ยืนยันได้สำหรับบทบาท กลุ่มเยาวชน และเป้าหมายนี้"
+  },
+  {
+    "setting": "setting_health",
+    "role": "role_youth_leader",
+    "targetYouth": "youth_vulnerable",
+    "goalC": "goal_c2",
+    "status": "no_match",
+    "reason": "คลังปัจจุบันมีคู่มือบริการสำหรับทีมวิชาชีพ แต่ยังไม่มีชุดเครื่องมือที่ยืนยันได้สำหรับบทบาท กลุ่มเยาวชน และเป้าหมายนี้"
+  },
+  {
+    "setting": "setting_health",
+    "role": "role_youth_leader",
+    "targetYouth": "youth_vulnerable",
+    "goalC": "goal_c3",
+    "status": "no_match",
+    "reason": "คลังปัจจุบันมีคู่มือบริการสำหรับทีมวิชาชีพ แต่ยังไม่มีชุดเครื่องมือที่ยืนยันได้สำหรับบทบาท กลุ่มเยาวชน และเป้าหมายนี้"
+  },
+  {
+    "setting": "setting_health",
+    "role": "role_youth_leader",
+    "targetYouth": "youth_vulnerable",
+    "goalC": "goal_c4",
+    "status": "no_match",
+    "reason": "คลังปัจจุบันมีคู่มือบริการสำหรับทีมวิชาชีพ แต่ยังไม่มีชุดเครื่องมือที่ยืนยันได้สำหรับบทบาท กลุ่มเยาวชน และเป้าหมายนี้"
+  },
+  {
+    "setting": "setting_health",
+    "role": "role_youth_leader",
+    "targetYouth": "youth_vulnerable",
+    "goalC": "goal_c5",
+    "status": "no_match",
+    "reason": "คลังปัจจุบันมีคู่มือบริการสำหรับทีมวิชาชีพ แต่ยังไม่มีชุดเครื่องมือที่ยืนยันได้สำหรับบทบาท กลุ่มเยาวชน และเป้าหมายนี้"
+  }
+]
