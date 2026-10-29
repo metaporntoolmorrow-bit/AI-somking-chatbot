@@ -280,3 +280,5 @@ PK/UNIQUE สร้างดัชนีอยู่แล้ว ไม่สร
 - ไม่เปลี่ยนตารางสมาชิก Auth สิทธิ์ผู้ดูแล หรือ RLS ของคลังเดิม
 
 ดูรายละเอียดข้อจำกัดและขั้นตอนเผยแพร่ใน [docs/master-spec-v7.md](docs/master-spec-v7.md)
+
+รุ่น 8 (30 ตุลาคม 2569) เพิ่ม `component`, `contextNarrative` และ `useSequence[].sourcePages` ใน `scenarios.source_payload` ส่วน `implementationGuidance.items` เก็บ id, category, tag, text, sourcePages, sourceSection, tags และ sourceAnchor ตามเอกสารต้นทาง ใช้ source `supplied_component_documents_2026_10_30` และเก็บ SHA-256 ของเอกสารทั้ง 5 ใน Preset/release manifest ไม่มีการเปลี่ยน schema ตารางหรือสิทธิ์ RLS และไม่เพิ่มเอกสารองค์ประกอบลงใน tools/scenario_tools/storage assets ดู [รายละเอียดรุ่น 8](docs/component-sop-v8.md)

@@ -3,20 +3,24 @@ import { createClient } from '@supabase/supabase-js';
 import { isSupabaseConfigured, supabaseConfig } from '@/lib/supabase/config';
 import { createServiceClient } from '@/lib/supabase/service';
 import { validContext, type UserContextState } from '@/lib/intervention-context';
+import {PLAN_GUIDANCE_SOURCES} from '@/lib/plan-content-policy.mjs';
 
 export type Package = { id:string; name:string; choiceLabel?:string; goal:string; setting:string; level:string; measures:string; roles:string; note:string };
 export type ToolFile = { id:string; name:string; url:string; sizeBytes:number; kind:string; mimeType:string };
 export type Tool = { id:string; name:string; shortName?:string; kind:string; description:string; activity:string; audiences:string; roles:string; setting:string; steps:string; preparation:string; risks:string; success:string; indicators:string; packageIds:string[]; hasSamplePdf:boolean; files:ToolFile[]; downloadReady:boolean };
 export type PlanStep = { order:number; when:string; action:string; owner:string; tool:string; setting:string };
-export type UseStep = { order:number; rank:number; toolCode:string; toolCodes?:string[]; shortTitle:string; stage:string; action:string; outcome:string };
-export type ImplementationGuidance = { source:string; successFactors:string[]; cautions:string[]; keyStandards:string[] };
-export type Scenario = { id:string; packageId:string; settingCode:string; roleCode:string; role:string; audienceCode:string; audience:string; level:string; activity:string; primaryIds:string[]; supportIds:string[]; measureIds:string[]; referenceIds:string[]; status:'primary_available'|'support_only'|'no_tool'; summary:string; intro:string; host:string; phases:string[]; referral:string; steps:PlanStep[]; useSequence:UseStep[]; context?:UserContextState; goalC?:string; implementationGuidance?:ImplementationGuidance };
+export type UseStep = { order:number; rank:number; toolCode:string; toolCodes?:string[]; shortTitle:string; stage:string; action:string; outcome:string; sourcePages?:number[] };
+export type GuidanceItem={id:string;category:string;tag:string;text:string;sourcePages:number[];sourceSection:number};
+export type ImplementationGuidance = { source:string; successFactors:string[]; cautions:string[]; keyStandards:string[];items?:GuidanceItem[];sourceTitle?:string;sourcePages?:number[] };
+export type ComponentSummary={code:string;number:number;name:string;purpose:string;sequenceNote:string;adaptation:string;source:{title:string;pages:number[]}};
+export type Scenario = { id:string; packageId:string; settingCode:string; roleCode:string; role:string; audienceCode:string; audience:string; level:string; activity:string; primaryIds:string[]; supportIds:string[]; measureIds:string[]; referenceIds:string[]; status:'primary_available'|'support_only'|'no_tool'; summary:string; intro:string; host:string; phases:string[]; referral:string; steps:PlanStep[]; useSequence:UseStep[]; context?:UserContextState; goalC?:string; implementationGuidance?:ImplementationGuidance;component?:ComponentSummary;contextNarrative?:string[] };
 export type Catalog = { status:'ready'|'empty'|'unavailable'; releaseId?:string; simulated?:boolean; bundleBucket?:string; bundleVersion?:number; packages:Package[]; tools:Tool[]; scenarios:Scenario[] };
 
 const empty = (status:Catalog['status']):Catalog => ({status,packages:[],tools:[],scenarios:[]});
 const value = (item:unknown) => typeof item === 'string' ? item : '';
 const object = (item:unknown):Record<string,unknown> => item && typeof item === 'object' && !Array.isArray(item) ? item as Record<string,unknown> : {};
 const strings = (item:unknown):string[] => Array.isArray(item) ? item.filter((part):part is string=>typeof part==='string') : [];
+const pages = (item:unknown):number[] => Array.isArray(item)?item.filter((part):part is number=>typeof part==='number'&&Number.isInteger(part)&&part>0):[];
 
 export async function getPublishedCatalog():Promise<Catalog> {
   if (!isSupabaseConfigured()) return empty('unavailable');
@@ -64,11 +68,14 @@ export async function getPublishedCatalog():Promise<Catalog> {
       if(pkg&&value(details.packageChoiceLabel)) pkg.choiceLabel=value(details.packageChoiceLabel);
       const ids=(slot:string)=>links.filter(link=>link.scenario_code===row.code&&link.slot===slot).map(link=>link.tool_code);
       const rawSteps=Array.isArray(details.steps)?details.steps:[];
-      const useSequence:UseStep[]=(Array.isArray(details.useSequence)?details.useSequence:[]).map((raw,index)=>{const s=object(raw);return {order:index+1,rank:typeof s.rank==='number'?s.rank:index,toolCode:value(s.toolCode),toolCodes:strings(s.toolCodes),shortTitle:value(s.shortTitle),stage:value(s.stage),action:value(s.action),outcome:value(s.outcome)};}).filter(s=>s.toolCode&&s.action);
+      const useSequence:UseStep[]=(Array.isArray(details.useSequence)?details.useSequence:[]).map((raw,index)=>{const s=object(raw);return {order:index+1,rank:typeof s.rank==='number'?s.rank:index,toolCode:value(s.toolCode),toolCodes:strings(s.toolCodes),shortTitle:value(s.shortTitle),stage:value(s.stage),action:value(s.action),outcome:value(s.outcome),sourcePages:pages(s.sourcePages)};}).filter(s=>s.toolCode&&s.action);
       const guidance=object(details.implementationGuidance);
       const context=validContext(details.context)?details.context:undefined;
-      const implementationGuidance=context&&guidance.source==='user_master_brief_2026_10_29'?{source:value(guidance.source),successFactors:strings(guidance.successFactors),cautions:strings(guidance.cautions),keyStandards:strings(guidance.keyStandards)}:undefined;
-      return {id:row.code,packageId:row.package_code,settingCode:row.setting_code,roleCode:row.operator_role_code,role:value(details.role),audienceCode:row.target_group_code,audience:value(details.audience),level:value(details.level)||row.intervention_level,activity:value(details.activity),primaryIds:ids('primary'),supportIds:ids('supporting'),measureIds:ids('measurement'),referenceIds:ids('reference'),status:row.catalogue_status as Scenario['status'],summary:row.summary_th??'',intro:value(details.intro),host:value(details.host),phases:strings(details.phases),referral:value(details.referral),context,goalC:value(details.goalC),implementationGuidance,useSequence,steps:rawSteps.map((raw,index)=>{const step=object(raw);return {order:typeof step.order==='number'?step.order:index+1,when:value(step.when),action:value(step.action),owner:value(step.owner),tool:value(step.tool),setting:value(step.setting)};}).filter(step=>step.action)};
+      const implementationGuidance=context&&PLAN_GUIDANCE_SOURCES.includes(value(guidance.source))?{source:value(guidance.source),successFactors:strings(guidance.successFactors),cautions:strings(guidance.cautions),keyStandards:strings(guidance.keyStandards),sourceTitle:value(guidance.sourceTitle),sourcePages:pages(guidance.sourcePages),items:(Array.isArray(guidance.items)?guidance.items:[]).map(raw=>{const i=object(raw);return {id:value(i.id),category:value(i.category),tag:value(i.tag),text:value(i.text),sourcePages:pages(i.sourcePages),sourceSection:typeof i.sourceSection==='number'?i.sourceSection:0};})}:undefined;
+      const c=object(details.component),ref=object(c.source);
+      const component=context&&typeof c.number==='number'?{code:value(c.code),number:c.number,name:value(c.name),purpose:value(c.purpose),sequenceNote:value(c.sequenceNote),adaptation:value(c.adaptation),source:{title:value(ref.title),pages:pages(ref.pages)}}:undefined;
+      const contextNarrative=strings(details.contextNarrative);
+      return {id:row.code,packageId:row.package_code,settingCode:row.setting_code,roleCode:row.operator_role_code,role:value(details.role),audienceCode:row.target_group_code,audience:value(details.audience),level:value(details.level)||row.intervention_level,activity:value(details.activity),primaryIds:ids('primary'),supportIds:ids('supporting'),measureIds:ids('measurement'),referenceIds:ids('reference'),status:row.catalogue_status as Scenario['status'],summary:row.summary_th??'',intro:value(details.intro),host:value(details.host),phases:strings(details.phases),referral:value(details.referral),context,goalC:value(details.goalC),implementationGuidance,component,contextNarrative,useSequence,steps:rawSteps.map((raw,index)=>{const step=object(raw);return {order:typeof step.order==='number'?step.order:index+1,when:value(step.when),action:value(step.action),owner:value(step.owner),tool:value(step.tool),setting:value(step.setting)};}).filter(step=>step.action)};
     });
     const bucket=toolResult.data?.some(row=>object(row.source_payload).assetBucket==='real-tool-assets')?'real-tool-assets':undefined;
     const bundleVersion=toolResult.data?.some(row=>object(row.source_payload).bundleSchemaVersion===2)?2:1;

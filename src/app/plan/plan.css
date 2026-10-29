@@ -7,5 +7,6 @@ body:has(.chat-shell){display:flex;flex-direction:column;height:100dvh;overflow:
 .chat-choice small{display:block;margin-top:4px;color:#496452;font-size:12px;font-weight:400;line-height:1.5}
 .chat-choice:disabled{cursor:wait;opacity:.65}
 .chat-loading{text-align:center;margin:6px 0;font-size:13px;color:#315d35}
+.chat-availability{text-align:center;margin:6px 0 0;font-size:11px;line-height:1.5;color:#496452}
 .chat-loading button{margin-left:8px;border:0;background:none;text-decoration:underline;color:inherit;cursor:pointer;min-height:44px}
 @media(max-width:700px){.chat-choice{min-height:44px}.chat-options-goals .chat-choice{flex-basis:100%;min-height:64px}.chat-choice small{font-size:11px}}

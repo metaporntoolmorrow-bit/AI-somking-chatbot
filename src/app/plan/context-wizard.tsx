@@ -4,17 +4,19 @@ import {useEffect,useRef,useState} from 'react';
 import {useRouter} from 'next/navigation';
 import Link from 'next/link';
 import {ArrowLeft,Leaf} from 'lucide-react';
-import {contextQuestions,emptyContext,contextSearch,type ContextKey} from '@/lib/intervention-context';
+import {contextQuestions,emptyContext,contextSearch,type ContextKey,type UserContextState} from '@/lib/intervention-context';
+import {availableContextChoices} from '@/lib/context-paths.mjs';
 
-export function ContextWizard() {
+export function ContextWizard({availableContexts}:{availableContexts:UserContextState[]}) {
   const router=useRouter();
   const [answers,setAnswers]=useState(emptyContext);
   const [step,setStep]=useState(0);
   const [submitting,setSubmitting]=useState(false);
   const end=useRef<HTMLDivElement>(null);
   const current=contextQuestions[step];
+  const options:typeof current.options=availableContextChoices(availableContexts,answers,current.key,current.options);
   function choose(key:ContextKey,value:string) {
-    if(submitting)return;
+    if(submitting||!options.some(option=>option.value===value))return;
     const next={...answers,[key]:value};
     for(const later of contextQuestions.slice(step+1))next[later.key]='';
     setAnswers(next);
@@ -37,7 +39,9 @@ export function ContextWizard() {
     </div></div>
     <div className="chat-composer"><div className="chat-composer-inner">
       <p className="chat-choice-label">เลือกคำตอบของคุณ <span>เลือกได้ 1 ข้อ · เลือกแล้วไปต่อได้เลย</span></p>
-      <div className={`chat-options${current.key==='goalC'?' chat-options-goals':''}`}>{current.options.map(option=><button key={option.value} type="button" className="chat-choice" disabled={submitting} onClick={()=>choose(current.key,option.value)}><span>{option.label}{option.description&&<small>{option.description}</small>}</span></button>)}</div>
+      <div className={`chat-options${current.key==='goalC'?' chat-options-goals':''}`}>{options.map(option=><button key={option.value} type="button" className="chat-choice" disabled={submitting} onClick={()=>choose(current.key,option.value)}><span>{option.label}{option.description&&<small>{option.description}</small>}</span></button>)}</div>
+      {!options.length&&<p className="chat-no-options">ยังไม่มีตัวเลือกพร้อมใช้ในบริบทนี้ <Link href="/plan">เริ่มเลือกบริบทใหม่</Link></p>}
+      <p className="chat-availability">ตัวเลือกจะแสดงตามชุดเครื่องมือที่มีพร้อมให้ใช้ในตอนนี้</p>
       {submitting&&<p className="chat-loading" role="status">กำลังจับคู่กับคลังเครื่องมือ… <button type="button" onClick={()=>setSubmitting(false)}>เลือกเป้าหมายใหม่</button></p>}
     </div></div>
   </div>;

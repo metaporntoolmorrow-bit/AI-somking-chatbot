@@ -2,7 +2,7 @@
 
 เว็บ Next.js 16 + TypeScript + Tailwind ที่อ่านข้อมูลจริงจาก Supabase ตาม [database.md](./database.md)
 
-รุ่นปัจจุบันใช้ [Master Spec รุ่น 7](./docs/master-spec-v7.md): ตัวเลือก 4 ข้อ จับคู่จากกฎคงที่ ไม่มี AI สร้างข้อความสด ดู [Preset ล่าสุด](./presets/real-tools-v2/presets.csv) และ [คำตอบทั้งหมดรวมช่องว่าง](./presets/real-tools-v2/all-paths.csv) ข้อมูลรุ่นก่อนด้านล่างเก็บไว้ประกอบประวัติการพัฒนา
+รุ่นปัจจุบันใช้ [SOP จากเอกสารองค์ประกอบ รุ่น 8](./docs/component-sop-v8.md): ตัวเลือก 4 ข้อกรองให้มีปลายทางจริง ขั้นตอน/วิธีทำ/เป้าหมายและแท็กคำแนะนำอิงเอกสาร 5 องค์ประกอบ ไม่มี AI สร้างข้อความสด ดู [Preset ล่าสุด](./presets/real-tools-v2/presets.csv), [แท็กและที่มา](./presets/real-tools-v2/guidance-tags.csv) และ [คำตอบทั้งหมดรวมช่องว่าง](./presets/real-tools-v2/all-paths.csv) ข้อมูลรุ่นก่อนด้านล่างเก็บไว้ประกอบประวัติการพัฒนา
 
 ## ตั้งค่าและรัน
 

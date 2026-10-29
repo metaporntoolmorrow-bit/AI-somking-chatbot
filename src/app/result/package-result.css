@@ -54,6 +54,13 @@ body:has(.result-screen) .site-footer { display: none; }
 .context-summary-banner{background:#eef4ff;border-left:4px solid #2c61a1;padding:18px 22px;border-radius:0 12px 12px 0;margin-bottom:30px;color:#234d79}
 .context-summary-banner h2{font-size:18px;line-height:1.5;margin:0 0 8px}
 .context-summary-banner p{font-size:15px;line-height:1.8;max-width:75ch;margin:0}
+.context-narrative{display:grid;gap:7px}.context-narrative p{max-width:none}
+.sequence-source{margin:0 0 16px;font-size:12px;line-height:1.6;color:#496452}
+.usage-goal{margin:7px 0 0;font-size:13px;line-height:1.65;color:#285b48}
+.usage-goal b,.usage-description b{font-weight:700}
+.guidance-tag{display:table;padding:2px 8px;border-radius:6px;background:#dcebdc;color:#285139;font-size:11px;font-weight:700;line-height:1.6;margin:0 0 5px}
+.cautions .guidance-tag{background:#f7e7bc;color:#6d4918}.standards .guidance-tag{background:#dce7f5;color:#294e7a}
+.guidance-reference{display:block;font-size:10px;line-height:1.5;margin-top:4px;color:inherit}
 .context-summary-banner strong{font-weight:700;text-decoration:underline;text-decoration-color:#92acd0;text-underline-offset:4px}
 .package-file-count,.package-scope-note{font-size:13px;line-height:1.6;color:#496452;margin:0 0 12px}
 .package-scope-note{margin:12px 0 0}

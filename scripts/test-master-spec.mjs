@@ -8,6 +8,7 @@ import JSZip from 'jszip';
 import {assertToolSourcePolicy} from '../src/lib/tool-source-policy.mjs';
 import {assertPlanContentPolicy} from '../src/lib/plan-content-policy.mjs';
 import {bundleIdentity} from '../src/lib/package-identity.mjs';
+import {availableContextChoices} from '../src/lib/context-paths.mjs';
 
 const preset=JSON.parse(await readFile('presets/real-tools-v2/presets.json','utf8'));
 const old=JSON.parse(await readFile('presets/real-tools-v1/presets.json','utf8'));
@@ -20,14 +21,14 @@ assert.equal(coverage.length,625);assert.equal(new Set(coverage.map(r=>JSON.stri
 for(const row of coverage){const matches=preset.scenarios.filter(s=>Object.entries(s.context).every(([k,v])=>row[k]===v));assert.equal(matches.length,row.status==='matched'?1:0);}
 assert.equal(registry.main.length,18);assert.equal(registry.supplementary.length,21);assert.ok(registry.supplementary.every(t=>!t.routingEnabled&&t.fileUrl===null));
 for(const asset of preset.assets)assert.equal(hash(await readFile(asset.relativePath)),asset.sha256,'Changed source '+asset.code);
-for(const row of preset.scenarios){assert.equal(row.useSequence.length,3);assert.ok(row.useSequence.every(s=>s.toolCodes.every(c=>Object.values(row.tools).flat().includes(c))));}
+for(const row of preset.scenarios){assert.equal(row.useSequence.length,({goal_c1:8,goal_c2:5,goal_c3:3,goal_c4:4,goal_c5:5})[row.context.goalC]);assert.ok(row.useSequence.every(s=>s.toolCodes.every(c=>Object.values(row.tools).flat().includes(c))));}
 const expectedSets=new Map();for(const row of preset.scenarios){const tools=Object.values(row.tools).flat();const key=hash(bundleIdentity(row.packageCode,tools));const prior=expectedSets.get(key);if(!prior||JSON.stringify(prior.answerLabels).length<JSON.stringify(row.answerLabels).length)expectedSets.set(key,row);}
 assert.equal(expectedSets.size,15);
 console.log(JSON.stringify({sourcePassed:true,contexts:625,matched:preset.scenarios.length,gaps:coverage.length-preset.scenarios.length,toolSets:expectedSets.size,originalAssets:30}));
 if(process.argv.includes('--source-only'))process.exit(0);
 
 const base=process.env.TEST_BASE_URL||'http://localhost:3000';
-const output='output/qa/master-v7';await mkdir(output,{recursive:true});
+const output='output/qa/component-v8';await mkdir(output,{recursive:true});
 const url=row=>`${base}/result?${new URLSearchParams(row.context)}`;
 const browser=await chromium.launch({headless:true,executablePath:'C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe'});
 const errors=[],pdfs=[];let flows=0,zips=0;
@@ -37,8 +38,10 @@ try{
   if(!process.argv.includes('--smoke')){
     for(const [key,row] of expectedSets){
       await page.goto(url(row),{waitUntil:'networkidle'});await page.emulateMedia({media:'print'});await page.evaluate(()=>document.fonts.ready);
-      assert.equal(await page.locator('.print-step-column').count(),3);
+      assert.equal(await page.locator('.print-step-column').count(),row.useSequence.length>6?4:Math.min(3,row.useSequence.length));
+      assert.equal(await page.locator('.print-step-goal').count(),row.useSequence.length);
       assert.equal(await page.locator('.print-implementation').count(),1);
+      const gap=await page.evaluate(()=>document.querySelector('.print-implementation').getBoundingClientRect().top-document.querySelector('.print-sequence').getBoundingClientRect().bottom);assert.ok(gap>=30,'Insufficient gap before implementation guidance');
       const file=`${output}/plan-${key.slice(0,8)}.pdf`;
       await page.pdf({path:file,preferCSSPageSize:true,printBackground:true});
       assert.match(execFileSync('pdfinfo',[file]).toString(),/Pages:\s+1\b/,file+' overflowed');
@@ -55,6 +58,9 @@ try{
     await page.setViewportSize({width:390,height:844});await page.goto(`${base}/plan`,{waitUntil:'networkidle'});
     for(let index=0;index<4;index++){
       const question=preset.questions[index],label=question.options.find(o=>o.value===row.context[question.key]).label;
+      const prior=Object.fromEntries(preset.questions.slice(0,index).map(q=>[q.key,row.context[q.key]]));
+      const valid=availableContextChoices(preset.scenarios.map(s=>s.context),prior,question.key,question.options);
+      assert.equal(await page.locator('.chat-choice').count(),valid.length);
       assert.equal(await page.locator('.chat-confirm').count(),0);
       assert.match(await page.locator('.chat-identity span').textContent(),new RegExp(`${index+1}.*4`));
       if(index===1){await page.getByRole('button',{name:'ย้อนกลับไปแก้คำตอบ'}).click();assert.match(await page.locator('.chat-identity span').textContent(),/1.*4/);await page.locator('.chat-choice').filter({hasText:preset.questions[0].options.find(o=>o.value===row.context.setting).label}).click();}
@@ -65,11 +71,13 @@ try{
       await page.locator('.chat-choice').filter({hasText:label}).click();
     }
     await page.waitForURL(/\/result\?/);await page.locator('.usage-list').waitFor();
-    assert.equal(await page.locator('.usage-list>li').count(),3);
+    assert.equal(await page.locator('.usage-list>li').count(),row.useSequence.length);
+    assert.equal(await page.locator('.usage-goal').count(),row.useSequence.length);
+    assert.equal(await page.locator('.guidance-tag').count(),6);
     assert.equal(await page.locator('.result-tools>li').count(),Object.values(row.tools).flat().length);
     assert.equal(await page.locator('.implementation-column').count(),3);
     const summary=await page.locator('.context-summary-banner').textContent();
-    for(const q of preset.questions)assert.ok(summary.includes(q.options.find(o=>o.value===row.context[q.key]).label));
+    for(const line of row.contextNarrative)assert.ok(summary.includes(line));
     assert.ok(!(await page.locator('.result-screen').textContent()).includes('ข้อมูลทดลอง'));
     assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
     if(flows===0){await page.screenshot({path:`${output}/result-mobile.png`,fullPage:true});await page.setViewportSize({width:1440,height:1000});await page.screenshot({path:`${output}/result-desktop.png`,fullPage:true});}
