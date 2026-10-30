@@ -16,6 +16,6 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       <Link href="/plan" className="button button-dark nav-cta">เริ่มสร้างแผน <ArrowUpRight size={17}/></Link>
     </div></header>
     <main>{children}</main>
-    <footer className="site-footer"><div className="container footer-inner"><div><div className="footer-brand"><Leaf size={20}/> AI นักขับเคลื่อนพื้นที่ปลอดบุหรี่ไฟฟ้า</div><p>ดูชุดแผนและเครื่องมือตามสถานะของข้อมูลที่เผยแพร่</p></div><div className="footer-links"><Link href="/tools">คลังเครื่องมือ</Link><Link href="/admin">หน้าผู้ดูแล</Link><Link href="/plan">สร้างแผน</Link></div></div></footer>
+    <footer className="site-footer"><div className="container footer-inner"><div><div className="footer-brand"><Leaf size={20}/> AI นักขับเคลื่อนพื้นที่ปลอดบุหรี่ไฟฟ้า</div><p>ดูชุดแผนและเครื่องมือตามสถานะของข้อมูลที่เผยแพร่</p></div><div className="footer-links"><Link href="/tools">คลังเครื่องมือ</Link><Link href="/dashboard">แดชบอร์ดสำหรับ สสส.</Link><Link href="/admin">หน้าผู้ดูแล</Link><Link href="/plan">สร้างแผน</Link></div></div></footer>
   </body></html>;
 }

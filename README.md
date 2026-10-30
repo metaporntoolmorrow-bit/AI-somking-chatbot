@@ -6,6 +6,8 @@
 
 ## ตั้งค่าและรัน
 
+แดชบอร์ดสำหรับ สสส. อยู่ที่ `/dashboard` มีปุ่มทางเข้าบนหน้าแรกและ footer ใช้บัญชี Admin1/Admin2 ที่ active เมื่อคลิกแล้วเข้าสู่ระบบจะกลับมาหน้าแดชบอร์ดอัตโนมัติ รอบนี้แสดง **ข้อมูลตัวอย่างตามม็อกอัปที่ผู้ใช้เลือก** พร้อมตัวกรอง 30/14/7 วัน กราฟ 4 มิติ และ CSV ครบทุกบริบท ไม่ใช่สถิติจริงของเว็บ ดู [ขอบเขตแดชบอร์ด](./docs/dashboard-v1.md)
+
 1. ติดตั้งแพ็กเกจ: `npm install`
 2. คัดลอก `.env.example` เป็น `.env.local` แล้วใส่ URL, publishable/anon key และ secret/service-role key ของ Supabase. เก็บ secret เฉพาะฝั่ง Server; `.env.local` ถูก ignore
 3. รัน [migration แรก](./supabase/migrations/202609240001_initial_content.sql) ใน Supabase SQL Editor หากยังไม่เคยรัน
